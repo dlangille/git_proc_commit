@@ -66,7 +66,7 @@ Sponsored by:	DigitalOcean [1]
 >>> print(commits[0].hexsha)
 0d5f1c8c72d95bc46329694b2490099765002331
 >>> 
-[dan@mydev:~/src/git_proc_commit] $ ./git-show-commit.py
+[dan@mydev:~/src/git_proc_commit] $ ./git-example.py
 jrm
 sysutils/doctl: Update to v1.31.2
 
@@ -76,6 +76,14 @@ Sponsored by:	DigitalOcean [1]
 
 0d5f1c8c72d95bc46329694b2490099765002331
 ```
+
+Example using git-show-commit.py duplicating git-show-commit.sh in python
+
+[dan@mydev:~/src/git_proc_commit] $ ./git-show-commit.py
+f2bfe60090b840b6d99a3288c0b745843cefcfe1
+ab24c4bd5dffffeabdcaa9bc5f3ca1e1615c95d5
+0d5f1c8c72d95bc46329694b2490099765002331
+
 
 references:
 

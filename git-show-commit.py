@@ -2,8 +2,8 @@
 
 import git
 repo = git.Repo("~/src/freebsd-ports")
-commits = list(repo.iter_commits("master", max_count=9))
-dir(commits[0])
-print(commits[0].author)
-print(commits[0].message)
-print(commits[0].hexsha)
+commits = list(repo.iter_commits("3bd153c2494182bb89915e6fc9222288c154285f..HEAD"))
+for commit in commits[::-1]:
+  print(commit.hexsha)
+
+
