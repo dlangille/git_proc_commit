@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python3
 
 import git
 repo = git.Repo("~/src/freebsd-ports")
