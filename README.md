@@ -5,11 +5,13 @@ for all commits.
 
 Example test:
 
+```
 [dan@pro02:~/src/git_proc_commit] $ ./git-show-commit.sh
 0d5f1c8c72d95bc46329694b2490099765002331
 ab24c4bd5dffffeabdcaa9bc5f3ca1e1615c95d5
 f2bfe60090b840b6d99a3288c0b745843cefcfe1
 [dan@pro02:~/src/git_proc_commit] $ 
+```
 
 references:
 
