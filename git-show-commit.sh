@@ -10,7 +10,7 @@ latest="3bd153c2494182bb89915e6fc9222288c154285f" # [NEW PORT]: devel/py-oci - W
 
 repo_dir=~/src/freebsd-ports
 
-GIT="/usr/bin/git"
+GIT="/usr/local/bin/git"
 
 cd "${repo_dir}"
 commits=`${GIT} rev-list ${latest}..HEAD`
