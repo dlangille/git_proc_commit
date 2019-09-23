@@ -92,6 +92,9 @@ def main():
         people = ET.SubElement(update, 'PEOPLE')
         ET.SubElement(people, 'UPDATER', Handle=f"{commit.author.name} <{commit.author.email}>")
 
+        log.debug("Writing commit hash")
+        ET.SubElement(update, 'COMMIT', Hash=commit.hexsha, EncodingLoses="false", Repository=config['repo'])
+
         files = ET.SubElement(update, 'FILES')
         log.debug("Writing changes")
         for file_change in commit.parents[0].diff(commit):
