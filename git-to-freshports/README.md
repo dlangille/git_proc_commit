@@ -5,7 +5,7 @@ Used to convert GIT commit entries into XML files digestible by the FreshPorts b
 
 Installation:
 ```shell script
-pkg install python3 py36-lxml py36-gitpython
+pkg install python3 py37-lxml py37-gitpython
 ```
 
 Running:
