@@ -27,14 +27,19 @@
 """Transform GIT commit entries into XML digestible by FreshPorts."""
 
 import logging as log
+import logging.config
 import argparse
 import git
 import datetime
+import sys
+import os
 from pathlib import Path
 from lxml import etree as ET
 
 
 FORMAT_VERSION = '1.4.0.0'
+SYSLOG_ADDRESS = '/dev/log'  # Or UDP socket like ('1.2.3.4', 514)
+SYSLOG_FACILITY = 'local3'
 
 
 def get_config() -> dict:
@@ -52,10 +57,30 @@ def get_config() -> dict:
 
 
 def configure_logging(log_level: str) -> None:
-    log.basicConfig(
-        format='%(asctime)s:[%(levelname)s]: %(message)s',
-        level=log_level,
-    )
+    logging.config.dictConfig({
+        'version': 1,
+        'disable_existing_loggers': True,
+        'formatters': {
+            'syslog': {
+                'format': f'{os.path.basename(sys.argv[0])}[{os.getpid()}]:[%(levelname)s] %(message)s'
+            }
+        },
+        'handlers': {
+            'syslog': {
+                'class': 'logging.handlers.SysLogHandler',
+                'address': SYSLOG_ADDRESS,
+                'facility': SYSLOG_FACILITY,
+                'formatter': 'syslog',
+            },
+        },
+        'loggers': {
+            '': {
+                'handlers': ['syslog'],
+                'level': log_level,
+                'propagate': True,
+            },
+        }
+    })
 
 
 def main():
