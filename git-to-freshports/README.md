@@ -17,3 +17,9 @@ Getting help:
 ```shell script
 python3 git-to-freshports-xml.py --help
 ```
+
+Running unit tests:
+```shell script
+pkg install py37-pytest
+python3 -m pytest
+```
