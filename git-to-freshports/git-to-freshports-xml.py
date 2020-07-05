@@ -45,7 +45,12 @@ SYSLOG_FACILITY = 'local3'
 def get_config() -> dict:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('-p', '--path', type=Path, required=True, help="Path to the repository")
+
+    # perhaps we want -r --range when doing an interation
     parser.add_argument('-c', '--commit', required=True, help="Commit to process the tree since")
+
+    # perhaps we want -c --commit for a single commit
+    parser.add_argument('-s', '--singlecommit', action='store_true', help="Process only the supplied commit")
     parser.add_argument('-O', '--output', type=Path, required=True, help="Output directory. Must already exist")
     parser.add_argument('-r', '--repo', default='ports', help="Repository we're working on. Defaults to 'ports'")
     parser.add_argument('-o', '--os', default='FreeBSD', help="OS we're working on. Defaults to 'FreeBSD'")
@@ -89,7 +94,13 @@ def main():
     log.debug(f"Config is: {config}")
 
     repo = git.Repo(str(config['path']))
-    commits = reversed(list(repo.iter_commits(f"{config['commit']}..HEAD")))
+    
+    singlecommit = git.Repo(str(config['singlecommit']))
+    
+    if (singlecommit):
+        commits = lists(repo.commit(f"{config['commit']}"))
+    else:
+        commits = reversed(list(repo.iter_commits(f"{config['commit']}..HEAD")))
 
     for order_number, commit in enumerate(commits):
         log.info(f"Processing commit '{commit.message.splitlines()[0]}'")
