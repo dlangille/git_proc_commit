@@ -12,51 +12,72 @@ fi
 
 . config.sh
 
-${LOGGER} -t ${LOGGERTAG} $0 has started
+LOGGERTAG='git-delta.sh'
 
-LOGGERTAG='fp-daemon'
+logfile(){
+  msg=$1
+  
+  timestamp=`date "+%Y.%m.%d %H:%M:%S"` 
+  echo ${timestamp} ${LOGGERTAG} $msg
+}
 
-GIT="/usr/local/bin/git"
+${LOGGER} -t ${LOGGERTAG} has started
+logfile "has started"
 
+# what remote are we using on this repo?
 REMOTE='origin'
 
+# where is the repo directory?
 REPODIR="${FRESHPORTS_JAIL_BASE_DIR}${PORTSDIRBASE}PORTS-head-git"
-echo ${REPODIR}
 
-PROCESS_ID=${$}
-XML="${MSGDIR}/recent"
+# where we do dump the XML files which we create?
+XML="${MSGDIR}/incoming"
+
+logfile "repo is $REPODIR"
+logfile "XML dir is $XML"
 
 cd ${REPODIR}
 
 # Update local copies of remote branches
+logfile "running: ${GIT} fetch $REMOTE"
 ${GIT} fetch $REMOTE
 
 # Make sure branch is clean and on master
-${GIT} reset --hard HEAD
+#logfile "running: ${GIT} reset --hard HEAD"
+#${GIT} reset --hard HEAD
+
+
+logfile "running: ${GIT} checkout master"
 ${GIT} checkout master
+
+
 
 # Get the first commit for our starting point
 STARTPOINT=$(${GIT} log master..$REMOTE/master --oneline --reverse | head -n 1 | cut -d' ' -f1)
 
+if [ "${STARTPOINT}x" = 'x' ]
+then
+	logfile "STARTPOINT is empty; there must not be any new commits to process"
+	${LOGGER} -t ${LOGGERTAG} ending - no commits found
+	logfile "ending"
+	exit 1
+else
+	logfile "STARTPOINT = ${STARTPOINT}"
+fi
+
+
 # Bring local branch up-to-date with the local remote
+logfile "running; ${GIT} rebase $REMOTE/master"
 ${GIT} rebase $REMOTE/master
 
-# Call xml conversion with starting point
-#commits=`${GIT} rev-list ${STARTPOINT}..HEAD`
-#echo We have these commits to process: ${commits}
 
-echo starting point is ${STARTPOINT}
-#die waiting for you do try this on the commandline: git rev-list  ${STARTPOINT}..HEAD
-#for commit in $commits
-#do
-#  echo about to process $commit
-#  FILE=`date +%Y.%m.%d.%H.%M.%S`.$PROCESS_ID.${commit}.txt
+# get list of commits, if only to document them here
+logfile "running: ${GIT} rev-list ${STARTPOINT}..HEAD"
+commits=`${GIT} rev-list ${STARTPOINT}..HEAD`
+echo $commits
 
-  ${LOGGER} -t ${LOGGERTAG} will invoke: ${SCRIPTDIR}/git-to-freshports-xml.py --path ${FRESHPORTS_JAIL_BASE_DIR}${PORTSDIRBASE}PORTS-head-git --commit ${STARTPOINT} --output ${XML}/${FILE}.xml
-                                         ${SCRIPTDIR}/git-to-freshports-xml.py --path ${FRESHPORTS_JAIL_BASE_DIR}${PORTSDIRBASE}PORTS-head-git --commit ${STARTPOINT} --output ${XML}
-#  exit
-#  echo $commit
-#done
+logfile "${SCRIPTDIR}/git-to-freshports-xml.py --path ${FRESHPORTS_JAIL_BASE_DIR}${PORTSDIRBASE}PORTS-head-git --commit ${STARTPOINT} --output ${XML}"
+         ${SCRIPTDIR}/git-to-freshports-xml.py --path ${FRESHPORTS_JAIL_BASE_DIR}${PORTSDIRBASE}PORTS-head-git --commit ${STARTPOINT} --output ${XML}
 
-#python3 git-to-freshports.py -c $STARTPOINT
-echo "Would have ran git-to-freshport.py starting at: $STARTPOINT"
+${LOGGER} -t ${LOGGERTAG} ending
+logfile "ending"
