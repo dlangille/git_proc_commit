@@ -37,8 +37,8 @@ from pathlib import Path
 from lxml import etree as ET
 
 
-FORMAT_VERSION = '1.4.0.0'
-SYSLOG_ADDRESS = '/dev/log'  # Or UDP socket like ('1.2.3.4', 514)
+FORMAT_VERSION  = '1.4.0.0'
+SYSLOG_ADDRESS  = '/var/run/log'  # Or UDP socket like ('1.2.3.4', 514)
 SYSLOG_FACILITY = 'local3'
 
 
@@ -131,7 +131,7 @@ def main():
         ET.SubElement(people, 'UPDATER', Handle=f"{commit.author.name} <{commit.author.email}>")
 
         log.debug("Writing commit hash")
-        ET.SubElement(update, 'COMMIT', Hash=commit.hexsha, EncodingLoses="false", Repository=config['repo'])
+        ET.SubElement(update, 'COMMIT', Hash=commit.hexsha, HashShort=repo.git.rev_parse(commit.hexsha, short=4), Subject=commit.summary.strip(), EncodingLoses="false", Repository=config['repo'])
 
         files = ET.SubElement(update, 'FILES')
         log.debug("Writing changes")
