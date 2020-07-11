@@ -95,14 +95,23 @@ def main():
 
     repo = git.Repo(str(config['path']))
 
+    num_commits = 0
     if config['commit']:
-        commits = reversed(list(repo.iter_commits(f"{config['commit']}..HEAD")))
+        commit_list = list(repo.iter_commits(f"{config['commit']}..HEAD"))
+        commits = reversed(commit_list)
+        num_commits = len(commit_list)
     elif config['commit_range']:
-        commits = reversed(list(repo.iter_commits(config['commit_range'])))
+        commit_list = list(repo.iter_commits(config['commit_range']))
+        commits = reversed(commit_list)
+        num_commits = len(commit_list)
     elif config['single_commit']:
-        commits = [repo.commit(config['single_commit'])]
+        commits = [repo.commit(config['single_commit'])]        
+        num_commits = 1
     else:
         assert False  # This should not happen
+
+    if (num_commits == 0):
+        log.info(f"No commits found");
 
     for order_number, commit in enumerate(commits):
         log.info(f"Processing commit '{commit.message.splitlines()[0]}'")
