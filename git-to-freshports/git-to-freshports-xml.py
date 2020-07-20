@@ -33,8 +33,9 @@ import git
 import datetime
 import sys
 import os
+
 from pathlib import Path
-from lxml import etree as ET
+from lxml    import etree as ET
 
 
 FORMAT_VERSION  = '1.4.0.0'
