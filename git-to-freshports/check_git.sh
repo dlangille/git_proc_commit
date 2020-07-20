@@ -3,13 +3,13 @@
 # This script exists mainly to redirect the output of git-delta.sh to a logfile.
 #
 
-if [ ! -f config.sh ]
+if [ ! -f /usr/local/etc/freshports/config.sh ]
 then
-	echo "config.sh not found by $0..."
+	echo "/usr/local/etc/freshports/config.sh not found by $0"
 	exit 1
 fi
 
-. config.sh
+. /usr/local/etc/freshports/config.sh
 
 LOGGERTAG=check_git.sh
 
