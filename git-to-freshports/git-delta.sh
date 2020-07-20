@@ -4,13 +4,13 @@
 # based upon https://github.com/FreshPorts/git_proc_commit/issues/3
 # An idea from https://github.com/sarcasticadmin
 
-if [ ! -f config.sh ]
+if [ ! -f /usr/local/etc/freshports/config.sh ]
 then
-	echo "config.sh not found by freebsd-git.sh..."
+	echo "/usr/local/etc/freshports/config.sh.sh not found by $0"
 	exit 1
 fi
 
-. config.sh
+. /usr/local/etc/freshports/config.sh
 
 LOGGERTAG='git-delta.sh'
 
@@ -28,10 +28,12 @@ logfile "has started"
 REMOTE='origin'
 
 # where is the repo directory?
-REPODIR="${FRESHPORTS_JAIL_BASE_DIR}${PORTSDIRBASE}PORTS-head-git"
+# We may have to pass the repo name in as a parameter.
+REPODIR="${INGRESS_PORTS_DIR_BASE}/freebsd-ports"
+LATEST_FILE="${INGRESS_PORTS_DIR_BASE}/latest.freebsd-ports"
 
 # where we do dump the XML files which we create?
-XML="${MSGDIR}/incoming"
+XML="${INGRESS_MSGDIR}/incoming"
 
 logfile "repo is $REPODIR"
 logfile "XML dir is $XML"
@@ -42,18 +44,14 @@ cd ${REPODIR}
 logfile "running: ${GIT} fetch $REMOTE"
 ${GIT} fetch $REMOTE
 
-# Make sure branch is clean and on master
-#logfile "running: ${GIT} reset --hard HEAD"
-#${GIT} reset --hard HEAD
-
-
 logfile "running: ${GIT} checkout master"
 ${GIT} checkout master
 
-
-
 # Get the first commit for our starting point
-STARTPOINT=$(${GIT} log master..$REMOTE/master --oneline --reverse | head -n 1 | cut -d' ' -f1)
+#STARTPOINT=$(${GIT} log --format=%h -n1 --reverse master..$REMOTE/master)
+
+# let's try having the latest commt in this this.
+STARTPOINT=`cat ${LATEST_FILE}`
 
 if [ "${STARTPOINT}x" = 'x' ]
 then
@@ -74,10 +72,14 @@ ${GIT} rebase $REMOTE/master
 # get list of commits, if only to document them here
 logfile "running: ${GIT} rev-list ${STARTPOINT}..HEAD"
 commits=`${GIT} rev-list ${STARTPOINT}..HEAD`
+
 echo $commits
 
-logfile "${SCRIPTDIR}/git-to-freshports-xml.py --path ${FRESHPORTS_JAIL_BASE_DIR}${PORTSDIRBASE}PORTS-head-git --commit ${STARTPOINT} --output ${XML}"
-         ${SCRIPTDIR}/git-to-freshports-xml.py --path ${FRESHPORTS_JAIL_BASE_DIR}${PORTSDIRBASE}PORTS-head-git --commit ${STARTPOINT} --output ${XML}
+logfile "${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --commit ${STARTPOINT} --output ${XML}"
+         ${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --commit ${STARTPOINT} --output ${XML}
+         
+new_latest=`${GIT}  rev-parse HEAD`
+echo $new_latest > ${LATEST_FILE}
 
 ${LOGGER} -t ${LOGGERTAG} ending
 logfile "ending"
