@@ -7,15 +7,20 @@
 # a single commit hash
 commit_hash=$1
 
-if [ ! -f config.sh ]
+if [ ! -f /usr/local/etc/freshports/config.sh ]
 then
-	echo "config.sh not found by freebsd-git.sh..."
+	echo "/usr/local/etc/freshports/config.sh not found by $0"
 	exit 1
 fi
 
-. config.sh
+. /usr/local/etc/freshports/config.sh
 
 LOGGERTAG='git-single-commit.sh'
+
+# where is the repo directory?
+# We may have to pass the repo name in as a parameter.
+REPODIR="${INGRESS_PORTS_DIR_BASE}/freebsd-ports"
+
 
 logfile(){
   msg=$1
@@ -28,15 +33,15 @@ ${LOGGER} -t ${LOGGERTAG} has started
 logfile "started"
 
 # where we do dump the XML files which we create?
-XML="${MSGDIR}/incoming"
+XML="${INGRESS_MSGDIR}/incoming"
 
 logfile "repo is $REPODIR"
 logfile "XML dir is $XML"
 
 cd ${REPODIR}
 
-logfile "${SCRIPTDIR}/git-to-freshports-xml.py --path ${FRESHPORTS_JAIL_BASE_DIR}${PORTSDIRBASE}PORTS-head-git --single-commit ${commit_hash} --output ${XML}"
-         ${SCRIPTDIR}/git-to-freshports-xml.py --path ${FRESHPORTS_JAIL_BASE_DIR}${PORTSDIRBASE}PORTS-head-git --single-commit ${commit_hash} --output ${XML}
+logfile "${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --single-commit ${commit_hash} --output ${XML}"
+         ${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --single-commit ${commit_hash} --output ${XML}
 
 ${LOGGER} -t ${LOGGERTAG} ending
 logfile "ending"
