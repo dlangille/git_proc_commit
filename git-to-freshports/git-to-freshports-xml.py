@@ -31,7 +31,9 @@ import logging.config
 import argparse
 import git
 import datetime
+import shutil
 import sys
+import tempfile
 import os
 
 from pathlib import Path
@@ -45,13 +47,14 @@ SYSLOG_FACILITY = 'local3'
 
 def get_config() -> dict:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('-p', '--path', type=Path, required=True, help="Path to the repository")
-    parser.add_argument('-O', '--output', type=Path, required=True, help="Output directory. Must already exist")
-    parser.add_argument('-r', '--repo', default='ports', help="Repository we're working on. Defaults to 'ports'")
-    parser.add_argument('-o', '--os', default='FreeBSD', help="OS we're working on. Defaults to 'FreeBSD'")
-    parser.add_argument('-f', '--force', action='store_true', help="Overwrite commit XML files if they already exist")
-    parser.add_argument('-v', '--verbose', action='store_const', const='DEBUG', default='INFO', dest='log_level',
-                        help="Print more debug information")
+    parser.add_argument('-p', '--path',     type=Path, required=True, help="Path to the repository")
+    parser.add_argument('-O', '--output',   type=Path, required=True, help="Output directory. Must already exist")
+    parser.add_argument('-S', '--spooling', type=Path, required=True, help="Spooling directory. Must already exist and be on the same filesystem as --output")
+    parser.add_argument('-r', '--repo',     default='ports',          help="Repository we're working on. Defaults to 'ports'")
+    parser.add_argument('-o', '--os',       default='FreeBSD',        help="OS we're working on. Defaults to 'FreeBSD'")
+    parser.add_argument('-f', '--force',   action='store_true',       help="Overwrite commit XML files if they already exist")
+    parser.add_argument('-v', '--verbose', action='store_const', const='DEBUG', default='INFO', dest='log_level', 
+                                                                      help="Print more debug information")
 
     commit_group = parser.add_mutually_exclusive_group(required=True)
     commit_group.add_argument('-c', '--commit',
@@ -162,10 +165,18 @@ def main():
         file_mode = 'wb' if config['force'] else 'xb'
         log.debug("Dumping XML")
         try:
-            with open(Path(config['output'], file_name), file_mode) as out_file:
-                out_file.write(ET.tostring(root, xml_declaration=True, encoding="UTF-8", pretty_print=True))
+            with tempfile.NamedTemporaryFile(prefix='FreshPorts.ingress.', dir=config['spooling'], delete=False) as temp_file:
+                temp_file.write(ET.tostring(root, xml_declaration=True, encoding="UTF-8", pretty_print=True))
+                temp_file.close()
+
+                # write to a spooling directory to avoid race conditions with ingress writing and freshports reading.
+                # we chmod 0644 so ingress and freshports can both write.
+                # then we move.
+                os.chmod(temp_file.name, 0o664)
+                shutil.move(temp_file.name, Path(config['output'], file_name))
         except FileExistsError as e:
             log.warning(f"{e}, if you want to overwrite it - please specify '--force' flag")
+        
         log.debug("Processing complete")
 
 
