@@ -40,8 +40,8 @@ logfile "XML dir is $XML"
 
 cd ${REPODIR}
 
-logfile "${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --single-commit ${commit_hash} --spooling ${SPOOLINGDIR} --output ${XML}"
-         ${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --single-commit ${commit_hash} --spooling ${SPOOLINGDIR} --output ${XML}
+logfile "${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --single-commit ${commit_hash} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
+         ${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --single-commit ${commit_hash} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
 
 ${LOGGER} -t ${LOGGERTAG} ending
 logfile "ending"

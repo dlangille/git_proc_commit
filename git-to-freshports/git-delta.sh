@@ -75,8 +75,8 @@ commits=`${GIT} rev-list ${STARTPOINT}..HEAD`
 
 echo $commits
 
-logfile "${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --commit ${STARTPOINT} --spooling ${SPOOLINGDIR} --output ${XML}"
-         ${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --commit ${STARTPOINT} --spooling ${SPOOLINGDIR} --output ${XML}
+logfile "${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --commit ${STARTPOINT} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
+         ${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --commit ${STARTPOINT} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
          
 new_latest=`${GIT}  rev-parse HEAD`
 echo $new_latest > ${LATEST_FILE}
