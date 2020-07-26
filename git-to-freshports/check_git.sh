@@ -16,7 +16,7 @@ LOGGERTAG=check_git.sh
 ${LOGGER} -t ${LOGGERTAG} $0 has started
 
 # redirect everything into the file
-${SCRIPTDIR}/git-delta.sh >> ${GITLOG} 2>&1
+${SCRIPTDIR}/git-delta.sh "doc ports src" >> ${GITLOG} 2>&1
 
 /bin/rm ${CHECKGITFILE}
 

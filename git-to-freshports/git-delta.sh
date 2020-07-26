@@ -10,76 +10,99 @@ then
 	exit 1
 fi
 
+# this can be a space separated list of repositories to check
+# e.g. "doc ports src"
+repos=$1
+
 . /usr/local/etc/freshports/config.sh
 
 LOGGERTAG='git-delta.sh'
 
-logfile(){
-  msg=$1
-  
-  timestamp=`date "+%Y.%m.%d %H:%M:%S"` 
-  echo ${timestamp} ${LOGGERTAG} $msg
-}
-
 ${LOGGER} -t ${LOGGERTAG} has started
-logfile "has started"
+logfile "has started. Will check these repos: '${repos}'"
 
 # what remote are we using on this repo?
 REMOTE='origin'
 
-# where is the repo directory?
-# We may have to pass the repo name in as a parameter.
-REPODIR="${INGRESS_PORTS_DIR_BASE}/freebsd-ports"
-LATEST_FILE="${INGRESS_PORTS_DIR_BASE}/latest.freebsd-ports"
-
 # where we do dump the XML files which we create?
 XML="${INGRESS_MSGDIR}/incoming"
 
-logfile "repo is $REPODIR"
 logfile "XML dir is $XML"
 
-cd ${REPODIR}
+for repo in ${repos}
+do
 
-# Update local copies of remote branches
-logfile "running: ${GIT} fetch $REMOTE"
-${GIT} fetch $REMOTE
+   # convert the repo label to a physical directory on disk
+   dir=`convert_repo_label_to_directory ${repo}`
 
-logfile "running: ${GIT} checkout master"
-${GIT} checkout master
+   # empty means error
+   if [  "${dir}" == "" ]; then
+      ${LOGGER} -t ${LOGGERTAG} FATAL error, repo='${repo}' is unknown: cannot translate it to a directory name
+      continue
+   fi
 
-# Get the first commit for our starting point
-#STARTPOINT=$(${GIT} log --format=%h -n1 --reverse master..$REMOTE/master)
+   # where is the repo directory?
+   # This is the directory which contains the repos.
+   REPODIR="${INGRESS_PORTS_DIR_BASE}/${dir}"
+   LATEST_FILE="${INGRESS_PORTS_DIR_BASE}/latest.${dir}"
 
-# let's try having the latest commt in this this.
-STARTPOINT=`cat ${LATEST_FILE}`
+   if [ -d ${REPODIR} ]; then
+      ${LOGGER} -t ${LOGGERTAG} REPODIR='${REPODIR}' exists
+   else
+      ${LOGGER} -t ${LOGGERTAG} "FATAL error, REPODIR='${REPODIR}' is not a directory"
+      continue
+   fi
 
-if [ "${STARTPOINT}x" = 'x' ]
-then
-	logfile "STARTPOINT is empty; there must not be any new commits to process"
-	${LOGGER} -t ${LOGGERTAG} ending - no commits found
-	logfile "ending"
-	exit 1
-else
-	logfile "STARTPOINT = ${STARTPOINT}"
-fi
+   if [ -f ${LATEST_FILE} ]; then
+      ${LOGGER} -t ${LOGGERTAG} LATEST_FILE='${LATEST_FILE}' exists
+   else
+      ${LOGGER} -t ${LOGGERTAG} "FATAL error, LATEST_FILE='${LATEST_FILE}' does not exist. We need a starting point."
+      continue
+   fi
+
+   logfile "repo is $REPODIR"
+   # on with the work
+
+   cd ${REPODIR}
+
+   # Update local copies of remote branches
+   logfile "running: ${GIT} fetch $REMOTE"
+   ${GIT} fetch $REMOTE
+
+   logfile "running: ${GIT} checkout master"
+   ${GIT} checkout master
+
+   # let's try having the latest commt in this this.
+   STARTPOINT=`cat ${LATEST_FILE}`
+
+   if [ "${STARTPOINT}x" = 'x' ]
+   then
+      logfile "STARTPOINT is empty; there must not be any new commits to process"
+      ${LOGGER} -t ${LOGGERTAG} ending - no commits found
+      logfile "not proceeding with this repo: '${repo}'"
+      continue
+   else
+      logfile "STARTPOINT = ${STARTPOINT}"
+   fi
+
+   # Bring local branch up-to-date with the local remote
+   logfile "running; ${GIT} rebase $REMOTE/master"
+   ${GIT} rebase $REMOTE/master
 
 
-# Bring local branch up-to-date with the local remote
-logfile "running; ${GIT} rebase $REMOTE/master"
-${GIT} rebase $REMOTE/master
+   # get list of commits, if only to document them here
+   logfile "running: ${GIT} rev-list ${STARTPOINT}..HEAD"
+   commits=`${GIT} rev-list ${STARTPOINT}..HEAD`
 
+   echo $commits
 
-# get list of commits, if only to document them here
-logfile "running: ${GIT} rev-list ${STARTPOINT}..HEAD"
-commits=`${GIT} rev-list ${STARTPOINT}..HEAD`
-
-echo $commits
-
-logfile "${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --commit ${STARTPOINT} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
-         ${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --commit ${STARTPOINT} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
+   logfile "${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --commit ${STARTPOINT} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
+            ${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --commit ${STARTPOINT} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
          
-new_latest=`${GIT}  rev-parse HEAD`
-echo $new_latest > ${LATEST_FILE}
+   new_latest=`${GIT}  rev-parse HEAD`
+   echo $new_latest > ${LATEST_FILE}
+
+done
 
 ${LOGGER} -t ${LOGGERTAG} ending
 logfile "ending"

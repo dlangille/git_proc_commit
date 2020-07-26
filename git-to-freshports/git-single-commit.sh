@@ -5,7 +5,8 @@
 # An idea from https://github.com/sarcasticadmin
 
 # a single commit hash
-commit_hash=$1
+repo=$1
+commit_hash=$2
 
 if [ ! -f /usr/local/etc/freshports/config.sh ]
 then
@@ -17,17 +18,25 @@ fi
 
 LOGGERTAG='git-single-commit.sh'
 
+# convert the repo label to a physical directory on disk
+dir=`convert_repo_label_to_directory ${repo}`
+
+# empty means error
+if [  "${dir}" == "" ]; then
+   ${LOGGER} -t ${LOGGERTAG} FATAL error, repo='${repo}' is unknown: cannot translate it to a directory name
+   continue
+fi
+
+
 # where is the repo directory?
 # We may have to pass the repo name in as a parameter.
 REPODIR="${INGRESS_PORTS_DIR_BASE}/freebsd-ports"
 
-
-logfile(){
-  msg=$1
+if [ ! -d ${REPODIR} ]; then
+   ${LOGGER} -t ${LOGGERTAG} FATAL error, REPODIR='${REPODIR}' is not a directory
+   continue
+fi
   
-  timestamp=`date "+%Y.%m.%d %H:%M:%S"` 
-  echo ${timestamp} ${LOGGERTAG} $msg
-}
 
 ${LOGGER} -t ${LOGGERTAG} has started
 logfile "started"
@@ -40,8 +49,8 @@ logfile "XML dir is $XML"
 
 cd ${REPODIR}
 
-logfile "${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --single-commit ${commit_hash} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
-         ${SCRIPTDIR}/git-to-freshports-xml.py --path ${REPODIR} --single-commit ${commit_hash} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
+logfile "${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --single-commit ${commit_hash} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
+         ${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --single-commit ${commit_hash} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
 
 ${LOGGER} -t ${LOGGERTAG} ending
 logfile "ending"

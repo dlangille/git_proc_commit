@@ -50,7 +50,7 @@ def get_config() -> dict:
     parser.add_argument('-p', '--path',     type=Path, required=True, help="Path to the repository")
     parser.add_argument('-O', '--output',   type=Path, required=True, help="Output directory. Must already exist")
     parser.add_argument('-S', '--spooling', type=Path, required=True, help="Spooling directory. Must already exist and be on the same filesystem as --output")
-    parser.add_argument('-r', '--repo',     default='ports',          help="Repository we're working on. Defaults to 'ports'")
+    parser.add_argument('-r', '--repo',     required=True,             help="Repository we're working on. Defaults to 'ports'")
     parser.add_argument('-o', '--os',       default='FreeBSD',        help="OS we're working on. Defaults to 'FreeBSD'")
     parser.add_argument('-f', '--force',   action='store_true',       help="Overwrite commit XML files if they already exist")
     parser.add_argument('-v', '--verbose', action='store_const', const='DEBUG', default='INFO', dest='log_level', 
