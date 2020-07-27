@@ -8,6 +8,8 @@
 repo=$1
 commit_hash=$2
 
+echo $0 starting up with repo='$repo' and commit='$commit_hash'
+
 if [ ! -f /usr/local/etc/freshports/config.sh ]
 then
 	echo "/usr/local/etc/freshports/config.sh not found by $0"
@@ -30,7 +32,7 @@ fi
 
 # where is the repo directory?
 # We may have to pass the repo name in as a parameter.
-REPODIR="${INGRESS_PORTS_DIR_BASE}/freebsd-ports"
+REPODIR="${INGRESS_PORTS_DIR_BASE}/${dir}"
 
 if [ ! -d ${REPODIR} ]; then
    ${LOGGER} -t ${LOGGERTAG} FATAL error, REPODIR='${REPODIR}' is not a directory
