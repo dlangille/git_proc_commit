@@ -29,7 +29,7 @@
 import logging as log
 import logging.config
 import argparse
-import git
+import pygit2
 import datetime
 import shutil
 import sys
@@ -92,24 +92,36 @@ def configure_logging(log_level: str) -> None:
     })
 
 
+def commit_range(repo: pygit2.Repository, commit_range: str):
+    start_commit_ref, end_commit_ref = commit_range.split('..')
+    start_commit = repo.revparse_single(start_commit_ref)
+    end_commit = repo.revparse_single(end_commit_ref)
+
+    result = []
+    for commit in repo.walk(end_commit.oid):
+        if commit == start_commit:
+            break
+        result.append(commit)
+
+    return list(reversed(result))
+
+
 def main():
     config = get_config()
     configure_logging(config['log_level'])
     log.debug(f"Config is: {config}")
 
-    repo = git.Repo(str(config['path']))
+    repo = pygit2.Repository(str(config['path']))
 
     num_commits = 0
     if config['commit']:
-        commit_list = list(repo.iter_commits(f"{config['commit']}..HEAD"))
-        commits = reversed(commit_list)
-        num_commits = len(commit_list)
+        commits = commit_range(repo, f"{config['commit']}..HEAD")
+        num_commits = len(commits)
     elif config['commit_range']:
-        commit_list = list(repo.iter_commits(config['commit_range']))
-        commits = reversed(commit_list)
-        num_commits = len(commit_list)
+        commits = commit_range(repo, config['commit_range'])
+        num_commits = len(commits)
     elif config['single_commit']:
-        commits = [repo.commit(config['single_commit'])]        
+        commits = [repo.revparse_single(config['single_commit'])]
         num_commits = 1
     else:
         assert False  # This should not happen
@@ -118,12 +130,13 @@ def main():
         log.info(f"No commits found");
 
     for order_number, commit in enumerate(commits):
+        commit: pygit2.Commit
         log.info(f"Processing commit '{commit.message.splitlines()[0]}'")
         root = ET.Element('UPDATES', Version=FORMAT_VERSION)
         update = ET.SubElement(root, 'UPDATE')
 
         log.debug("Getting commit datetime")
-        commit_datetime = commit.committed_datetime.astimezone(datetime.timezone.utc)
+        commit_datetime = datetime.datetime.utcfromtimestamp(commit.commit_time)
         log.debug(f"Commit datetime: {commit_datetime}")
 
         log.debug("Writing commit date")
@@ -133,7 +146,7 @@ def main():
         ET.SubElement(update, 'TIME', Timezone='UTC', Hour=str(commit_datetime.hour),
                       Minute=str(commit_datetime.minute), Second=str(commit_datetime.second))
         log.debug("Writing OS entry")
-        ET.SubElement(update, 'OS', Repo=config['repo'], Id=config['os'], Branch=str(repo.active_branch))
+        ET.SubElement(update, 'OS', Repo=config['repo'], Id=config['os'], Branch=str(repo.head.shorthand))
 
         log.debug("Writing commit message")
         text = ET.SubElement(update, 'LOG')
@@ -144,24 +157,28 @@ def main():
         ET.SubElement(people, 'UPDATER', Handle=f"{commit.author.name} <{commit.author.email}>")
 
         log.debug("Writing commit hash")
-        ET.SubElement(update, 'COMMIT', Hash=commit.hexsha, HashShort=repo.git.rev_parse(commit.hexsha, short=4), Subject=commit.summary.strip(), EncodingLoses="false", Repository=config['repo'])
+        ET.SubElement(update, 'COMMIT', Hash=commit.hex, HashShort=commit.short_id,
+                      Subject=commit.message.splitlines()[0], EncodingLoses="false", Repository=config['repo'])
 
         files = ET.SubElement(update, 'FILES')
+        diff = repo.diff(commit.parents[0], commit)
+        diff.find_similar()  # Look for renames
         log.debug("Writing changes")
-        for file_change in commit.parents[0].diff(commit):
-            log.debug(f"Writing change: {file_change}")
-            if file_change.change_type == 'A':
-                ET.SubElement(files, 'FILE', Action='Add', Path=file_change.b_path)
-            elif file_change.change_type == 'D':
-                ET.SubElement(files, 'FILE', Action='Delete', Path=file_change.a_path)
-            elif file_change.change_type == 'R':
-                ET.SubElement(files, 'FILE', Action='Rename', Path=file_change.a_path, Destination=file_change.b_path)
+        for diff_delta in diff.deltas:
+            log.debug(f"Writing change: {diff_delta}")
+            change_type = diff_delta.status_char()
+            if change_type == 'A':
+                ET.SubElement(files, 'FILE', Action='Add', Path=diff_delta.new_file.path)
+            elif change_type == 'D':
+                ET.SubElement(files, 'FILE', Action='Delete', Path=diff_delta.old_file.path)
+            elif change_type == 'R':
+                ET.SubElement(files, 'FILE', Action='Rename', Path=diff_delta.old_file.path, Destination=diff_delta.new_file.path)
             else:  # M and T types
-                ET.SubElement(files, 'FILE', Action='Modify', Path=file_change.a_path)
+                ET.SubElement(files, 'FILE', Action='Modify', Path=diff_delta.old_file.path)
 
         file_name = (f"{commit_datetime.year}.{commit_datetime.month:02d}.{commit_datetime.day:02d}."
                      f"{commit_datetime.hour:02d}.{commit_datetime.minute:02d}.{commit_datetime.second:02d}."
-                     f"{order_number:06d}.{commit.hexsha}.xml")
+                     f"{order_number:06d}.{commit.hex}.xml")
         file_mode = 'wb' if config['force'] else 'xb'
         log.debug("Dumping XML")
         try:
