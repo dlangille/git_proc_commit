@@ -162,7 +162,6 @@ def main():
 
         files = ET.SubElement(update, 'FILES')
         diff = repo.diff(commit.parents[0], commit)
-        diff.find_similar()  # Look for renames
         log.debug("Writing changes")
         for diff_delta in diff.deltas:
             log.debug(f"Writing change: {diff_delta}")
