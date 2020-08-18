@@ -18,7 +18,6 @@ repos=$1
 
 LOGGERTAG='git-delta.sh'
 
-${LOGGER} -t ${LOGGERTAG} has started
 logfile "has started. Will check these repos: '${repos}'"
 
 # what remote are we using on this repo?
@@ -31,13 +30,14 @@ logfile "XML dir is $XML"
 
 for repo in ${repos}
 do
+   logfile "Now processing repo: ${repo}"
 
    # convert the repo label to a physical directory on disk
    dir=`convert_repo_label_to_directory ${repo}`
 
    # empty means error
    if [  "${dir}" == "" ]; then
-      ${LOGGER} -t ${LOGGERTAG} FATAL error, repo='${repo}' is unknown: cannot translate it to a directory name
+      logfile "FATAL error, repo='${repo}' is unknown: cannot translate it to a directory name"
       continue
    fi
 
@@ -47,30 +47,32 @@ do
    LATEST_FILE="${INGRESS_PORTS_DIR_BASE}/latest.${dir}"
 
    if [ -d ${REPODIR} ]; then
-      ${LOGGER} -t ${LOGGERTAG} REPODIR='${REPODIR}' exists
+      logfile "REPODIR='${REPODIR}' exists"
    else
-      ${LOGGER} -t ${LOGGERTAG} "FATAL error, REPODIR='${REPODIR}' is not a directory"
+      logfile "FATAL error, REPODIR='${REPODIR}' is not a directory"
       continue
    fi
 
    if [ -f ${LATEST_FILE} ]; then
-      ${LOGGER} -t ${LOGGERTAG} LATEST_FILE='${LATEST_FILE}' exists
+      logfile "LATEST_FILE='${LATEST_FILE}' exists"
    else
-      ${LOGGER} -t ${LOGGERTAG} "FATAL error, LATEST_FILE='${LATEST_FILE}' does not exist. We need a starting point."
+      logfile "FATAL error, LATEST_FILE='${LATEST_FILE}' does not exist. We need a starting point."
       continue
    fi
 
-   logfile "repo is $REPODIR"
+   logfile "Repodir is $REPODIR"
    # on with the work
 
    cd ${REPODIR}
 
    # Update local copies of remote branches
-   logfile "running: ${GIT} fetch $REMOTE"
+   logfile "Running: ${GIT} fetch $REMOTE:"
    ${GIT} fetch $REMOTE
+   logfile "Done."
 
-   logfile "running: ${GIT} checkout master"
+   logfile "Running: ${GIT} checkout master:"
    ${GIT} checkout master
+   logfile "Done."
 
    # let's try having the latest commt in this this.
    STARTPOINT=`cat ${LATEST_FILE}`
@@ -78,23 +80,33 @@ do
    if [ "${STARTPOINT}x" = 'x' ]
    then
       logfile "STARTPOINT is empty; there must not be any new commits to process"
-      ${LOGGER} -t ${LOGGERTAG} ending - no commits found
-      logfile "not proceeding with this repo: '${repo}'"
+      logfile "Not proceeding with this repo: '${repo}'"
       continue
    else
       logfile "STARTPOINT = ${STARTPOINT}"
    fi
 
    # Bring local branch up-to-date with the local remote
-   logfile "running; ${GIT} rebase $REMOTE/master"
+   logfile "Running; ${GIT} rebase $REMOTE/master:"
    ${GIT} rebase $REMOTE/master
+   logfile "Done."
 
 
    # get list of commits, if only to document them here
-   logfile "running: ${GIT} rev-list ${STARTPOINT}..HEAD"
+   logfile "Running: ${GIT} rev-list ${STARTPOINT}..HEAD"
    commits=`${GIT} rev-list ${STARTPOINT}..HEAD`
+   logfile "Done."
 
-   echo $commits
+   if [ -z "commits" ]
+   then
+     logfile "No commits were found"
+   else
+     logfile "The commits found are:"
+     for commit in $commits
+     do
+        logfile "$commit"
+     done
+   fi
 
    logfile "${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --commit ${STARTPOINT} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
             ${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --commit ${STARTPOINT} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
@@ -104,5 +116,4 @@ do
 
 done
 
-${LOGGER} -t ${LOGGERTAG} ending
-logfile "ending"
+logfile "Ending"
