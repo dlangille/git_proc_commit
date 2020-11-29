@@ -50,17 +50,16 @@ def get_config() -> dict:
     parser.add_argument('-p', '--path',     type=Path, required=True, help="Path to the repository")
     parser.add_argument('-O', '--output',   type=Path, required=True, help="Output directory. Must already exist")
     parser.add_argument('-S', '--spooling', type=Path, required=True, help="Spooling directory. Must already exist and be on the same filesystem as --output")
-    parser.add_argument('-r', '--repo',     required=True,             help="Repository we're working on. Defaults to 'ports'")
+    parser.add_argument('-r', '--repo',     required=True,            help="Repository we're working on. Defaults to 'ports'")
     parser.add_argument('-o', '--os',       default='FreeBSD',        help="OS we're working on. Defaults to 'FreeBSD'")
-    parser.add_argument('-f', '--force',   action='store_true',       help="Overwrite commit XML files if they already exist")
-    parser.add_argument('-v', '--verbose', action='store_const', const='DEBUG', default='INFO', dest='log_level', 
+    parser.add_argument('-f', '--force',    action='store_true',      help="Overwrite commit XML files if they already exist")
+    parser.add_argument('-v', '--verbose',  action='store_const', const='DEBUG', default='INFO', dest='log_level', 
                                                                       help="Print more debug information")
 
     commit_group = parser.add_mutually_exclusive_group(required=True)
-    commit_group.add_argument('-c', '--commit',
-                              help="Commit to process the tree since. Equivalent to '--commit-range=<commit>..HEAD'")
+    commit_group.add_argument('-c', '--commit',        help="Commit to process the tree since. Equivalent to '--commit-range=<commit>..HEAD'")
     commit_group.add_argument('-s', '--single-commit', help="Process only the supplied commit")
-    commit_group.add_argument('-R', '--commit-range', help="Range of commits to process in git format (FROM..TO)")
+    commit_group.add_argument('-R', '--commit-range',  help="Range of commits to process in git format (FROM..TO)")
 
     return vars(parser.parse_args())
 
@@ -95,7 +94,7 @@ def configure_logging(log_level: str) -> None:
 def commit_range(repo: pygit2.Repository, commit_range: str):
     start_commit_ref, end_commit_ref = commit_range.split('..')
     start_commit = repo.revparse_single(start_commit_ref)
-    end_commit = repo.revparse_single(end_commit_ref)
+    end_commit   = repo.revparse_single(end_commit_ref)
 
     result = []
     for commit in repo.walk(end_commit.oid):
@@ -127,7 +126,7 @@ def main():
         assert False  # This should not happen
 
     if (num_commits == 0):
-        log.info(f"No commits found");
+        log.info(f"No commits found for: {config['repo']}");
 
     for order_number, commit in enumerate(commits):
         commit: pygit2.Commit
