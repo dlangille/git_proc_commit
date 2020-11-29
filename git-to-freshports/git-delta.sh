@@ -65,13 +65,9 @@ do
 
    cd ${REPODIR}
 
-   # Update local copies of remote branches
-   logfile "Running: ${GIT} fetch $REMOTE:"
-   ${GIT} fetch $REMOTE
-   logfile "Done."
-
-   logfile "Running: ${GIT} checkout master:"
-   ${GIT} checkout master
+   # Bring local branch up-to-date with the local remote
+   logfile "Running: ${GIT} pull:"
+   ${GIT} pull
    logfile "Done."
 
    # let's try having the latest commt in this this.
@@ -85,12 +81,6 @@ do
    else
       logfile "STARTPOINT = ${STARTPOINT}"
    fi
-
-   # Bring local branch up-to-date with the local remote
-   logfile "Running; ${GIT} rebase $REMOTE/master:"
-   ${GIT} rebase $REMOTE/master
-   logfile "Done."
-
 
    # get list of commits, if only to document them here
    logfile "Running: ${GIT} rev-list ${STARTPOINT}..HEAD"
