@@ -40,7 +40,7 @@ from pathlib import Path
 from lxml    import etree as ET
 
 
-FORMAT_VERSION  = '1.4.0.0'
+FORMAT_VERSION  = '1.4.0.1'
 SYSLOG_ADDRESS  = '/var/run/log'  # Or UDP socket like ('1.2.3.4', 514)
 SYSLOG_FACILITY = 'local3'
 
@@ -131,7 +131,7 @@ def main():
     for order_number, commit in enumerate(commits):
         commit: pygit2.Commit
         log.info(f"Processing commit '{commit.message.splitlines()[0]}'")
-        root = ET.Element('UPDATES', Version=FORMAT_VERSION)
+        root = ET.Element('UPDATES', Version=FORMAT_VERSION, Source='git')
         update = ET.SubElement(root, 'UPDATE')
 
         log.debug("Getting commit datetime")
