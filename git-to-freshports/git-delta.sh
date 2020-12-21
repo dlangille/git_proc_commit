@@ -33,7 +33,7 @@ do
    logfile "Now processing repo: ${repo}"
 
    # convert the repo label to a physical directory on disk
-   dir=`convert_repo_label_to_directory ${repo}`
+   dir=$(convert_repo_label_to_directory ${repo})
 
    # empty means error
    if [  "${dir}" == "" ]; then
@@ -71,7 +71,7 @@ do
    logfile "Done."
 
    # let's try having the latest commt in this this.
-   STARTPOINT=`cat ${LATEST_FILE}`
+   STARTPOINT=$(cat ${LATEST_FILE})
 
    if [ "${STARTPOINT}x" = 'x' ]
    then
@@ -84,7 +84,7 @@ do
 
    # get list of commits, if only to document them here
    logfile "Running: ${GIT} rev-list ${STARTPOINT}..HEAD"
-   commits=`${GIT} rev-list ${STARTPOINT}..HEAD`
+   commits=$(${GIT} rev-list ${STARTPOINT}..HEAD)
    logfile "Done."
 
    if [ -z "commits" ]
@@ -101,7 +101,7 @@ do
    logfile "${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --commit ${STARTPOINT} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
             ${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --commit ${STARTPOINT} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
          
-   new_latest=`${GIT}  rev-parse HEAD`
+   new_latest=$(${GIT}  rev-parse HEAD)
    echo $new_latest > ${LATEST_FILE}
 
 done

@@ -21,7 +21,7 @@ fi
 LOGGERTAG='git-single-commit.sh'
 
 # convert the repo label to a physical directory on disk
-dir=`convert_repo_label_to_directory ${repo}`
+dir=$(convert_repo_label_to_directory ${repo})
 
 # empty means error
 if [  "${dir}" == "" ]; then
