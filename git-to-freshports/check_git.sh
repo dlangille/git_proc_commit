@@ -16,7 +16,8 @@ LOGGERTAG=check_git.sh
 ${LOGGER} -t ${LOGGERTAG} $0 has started
 
 # redirect everything into the file
-${SCRIPTDIR}/git-delta.sh "doc ports ports-quarterly src" >> ${GITLOG} 2>&1
+# the "quotes" around REPOS_TO_CHECK_GIT are required because it is a string as a single parameter
+${SCRIPTDIR}/git-delta.sh "$REPOS_TO_CHECK_GIT" >> ${GITLOG} 2>&1
 
 /bin/rm ${CHECKGITFILE}
 
