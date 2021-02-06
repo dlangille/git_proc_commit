@@ -87,7 +87,7 @@ do
    commits=$(${GIT} rev-list ${STARTPOINT}..HEAD)
    logfile "Done."
 
-   if [ -z "commits" ]
+   if [ -z "$commits" ]
    then
      logfile "No commits were found"
    else
