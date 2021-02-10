@@ -152,7 +152,7 @@ def main():
 
     for order_number, commit in enumerate(commits):
         commit: pygit2.Commit
-        log.info(f"Processing commit '{commit.message.splitlines()[0]}'")
+        log.info(f"Processing commit '{commit.hex} {commit.message.splitlines()[0]}'")
         root = ET.Element('UPDATES', Version=FORMAT_VERSION, Source='git')
         update = ET.SubElement(root, 'UPDATE')
 
@@ -194,15 +194,18 @@ def main():
         diff = repo.diff(commit.parents[0], commit)
         log.debug("Writing changes")
         for diff_delta in diff.deltas:
-            log.debug(f"Writing change: {diff_delta}")
             change_type = diff_delta.status_char()
             if change_type == 'A':
+                log.debug(f"Writing change: <new> -> {diff_delta.new_file.path}")
                 ET.SubElement(files, 'FILE', Action='Add', Path=diff_delta.new_file.path)
             elif change_type == 'D':
+                log.debug(f"Writing change: {diff_delta.old_file.path} -> <deleted>")
                 ET.SubElement(files, 'FILE', Action='Delete', Path=diff_delta.old_file.path)
             elif change_type == 'R':
+                log.debug(f"Writing change: {diff_delta.old_file.path} -> {diff_delta.new_file.path}")
                 ET.SubElement(files, 'FILE', Action='Rename', Path=diff_delta.old_file.path, Destination=diff_delta.new_file.path)
             else:  # M and T types
+                log.debug(f"Writing change: {diff_delta.old_file.path}")
                 ET.SubElement(files, 'FILE', Action='Modify', Path=diff_delta.old_file.path)
 
         file_name = (f"{commit_datetime.year}.{commit_datetime.month:02d}.{commit_datetime.day:02d}."
