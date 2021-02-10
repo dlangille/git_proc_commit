@@ -121,8 +121,11 @@ def commit_range(repo: pygit2.Repository, commit_range: str):
     start_commit = repo.revparse_single(start_commit_ref)
     end_commit   = repo.revparse_single(end_commit_ref)
 
+    walker = repo.walk(end_commit.oid)
+    walker.simplify_first_parent()  # Avoid wandering off to merged branches. Same as 'git log --first-parent'
+
     result = []
-    for commit in repo.walk(end_commit.oid):
+    for commit in walker:
         if commit == start_commit:
             break
         result.append(commit)
