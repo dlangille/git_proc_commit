@@ -40,7 +40,7 @@ from pathlib import Path
 from lxml    import etree as ET
 
 
-FORMAT_VERSION  = '1.4.0.1'
+FORMAT_VERSION  = '1.5.0.0'
 SYSLOG_ADDRESS  = '/var/run/log'  # Or UDP socket like ('1.2.3.4', 514)
 SYSLOG_FACILITY = 'local3'
 
@@ -55,6 +55,8 @@ def get_config() -> dict:
     parser.add_argument('-f', '--force',    action='store_true',      help="Overwrite commit XML files if they already exist")
     parser.add_argument('-v', '--verbose',  action='store_const', const='DEBUG', default='INFO', dest='log_level', 
                                                                       help="Print more debug information")
+    parser.add_argument('-l', '--log-dest', choices={'syslog', 'stderr'}, default='syslog', dest='log_destination',
+                        help="Logging destination. Defaults to 'sylog'")
 
     commit_group = parser.add_mutually_exclusive_group(required=True)
     commit_group.add_argument('-c', '--commit',        help="Commit to process the tree since. Equivalent to '--commit-range=<commit>..HEAD'")
@@ -64,31 +66,51 @@ def get_config() -> dict:
     return vars(parser.parse_args())
 
 
-def configure_logging(log_level: str) -> None:
-    logging.config.dictConfig({
+def configure_logging(log_level: str, log_destination: str) -> None:
+    log_config = {
         'version': 1,
         'disable_existing_loggers': True,
         'formatters': {
-            'syslog': {
-                'format': f'{os.path.basename(sys.argv[0])}[{os.getpid()}]:[%(levelname)s] %(message)s'
-            }
+            # Filled later
         },
         'handlers': {
-            'syslog': {
-                'class': 'logging.handlers.SysLogHandler',
-                'address': SYSLOG_ADDRESS,
-                'facility': SYSLOG_FACILITY,
-                'formatter': 'syslog',
-            },
+            # Filled later
         },
         'loggers': {
             '': {
-                'handlers': ['syslog'],
+                'handlers': [
+                    # Filler later
+                ],
                 'level': log_level,
                 'propagate': True,
             },
         }
-    })
+    }
+
+    if log_destination == 'syslog':
+        log_config['formatters']['syslog'] = {
+            'format': f'{os.path.basename(sys.argv[0])}[{os.getpid()}]:[%(levelname)s] %(message)s'
+        }
+        log_config['handlers']['syslog'] = {
+            'class': 'logging.handlers.SysLogHandler',
+            'address': SYSLOG_ADDRESS,
+            'facility': SYSLOG_FACILITY,
+            'formatter': 'syslog',
+        }
+        log_config['loggers']['']['handlers'] = ['syslog']
+    elif log_destination == 'stderr':
+        log_config['formatters']['stderr'] = {
+            'format': '%(asctime)s:[%(levelname)s]: %(message)s'
+        }
+        log_config['handlers']['stderr'] = {
+            'class': 'logging.StreamHandler',
+            'formatter': 'stderr'
+        }
+        log_config['loggers']['']['handlers'] = ['stderr']
+    else:
+        assert False, f"Unknown log_destination: {log_destination}"
+
+    logging.config.dictConfig(log_config)
 
 
 def commit_range(repo: pygit2.Repository, commit_range: str):
@@ -107,7 +129,7 @@ def commit_range(repo: pygit2.Repository, commit_range: str):
 
 def main():
     config = get_config()
-    configure_logging(config['log_level'])
+    configure_logging(config['log_level'], config['log_destination'])
     log.debug(f"Config is: {config}")
 
     repo = pygit2.Repository(str(config['path']))
@@ -130,7 +152,7 @@ def main():
 
     for order_number, commit in enumerate(commits):
         commit: pygit2.Commit
-        log.info(f"Processing commit '{commit.message.splitlines()[0]}'")
+        log.info(f"Processing commit '{commit.hex} {commit.message.splitlines()[0]}'")
         root = ET.Element('UPDATES', Version=FORMAT_VERSION, Source='git')
         update = ET.SubElement(root, 'UPDATE')
 
@@ -172,15 +194,18 @@ def main():
         diff = repo.diff(commit.parents[0], commit)
         log.debug("Writing changes")
         for diff_delta in diff.deltas:
-            log.debug(f"Writing change: {diff_delta}")
             change_type = diff_delta.status_char()
             if change_type == 'A':
+                log.debug(f"Writing change: <new> -> {diff_delta.new_file.path}")
                 ET.SubElement(files, 'FILE', Action='Add', Path=diff_delta.new_file.path)
             elif change_type == 'D':
+                log.debug(f"Writing change: {diff_delta.old_file.path} -> <deleted>")
                 ET.SubElement(files, 'FILE', Action='Delete', Path=diff_delta.old_file.path)
             elif change_type == 'R':
+                log.debug(f"Writing change: {diff_delta.old_file.path} -> {diff_delta.new_file.path}")
                 ET.SubElement(files, 'FILE', Action='Rename', Path=diff_delta.old_file.path, Destination=diff_delta.new_file.path)
             else:  # M and T types
+                log.debug(f"Writing change: {diff_delta.old_file.path}")
                 ET.SubElement(files, 'FILE', Action='Modify', Path=diff_delta.old_file.path)
 
         file_name = (f"{commit_datetime.year}.{commit_datetime.month:02d}.{commit_datetime.day:02d}."
