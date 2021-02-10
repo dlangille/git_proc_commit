@@ -44,6 +44,9 @@ FORMAT_VERSION  = '1.5.0.0'
 SYSLOG_ADDRESS  = '/var/run/log'  # Or UDP socket like ('1.2.3.4', 514)
 SYSLOG_FACILITY = 'local3'
 
+# A special git hash that denotes an empty repo. Present in every git repo.
+GIT_NULL_COMMIT = "4b825dc642cb6eb9a060e54bf8d69288fbee4904"
+
 
 def get_config() -> dict:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -191,7 +194,14 @@ def main():
                       Subject=commit.message.splitlines()[0], EncodingLoses="false", Repository=config['repo'])
 
         files = ET.SubElement(update, 'FILES')
-        diff = repo.diff(commit.parents[0], commit)
+
+        try:
+            diff = repo.diff(commit.parents[0], commit)
+        except IndexError:
+            # commit is a root commit and has no parents
+            # In this case we diff against git "null" commit
+            diff = repo.diff(GIT_NULL_COMMIT, commit)
+
         log.debug("Writing changes")
         for diff_delta in diff.deltas:
             change_type = diff_delta.status_char()
