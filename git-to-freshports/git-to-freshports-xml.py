@@ -190,7 +190,10 @@ def main():
 
         log.debug("Writing author")
         people = ET.SubElement(update, 'PEOPLE')
-        ET.SubElement(people, 'UPDATER', Handle=f"{commit.author.name} <{commit.author.email}>")
+
+        ET.SubElement(people, 'COMMITTER', CommitterName=f"{commit.committer.name}", CommitterEmail=f"{commit.committer.email}")
+
+        ET.SubElement(people, 'AUTHOR',    AuthorName=f"{commit.author.name}",       AuthorEmail=f"{commit.author.email}")
 
         log.debug("Writing commit hash")
         ET.SubElement(update, 'COMMIT', Hash=commit.hex, HashShort=commit.short_id,
