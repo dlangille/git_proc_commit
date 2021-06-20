@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="8" Minute="40" Second="4"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>mail/thunderbird: fix build with clang/libc++12
+
+PR:		255954
+Reported by:	dim
+Obtained from:	https://bugzilla.mozilla.org/show_bug.cgi?id=1694575
+
+(cherry picked from commit 5cfd4469d834c0bc282e8f0d2f45ede416290845)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Christoph Moench-Tegeder" CommitterEmail="cmt@FreeBSD.org"/>
+      <AUTHOR AuthorName="Christoph Moench-Tegeder" AuthorEmail="cmt@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e6b0a4d6272751fa08cee3e1d083b2574b1ec3c8" HashShort="e6b0a4d" Subject="mail/thunderbird: fix build with clang/libc++12" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Add" Path="mail/thunderbird/files/patch-bug1694575"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

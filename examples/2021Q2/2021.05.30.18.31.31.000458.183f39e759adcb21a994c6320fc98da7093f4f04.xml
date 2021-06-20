@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="30"/>
+    <TIME Timezone="UTC" Hour="18" Minute="31" Second="31"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/gallery-dl: update to 1.17.5
+
+Changes:	https://github.com/mikf/gallery-dl/releases/tag/v1.17.5
+Reported by:	GitHub (watch releases)
+
+(cherry picked from commit f92880116d8bcbf171b38a9b770974a1f6bb3167)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="183f39e759adcb21a994c6320fc98da7093f4f04" HashShort="183f39e" Subject="www/gallery-dl: update to 1.17.5" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/gallery-dl/Makefile"/>
+      <FILE Action="Modify" Path="www/gallery-dl/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

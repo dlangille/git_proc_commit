@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="13"/>
+    <TIME Timezone="UTC" Hour="19" Minute="45" Second="50"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11/xorg-server: Update to 1.20.11
+
+Changes: https://lists.x.org/archives/xorg/2021-April/060678.html
+(cherry picked from commit fdd94741382f7962682630fe7f03f7652c898e79)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Emmanuel Vadot" CommitterEmail="manu@FreeBSD.org"/>
+      <AUTHOR AuthorName="Emmanuel Vadot" AuthorEmail="manu@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="23351ba6e55bcf0d23c53bec5575168871c8403d" HashShort="23351ba" Subject="x11/xorg-server: Update to 1.20.11" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11-servers/xorg-server/Makefile"/>
+      <FILE Action="Modify" Path="x11-servers/xorg-server/distinfo"/>
+      <FILE Action="Modify" Path="x11-servers/xwayland/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

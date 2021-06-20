@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="24"/>
+    <TIME Timezone="UTC" Hour="11" Minute="45" Second="13"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/vulkan-caps-viewer: update to 3.01
+
+Changes:	https://github.com/SaschaWillems/VulkanCapsViewer/releases/tag/3.01
+Reported by:	GitHub (watch releases)
+
+(cherry picked from commit 93f93fa7511e0819069a4f337b70909d82aea208)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="dd9d2b67767d35afded972f938a15ff2f798c15f" HashShort="dd9d2b6" Subject="graphics/vulkan-caps-viewer: update to 3.01" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/vulkan-caps-viewer/Makefile"/>
+      <FILE Action="Modify" Path="graphics/vulkan-caps-viewer/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

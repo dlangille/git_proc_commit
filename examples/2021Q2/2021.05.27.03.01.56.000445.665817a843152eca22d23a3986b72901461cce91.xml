@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="27"/>
+    <TIME Timezone="UTC" Hour="3" Minute="1" Second="56"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11/phosh: add missing dependency after 5e9ec28809ec
+
+(phosh:1234): GLib-GIO-ERROR **: Settings schema 'org.gnome.shell.keybindings' is not installed
+
+(cherry picked from commit 0d5f0ec8304d07f7138b5a3972ec72c48d4fd03b)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="665817a843152eca22d23a3986b72901461cce91" HashShort="665817a" Subject="x11/phosh: add missing dependency after 5e9ec28809ec" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11/phosh/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

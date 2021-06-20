@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="8" Minute="39" Second="42"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/firefox-esr: fix build with clang/libc++12
+
+Reported by:	dim
+Obtained from:	https://bugzilla.mozilla.org/show_bug.cgi?id=1694575
+PR:		255953
+
+(cherry picked from commit d68bbde38e14ca3ac14b0c21b9f1a0c0a3928d2b)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Christoph Moench-Tegeder" CommitterEmail="cmt@FreeBSD.org"/>
+      <AUTHOR AuthorName="Christoph Moench-Tegeder" AuthorEmail="cmt@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8ed133d651cb393faed167f20e0facb0fb81d45d" HashShort="8ed133d" Subject="www/firefox-esr: fix build with clang/libc++12" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Add" Path="www/firefox-esr/files/patch-bug1694575"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

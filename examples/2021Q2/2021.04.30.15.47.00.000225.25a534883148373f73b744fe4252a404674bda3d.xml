@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="30"/>
+    <TIME Timezone="UTC" Hour="15" Minute="47" Second="0"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/chromium: add back patch for aarch64
+
+MFH:		2021Q2
+(cherry picked from commit a0ca21b89d3f42a6f47a7ce2e9f74948051c467a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rene Ladan" CommitterEmail="rene@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthias Wolf" AuthorEmail="matthias@rheinwolf.de"/>
+    </PEOPLE>
+    <COMMIT Hash="25a534883148373f73b744fe4252a404674bda3d" HashShort="25a5348" Subject="www/chromium: add back patch for aarch64" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Add" Path="www/chromium/files/patch-third__party_zlib_BUILD.gn"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

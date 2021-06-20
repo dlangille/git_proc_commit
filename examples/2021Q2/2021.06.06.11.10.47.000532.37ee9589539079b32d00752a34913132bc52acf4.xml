@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="6"/>
+    <TIME Timezone="UTC" Hour="11" Minute="10" Second="47"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/vlc: Update to upstream version 3.0.14.
+
+Changes since 3.0.12:
+---------------------
+
+Demux:
+ * Adaptive: fix artefacts in HLS streams with wrong profiles/levels
+ * Fix regression on some MP4 files for the audio track
+ * Fix MPGA and ADTS probing in TS files
+ * Fix Flac inside AVI files
+ * Fix VP9/Webm artefacts when seeking
+
+Codec:
+ * Support SSA text scaling
+ * Fix rotation on Android rotation
+ * Fix WebVTT subtitles that start at 00:00
+
+Access:
+ * Update libnfs to support NFSv4
+ * Improve SMB2 integration
+ * Fix Blu-ray files using Unicode names on Windows
+ * Disable mcast lookups on Android for RTSP playback
+
+Video Output:
+ * Rework the D3D11 rendering wait, to fix choppiness on display
+
+Interfaces:
+ * Fix VLC getting stuck on close on X11 (#21875)
+ * Improve RTL on preferences on macOS
+ * Add mousewheel horizontal axis control
+ * Fix crash on exit on macOS
+ * Fix sizing of the fullscreen controls on macOS
+
+Windows:
+ * Fix subtitles/OSD under Windows XP
+
+Misc:
+ * Update translations
+ * Improve MIDI fonts search on Linux
+ * Update Soundcloud, Youtube, liveleak
+ * Fix compilation with GCC11
+ * Fix input-slave option for subtitles
+
+MFH:		2021Q2
+(cherry picked from commit 984c3ef8a615d27bfd9ca97a26722bafed446520)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Thomas Zander" CommitterEmail="riggs@FreeBSD.org"/>
+      <AUTHOR AuthorName="Thomas Zander" AuthorEmail="riggs@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="37ee9589539079b32d00752a34913132bc52acf4" HashShort="37ee9589" Subject="multimedia/vlc: Update to upstream version 3.0.14." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/vlc/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/vlc/distinfo"/>
+      <FILE Action="Delete" Path="multimedia/vlc/files/patch-modules-lua-vlc.h"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

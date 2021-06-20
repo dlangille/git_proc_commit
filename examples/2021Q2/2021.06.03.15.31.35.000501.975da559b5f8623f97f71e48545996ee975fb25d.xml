@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="3"/>
+    <TIME Timezone="UTC" Hour="15" Minute="31" Second="35"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/openvpn-devel: bugfix update to 0033811e
+
+Changes:
+* 0033811e 2021-06-03 | Fix SIGSEGV (NULL deref) receiving push "echo" [Matthias Andree]
+* b7fe49c2 2021-05-24 | Do not require CA when peer-fingerprint is used [Selva Nair]
+* 28240c4a 2021-06-01 | Fix parsing of IV_SSO string [Selva Nair]
+
+Approved by: Gert Doering (maintainer, by IRC)
+
+(cherry picked from commit 8c0ab38d7a4762277fdbb3da8f0f72a60b4cec2c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Matthias Andree" CommitterEmail="mandree@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthias Andree" AuthorEmail="mandree@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="975da559b5f8623f97f71e48545996ee975fb25d" HashShort="975da55" Subject="security/openvpn-devel: bugfix update to 0033811e" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/openvpn-devel/Makefile"/>
+      <FILE Action="Modify" Path="security/openvpn-devel/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

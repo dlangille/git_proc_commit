@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="12"/>
+    <TIME Timezone="UTC" Hour="22" Minute="23" Second="22"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/lttng-tools: fix obtaining HOST_NAME_MAX
+
+Using sysconf(3) API lead to accidental introduction of variable length arrays
+(VLA) in the port. Additionally one patch hardcoded 256 as the HOST_NAME_MAX
+even though the code doesn't expect an additional byte for the terminating NULL
+byte in the struct definition.
+
+Fall back to using _POSIX_HOST_NAME_MAX as the remaining code is not ready for
+introducing sysconf(3) as a patch.
+
+Remove #ifdef FreeBSD from our patches.
+
+Bump PORTREVISION to rebuild with the new patch.
+
+Sponsored by:   Fudo Security
+Differential Revision:	https://reviews.freebsd.org/D30048
+
+(cherry picked from commit aa34b0f42f0b02560ef68a9bd952206c02869e64)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Adam Wolk" AuthorEmail="a.wolk@fudosecurity.com"/>
+    </PEOPLE>
+    <COMMIT Hash="012f31b59f04fabd0cc48121de8664b17f19fe4f" HashShort="012f31b" Subject="sysutils/lttng-tools: fix obtaining HOST_NAME_MAX" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/lttng-tools/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/lttng-tools/files/patch-src_bin_lttng-sessiond_consumer.c"/>
+      <FILE Action="Modify" Path="sysutils/lttng-tools/files/patch-src_bin_lttng-sessiond_session.h"/>
+      <FILE Action="Modify" Path="sysutils/lttng-tools/files/patch-src_bin_lttng-sessiond_ust-metadata.c"/>
+      <FILE Action="Modify" Path="sysutils/lttng-tools/files/patch-src_bin_lttng_commands_view.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

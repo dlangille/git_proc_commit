@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="8"/>
+    <TIME Timezone="UTC" Hour="23" Minute="20" Second="43"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/valgrind-devel: Fix pkg-plist for option MANPAGES
+
+It was accidentally broken by r568304.
+
+PR:		254687
+Approved by:	Paul Floyd &lt;pjfloyd@wanadoo.fr&gt; (maintainer)
+
+(cherry picked from commit 2ffc589066b73ac61bee88356f6d272307292441)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jung-uk Kim" CommitterEmail="jkim@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jung-uk Kim" AuthorEmail="jkim@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="077df0087eb2c3c18f18dd2502dd65efb52b43c4" HashShort="077df00" Subject="devel/valgrind-devel: Fix pkg-plist for option MANPAGES" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/valgrind-devel/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="23"/>
+    <TIME Timezone="UTC" Hour="0" Minute="22" Second="7"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/yuzu: limit sdl &lt; 2.0.15 workaround to PS5 rumble
+
+- devel/sdl20 currently disables HIDAPI by default
+- rumble hint is only necessary for bluetooth
+
+(cherry picked from commit e68388943479a40b76501705b136467b74b64cec)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="1b4a63f07e456f3d02fe551f7954bc11bb2c273c" HashShort="1b4a63f" Subject="emulators/yuzu: limit sdl &lt; 2.0.15 workaround to PS5 rumble" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/yuzu/files/patch-sdl2"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

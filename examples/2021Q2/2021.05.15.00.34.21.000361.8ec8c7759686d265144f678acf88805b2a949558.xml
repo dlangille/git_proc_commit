@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="15"/>
+    <TIME Timezone="UTC" Hour="0" Minute="34" Second="21"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11-wm/wayfire: document recommended addons
+
+When using default config Wayfire will show black screen if wf-shell
+isn't installed. However, wf-shell can be replaced by other packages.
+Exposing such addons as default options causes circular dependency.
+
+(cherry picked from commit 8a400121ead9a493b39fc902b5956343590e7eac)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8ec8c7759686d265144f678acf88805b2a949558" HashShort="8ec8c77" Subject="x11-wm/wayfire: document recommended addons" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Add" Path="x11-wm/wayfire/pkg-message"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="10"/>
+    <TIME Timezone="UTC" Hour="2" Minute="9" Second="1"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-im/coyim: Fixes the broken build.
+
+Remove the missing accel_flags for now from gotk3 vendor library.
+
+(cherry picked from commit 46d7ecb8c535d3b5344425335eef58ce8634d545)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Santhosh Raju" CommitterEmail="fox@FreeBSD.org"/>
+      <AUTHOR AuthorName="Santhosh Raju" AuthorEmail="fox@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="88d99b629ed2a5ad7daea333c4b63fa8b143dd30" HashShort="88d99b6" Subject="net-im/coyim: Fixes the broken build." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-im/coyim/Makefile"/>
+      <FILE Action="Add" Path="net-im/coyim/files/patch-vendor_github.com_gotk3_gotk3_gtk_accel.go"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

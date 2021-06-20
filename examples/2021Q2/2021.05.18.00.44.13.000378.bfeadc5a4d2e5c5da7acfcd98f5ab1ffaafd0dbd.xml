@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="0" Minute="44" Second="13"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/ceph14: update to 14.2.21 release
+
+Introduce option WITH_TESTS which covers all test/debug tools. Currently disabled due to linking errors
+
+PR:		255763 (based on)
+Approved by:	maintainer (implicit)
+
+(cherry picked from commit 715e14075958b553628fca5355caaf478f14ecd2)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="bfeadc5a4d2e5c5da7acfcd98f5ab1ffaafd0dbd" HashShort="bfeadc5" Subject="net/ceph14: update to 14.2.21 release" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/ceph14/distinfo"/>
+      <FILE Action="Modify" Path="net/ceph14/files/file-git_version"/>
+      <FILE Action="Add" Path="net/ceph14/files/patch-src_mgr_ActivePyModules.cc"/>
+      <FILE Action="Add" Path="net/ceph14/files/patch-src_os_bluestore_KernelDevice.cc"/>
+      <FILE Action="Delete" Path="net/ceph14/files/patch-src_rgw_rgw_main.cc.diff"/>
+      <FILE Action="Delete" Path="net/ceph14/files/patch-src_test_libcephfs_lazyio.cc"/>
+      <FILE Action="Modify" Path="net/ceph14/pkg-message"/>
+      <FILE Action="Modify" Path="net/ceph14/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

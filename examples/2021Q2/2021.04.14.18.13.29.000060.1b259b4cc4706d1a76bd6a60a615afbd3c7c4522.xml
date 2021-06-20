@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="14"/>
+    <TIME Timezone="UTC" Hour="18" Minute="13" Second="29"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>dns/dnscontrol: Fix distfile (upstream tag did not change)
+
+Reported by:	pkg-fallout
+
+(cherry picked from commit 70570f9bb01296872ad6ff1993aa476667b2f51a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernhard Froehlich" CommitterEmail="decke@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernhard Froehlich" AuthorEmail="decke@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="1b259b4cc4706d1a76bd6a60a615afbd3c7c4522" HashShort="1b259b4" Subject="dns/dnscontrol: Fix distfile (upstream tag did not change)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="dns/dnscontrol/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

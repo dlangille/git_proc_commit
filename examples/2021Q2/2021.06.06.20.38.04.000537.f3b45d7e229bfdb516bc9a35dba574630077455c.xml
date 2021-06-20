@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="6"/>
+    <TIME Timezone="UTC" Hour="20" Minute="38" Second="4"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/pglogical: Security update to 2.3.4
+
+ChangeLog:	https://github.com/2ndQuadrant/pglogical/releases/tag/REL2_3_4
+MFH:		2021Q2
+(cherry picked from commit fc84d439be373776eab7305ebd680345106d0ddb)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Matthew Seaman" CommitterEmail="matthew@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthew Seaman" AuthorEmail="matthew@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f3b45d7e229bfdb516bc9a35dba574630077455c" HashShort="f3b45d7" Subject="databases/pglogical: Security update to 2.3.4" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/pglogical/Makefile"/>
+      <FILE Action="Modify" Path="databases/pglogical/distinfo"/>
+      <FILE Action="Modify" Path="databases/pglogical/files/patch-pglogical__fe.c"/>
+      <FILE Action="Modify" Path="databases/pglogical/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="18"/>
+    <TIME Timezone="UTC" Hour="13" Minute="33" Second="43"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/chromium: update to 91.0.4472.114
+
+MFH:		2021Q2
+Security:	https://vuxml.freebsd.org/freebsd/afdc7579-d023-11eb-bcad-3065ec8fd3ec.html
+(cherry picked from commit d11be887452214296fcf5869c9c2db71e0264629)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rene Ladan" CommitterEmail="rene@FreeBSD.org"/>
+      <AUTHOR AuthorName="Rene Ladan" AuthorEmail="rene@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="711a4ba94c3297b4f0c68f90008426c4d3139d54" HashShort="711a4ba" Subject="www/chromium: update to 91.0.4472.114" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/chromium/Makefile"/>
+      <FILE Action="Modify" Path="www/chromium/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

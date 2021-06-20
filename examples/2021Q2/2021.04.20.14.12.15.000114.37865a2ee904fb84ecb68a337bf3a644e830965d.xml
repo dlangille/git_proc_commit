@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="20"/>
+    <TIME Timezone="UTC" Hour="14" Minute="12" Second="15"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/gearmand: Mark BROKEN on FreeBSD 12+
+
+Outdated and doesn't build on 12+
+
+References:
+https://portsfallout.com/fallout?port=devel%2Fgearmand$
+
+PR:	255212
+Reported by:	daniel.engberg.lists@pyret.net
+MFH:	2021Q2
+
+(cherry picked from commit 143627392d41563295e20a41a23473f671b6135b)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Fernando Apesteguía" CommitterEmail="fernape@FreeBSD.org"/>
+      <AUTHOR AuthorName="Fernando Apesteguía" AuthorEmail="fernape@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="37865a2ee904fb84ecb68a337bf3a644e830965d" HashShort="37865a2" Subject="devel/gearmand: Mark BROKEN on FreeBSD 12+" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/gearmand/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

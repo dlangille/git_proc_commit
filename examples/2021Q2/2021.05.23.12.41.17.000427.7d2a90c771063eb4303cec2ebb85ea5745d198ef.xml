@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="23"/>
+    <TIME Timezone="UTC" Hour="12" Minute="41" Second="17"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/musicpd: Update to upstream release 0.22.8.
+
+Details:
+- Upstream release, see
+  https://raw.githubusercontent.com/MusicPlayerDaemon/MPD/v0.22.8/NEWS
+- Fixes a regression (crash in the "albumart" command)
+
+MFH:		2021Q2
+(cherry picked from commit c194689f693785f04f66ccb5a813d849b329f2da)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Thomas Zander" CommitterEmail="riggs@FreeBSD.org"/>
+      <AUTHOR AuthorName="Thomas Zander" AuthorEmail="riggs@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="7d2a90c771063eb4303cec2ebb85ea5745d198ef" HashShort="7d2a90c" Subject="audio/musicpd: Update to upstream release 0.22.8." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/musicpd/Makefile"/>
+      <FILE Action="Modify" Path="audio/musicpd/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

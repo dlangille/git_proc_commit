@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="31"/>
+    <TIME Timezone="UTC" Hour="11" Minute="0" Second="46"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>mail/thunderbird: update to 78.11.0 (rc1)
+
+Release Notes (soon):
+  https://www.thunderbird.net/en-US/thunderbird/78.11.0/releasenotes/
+
+(cherry picked from commit 164f9966b49979962c36d5a43b4d1bb7f8a0877e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Christoph Moench-Tegeder" CommitterEmail="cmt@FreeBSD.org"/>
+      <AUTHOR AuthorName="Christoph Moench-Tegeder" AuthorEmail="cmt@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="bbb3286511816122520b7dc98607ebd8c5718f50" HashShort="bbb3286" Subject="mail/thunderbird: update to 78.11.0 (rc1)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="mail/thunderbird/Makefile"/>
+      <FILE Action="Modify" Path="mail/thunderbird/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

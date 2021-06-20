@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="13"/>
+    <TIME Timezone="UTC" Hour="16" Minute="43" Second="14"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/mariadb105-server: Security update to 10.5.10
+
+Security:	56ba4513-a1be-11eb-9072-d4c9ef517024
+MFH:		2021Q2
+(cherry picked from commit 77eb1b3bc8ffcaa0f237068738ac4cc7783c5c71)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernard Spil" CommitterEmail="brnrd@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernard Spil" AuthorEmail="brnrd@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="40461a60c4e2d3cfbf255609718510d975b85f9b" HashShort="40461a6" Subject="databases/mariadb105-server: Security update to 10.5.10" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/mariadb105-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/mariadb105-server/distinfo"/>
+      <FILE Action="Modify" Path="databases/mariadb105-server/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

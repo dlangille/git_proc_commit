@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="3"/>
+    <TIME Timezone="UTC" Hour="15" Minute="0" Second="26"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/wireguard-kmod: Update to 0.0.20210502
+
+(cherry picked from commit 8b129d0cf654b388615d41d75453ed4fcfa44bb6)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernhard Froehlich" CommitterEmail="decke@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernhard Froehlich" AuthorEmail="decke@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="87a5d373964b7b7491af13ff3c161850d1e73449" HashShort="87a5d37" Subject="net/wireguard-kmod: Update to 0.0.20210502" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/wireguard-kmod/Makefile"/>
+      <FILE Action="Modify" Path="net/wireguard-kmod/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

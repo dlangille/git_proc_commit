@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="11"/>
+    <TIME Timezone="UTC" Hour="17" Minute="55" Second="18"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/firefox: enable LTO by default on amd64
+
+Builds and works fine on 11.4, 12.2, 13.0, 14.0.
+
+(cherry picked from commit 6ec985b72d587add0bd8692d3b9b2e6fab7e8714)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="a726dca279c52ca5014bed6bd673349b3d706714" HashShort="a726dca" Subject="www/firefox: enable LTO by default on amd64" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/firefox/Makefile"/>
+      <FILE Action="Modify" Path="www/firefox/Makefile.options"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

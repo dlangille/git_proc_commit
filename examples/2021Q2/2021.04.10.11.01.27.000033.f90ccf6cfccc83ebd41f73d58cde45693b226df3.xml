@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="10"/>
+    <TIME Timezone="UTC" Hour="11" Minute="1" Second="27"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Regenerate all distfiles using gitlab as source.
+
+This regeneration is required as the new gitlab version changed
+the address and the directory the source files can be downloaded.
+
+This commit also applies some small fixes to make sure all ports using
+gitlab are buildable.
+
+Reviewed by:	mat
+Approved by:	portmgr
+Differential Revision:	https://reviews.freebsd.org/D29628
+
+(cherry picked from commit 911f04257e3175fca4e46c7d57bf5ca79767e209)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Matthias Fechner" CommitterEmail="mfechner@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthias Fechner" AuthorEmail="mfechner@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f90ccf6cfccc83ebd41f73d58cde45693b226df3" HashShort="f90ccf6" Subject="Regenerate all distfiles using gitlab as source." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="accessibility/feedbackd/distinfo"/>
+      <FILE Action="Modify" Path="audio/bcg729/distinfo"/>
+      <FILE Action="Modify" Path="audio/exhale/distinfo"/>
+      <FILE Action="Modify" Path="audio/lollypop/distinfo"/>
+      <FILE Action="Modify" Path="audio/mixertui/distinfo"/>
+      <FILE Action="Modify" Path="audio/sayonara/distinfo"/>
+      <FILE Action="Modify" Path="audio/soundtouch/distinfo"/>
+      <FILE Action="Modify" Path="cad/kicad-devel/distinfo"/>
+      <FILE Action="Modify" Path="comms/cutecom/distinfo"/>
+      <FILE Action="Modify" Path="databases/ods2sql/distinfo"/>
+      <FILE Action="Modify" Path="databases/pg_ed25519/distinfo"/>
+      <FILE Action="Modify" Path="deskutils/griffith/distinfo"/>
+      <FILE Action="Modify" Path="deskutils/gucharmap/distinfo"/>
+      <FILE Action="Modify" Path="deskutils/meteo/distinfo"/>
+      <FILE Action="Modify" Path="deskutils/sysctlview/distinfo"/>
+      <FILE Action="Modify" Path="devel/app-builder/distinfo"/>
+      <FILE Action="Modify" Path="devel/bcunit/distinfo"/>
+      <FILE Action="Modify" Path="devel/cl-alexandria/distinfo"/>
+      <FILE Action="Modify" Path="devel/cl-asdf/distinfo"/>
+      <FILE Action="Modify" Path="devel/deheader/distinfo"/>
+      <FILE Action="Modify" Path="devel/gitaly/distinfo"/>
+      <FILE Action="Modify" Path="devel/gitlab-runner/distinfo"/>
+      <FILE Action="Modify" Path="devel/gitlab-shell/distinfo"/>
+      <FILE Action="Modify" Path="devel/icmake/distinfo"/>
+      <FILE Action="Modify" Path="devel/libevdev/distinfo"/>
+      <FILE Action="Modify" Path="devel/libsysctlmibinfo/distinfo"/>
+      <FILE Action="Modify" Path="devel/libsysctlmibinfo2/distinfo"/>
+      <FILE Action="Modify" Path="devel/loccount/Makefile"/>
+      <FILE Action="Modify" Path="devel/loccount/distinfo"/>
+      <FILE Action="Modify" Path="devel/php-libawl/distinfo"/>
+      <FILE Action="Modify" Path="devel/py-pop-config/distinfo"/>
+      <FILE Action="Modify" Path="devel/py-pop/distinfo"/>
+      <FILE Action="Modify" Path="devel/py-tiamat/distinfo"/>
+      <FILE Action="Modify" Path="dns/bind9-devel/Makefile"/>
+      <FILE Action="Modify" Path="editors/dte/distinfo"/>
+      <FILE Action="Modify" Path="editors/jucipp/distinfo"/>
+      <FILE Action="Modify" Path="games/beret/distinfo"/>
+      <FILE Action="Modify" Path="games/bs/distinfo"/>
+      <FILE Action="Modify" Path="games/frotz/distinfo"/>
+      <FILE Action="Modify" Path="games/jinput/distinfo"/>
+      <FILE Action="Modify" Path="games/jutils/distinfo"/>
+      <FILE Action="Modify" Path="games/lugaru/distinfo"/>
+      <FILE Action="Modify" Path="games/open-adventure/distinfo"/>
+      <FILE Action="Modify" Path="games/re3/Makefile"/>
+      <FILE Action="Modify" Path="games/ski/distinfo"/>
+      <FILE Action="Modify" Path="games/solarus-quest-editor/distinfo"/>
+      <FILE Action="Modify" Path="games/solarus/distinfo"/>
+      <FILE Action="Modify" Path="games/veloren/distinfo"/>
+      <FILE Action="Modify" Path="games/veloren/files/patch-vek"/>
+      <FILE Action="Modify" Path="graphics/cbonsai/distinfo"/>
+      <FILE Action="Modify" Path="graphics/fig2sxd/distinfo"/>
+      <FILE Action="Modify" Path="graphics/gcolor3/distinfo"/>
+      <FILE Action="Modify" Path="graphics/glx-utils/distinfo"/>
+      <FILE Action="Modify" Path="graphics/gtk-update-icon-cache/distinfo"/>
+      <FILE Action="Modify" Path="graphics/jpeg-xl/distinfo"/>
+      <FILE Action="Modify" Path="graphics/katarakt/distinfo"/>
+      <FILE Action="Modify" Path="graphics/kmscube/distinfo"/>
+      <FILE Action="Modify" Path="graphics/libglvnd/distinfo"/>
+      <FILE Action="Modify" Path="graphics/libpillowfight/distinfo"/>
+      <FILE Action="Modify" Path="graphics/piglit/distinfo"/>
+      <FILE Action="Modify" Path="graphics/waffle/distinfo"/>
+      <FILE Action="Modify" Path="graphics/wayland-utils/distinfo"/>
+      <FILE Action="Modify" Path="graphics/xsane/distinfo"/>
+      <FILE Action="Modify" Path="lang/clisp/distinfo"/>
+      <FILE Action="Modify" Path="lang/owl-lisp/distinfo"/>
+      <FILE Action="Modify" Path="mail/isbg/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-alugrid/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-common/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-curvedgeometry/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-fem/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-foamgrid/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-functions/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-geometry/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-grid/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-istl/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-localfunctions/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-metagrid/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-pdelab/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-polygongrid/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-spgrid/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-typetree/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-uggrid/distinfo"/>
+      <FILE Action="Modify" Path="math/dune-vtk/distinfo"/>
+      <FILE Action="Modify" Path="math/minizinc-ide/distinfo"/>
+      <FILE Action="Modify" Path="math/symmetrica/distinfo"/>
+      <FILE Action="Modify" Path="math/sympow/distinfo"/>
+      <FILE Action="Modify" Path="misc/gnu-watch/distinfo"/>
+      <FILE Action="Modify" Path="misc/ironscanner/distinfo"/>
+      <FILE Action="Modify" Path="misc/iso-codes/distinfo"/>
+      <FILE Action="Modify" Path="misc/shared-mime-info/distinfo"/>
+      <FILE Action="Modify" Path="misc/tlci/distinfo"/>
+      <FILE Action="Modify" Path="misc/valentina/distinfo"/>
+      <FILE Action="Modify" Path="multimedia/dav1d/distinfo"/>
+      <FILE Action="Modify" Path="multimedia/libndi/distinfo"/>
+      <FILE Action="Modify" Path="multimedia/librist/distinfo"/>
+      <FILE Action="Modify" Path="multimedia/libvdpau/distinfo"/>
+      <FILE Action="Modify" Path="multimedia/svt-av1/distinfo"/>
+      <FILE Action="Modify" Path="multimedia/vdpauinfo/distinfo"/>
+      <FILE Action="Modify" Path="multimedia/x264/distinfo"/>
+      <FILE Action="Modify" Path="net-im/6cord/distinfo"/>
+      <FILE Action="Modify" Path="net-im/libaccounts-glib/distinfo"/>
+      <FILE Action="Modify" Path="net-im/libaccounts-qt5/distinfo"/>
+      <FILE Action="Modify" Path="net-im/libsignon-glib/distinfo"/>
+      <FILE Action="Modify" Path="net-im/telepathy-accounts-signon/distinfo"/>
+      <FILE Action="Modify" Path="net-mgmt/nagiosql/Makefile"/>
+      <FILE Action="Modify" Path="net-mgmt/nagiosql/distinfo"/>
+      <FILE Action="Modify" Path="net-mgmt/thanos/distinfo"/>
+      <FILE Action="Modify" Path="net/echoping/distinfo"/>
+      <FILE Action="Modify" Path="net/geoclue/distinfo"/>
+      <FILE Action="Modify" Path="net/gitlab-agent/distinfo"/>
+      <FILE Action="Modify" Path="net/ooni-mini/distinfo"/>
+      <FILE Action="Modify" Path="net/ooni-probe-cli/distinfo"/>
+      <FILE Action="Modify" Path="net/remmina/distinfo"/>
+      <FILE Action="Modify" Path="net/seaweedfs/distinfo"/>
+      <FILE Action="Modify" Path="net/waypipe/distinfo"/>
+      <FILE Action="Modify" Path="print/pdftk/distinfo"/>
+      <FILE Action="Modify" Path="science/agrum/distinfo"/>
+      <FILE Action="Modify" Path="science/dalton/distinfo"/>
+      <FILE Action="Modify" Path="science/libvdwxc/distinfo"/>
+      <FILE Action="Modify" Path="science/massxpert/distinfo"/>
+      <FILE Action="Modify" Path="science/opensph/distinfo"/>
+      <FILE Action="Modify" Path="science/simgrid/distinfo"/>
+      <FILE Action="Modify" Path="science/xdrawchem/distinfo"/>
+      <FILE Action="Modify" Path="security/obfs4proxy-tor/distinfo"/>
+      <FILE Action="Modify" Path="security/palisade/distinfo"/>
+      <FILE Action="Modify" Path="security/py-sequoia/Makefile"/>
+      <FILE Action="Modify" Path="security/py-sequoia/distinfo"/>
+      <FILE Action="Modify" Path="security/sequoia/distinfo"/>
+      <FILE Action="Modify" Path="security/signing-party/distinfo"/>
+      <FILE Action="Modify" Path="shells/ion/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/accounts-qml-module/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/beats7/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/evhz/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/hs-cputype/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/hs-cputype/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/jstest-gtk/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/libg15/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/minipro/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/nsysctl/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/py-dict-toolbox/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/py-python-crontab/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/signon-plugin-oauth2/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/signon-qt5/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/signon-ui/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/sysctlbyname-improved-kmod/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/sysctlinfo-kmod/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/ufetch/distinfo"/>
+      <FILE Action="Modify" Path="textproc/gitlab-elasticsearch-indexer/distinfo"/>
+      <FILE Action="Modify" Path="textproc/yodl/distinfo"/>
+      <FILE Action="Modify" Path="www/amfora/distinfo"/>
+      <FILE Action="Modify" Path="www/davical/distinfo"/>
+      <FILE Action="Modify" Path="www/ffsend/distinfo"/>
+      <FILE Action="Modify" Path="www/gitlab-ce/distinfo"/>
+      <FILE Action="Modify" Path="www/gitlab-workhorse/distinfo"/>
+      <FILE Action="Modify" Path="www/simple-web-server/distinfo"/>
+      <FILE Action="Modify" Path="x11-drivers/xf86-video-intel/distinfo"/>
+      <FILE Action="Modify" Path="x11-themes/plata-theme/distinfo"/>
+      <FILE Action="Modify" Path="x11-toolkits/color-widgets-qt5/distinfo"/>
+      <FILE Action="Modify" Path="x11-toolkits/libhandy0/distinfo"/>
+      <FILE Action="Modify" Path="x11-wm/phoc/distinfo"/>
+      <FILE Action="Modify" Path="x11/arandr/distinfo"/>
+      <FILE Action="Modify" Path="x11/gtk-app-menu/distinfo"/>
+      <FILE Action="Modify" Path="x11/libxcvt/distinfo"/>
+      <FILE Action="Modify" Path="x11/phosh/distinfo"/>
+      <FILE Action="Modify" Path="x11/squeekboard/distinfo"/>
+      <FILE Action="Modify" Path="x11/tint/distinfo"/>
+      <FILE Action="Modify" Path="x11/virglrenderer/distinfo"/>
+      <FILE Action="Modify" Path="x11/virtboard/distinfo"/>
+      <FILE Action="Modify" Path="x11/xrestop/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="9"/>
+    <TIME Timezone="UTC" Hour="22" Minute="11" Second="51"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/gitea: Update to 1.13.7
+
+PR:	254930
+Submitted by:	maintainer</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Adam Weinberger" CommitterEmail="adamw@FreeBSD.org"/>
+      <AUTHOR AuthorName="Adam Weinberger" AuthorEmail="adamw@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="78ba3b7c50e7f26ba87866cb611ea81d0fee7989" HashShort="78ba3b7" Subject="www/gitea: Update to 1.13.7" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/gitea/Makefile"/>
+      <FILE Action="Modify" Path="www/gitea/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

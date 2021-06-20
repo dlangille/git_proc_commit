@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="21"/>
+    <TIME Timezone="UTC" Hour="12" Minute="52" Second="47"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>dns/bind916: Update to 9.16.16.
+
+MFH:	2021Q2
+Changes: https://downloads.isc.org/isc/bind9/9.16.16/doc/arm/html/notes.html#notes-for-bind-9-16-16
+(cherry picked from commit e06ef8b69d83bc160af3b2a95a1c9a1ae423ebfe)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mathieu Arnold" CommitterEmail="mat@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mathieu Arnold" AuthorEmail="mat@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="da8835cf22f2307f300dbc327028d6022372a36e" HashShort="da8835c" Subject="dns/bind916: Update to 9.16.16." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="dns/bind916/Makefile"/>
+      <FILE Action="Modify" Path="dns/bind916/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

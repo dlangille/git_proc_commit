@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="3"/>
+    <TIME Timezone="UTC" Hour="11" Minute="34" Second="3"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/py-aiohttp: update to 3.7.4.post0
+
+PR:		256219
+Approved by:	koobs (maintainer)
+Security:	CVE-2021-21330
+Security:	3000acee-c45d-11eb-904f-14dae9d5a9d2
+MFH:		2020Q2 (bugfix, security release(s))
+
+(cherry picked from commit ac412b55156cc77c8e96fb631a338a617749bcb7)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="618cb4a87e8f811e54889cd353f59847f8b55ba3" HashShort="618cb4a" Subject="www/py-aiohttp: update to 3.7.4.post0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/py-aiohttp/Makefile"/>
+      <FILE Action="Modify" Path="www/py-aiohttp/distinfo"/>
+      <FILE Action="Delete" Path="www/py-aiohttp/files/patch-setup.py"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="20" Minute="45" Second="8"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/php74: Upgrade from 7.4.19 to 7.4.20
+
+Changelog:
+
+    Core:
+        Fixed bug #80929 (Method name corruption related to repeated calls to call_user_func_array).
+        Fixed bug #80960 (opendir() warning wrong info when failed on Windows).
+        Fixed bug #67792 (HTTP Authorization schemes are treated as case-sensitive).
+        Fixed bug #80972 (Memory exhaustion on invalid string offset).
+    FPM:
+        Fixed bug #65800 (Events port mechanism).
+    FTP:
+        Fixed bug #80901 (Info leak in ftp extension).
+        Fixed bug #79100 (Wrong FTP error messages).
+    GD:
+        Fixed bug #81032 (GD install is affected by external libgd installation).
+    MBString:
+        Fixed bug #81011 (mb_convert_encoding removes references from arrays).
+    ODBC:
+        Fixed bug #80460 (ODBC doesn't account for SQL_NO_TOTAL indicator).
+    PDO_MySQL:
+        Fixed bug #81037 (PDO discards error message text from prepared statement).
+    PDO_ODBC:
+        Fixed bug #44643 (bound parameters ignore explicit type definitions).
+    pgsql:
+        Fixed php_pgsql_fd_cast() wrt. php_stream_can_cast().
+    SPL:
+        Fixed bug #80933 (SplFileObject::DROP_NEW_LINE is broken for NUL and CR).
+    Opcache:
+        Fixed bug #80900 (switch statement behavior inside function).
+        Fixed bug #81015 (Opcache optimization assumes wrong part of ternary operator in if-condition).
+    XMLReader:
+        Fixed bug #73246 (XMLReader: encoding length not checked).
+    Zip:
+        Fixed bug #80863 (ZipArchive::extractTo() ignores references).
+
+Sponsored by:	Bounce Experts
+
+(cherry picked from commit a1915ded564eb2da54d7f2295902c2a7d5655e13)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Torsten Zuehlsdorff" CommitterEmail="tz@FreeBSD.org"/>
+      <AUTHOR AuthorName="Torsten Zuehlsdorff" AuthorEmail="tz@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="96099f86cf1eed6ac08195c4fe6e8eb305caebf8" HashShort="96099f8" Subject="lang/php74: Upgrade from 7.4.19 to 7.4.20" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/php74/Makefile"/>
+      <FILE Action="Modify" Path="lang/php74/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

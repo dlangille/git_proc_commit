@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="23"/>
+    <TIME Timezone="UTC" Hour="15" Minute="8" Second="52"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>shells/fish: Update to 3.2.2
+
+Changes:	https://github.com/fish-shell/fish-shell/releases/tag/3.2.2
+
+(cherry picked from commit 93946d8aaafcff4fe8142ad4b0abb57af426144c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Lewis Cook" CommitterEmail="lcook@FreeBSD.org"/>
+      <AUTHOR AuthorName="Lewis Cook" AuthorEmail="lcook@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0854e2520786948b8ed964f8711e1889d98d881a" HashShort="0854e25" Subject="shells/fish: Update to 3.2.2" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="shells/fish/Makefile"/>
+      <FILE Action="Modify" Path="shells/fish/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

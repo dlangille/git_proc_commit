@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="7"/>
+    <TIME Timezone="UTC" Hour="13" Minute="31" Second="56"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/py-gtts, textproc/py-googletrans: Pass maintainership
+
+Approved by:	lbartoletti (new maintainer)
+MFH:		2021Q2
+
+(cherry picked from commit 58fa1c7810afa2be6922aa870da2a45f22473b32)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kai Knoblich" CommitterEmail="kai@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kai Knoblich" AuthorEmail="kai@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="88b3bf6cdbc5cd7dffb40f526a38381babea882f" HashShort="88b3bf6" Subject="audio/py-gtts, textproc/py-googletrans: Pass maintainership" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/py-gtts/Makefile"/>
+      <FILE Action="Modify" Path="textproc/py-googletrans/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="28"/>
+    <TIME Timezone="UTC" Hour="5" Minute="31" Second="42"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Uses/cargo: Improve URL subsitution for ports using CARGO_USE_GIT[HUB|LAB]
+
+While maintaing a rust application, I found a cargo.toml that specifies
+the git URL with { git="https://..." }, cargo.mk expects a form like { git = "https://" }.
+This patch improve the regex making the spaces around the '=' optional
+Test: built all ports using the CARGO_USE_GIT feature
+
+Approved by: tobik
+Differential Revision: https://reviews.freebsd.org/D29805
+
+(cherry picked from commit 58744a09099a7accf9f5acd004e04701c6d8a130)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Tobias Kortkamp" CommitterEmail="tobik@FreeBSD.org"/>
+      <AUTHOR AuthorName="Luca Pizzamiglio" AuthorEmail="pizzamig@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="332722659b25d6c52e29bfbb3c81f5d2ffc9a62a" HashShort="3327226" Subject="Uses/cargo: Improve URL subsitution for ports using CARGO_USE_GIT[HUB|LAB]" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="Mk/Uses/cargo.mk"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

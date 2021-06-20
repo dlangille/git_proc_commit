@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="1"/>
+    <TIME Timezone="UTC" Hour="14" Minute="39" Second="34"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11/libX11: Update to 1.7.1.
+
+https://lists.x.org/archives/xorg-announce/2021-May/003088.html
+https://lists.x.org/archives/xorg-announce/2021-May/003089.html
+
+PR:		256034
+Security:	CVE-2021-31535
+
+(cherry picked from commit 275cdd9b5f5b66999dc8bcafa610eaa85b5b7b55)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jung-uk Kim" CommitterEmail="jkim@FreeBSD.org"/>
+      <AUTHOR AuthorName="Daniel Engberg" AuthorEmail="daniel.engberg.lists@pyret.net"/>
+    </PEOPLE>
+    <COMMIT Hash="c0f9304ef928105ed2616c2bda5f9a48f6dae053" HashShort="c0f9304" Subject="x11/libX11: Update to 1.7.1." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11/libX11/Makefile"/>
+      <FILE Action="Modify" Path="x11/libX11/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

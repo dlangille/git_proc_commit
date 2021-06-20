@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="19"/>
+    <TIME Timezone="UTC" Hour="6" Minute="1" Second="48"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/py-hcloud -- update to 1.12.0
+
+ChangeLog:	   https://github.com/hetznercloud/hcloud-python/blob/v1.12.0/CHANGELOG.rst
+(cherry picked from commit 654f739b8a2ac67166ae5c54530d07e1abac8364)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Matthew Seaman" CommitterEmail="matthew@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthew Seaman" AuthorEmail="matthew@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8e6aa4bb09926044ff9df78f8fbacc4e38d3c11c" HashShort="8e6aa4b" Subject="sysutils/py-hcloud -- update to 1.12.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/py-hcloud/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/py-hcloud/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

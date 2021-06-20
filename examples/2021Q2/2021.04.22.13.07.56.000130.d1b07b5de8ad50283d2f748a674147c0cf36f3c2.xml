@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="22"/>
+    <TIME Timezone="UTC" Hour="13" Minute="7" Second="56"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/lagrange: Make SSE4.1 support optional
+
+Older class AMD64 and i386 CPUs do not support
+SSE4.1, so make it opt-in instead.  This is a
+problem since a build host may support the
+feature-set whilst a package consumer does not,
+causing an unexpected crash upon starting
+the application.
+
+(cherry picked from commit 6a9dfe8760c745ce1710c71c797f88c2f5416b1c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Lewis Cook" CommitterEmail="lcook@FreeBSD.org"/>
+      <AUTHOR AuthorName="Lewis Cook" AuthorEmail="lcook@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="d1b07b5de8ad50283d2f748a674147c0cf36f3c2" HashShort="d1b07b5" Subject="www/lagrange: Make SSE4.1 support optional" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/lagrange/Makefile"/>
+      <FILE Action="Add" Path="www/lagrange/files/patch-lib_the__Foundation_CheckSSE.cmake"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

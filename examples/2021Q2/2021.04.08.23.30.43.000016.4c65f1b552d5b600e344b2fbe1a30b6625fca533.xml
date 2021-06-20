@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="8"/>
+    <TIME Timezone="UTC" Hour="23" Minute="30" Second="43"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/valgrind: Update to be based on release version of Valgrind 3.17
+
+Also, re-assign the submitter as maintainer.
+
+PR:		254506
+Approved by:	zeising (maintainer)
+
+(cherry picked from commit 4395c84bf891613c3c76551b96a797e58bdde0e9)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jung-uk Kim" CommitterEmail="jkim@FreeBSD.org"/>
+      <AUTHOR AuthorName="Paul Floyd" AuthorEmail="pjfloyd@wanadoo.fr"/>
+    </PEOPLE>
+    <COMMIT Hash="4c65f1b552d5b600e344b2fbe1a30b6625fca533" HashShort="4c65f1b" Subject="devel/valgrind: Update to be based on release version of Valgrind 3.17" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/valgrind/Makefile"/>
+      <FILE Action="Modify" Path="devel/valgrind/distinfo"/>
+      <FILE Action="Modify" Path="devel/valgrind/pkg-descr"/>
+      <FILE Action="Modify" Path="devel/valgrind/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

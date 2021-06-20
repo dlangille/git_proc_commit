@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="22"/>
+    <TIME Timezone="UTC" Hour="22" Minute="17" Second="44"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>science/mbdyn: Unbreak build by properly implementing get_nprocs() for FreeBSD.
+
+It looks like it was only built for one CPU before and didn't fail.
+Some change in the underlying libraries triggered the build to become
+multi-CPU and it began failing because get_nprocs() wasn't available
+for FreeBSD and also was't properly linked to the surrounding code.
+Reported by:	fallout
+
+(cherry picked from commit c4254019d8e8aa636db96bcea5702e0a39880048)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0b45aff9703499baec84b5c3adbee9e5e28d4e33" HashShort="0b45aff" Subject="science/mbdyn: Unbreak build by properly implementing get_nprocs() for FreeBSD." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="science/mbdyn/Makefile"/>
+      <FILE Action="Add" Path="science/mbdyn/files/patch-libraries_libobjs_get__nprocs.c"/>
+      <FILE Action="Add" Path="science/mbdyn/files/patch-mbdyn_base_invsolver.cc"/>
+      <FILE Action="Add" Path="science/mbdyn/files/patch-mbdyn_base_readlinsol.cc"/>
+      <FILE Action="Add" Path="science/mbdyn/files/patch-mbdyn_base_rtsolver.cc"/>
+      <FILE Action="Add" Path="science/mbdyn/files/patch-mbdyn_base_solver.cc"/>
+      <FILE Action="Modify" Path="science/mbdyn/pkg-descr"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

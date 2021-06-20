@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="9"/>
+    <TIME Timezone="UTC" Hour="10" Minute="57" Second="35"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/miniflux: update to 2.0.31
+
+(cherry picked from commit 108d5e1188a70c5f685a0e2cce2c7c6143016c19)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="cead38b0d4f5aab7ff73b65673a464733908ed0b" HashShort="cead38b" Subject="www/miniflux: update to 2.0.31" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/miniflux/Makefile"/>
+      <FILE Action="Modify" Path="www/miniflux/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

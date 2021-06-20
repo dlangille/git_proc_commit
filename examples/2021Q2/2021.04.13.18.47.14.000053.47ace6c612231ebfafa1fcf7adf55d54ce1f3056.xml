@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="13"/>
+    <TIME Timezone="UTC" Hour="18" Minute="47" Second="14"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/python39: Update to 3.9.4
+
+(cherry picked from commit 11cc7534e67d8d92fe5abc998bf001a5d1e35a6e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Wen Heping" AuthorEmail="wen@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="47ace6c612231ebfafa1fcf7adf55d54ce1f3056" HashShort="47ace6c" Subject="lang/python39: Update to 3.9.4" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/python-doc-html/distinfo"/>
+      <FILE Action="Modify" Path="lang/python39/Makefile.version"/>
+      <FILE Action="Modify" Path="lang/python39/distinfo"/>
+      <FILE Action="Modify" Path="lang/python39/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

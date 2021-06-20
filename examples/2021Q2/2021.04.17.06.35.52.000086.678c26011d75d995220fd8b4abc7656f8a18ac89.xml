@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="17"/>
+    <TIME Timezone="UTC" Hour="6" Minute="35" Second="52"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/juce: Broken on 11
+
+Reported by:	fallout
+
+(cherry picked from commit 4354917d7bed7b36cbde3e5c4b5233ad82521d25)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="678c26011d75d995220fd8b4abc7656f8a18ac89" HashShort="678c260" Subject="devel/juce: Broken on 11" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/juce/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

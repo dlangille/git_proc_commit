@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="0" Minute="52" Second="36"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/nss: fix build on powerpc64le
+
+Error:
+C_Initialize failed: 0x00000030, CKR_DEVICE_ERROR
+NSPR error code: -5977: Failure to load dynamic library
+Initiailzing softoken failed: 0x00000030, CKR_DEVICE_ERROR
+NSPR error code: -5977: Failure to load dynamic library
+
+While here also correct option description after introducing proper VSX option in https://hg.mozilla.org/projects/nss/rev/a66c71152314e591106680e6de618c3c8d044373
+
+(cherry picked from commit 2eaa6b5910ff4c72b61a4fcf4b06c8f6c1d8db93)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Piotr Kubaj" AuthorEmail="pkubaj@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="05b3a5e55009aea31c3d2e690e86e84b3dde8408" HashShort="05b3a5e" Subject="security/nss: fix build on powerpc64le" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/nss/Makefile"/>
+      <FILE Action="Modify" Path="security/nss/files/patch-lib-freebl-Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

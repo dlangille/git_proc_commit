@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="14"/>
+    <TIME Timezone="UTC" Hour="12" Minute="26" Second="39"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/libopenraw: Fix fetch
+
+6d447e3feb6d47f958c786eb8ab40b0a7a535818.patch has changed slightly:
+
+-index 3356507f..261b9a92 100644
++index 3356507..261b9a9 100644
+
+(cherry picked from commit e566bd3c9cb470b453a220734421d61579626032)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Tobias Kortkamp" CommitterEmail="tobik@FreeBSD.org"/>
+      <AUTHOR AuthorName="Tobias Kortkamp" AuthorEmail="tobik@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="d853f98e6c5306812ddd30684d387a770c2579af" HashShort="d853f98" Subject="graphics/libopenraw: Fix fetch" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/libopenraw/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

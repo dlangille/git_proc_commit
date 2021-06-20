@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="3"/>
+    <TIME Timezone="UTC" Hour="13" Minute="59" Second="3"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>misc/tkcron: Use default tk
+
+tkcron is able to run under any version of tk. Use the default tk
+prescribed by the ports tree.
+
+PR:		255624
+Reported by:	Chris Hutchinson &lt;portmaster_bsdforge.com
+MFH:		2021Q2
+
+(cherry picked from commit d87efbc4572321f5aec06e94d199217cdb257f57)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Cy Schubert" CommitterEmail="cy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Cy Schubert" AuthorEmail="cy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e735db796840d86e4d65335996406cc7cbdb3f1d" HashShort="e735db7" Subject="misc/tkcron: Use default tk" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="misc/tkcron/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

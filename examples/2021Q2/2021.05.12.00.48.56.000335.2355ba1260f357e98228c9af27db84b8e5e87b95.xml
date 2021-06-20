@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="12"/>
+    <TIME Timezone="UTC" Hour="0" Minute="48" Second="56"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/qemu-user-static{,-devel}: fix build on recent FreeBSD
+
+This updates both to 6ffee39fe2e4, which pulls in some patches to fix
+the build after a recent commit to main that was MFC'd to stable/13.
+
+While we're here, update qemu-user-static-devel to point to the current
+upstream. qemu-user-static-devel will likely be updated in the near
+future to point to imp's 6.0 rebase branch for Q/A.
+
+(cherry picked from commit f2b487a6e9c74a44c1a68595a442f65951d4007c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kyle Evans" CommitterEmail="kevans@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kyle Evans" AuthorEmail="kevans@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="2355ba1260f357e98228c9af27db84b8e5e87b95" HashShort="2355ba1" Subject="emulators/qemu-user-static{,-devel}: fix build on recent FreeBSD" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/qemu-user-static-devel/Makefile"/>
+      <FILE Action="Modify" Path="emulators/qemu-user-static-devel/distinfo"/>
+      <FILE Action="Modify" Path="emulators/qemu-user-static/Makefile"/>
+      <FILE Action="Modify" Path="emulators/qemu-user-static/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

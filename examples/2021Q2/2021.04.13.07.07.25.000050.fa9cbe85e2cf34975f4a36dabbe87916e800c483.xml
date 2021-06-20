@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="13"/>
+    <TIME Timezone="UTC" Hour="7" Minute="7" Second="25"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>textproc/iksemel: fix build when openssl is installed.
+
+This port does not build when openssl is installed. Disable it explicitely in
+the configure.
+
+PR:	254296
+Reported by:	dym@afalina.od.ua
+Tested by:	felix@palmen-it.de newton.ja.terry@gmail.com
+MFH:		2021Q2 build fix
+
+(cherry picked from commit 0a4dd56b6717f75db19a03d8a7920783e256cd0a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Fernando Apesteguía" CommitterEmail="fernape@FreeBSD.org"/>
+      <AUTHOR AuthorName="Fernando Apesteguía" AuthorEmail="fernape@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="fa9cbe85e2cf34975f4a36dabbe87916e800c483" HashShort="fa9cbe8" Subject="textproc/iksemel: fix build when openssl is installed." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="textproc/iksemel/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

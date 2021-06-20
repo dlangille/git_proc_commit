@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="13" Minute="51" Second="34"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-mgmt/carbonzipper: fix plist
+
+@sample is used incorrectly here
+
+Approved by:	portmgr blanket
+
+(cherry picked from commit 3d100fb5155f0c98093b62f736e429f523542cc6)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="b829d75971512bcbd839df9cd314620d3e85c375" HashShort="b829d75" Subject="net-mgmt/carbonzipper: fix plist" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-mgmt/carbonzipper/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

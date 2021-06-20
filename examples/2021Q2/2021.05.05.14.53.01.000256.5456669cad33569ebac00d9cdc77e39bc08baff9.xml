@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="5"/>
+    <TIME Timezone="UTC" Hour="14" Minute="53" Second="1"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/ansible: Update to 2.9.21
+
+MFH:		2021Q2
+Security:	50ec3a01-ad77-11eb-8528-8c164582fbac
+Security:	CVE-2020-10744
+Changes:	https://github.com/ansible/ansible/blob/stable-2.9/changelogs/CHANGELOG-v2.9.rst#v2-9-21
+
+(cherry picked from commit fa8d16c7aa72c988379d453f7a243e9ca51b69d9)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mateusz Piotrowski" CommitterEmail="0mp@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mateusz Piotrowski" AuthorEmail="0mp@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="5456669cad33569ebac00d9cdc77e39bc08baff9" HashShort="5456669" Subject="sysutils/ansible: Update to 2.9.21" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/ansible/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/ansible/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

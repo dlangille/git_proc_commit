@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="1"/>
+    <TIME Timezone="UTC" Hour="3" Minute="41" Second="34"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/nncp: Update to 6.5.0
+
+Changes: http://www.nncpgo.org/Release-6_002e5_002e0.html
+
+PR:	256304
+(cherry picked from commit 82146b080fe70be39f9d73fcfa1170d1a6e02daf)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Neel Chauhan" CommitterEmail="nc@FreeBSD.org"/>
+      <AUTHOR AuthorName="Sergey Matveev" AuthorEmail="stargrave@stargrave.org"/>
+    </PEOPLE>
+    <COMMIT Hash="4bca84a98fb0ea69697c601e298db5467643fe3a" HashShort="4bca84a" Subject="net/nncp: Update to 6.5.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/nncp/Makefile"/>
+      <FILE Action="Modify" Path="net/nncp/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

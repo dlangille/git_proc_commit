@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="19"/>
+    <TIME Timezone="UTC" Hour="21" Minute="5" Second="5"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11-fm/krusader2: fix crash-on-exit
+
+Details are in the patch which has been added; committed upstream.</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Adriaan de Groot" CommitterEmail="adridg@FreeBSD.org"/>
+      <AUTHOR AuthorName="Adriaan de Groot" AuthorEmail="adridg@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="dc11fcf27d86281522b097f47c0503b8c1070cb2" HashShort="dc11fcf" Subject="x11-fm/krusader2: fix crash-on-exit" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11-fm/krusader2/Makefile"/>
+      <FILE Action="Add" Path="x11-fm/krusader2/files/patch-git-415d519e.diff"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="23"/>
+    <TIME Timezone="UTC" Hour="16" Minute="11" Second="2"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>llvm12: rework handling undefined options
+
+Define a list of options and for any that aren't defined for the current
+architecture add a PLIST_SUB entry as through the option were defined and
+disabled.
+
+(cherry picked from commit c9a3a7442f64da0f932d4e6934218c1acd684d25)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Brooks Davis" AuthorEmail="brooks@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="5390741fcfd802145f2cd2cdff5bceb292594f1e" HashShort="5390741" Subject="llvm12: rework handling undefined options" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/llvm12/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

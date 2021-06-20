@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="28"/>
+    <TIME Timezone="UTC" Hour="23" Minute="27" Second="26"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Mk/bsd.gecko.mk: bump rust-cbindgen dependency to 0.19.0
+
+that's required for Firefox 89.0, and works for Thunderbird, too
+
+Log:
+  http://beefy13.nyi.freebsd.org/data/130i386-quarterly/ec4bc9831585/logs/firefox-89.0,2.log
+
+Dependency defined in:
+  build/moz.configure/bindgen.configure
+
+Reported by:	pkg-fallout
+
+(cherry picked from commit 542fc012150030542a7eb9cc32c0bad96d4ef479)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Christoph Moench-Tegeder" CommitterEmail="cmt@FreeBSD.org"/>
+      <AUTHOR AuthorName="Christoph Moench-Tegeder" AuthorEmail="cmt@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="50477f68e31baa36286fd8d9239766ce9133225a" HashShort="50477f6" Subject="Mk/bsd.gecko.mk: bump rust-cbindgen dependency to 0.19.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="Mk/bsd.gecko.mk"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

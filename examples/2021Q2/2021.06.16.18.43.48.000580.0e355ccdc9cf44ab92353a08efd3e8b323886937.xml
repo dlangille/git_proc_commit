@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="16"/>
+    <TIME Timezone="UTC" Hour="18" Minute="43" Second="48"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/wireguard-kmod: Fix build on latest stable/13
+
+PR:		256639
+Obtained from:	https://git.zx2c4.com/wireguard-freebsd/commit/?id=64a507ad6b3c7e8455c67b452160b9e4211fd872
+
+(cherry picked from commit 57eb088f783473d1a7975d31a669d50b2f724e42)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernhard Froehlich" CommitterEmail="decke@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernhard Froehlich" AuthorEmail="decke@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0e355ccdc9cf44ab92353a08efd3e8b323886937" HashShort="0e355cc" Subject="net/wireguard-kmod: Fix build on latest stable/13" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/wireguard-kmod/Makefile"/>
+      <FILE Action="Add" Path="net/wireguard-kmod/files/patch-compat.h"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

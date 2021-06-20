@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="21"/>
+    <TIME Timezone="UTC" Hour="15" Minute="54" Second="30"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>benchmarks/glmark2: backport --fullscreen fix for WAYLAND option
+
+$ glmark2-wayland --fullscreen
+Error: eglCreateWindowSurface failed with error: 0x300b
+Error: eglCreateWindowSurface failed with error: 0x300b
+Error: CanvasGeneric: Invalid EGL state
+Error: main: Could not initialize canvas
+
+(cherry picked from commit 1307312bf475a3457d54c8ea2b3ff871519db22a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="7023f3d11c3c36d5dd0d08a697dff45534f09541" HashShort="7023f3d" Subject="benchmarks/glmark2: backport --fullscreen fix for WAYLAND option" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="benchmarks/glmark2/Makefile"/>
+      <FILE Action="Modify" Path="benchmarks/glmark2/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

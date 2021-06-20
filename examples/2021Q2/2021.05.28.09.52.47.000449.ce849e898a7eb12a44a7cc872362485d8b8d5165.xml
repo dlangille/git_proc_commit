@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="28"/>
+    <TIME Timezone="UTC" Hour="9" Minute="52" Second="47"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/samba41[23]: Update to 4.12.15
+
+Updated net/samba412 and net/samba413 to fix CVE-2021-20254.
+
+Also fixed:
+* Incorrect include line for the bind backend(255415)
+* Broken pkg-plist with NO_PYTHON(254033)
+* Broken URL parsing in LDAP client(252385)
+
+PR:		255415
+		254033
+		252385
+Security:	CVE-2021-20254
+
+(cherry picked from commit 3887986f673b9aa45588ab13e18544654ba5218a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Timur I. Bakeyev" AuthorEmail="timur@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ce849e898a7eb12a44a7cc872362485d8b8d5165" HashShort="ce849e8" Subject="net/samba41[23]: Update to 4.12.15" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/samba412/Makefile"/>
+      <FILE Action="Modify" Path="net/samba412/distinfo"/>
+      <FILE Action="Modify" Path="net/samba412/files/patch-bind"/>
+      <FILE Action="Add" Path="net/samba412/files/patch-linuxisms"/>
+      <FILE Action="Modify" Path="net/samba412/pkg-plist"/>
+      <FILE Action="Modify" Path="net/samba413/Makefile"/>
+      <FILE Action="Modify" Path="net/samba413/distinfo"/>
+      <FILE Action="Modify" Path="net/samba413/files/patch-bind"/>
+      <FILE Action="Add" Path="net/samba413/files/patch-linuxisms"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

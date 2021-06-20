@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="13"/>
+    <TIME Timezone="UTC" Hour="16" Minute="43" Second="13"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/mariadb104-server: Security update to 10.4.19
+
+Security:	56ba4513-a1be-11eb-9072-d4c9ef517024
+MFH:		2021Q2
+(cherry picked from commit a6d83062ce3d42fd591d4688d1e374a145b347f4)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernard Spil" CommitterEmail="brnrd@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernard Spil" AuthorEmail="brnrd@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="cd56aefb376fe673d640dcf2509689000f37b24a" HashShort="cd56aef" Subject="databases/mariadb104-server: Security update to 10.4.19" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/mariadb104-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/mariadb104-server/distinfo"/>
+      <FILE Action="Modify" Path="databases/mariadb104-server/files/patch-CMakeLists.txt"/>
+      <FILE Action="Modify" Path="databases/mariadb104-server/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

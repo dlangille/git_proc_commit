@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="25"/>
+    <TIME Timezone="UTC" Hour="8" Minute="31" Second="57"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/accountsservice: Update to 0.6.55
+
+This update also fixes the userdel functionality.
+
+PR:		249445
+Reviewed by:	0mp
+Approved by:	maintainer timeout
+MFH:		2021Q2
+Security:	75aae50b-9e3c-11eb-9bc3-8c164582fbac
+Security:	CVE-2018-14036
+
+(cherry picked from commit ffb1311e56725702208e807cfc63c8163c6b4a52)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mateusz Piotrowski" CommitterEmail="0mp@FreeBSD.org"/>
+      <AUTHOR AuthorName="Olivier Duchateau" AuthorEmail="olivierd@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="6a456af02d7efda292eb0c52887c1a1964478589" HashShort="6a456af" Subject="sysutils/accountsservice: Update to 0.6.55" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/accountsservice/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/accountsservice/distinfo"/>
+      <FILE Action="Delete" Path="sysutils/accountsservice/files/patch-configure"/>
+      <FILE Action="Add" Path="sysutils/accountsservice/files/patch-meson.build"/>
+      <FILE Action="Add" Path="sysutils/accountsservice/files/patch-meson__post__install.py"/>
+      <FILE Action="Modify" Path="sysutils/accountsservice/files/patch-src_daemon.c"/>
+      <FILE Action="Add" Path="sysutils/accountsservice/files/patch-src_libaccountsservice_act-user.c"/>
+      <FILE Action="Add" Path="sysutils/accountsservice/files/patch-src_meson.build"/>
+      <FILE Action="Modify" Path="sysutils/accountsservice/files/patch-src_user.c"/>
+      <FILE Action="Add" Path="sysutils/accountsservice/files/patch-src_user.h"/>
+      <FILE Action="Add" Path="sysutils/accountsservice/files/patch-src_wtmp-helper.h"/>
+      <FILE Action="Modify" Path="sysutils/accountsservice/pkg-descr"/>
+      <FILE Action="Delete" Path="sysutils/accountsservice/pkg-install"/>
+      <FILE Action="Modify" Path="sysutils/accountsservice/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

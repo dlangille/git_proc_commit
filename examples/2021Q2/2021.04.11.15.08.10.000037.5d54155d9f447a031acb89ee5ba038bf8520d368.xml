@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="11"/>
+    <TIME Timezone="UTC" Hour="15" Minute="8" Second="10"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/virtualbox-ose: Fix build with ports provided SSL library on 11.x
+
+Due to a compiler/linker command line ordering issue, VirtualBox 6
+fails to compile on 11.x when a ports provided SSL library is
+used.
+
+Fix the order of -L options passed to the linker where the ssl
+library is used.
+
+Thanks to  Chad Jacob Milios &lt;milios@ccsys.com&gt; for suggesting the
+correct fix.
+
+PR:		254295
+Submitted by:	russo@bogodyn.org
+MFH:		2021Q2
+
+(cherry picked from commit 423f3dfd755f7c98bf2d28083aac19783cf4e9a6)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Guido Falsi" CommitterEmail="madpilot@FreeBSD.org"/>
+      <AUTHOR AuthorName="Guido Falsi" AuthorEmail="madpilot@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="5d54155d9f447a031acb89ee5ba038bf8520d368" HashShort="5d54155d" Subject="emulators/virtualbox-ose: Fix build with ports provided SSL library on 11.x" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Add" Path="emulators/virtualbox-ose/files/patch-src_VBox_RDP_client-1.8.4_Makefile.kmk"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="4"/>
+    <TIME Timezone="UTC" Hour="22" Minute="53" Second="37"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/firefox: update to 88.0.1 (rc1)
+
+Release Notes (soon):
+  https://www.mozilla.org/en-US/firefox/88.0.1/releasenotes/
+
+(cherry picked from commit 8152cce6ee37aecd537737139186b370324e22cf)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Christoph Moench-Tegeder" CommitterEmail="cmt@FreeBSD.org"/>
+      <AUTHOR AuthorName="Christoph Moench-Tegeder" AuthorEmail="cmt@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e2759ff30937f56dbeb82bc8c3768ca7a1639b87" HashShort="e2759ff" Subject="www/firefox: update to 88.0.1 (rc1)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/firefox/Makefile"/>
+      <FILE Action="Modify" Path="www/firefox/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

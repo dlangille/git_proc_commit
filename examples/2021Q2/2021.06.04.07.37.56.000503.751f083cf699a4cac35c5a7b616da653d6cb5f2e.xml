@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="7" Minute="37" Second="56"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/virtualbox-ose: Fix additions build on recent HEAD
+
+Src HEAD commit 6d3e78ad6c11 vfs_quotactl function signature, adapt
+virtualbox code to be able to compile there too.
+
+MFH:		2021Q2
+(cherry picked from commit ef04eff33cf6262e79da1d092d69951ae26f915a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Guido Falsi" CommitterEmail="madpilot@FreeBSD.org"/>
+      <AUTHOR AuthorName="Guido Falsi" AuthorEmail="madpilot@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="751f083cf699a4cac35c5a7b616da653d6cb5f2e" HashShort="751f083" Subject="emulators/virtualbox-ose: Fix additions build on recent HEAD" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/virtualbox-ose/files/patch-src_VBox_Additions_freebsd_vboxvfs_vboxvfs__vfsops.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

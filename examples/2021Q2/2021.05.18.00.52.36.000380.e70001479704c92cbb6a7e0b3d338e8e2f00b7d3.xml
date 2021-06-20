@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="0" Minute="52" Second="36"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/nss: update to 3.64
+
+Changes:	https://developer.mozilla.org/docs/Mozilla/Projects/NSS/NSS_3.64_release_notes
+Changes:	https://hg.mozilla.org/projects/nss/shortlog/NSS_3_64_RTM
+(cherry picked from commit 7e8c7e0b65421657a900eacb88af4f1532736dfc)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e70001479704c92cbb6a7e0b3d338e8e2f00b7d3" HashShort="e700014" Subject="security/nss: update to 3.64" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/nss/Makefile"/>
+      <FILE Action="Modify" Path="security/nss/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

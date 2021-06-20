@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="22"/>
+    <TIME Timezone="UTC" Hour="12" Minute="41" Second="24"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/include-what-you-use: update to 0.15
+
+PR:             255189
+Approved by:    koobs (maintainer)
+MFH:		2021Q2 (several bugfix releases)
+
+(cherry picked from commit 2c9f5d1cb54dc06c60f83ee79435c0bdf579e65d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rene Ladan" CommitterEmail="rene@FreeBSD.org"/>
+      <AUTHOR AuthorName="Rene Ladan" AuthorEmail="rene@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="1cd7238bc54a86a1b9b29213ed011f8c40404838" HashShort="1cd7238" Subject="devel/include-what-you-use: update to 0.15" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/include-what-you-use/Makefile"/>
+      <FILE Action="Modify" Path="devel/include-what-you-use/distinfo"/>
+      <FILE Action="Modify" Path="devel/include-what-you-use/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

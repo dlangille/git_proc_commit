@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="4"/>
+    <TIME Timezone="UTC" Hour="7" Minute="35" Second="20"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>shells/modernish: Fix build
+
+It looks like modernish requires /dev/tty to be available during the
+installation as it tries to run its install-time test suite. A solution
+to that is wrapping ./install.sh with script(1) to make a TTY available.
+Interestingly, if we replace script(1) with daemon(8), we can reproduce
+the error present in the pkg fallout logs.
+
+(cherry picked from commit 0e66f4260178b5e9528cd6009d4c3c735bf46350)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mateusz Piotrowski" CommitterEmail="0mp@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mateusz Piotrowski" AuthorEmail="0mp@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="311e5367525a1c0cd978046afede8e67def532d1" HashShort="311e536" Subject="shells/modernish: Fix build" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="shells/modernish/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

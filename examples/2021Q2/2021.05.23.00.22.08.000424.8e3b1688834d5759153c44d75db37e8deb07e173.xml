@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="23"/>
+    <TIME Timezone="UTC" Hour="0" Minute="22" Second="8"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/yuzu: unbreak with sdl &lt; 2.0.14 after c61770cb8015
+
+src/input_common/sdl/sdl_impl.cpp:95:20: error: 'SDL_ControllerSensorEvent' has not been declared
+   95 |     void SetMotion(SDL_ControllerSensorEvent event) {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/input_common/sdl/sdl_impl.cpp: In member function 'void InputCommon::SDL::SDLJoystick::EnableMotion()':
+src/input_common/sdl/sdl_impl.cpp:79:17: error: 'SDL_GameControllerHasSensor' was not declared in this scope; did you mean 'SDL_GameControllerGetVendor'?
+   79 |             if (SDL_GameControllerHasSensor(controller, SDL_SENSOR_ACCEL) &amp;&amp; !has_accel) {
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 SDL_GameControllerGetVendor
+src/input_common/sdl/sdl_impl.cpp:80:17: error: 'SDL_GameControllerSetSensorEnabled' was not declared in this scope; did you mean 'SDL_GameControllerGetVendor'?
+   80 |                 SDL_GameControllerSetSensorEnabled(controller, SDL_SENSOR_ACCEL, SDL_TRUE);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 SDL_GameControllerGetVendor
+src/input_common/sdl/sdl_impl.cpp:83:17: error: 'SDL_GameControllerHasSensor' was not declared in this scope; did you mean 'SDL_GameControllerGetVendor'?
+   83 |             if (SDL_GameControllerHasSensor(controller, SDL_SENSOR_GYRO) &amp;&amp; !has_gyro) {
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 SDL_GameControllerGetVendor
+src/input_common/sdl/sdl_impl.cpp:84:17: error: 'SDL_GameControllerSetSensorEnabled' was not declared in this scope; did you mean 'SDL_GameControllerGetVendor'?
+   84 |                 SDL_GameControllerSetSensorEnabled(controller, SDL_SENSOR_GYRO, SDL_TRUE);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 SDL_GameControllerGetVendor
+src/input_common/sdl/sdl_impl.cpp: In member function 'void InputCommon::SDL::SDLJoystick::SetMotion(int)':
+src/input_common/sdl/sdl_impl.cpp:98:37: error: request for member 'timestamp' in 'event', which is of non-class type 'int'
+   98 |         u64 time_difference = event.timestamp - last_motion_update;
+      |                                     ^~~~~~~~~
+src/input_common/sdl/sdl_impl.cpp:99:36: error: request for member 'timestamp' in 'event', which is of non-class type 'int'
+   99 |         last_motion_update = event.timestamp;
+      |                                    ^~~~~~~~~
+src/input_common/sdl/sdl_impl.cpp:100:23: error: request for member 'sensor' in 'event', which is of non-class type 'int'
+  100 |         switch (event.sensor) {
+      |                       ^~~~~~
+src/input_common/sdl/sdl_impl.cpp:102:56: error: request for member 'data' in 'event', which is of non-class type 'int'
+  102 |             const Common::Vec3f acceleration = {-event.data[0], event.data[2], -event.data[1]};
+      |                                                        ^~~~
+src/input_common/sdl/sdl_impl.cpp:102:71: error: request for member 'data' in 'event', which is of non-class type 'int'
+  102 |             const Common::Vec3f acceleration = {-event.data[0], event.data[2], -event.data[1]};
+      |                                                                       ^~~~
+src/input_common/sdl/sdl_impl.cpp:102:87: error: request for member 'data' in 'event', which is of non-class type 'int'
+  102 |             const Common::Vec3f acceleration = {-event.data[0], event.data[2], -event.data[1]};
+      |                                                                                       ^~~~
+src/input_common/sdl/sdl_impl.cpp:102:94: error: could not convert '{&lt;expression error&gt;, &lt;expression error&gt;, &lt;expression error&gt;}' from '&lt;brace-enclosed initializer list&gt;' to 'const Vec3f' {aka 'const Common::Vec3&lt;float&gt;'}
+  102 |             const Common::Vec3f acceleration = {-event.data[0], event.data[2], -event.data[1]};
+      |                                                                                              ^
+      |                                                                                              |
+      |                                                                                              &lt;brace-enclosed initializer list&gt;
+src/input_common/sdl/sdl_impl.cpp:107:52: error: request for member 'data' in 'event', which is of non-class type 'int'
+  107 |             const Common::Vec3f gyroscope = {event.data[0], -event.data[2], event.data[1]};
+      |                                                    ^~~~
+src/input_common/sdl/sdl_impl.cpp:107:68: error: request for member 'data' in 'event', which is of non-class type 'int'
+  107 |             const Common::Vec3f gyroscope = {event.data[0], -event.data[2], event.data[1]};
+      |                                                                    ^~~~
+src/input_common/sdl/sdl_impl.cpp:107:83: error: request for member 'data' in 'event', which is of non-class type 'int'
+  107 |             const Common::Vec3f gyroscope = {event.data[0], -event.data[2], event.data[1]};
+      |                                                                                   ^~~~
+src/input_common/sdl/sdl_impl.cpp:107:90: error: could not convert '{&lt;expression error&gt;, &lt;expression error&gt;, &lt;expression error&gt;}' from '&lt;brace-enclosed initializer list&gt;' to 'const Vec3f' {aka 'const Common::Vec3&lt;float&gt;'}
+  107 |             const Common::Vec3f gyroscope = {event.data[0], -event.data[2], event.data[1]};
+      |                                                                                          ^
+      |                                                                                          |
+      |                                                                                          &lt;brace-enclosed initializer list&gt;
+src/input_common/sdl/sdl_impl.cpp: In member function 'void InputCommon::SDL::SDLState::HandleGameControllerEvent(const SDL_Event&amp;)':
+src/input_common/sdl/sdl_impl.cpp:355:10: error: 'SDL_CONTROLLERSENSORUPDATE' was not declared in this scope; did you mean 'SDL_CONTROLLERBUTTONUP'?
+  355 |     case SDL_CONTROLLERSENSORUPDATE: {
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |          SDL_CONTROLLERBUTTONUP
+src/input_common/sdl/sdl_impl.cpp:356:57: error: 'const SDL_Event' {aka 'const union SDL_Event'} has no member named 'csensor'; did you mean 'sensor'?
+  356 |         if (auto joystick = GetSDLJoystickBySDLID(event.csensor.which)) {
+      |                                                         ^~~~~~~
+      |                                                         sensor
+src/input_common/sdl/sdl_impl.cpp:357:39: error: 'const SDL_Event' {aka 'const union SDL_Event'} has no member named 'csensor'; did you mean 'sensor'?
+  357 |             joystick-&gt;SetMotion(event.csensor);
+      |                                       ^~~~~~~
+      |                                       sensor
+src/input_common/sdl/sdl_impl.cpp: In function 'Common::ParamPackage InputCommon::SDL::{anonymous}::SDLEventToMotionParamPackage(InputCommon::SDL::SDLState&amp;, const SDL_Event&amp;)':
+src/input_common/sdl/sdl_impl.cpp:1008:10: error: 'SDL_CONTROLLERSENSORUPDATE' was not declared in this scope; did you mean 'SDL_CONTROLLERBUTTONUP'?
+ 1008 |     case SDL_CONTROLLERSENSORUPDATE: {
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |          SDL_CONTROLLERBUTTONUP
+src/input_common/sdl/sdl_impl.cpp:1012:19: error: 'const SDL_Event' {aka 'const union SDL_Event'} has no member named 'csensor'; did you mean 'sensor'?
+ 1012 |         if (event.csensor.sensor == SDL_SENSOR_ACCEL) {
+      |                   ^~~~~~~
+      |                   sensor
+src/input_common/sdl/sdl_impl.cpp:1013:56: error: 'const SDL_Event' {aka 'const union SDL_Event'} has no member named 'csensor'; did you mean 'sensor'?
+ 1013 |             const Common::Vec3f acceleration = {-event.csensor.data[0], event.csensor.data[2],
+      |                                                        ^~~~~~~
+      |                                                        sensor
+src/input_common/sdl/sdl_impl.cpp:1013:79: error: 'const SDL_Event' {aka 'const union SDL_Event'} has no member named 'csensor'; did you mean 'sensor'?
+ 1013 |             const Common::Vec3f acceleration = {-event.csensor.data[0], event.csensor.data[2],
+      |                                                                               ^~~~~~~
+      |                                                                               sensor
+src/input_common/sdl/sdl_impl.cpp:1014:56: error: 'const SDL_Event' {aka 'const union SDL_Event'} has no member named 'csensor'; did you mean 'sensor'?
+ 1014 |                                                 -event.csensor.data[1]};
+      |                                                        ^~~~~~~
+      |                                                        sensor
+src/input_common/sdl/sdl_impl.cpp:1014:71: error: could not convert '{&lt;expression error&gt;, &lt;expression error&gt;, &lt;expression error&gt;}' from '&lt;brace-enclosed initializer list&gt;' to 'const Vec3f' {aka 'const Common::Vec3&lt;float&gt;'}
+ 1014 |                                                 -event.csensor.data[1]};
+      |                                                                       ^
+      |                                                                       |
+      |                                                                       &lt;brace-enclosed initializer list&gt;
+src/input_common/sdl/sdl_impl.cpp:1020:19: error: 'const SDL_Event' {aka 'const union SDL_Event'} has no member named 'csensor'; did you mean 'sensor'?
+ 1020 |         if (event.csensor.sensor == SDL_SENSOR_GYRO) {
+      |                   ^~~~~~~
+      |                   sensor
+src/input_common/sdl/sdl_impl.cpp:1021:52: error: 'const SDL_Event' {aka 'const union SDL_Event'} has no member named 'csensor'; did you mean 'sensor'?
+ 1021 |             const Common::Vec3f gyroscope = {event.csensor.data[0], -event.csensor.data[2],
+      |                                                    ^~~~~~~
+      |                                                    sensor
+src/input_common/sdl/sdl_impl.cpp:1021:76: error: 'const SDL_Event' {aka 'const union SDL_Event'} has no member named 'csensor'; did you mean 'sensor'?
+ 1021 |             const Common::Vec3f gyroscope = {event.csensor.data[0], -event.csensor.data[2],
+      |                                                                            ^~~~~~~
+      |                                                                            sensor
+src/input_common/sdl/sdl_impl.cpp:1022:52: error: 'const SDL_Event' {aka 'const union SDL_Event'} has no member named 'csensor'; did you mean 'sensor'?
+ 1022 |                                              event.csensor.data[1]};
+      |                                                    ^~~~~~~
+      |                                                    sensor
+src/input_common/sdl/sdl_impl.cpp:1022:67: error: could not convert '{&lt;expression error&gt;, &lt;expression error&gt;, &lt;expression error&gt;}' from '&lt;brace-enclosed initializer list&gt;' to 'const Vec3f' {aka 'const Common::Vec3&lt;float&gt;'}
+ 1022 |                                              event.csensor.data[1]};
+      |                                                                   ^
+      |                                                                   |
+      |                                                                   &lt;brace-enclosed initializer list&gt;
+src/input_common/sdl/sdl_impl.cpp:1032:69: error: 'const SDL_Event' {aka 'const union SDL_Event'} has no member named 'csensor'; did you mean 'sensor'?
+ 1032 |         if (const auto joystick = state.GetSDLJoystickBySDLID(event.csensor.which)) {
+      |                                                                     ^~~~~~~
+      |                                                                     sensor
+src/input_common/sdl/sdl_impl.cpp: In member function 'std::optional&lt;Common::ParamPackage&gt; InputCommon::SDL::Polling::SDLMotionPoller::FromEvent(const SDL_Event&amp;) const':
+src/input_common/sdl/sdl_impl.cpp:1300:14: error: 'SDL_CONTROLLERSENSORUPDATE' was not declared in this scope; did you mean 'SDL_CONTROLLERBUTTONUP'?
+ 1300 |         case SDL_CONTROLLERSENSORUPDATE:
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |              SDL_CONTROLLERBUTTONUP
+
+Reported by:	pkg-fallout
+
+(cherry picked from commit bd9872793c6e27cff9aef8891905ff8200f79986)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8e3b1688834d5759153c44d75db37e8deb07e173" HashShort="8e3b168" Subject="emulators/yuzu: unbreak with sdl &lt; 2.0.14 after c61770cb8015" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/yuzu/files/patch-sdl2"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

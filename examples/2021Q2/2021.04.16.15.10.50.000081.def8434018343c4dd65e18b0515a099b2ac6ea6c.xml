@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="16"/>
+    <TIME Timezone="UTC" Hour="15" Minute="10" Second="50"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/desktop-installer: Fix accidentally silenced user prompt
+
+PR:             255087
+Reported by:    Ivan Zubov
+MFH:            2021Q2 (runtime fix)
+
+(cherry picked from commit 0e084ddc8634c8f8436c155ccb2f748a7549db80)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jason W. Bacon" CommitterEmail="jwb@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jason W. Bacon" AuthorEmail="jwb@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="def8434018343c4dd65e18b0515a099b2ac6ea6c" HashShort="def8434" Subject="sysutils/desktop-installer: Fix accidentally silenced user prompt" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/desktop-installer/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/desktop-installer/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>
