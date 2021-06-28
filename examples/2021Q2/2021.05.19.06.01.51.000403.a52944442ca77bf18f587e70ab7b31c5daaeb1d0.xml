@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="19"/>
+    <TIME Timezone="UTC" Hour="6" Minute="1" Second="51"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/py-hcloud -- fix dependency versions
+
+This removes one impediment to the pending update of www/py-requests
+
+PR:	250941
+(cherry picked from commit 31ac02bd2729f5701ff471453720e90c9e5d3e48)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Matthew Seaman" CommitterEmail="matthew@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthew Seaman" AuthorEmail="matthew@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="a52944442ca77bf18f587e70ab7b31c5daaeb1d0" HashShort="a529444" Subject="sysutils/py-hcloud -- fix dependency versions" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/py-hcloud/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

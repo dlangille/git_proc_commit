@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="19"/>
+    <TIME Timezone="UTC" Hour="18" Minute="0" Second="15"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/maven: update to 3.8.1
+
+This is not just a bugfix as it contains three features that cause a change of
+default behavior (external HTTP insecure URLs are now blocked by default): your
+builds may fail when using this new Maven release, if you use now blocked
+repositories. Please check and eventually fix before upgrading.
+
+Changes http://maven.apache.org/docs/3.8.1/release-notes.html
+
+PR:		255161
+Approved by:	Jonathan Chen &lt;jonc@chen.org.nz&gt; (maintainer)
+Security:	CVE-2021-26291
+		CVE-2020-13956
+
+(cherry picked from commit 887cfadcdf5e7ce9a33ef83ee6ee7b63ff855830)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kevin Bowling" CommitterEmail="kbowling@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kevin Bowling" AuthorEmail="kbowling@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="5675152f8fb588ed22092352a5a0294a67ba8442" HashShort="5675152" Subject="devel/maven: update to 3.8.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/maven/Makefile"/>
+      <FILE Action="Modify" Path="devel/maven/distinfo"/>
+      <FILE Action="Modify" Path="devel/maven/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

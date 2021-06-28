@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="14"/>
+    <TIME Timezone="UTC" Hour="18" Minute="57" Second="31"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/virtualbox-ose-kmod: Fix hang at module loading time
+
+After src commit e266a0f7f001 a module is not allowed to call
+kern_kldload while being loaded. The virtualbox module is doing
+exactly this though. virutalbox used to do this because the ng_ether
+netgraph node did not provide version information in the past and
+there was no way to properly depend on it.
+
+ng_ether has gained versioning information in base r238844 more
+than ten years ago, so we can now unconditionally properly depend
+on it, since this revision is now included in all supported FreeBSD
+versions.
+
+Thanks to Tomoaki AOKI for identifying the base commuit exposing
+the issue.
+PR:			256505
+Tested by:		Tomoaki AOKI &lt;junchoon@dec.sakura.ne.jp&gt;
+MFH:			2021Q2
+Differential Revision:	https://reviews.freebsd.org/D30722
+
+(cherry picked from commit 082999790a64a5e64a3faa133e8d2d06bf2aff61)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Guido Falsi" CommitterEmail="madpilot@FreeBSD.org"/>
+      <AUTHOR AuthorName="Guido Falsi" AuthorEmail="madpilot@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="758e045e3a8137842c72d35514c76b6d7f31c06b" HashShort="758e045" Subject="emulators/virtualbox-ose-kmod: Fix hang at module loading time" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Delete" Path="emulators/virtualbox-ose/files/patch-src-VBox-HostDrivers-VBoxNetFlt-freebsd-VBoxNetFlt-freebsd.c"/>
+      <FILE Action="Add" Path="emulators/virtualbox-ose/files/patch-src_VBox_HostDrivers_VBoxNetFlt_freebsd_VBoxNetFlt-freebsd.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

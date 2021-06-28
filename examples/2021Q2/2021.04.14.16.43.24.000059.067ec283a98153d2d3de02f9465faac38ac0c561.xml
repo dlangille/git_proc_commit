@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="14"/>
+    <TIME Timezone="UTC" Hour="16" Minute="43" Second="24"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/opencv: Fix JAVA option and correct Apache Ant usage
+
+JAVA option did not work because the actual build knob was wrong.
+Especially, on a system where devel/apache-ant was installed, ant and
+java binaries were automatically detected and enabled even if the JAVA
+option was disabled.  While I am here, fix Apache Ant usage by setteing
+JAVACMD variable.  Without it, it may pick up java binary from JRE via
+javavm(1) from java/javavmwrapper.  If ant script is used with java from
+JRE, build fails because it cannot find jar.
+
+Approved by:	tcberner (maintainer)
+
+(cherry picked from commit 71117cddc9fc29c1e83c14e94c4b04179c0158d3)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jung-uk Kim" CommitterEmail="jkim@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jung-uk Kim" AuthorEmail="jkim@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="067ec283a98153d2d3de02f9465faac38ac0c561" HashShort="067ec28" Subject="graphics/opencv: Fix JAVA option and correct Apache Ant usage" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/opencv/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

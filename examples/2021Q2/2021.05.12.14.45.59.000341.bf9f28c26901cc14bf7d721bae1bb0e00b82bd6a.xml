@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="12"/>
+    <TIME Timezone="UTC" Hour="14" Minute="45" Second="59"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/gstreamer1-plugins-svt-av1: chase 8c1f210e22bf
+
+(cherry picked from commit 8afb240d592e54cb87f63d77491d16490315ae37)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="bf9f28c26901cc14bf7d721bae1bb0e00b82bd6a" HashShort="bf9f28c" Subject="multimedia/gstreamer1-plugins-svt-av1: chase 8c1f210e22bf" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/gstreamer1-plugins-svt-av1/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/gstreamer1-plugins-svt-av1/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

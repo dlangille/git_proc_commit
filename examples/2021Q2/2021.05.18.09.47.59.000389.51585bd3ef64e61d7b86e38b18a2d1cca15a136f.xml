@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="9" Minute="47" Second="59"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/vst3sdk: Broken on 11</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="51585bd3ef64e61d7b86e38b18a2d1cca15a136f" HashShort="51585bd" Subject="audio/vst3sdk: Broken on 11" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/vst3sdk/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

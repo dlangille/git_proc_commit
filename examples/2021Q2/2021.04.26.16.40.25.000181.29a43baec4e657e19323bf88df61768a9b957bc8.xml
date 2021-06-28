@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="26"/>
+    <TIME Timezone="UTC" Hour="16" Minute="40" Second="25"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/osslsigncode: extend BROKEN to FreeBSD 14</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="29a43baec4e657e19323bf88df61768a9b957bc8" HashShort="29a43ba" Subject="security/osslsigncode: extend BROKEN to FreeBSD 14" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/osslsigncode/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

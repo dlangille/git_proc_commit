@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="18"/>
+    <TIME Timezone="UTC" Hour="12" Minute="57" Second="31"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Fix the build for net-mgmt/nagios-check_bacula11
+
+This patch has been committed upstream via
+
+https://www.bacula.org/git/cgit.cgi/bacula/commit/?h=Branch-11.0&amp;id=ef3a7fe40a2aee5e7acb3bf3144bba713c9cf982
+(cherry picked from commit 80b2fa6dd4250768bc02483819e9c02f3168c7a8)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dan Langille" CommitterEmail="dvl@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dan Langille" AuthorEmail="dvl@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="83fdf0df89ca778d026d9465b1b2318cd528f1a8" HashShort="83fdf0d" Subject="Fix the build for net-mgmt/nagios-check_bacula11" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Add" Path="sysutils/bacula11-server/files/patch-examples_nagios_check__bacula_check__bacula.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

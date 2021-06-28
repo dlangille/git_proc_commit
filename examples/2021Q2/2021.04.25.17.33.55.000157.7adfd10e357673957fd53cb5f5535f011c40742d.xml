@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="25"/>
+    <TIME Timezone="UTC" Hour="17" Minute="33" Second="55"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/wireguard-tools: Use WRKSRC_SUBDIR
+
+Approved by:	portmgr (blanket)
+
+(cherry picked from commit 7b932c360faf383a6c59abd7c4a801ff9230cfe2)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernhard Froehlich" CommitterEmail="decke@FreeBSD.org"/>
+      <AUTHOR AuthorName="Po-Chuan Hsieh" AuthorEmail="sunpoet@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="7adfd10e357673957fd53cb5f5535f011c40742d" HashShort="7adfd10" Subject="net/wireguard-tools: Use WRKSRC_SUBDIR" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/wireguard-tools/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

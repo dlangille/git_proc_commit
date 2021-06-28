@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="1"/>
+    <TIME Timezone="UTC" Hour="10" Minute="23" Second="17"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>games/libretro-snes9x2010: fix build
+
+- Fix build by changing gcc-specific argument to clang compatible
+  (-flto=auto -&gt; -flto). This change was upstreamed so it may be
+  dropped on the next port update. For FreeBSD 11, don't use -flto
+  at all to also fix the build.
+- While here, minor style fixes
+
+Approved by:	portmgr blanket
+
+(cherry picked from commit b842770973b7a381cf5f2b596a6bf7da04be418b)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="eb03ce1bb33d7819d372999512fb79046cc79bee" HashShort="eb03ce1" Subject="games/libretro-snes9x2010: fix build" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="games/libretro-snes9x2010/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

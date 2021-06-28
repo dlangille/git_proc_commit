@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="22"/>
+    <TIME Timezone="UTC" Hour="17" Minute="20" Second="5"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>games/brumbrumrally: fix build on 11 by disabling LTO</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="aeb34a5d6f1f0955f3d1089cb06c2788672502b5" HashShort="aeb34a5" Subject="games/brumbrumrally: fix build on 11 by disabling LTO" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="games/brumbrumrally/files/patch-Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

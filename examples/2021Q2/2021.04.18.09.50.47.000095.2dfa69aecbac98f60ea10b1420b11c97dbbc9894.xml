@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="18"/>
+    <TIME Timezone="UTC" Hour="9" Minute="50" Second="47"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-mgmt/netbox: Update to 2.10.10
+
+Changelog:
+
+Enhancements:
+* Add DC terminal power port, outlet types
+* Add Saf-D-Grid power port, outlet types
+* Support Markdown rendering for report logs
+* Add F connector port type
+* Add SFP56 50GE interface type
+
+Bug Fixes:
+* Update parent device/VM when deleting a primary IP
+* Fix VLAN assignment when editing VM interfaces in bulk
+* Update object data when renaming a custom field
+* Optimize change log cleanup
+* Fix MAC address field display in VM interfaces search form
+* Fix custom field filtering for cables, virtual chassis
+* Fix choice field filters (multiple models)
+
+https://github.com/netbox-community/netbox/releases/tag/v2.10.10
+
+MFH:		2021Q2
+(cherry picked from commit f2a9b3469d37649d527bb47cca797670370ee2d4)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kai Knoblich" CommitterEmail="kai@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kai Knoblich" AuthorEmail="kai@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="2dfa69aecbac98f60ea10b1420b11c97dbbc9894" HashShort="2dfa69a" Subject="net-mgmt/netbox: Update to 2.10.10" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-mgmt/netbox/Makefile"/>
+      <FILE Action="Modify" Path="net-mgmt/netbox/distinfo"/>
+      <FILE Action="Modify" Path="net-mgmt/netbox/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

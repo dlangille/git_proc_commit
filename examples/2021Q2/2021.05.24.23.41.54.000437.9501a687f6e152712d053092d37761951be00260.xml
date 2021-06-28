@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="24"/>
+    <TIME Timezone="UTC" Hour="23" Minute="41" Second="54"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>irc/irssi: Update to 1.2.3
+
+Changes:	https://irssi.org/NEWS/#v1-2-3
+PR:		255116
+Submitted by:	David O'Rourke &lt;dor.bsd@xm0.uk&gt; (maintainer)
+Approved by:	mentors (implicit)
+
+(cherry picked from commit 1ed838f5dead7db6ce68317480917f89461d848e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bryan Drewery" CommitterEmail="bdrewery@FreeBSD.org"/>
+      <AUTHOR AuthorName="Lewis Cook" AuthorEmail="lcook@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="9501a687f6e152712d053092d37761951be00260" HashShort="9501a68" Subject="irc/irssi: Update to 1.2.3" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="irc/irssi/Makefile"/>
+      <FILE Action="Modify" Path="irc/irssi/distinfo"/>
+      <FILE Action="Delete" Path="irc/irssi/files/patch-src_core_modules.c"/>
+      <FILE Action="Delete" Path="irc/irssi/files/patch-src_core_servers-reconnect.c"/>
+      <FILE Action="Delete" Path="irc/irssi/files/patch-src_core_servers-setup.c"/>
+      <FILE Action="Delete" Path="irc/irssi/files/patch-src_fe-text_term-terminfo.c"/>
+      <FILE Action="Modify" Path="irc/irssi/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

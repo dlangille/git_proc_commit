@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="17"/>
+    <TIME Timezone="UTC" Hour="10" Minute="57" Second="10"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>news/pan: remove manual linking with -lgnuregex
+
+This looks like a hack needed for a patch from 2001 (which is long
+gone) to work. Today it breaks the build because it lacks corresponding
+dependency, so remove it.
+
+Approved by:	portmgr blanket
+
+(cherry picked from commit 9347f261c247cf07b87b8abd92265c1e21b9cdbe)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="83210b7d924f09caf388c7926dc9f89abf5b7c2a" HashShort="83210b7" Subject="news/pan: remove manual linking with -lgnuregex" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="news/pan/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

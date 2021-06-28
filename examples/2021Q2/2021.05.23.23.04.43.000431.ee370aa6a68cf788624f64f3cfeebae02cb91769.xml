@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="23"/>
+    <TIME Timezone="UTC" Hour="23" Minute="4" Second="43"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/spidermonkey185: Fix build with clang 12
+
+PR:		256007
+Approved by:	koobs (maintainer)
+
+(cherry picked from commit 760a1742ba6c55d815211aadbaff10ca9acee76e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Danilo G. Baio" CommitterEmail="dbaio@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dimitry Andric" AuthorEmail="dim@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ee370aa6a68cf788624f64f3cfeebae02cb91769" HashShort="ee370aa" Subject="lang/spidermonkey185: Fix build with clang 12" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/spidermonkey185/files/patch-c++11"/>
+      <FILE Action="Add" Path="lang/spidermonkey185/files/patch-methodjit_MethodJIT.cpp"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

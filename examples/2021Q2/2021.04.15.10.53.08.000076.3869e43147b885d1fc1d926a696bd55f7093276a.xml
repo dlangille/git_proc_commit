@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="15"/>
+    <TIME Timezone="UTC" Hour="10" Minute="53" Second="8"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/chromium: pet portclippy
+
+(cherry picked from commit d8400d2cc3eb157b040171a5ac1e07aebcb626e9)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rene Ladan" CommitterEmail="rene@FreeBSD.org"/>
+      <AUTHOR AuthorName="Rene Ladan" AuthorEmail="rene@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="3869e43147b885d1fc1d926a696bd55f7093276a" HashShort="3869e43" Subject="www/chromium: pet portclippy" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/chromium/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

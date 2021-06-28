@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="30"/>
+    <TIME Timezone="UTC" Hour="22" Minute="37" Second="23"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11-toolkits/wlroots: backport fix for bundled libXcursor
+
+PR:		256274
+Security:	CVE-2013-2003
+(cherry picked from commit fc72140f6f4a11e87aeb620aa7b9034308ef93ae)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Evgeniy Khramtsov" AuthorEmail="evgeniy@khramtsov.org"/>
+    </PEOPLE>
+    <COMMIT Hash="567aa9c05c47773a68f12d168cfb2c249c3101d1" HashShort="567aa9c" Subject="x11-toolkits/wlroots: backport fix for bundled libXcursor" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11-toolkits/wlroots/Makefile"/>
+      <FILE Action="Modify" Path="x11-toolkits/wlroots/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

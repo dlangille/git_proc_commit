@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="27"/>
+    <TIME Timezone="UTC" Hour="17" Minute="51" Second="30"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/projectcenter: mark BROKEN
+
+(cherry picked from commit 0a924285557be0340804702fa74bdbf39b45dd83)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="7ba955da51bf355d786458b1eefc5c65ef468cc1" HashShort="7ba955d" Subject="devel/projectcenter: mark BROKEN" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/projectcenter/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

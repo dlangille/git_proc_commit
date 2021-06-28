@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="9"/>
+    <TIME Timezone="UTC" Hour="21" Minute="12" Second="57"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/czkawka: add new port
+
+Czkawka (tch-kav-ka, hiccup) is a simple, fast and free app to remove
+unnecessary files from your computer.
+
+Features:
+- Written in memory safe Rust
+- Amazingly fast - due to using more or less advanced algorithms and
+  multithreading
+- Free, Open Source without ads
+- Multiplatform - works on Linux, Windows and macOS
+- Cache support - second and further scans should be a lot faster than
+  the first one
+- CLI frontend - for easy automation
+- GUI frontend - uses modern GTK 3 and looks similar to FSlint
+- Rich search option - allows setting absolute included and excluded
+  directories, set of allowed file extensions or excluded items with
+  the * wildcard
+- Multiple tools to use:
+  - Duplicates - Finds duplicates basing on file name, size, hash,
+    first 1 MB of hash
+  - Empty Folders - Finds empty folders with the help of an advanced
+    algorithm
+  - Big Files - Finds the provided number of the biggest files in
+    given location
+  - Empty Files - Looks for empty files across the drive
+  - Temporary Files - Finds temporary files
+  - Similar Images - Finds images which are not exactly the same
+    (different resolution, watermarks)
+  - Zeroed Files - Finds files which are filled with zeros (usually
+    corrupted)
+  - Same Music - Searches for music with same artist, album etc.
+  - Invalid Symbolic Links - Shows symbolic links which points to
+    non-existent files/directories
+  - Broken Files - Finds files with an invalid extension or that are
+    corrupted
+
+https://github.com/qarmin/czkawka
+(cherry picked from commit 876342f052d0d79b8bfbe8f5061c8156440f8234)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="df576c37a07c346b9bde052c6d4b285b46112278" HashShort="df576c3" Subject="sysutils/czkawka: add new port" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/Makefile"/>
+      <FILE Action="Add" Path="sysutils/czkawka/Makefile"/>
+      <FILE Action="Add" Path="sysutils/czkawka/distinfo"/>
+      <FILE Action="Add" Path="sysutils/czkawka/pkg-descr"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

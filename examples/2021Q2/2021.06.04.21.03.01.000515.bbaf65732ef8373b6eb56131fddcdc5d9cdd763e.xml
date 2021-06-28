@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="21" Minute="3" Second="1"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/py-flask-restx: update to 0.4.0
+
+Changes:	https://github.com/python-restx/flask-restx/compare/0.3.0...0.4.0
+Reported by:	Repology
+
+(cherry picked from commit 43f07d47286a9b0e8de1f69897ffb4fb2f8de744)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="bbaf65732ef8373b6eb56131fddcdc5d9cdd763e" HashShort="bbaf657" Subject="www/py-flask-restx: update to 0.4.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/py-flask-restx/Makefile"/>
+      <FILE Action="Modify" Path="www/py-flask-restx/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

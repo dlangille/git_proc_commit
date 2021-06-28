@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="10"/>
+    <TIME Timezone="UTC" Hour="17" Minute="20" Second="56"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/tor-devel: Update 0.4.6.2-alpha -&gt; 0.4.6.3-rc
+
+o Major bugfixes (onion service, control port):
+  - Make the ADD_ONION command properly configure client authorization.
+    Before this fix, the created onion failed to add the client(s).
+    Fixes bug 40378; bugfix on 0.4.6.1-alpha.
+
+o Minor features (compatibility, Linux seccomp sandbox):
+  - Add a workaround to enable the Linux sandbox to work correctly
+    with Glibc 2.33. This version of Glibc has started using the
+    fstatat() system call, which previously our sandbox did not allow.
+    Closes ticket 40382; see the ticket for a discussion of trade-offs.
+
+etc.
+
+Reported by:	Upstream notification
+
+(cherry picked from commit e0dfc470f5be1b6bee64050675dc14202023b30a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f1970554d5c81d0ec4f30d5ac3db2c9868a8121b" HashShort="f197055" Subject="security/tor-devel: Update 0.4.6.2-alpha -&gt; 0.4.6.3-rc" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/tor-devel/Makefile"/>
+      <FILE Action="Modify" Path="security/tor-devel/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

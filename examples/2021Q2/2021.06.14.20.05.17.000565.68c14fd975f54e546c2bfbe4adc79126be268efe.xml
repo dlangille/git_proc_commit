@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="14"/>
+    <TIME Timezone="UTC" Hour="20" Minute="5" Second="17"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/virtualbox-ose-kmod-legacy: Fix hang at module loading time
+
+After src commit e266a0f7f001 a module is not allowed to call
+kern_kldload while being loaded. The virtualbox module is doing
+exactly this though. virutalbox used to do this because the ng_ether
+netgraph node did not provide version information in the past and
+there was no way to properly depend on it.
+
+ng_ether has gained versioning information in base r238844 more
+than ten years ago, so we can now unconditionally properly depend
+on it, since this revision is now included in all supported FreeBSD
+versions.
+
+Thanks to Tomoaki AOKI for identifying the base commuit exposing
+the issue.
+
+Backport fix to legacy port.
+
+WHile here also merge a double patch for the smae file.
+
+PR:		256505
+MFH:		2021Q2
+(cherry picked from commit 354344ce8af17e5b6d85109120af5c6584ae642c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Guido Falsi" CommitterEmail="madpilot@FreeBSD.org"/>
+      <AUTHOR AuthorName="Guido Falsi" AuthorEmail="madpilot@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="68c14fd975f54e546c2bfbe4adc79126be268efe" HashShort="68c14fd" Subject="emulators/virtualbox-ose-kmod-legacy: Fix hang at module loading time" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/virtualbox-ose-kmod-legacy/Makefile"/>
+      <FILE Action="Delete" Path="emulators/virtualbox-ose-legacy/files/patch-src-VBox-HostDrivers-VBoxNetFlt-freebsd-VBoxNetFlt-freebsd.c"/>
+      <FILE Action="Modify" Path="emulators/virtualbox-ose-legacy/files/patch-src_VBox_HostDrivers_VBoxNetFlt_freebsd_VBoxNetFlt-freebsd.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

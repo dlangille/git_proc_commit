@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="18"/>
+    <TIME Timezone="UTC" Hour="17" Minute="22" Second="35"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-p2p/awgg: fix plist
+
+Reported by:	'poudriere bulk -t' failure
+Approved by:	portmgr blanket (trivial fix packaging)
+MFH:		2021Q2
+
+(cherry picked from commit 168a3c4e3a51e4fe8e9ef0351c2b4e8008a97452)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="6cd9d66248fb8b27de998d0248164836d5f77a07" HashShort="6cd9d66" Subject="net-p2p/awgg: fix plist" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-p2p/awgg/Makefile"/>
+      <FILE Action="Modify" Path="net-p2p/awgg/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

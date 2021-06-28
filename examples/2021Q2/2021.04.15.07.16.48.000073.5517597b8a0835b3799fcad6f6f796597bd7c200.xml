@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="15"/>
+    <TIME Timezone="UTC" Hour="7" Minute="16" Second="48"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>textproc/aspell: fix a bad regexp after location specifier
+
+PR:		253774
+(cherry picked from commit ef24a782a2a4f9dce3b37ecbbb6aa1f798cc96b3)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Thierry Thomas" CommitterEmail="thierry@FreeBSD.org"/>
+      <AUTHOR AuthorName="Thierry Thomas" AuthorEmail="thierry@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="5517597b8a0835b3799fcad6f6f796597bd7c200" HashShort="5517597" Subject="textproc/aspell: fix a bad regexp after location specifier" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="textproc/aspell/Makefile"/>
+      <FILE Action="Modify" Path="textproc/aspell/files/patch-configure"/>
+      <FILE Action="Modify" Path="textproc/aspell/files/patch-interfaces__cc__aspell.h"/>
+      <FILE Action="Modify" Path="textproc/aspell/files/patch-modules__speller__default__affix.cpp"/>
+      <FILE Action="Add" Path="textproc/aspell/files/patch-modules_filter_modes_perl.amf"/>
+      <FILE Action="Modify" Path="textproc/aspell/files/patch-prog__aspell.cpp"/>
+      <FILE Action="Modify" Path="textproc/aspell/files/patch-prog__checker_string.cpp"/>
+      <FILE Action="Modify" Path="textproc/aspell/files/patch-prog__checker_string.hpp"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

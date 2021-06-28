@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="5"/>
+    <TIME Timezone="UTC" Hour="11" Minute="48" Second="0"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/php74-pdo_pgsql: Apply patch for PHP Bug 81002
+
+The last release introduces a bug, which causes BOOL values inserted into PostgreSQL
+converted to INT. This causes exceptions when tried.
+
+Since this is a serious issue, we apply the upstream patch
+until it gets official released
+
+Approved by:	madpilot
+Sponsored by:	Bounce Experts
+Differential Revision:	https://reviews.freebsd.org/D30117
+
+(cherry picked from commit 8aea544d5b4c9804739167f5115cf311b339e467)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Torsten Zuehlsdorff" CommitterEmail="tz@FreeBSD.org"/>
+      <AUTHOR AuthorName="Torsten Zuehlsdorff" AuthorEmail="tz@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="2bb8fefb3a2ab2f88c20816ff72e8038418c6cfe" HashShort="2bb8fef" Subject="databases/php74-pdo_pgsql: Apply patch for PHP Bug 81002" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/php74-pdo_pgsql/Makefile"/>
+      <FILE Action="Add" Path="databases/php74-pdo_pgsql/files/patch-pgsql__statement.c"/>
+      <FILE Action="Add" Path="databases/php74-pdo_pgsql/files/patch-tests_bug__80892.phpt"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

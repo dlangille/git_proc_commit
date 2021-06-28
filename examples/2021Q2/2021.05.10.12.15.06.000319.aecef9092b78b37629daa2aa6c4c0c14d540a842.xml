@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="10"/>
+    <TIME Timezone="UTC" Hour="12" Minute="15" Second="6"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/dssim: regen distinfo after 3758b337a1b0
+
+(cherry picked from commit c907dcaab92a6e0c48b131753bf5ed7dba1825fd)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="aecef9092b78b37629daa2aa6c4c0c14d540a842" HashShort="aecef90" Subject="graphics/dssim: regen distinfo after 3758b337a1b0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/dssim/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

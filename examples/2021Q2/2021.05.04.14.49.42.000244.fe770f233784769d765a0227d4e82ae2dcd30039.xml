@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="4"/>
+    <TIME Timezone="UTC" Hour="14" Minute="49" Second="42"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/redis-devel: update to 6.2.3.
+PR:	255582
+
+(cherry picked from commit 4396971f299d95ae8519181113b613c09b23958f)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Sergey A. Osokin" CommitterEmail="osa@FreeBSD.org"/>
+      <AUTHOR AuthorName="Sergey A. Osokin" AuthorEmail="osa@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="fe770f233784769d765a0227d4e82ae2dcd30039" HashShort="fe770f2" Subject="databases/redis-devel: update to 6.2.3." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/redis-devel/Makefile"/>
+      <FILE Action="Modify" Path="databases/redis-devel/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

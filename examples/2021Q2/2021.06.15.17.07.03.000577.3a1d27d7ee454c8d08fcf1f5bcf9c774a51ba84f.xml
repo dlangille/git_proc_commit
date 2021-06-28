@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="15"/>
+    <TIME Timezone="UTC" Hour="17" Minute="7" Second="3"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/libsidplayfp: Update to 2.2.0
+
+PR:		256043
+Approved by:	maintainer
+MFH:		2021Q2 (fix distinfo)
+
+(cherry picked from commit d8f237b348e287cc7c0045c56e3645217b50f66e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kevin Bowling" CommitterEmail="kbowling@FreeBSD.org"/>
+      <AUTHOR AuthorName="Daniel Engberg" AuthorEmail="daniel.engberg.lists@pyret.net"/>
+    </PEOPLE>
+    <COMMIT Hash="3a1d27d7ee454c8d08fcf1f5bcf9c774a51ba84f" HashShort="3a1d27d" Subject="audio/libsidplayfp: Update to 2.2.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/libsidplayfp/Makefile"/>
+      <FILE Action="Add" Path="audio/libsidplayfp/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

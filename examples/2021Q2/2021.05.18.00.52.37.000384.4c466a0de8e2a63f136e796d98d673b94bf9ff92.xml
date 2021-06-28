@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="0" Minute="52" Second="37"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/citra: update to s20210516
+
+Changes:	https://github.com/citra-emu/citra/compare/e7671d93b...842031a2e
+(cherry picked from commit d20486100c159b14895cbb17472c795e2b5bd2a4)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="4c466a0de8e2a63f136e796d98d673b94bf9ff92" HashShort="4c466a0" Subject="emulators/citra: update to s20210516" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/citra/Makefile"/>
+      <FILE Action="Modify" Path="emulators/citra/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

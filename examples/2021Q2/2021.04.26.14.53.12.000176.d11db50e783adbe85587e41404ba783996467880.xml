@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="26"/>
+    <TIME Timezone="UTC" Hour="14" Minute="53" Second="12"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>games/gigalomania: fix build</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="d11db50e783adbe85587e41404ba783996467880" HashShort="d11db50" Subject="games/gigalomania: fix build" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Add" Path="games/gigalomania/files/patch-game.cpp"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

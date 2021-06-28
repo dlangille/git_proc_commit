@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="13"/>
+    <TIME Timezone="UTC" Hour="16" Minute="42" Second="55"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/mariadb103-server: Security update to 10.3.29
+
+Reported by:	&lt;i dani outlook com&gt;
+Security:	56ba4513-a1be-11eb-9072-d4c9ef517024
+MFH:		2021Q2
+
+(cherry picked from commit b5fa758767b91744c625000f05daad5ed58ea4bd)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernard Spil" CommitterEmail="brnrd@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernard Spil" AuthorEmail="brnrd@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="bdb5bace13fbb8a78d927ca224a8cd08301e2f4e" HashShort="bdb5bac" Subject="databases/mariadb103-server: Security update to 10.3.29" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/mariadb103-client/Makefile"/>
+      <FILE Action="Modify" Path="databases/mariadb103-client/files/patch-CMakeLists.txt"/>
+      <FILE Action="Modify" Path="databases/mariadb103-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/mariadb103-server/distinfo"/>
+      <FILE Action="Modify" Path="databases/mariadb103-server/files/patch-CMakeLists.txt"/>
+      <FILE Action="Modify" Path="databases/mariadb103-server/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="2"/>
+    <TIME Timezone="UTC" Hour="18" Minute="42" Second="21"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/logstash6: Update to 6.8.16
+
+Also reformat Makefile a bit.
+
+(cherry picked from commit 7a387b714197b459b79cc79edda733b401fdffda)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="68a5927bf43037e909720495d8b8e4dc2ed1a3d5" HashShort="68a5927" Subject="sysutils/logstash6: Update to 6.8.16" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/logstash6/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/logstash6/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

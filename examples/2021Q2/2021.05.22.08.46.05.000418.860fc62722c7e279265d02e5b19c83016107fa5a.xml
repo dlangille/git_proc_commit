@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="22"/>
+    <TIME Timezone="UTC" Hour="8" Minute="46" Second="5"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>misc/compat12x: Update to 12.2.1202000.20210406.
+
+PR:		255957
+Approved by:	bapt (maintainer)
+
+(cherry picked from commit 53df51c78b97d0d6483e5247a09803d21bf78edb)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jung-uk Kim" CommitterEmail="jkim@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jung-uk Kim" AuthorEmail="jkim@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="860fc62722c7e279265d02e5b19c83016107fa5a" HashShort="860fc62" Subject="misc/compat12x: Update to 12.2.1202000.20210406." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="misc/compat12x/Makefile"/>
+      <FILE Action="Modify" Path="misc/compat12x/distinfo"/>
+      <FILE Action="Modify" Path="misc/compat12x/pkg-plist.aarch64"/>
+      <FILE Action="Modify" Path="misc/compat12x/pkg-plist.amd64"/>
+      <FILE Action="Modify" Path="misc/compat12x/pkg-plist.armv6"/>
+      <FILE Action="Modify" Path="misc/compat12x/pkg-plist.armv7"/>
+      <FILE Action="Modify" Path="misc/compat12x/pkg-plist.i386"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

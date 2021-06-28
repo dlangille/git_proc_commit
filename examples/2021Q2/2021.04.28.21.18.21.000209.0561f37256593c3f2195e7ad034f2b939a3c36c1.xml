@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="28"/>
+    <TIME Timezone="UTC" Hour="21" Minute="18" Second="21"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/virt-what: Update to 1.21
+
+- Update to 1.21
+
+Approved by:	osa (mentor)
+Differential Revision:	https://reviews.freebsd.org/D29859
+
+(cherry picked from commit f62ab73224dfacbcf06db1360319ac6a31fe91f7)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0561f37256593c3f2195e7ad034f2b939a3c36c1" HashShort="0561f37" Subject="sysutils/virt-what: Update to 1.21" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/virt-what/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/virt-what/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

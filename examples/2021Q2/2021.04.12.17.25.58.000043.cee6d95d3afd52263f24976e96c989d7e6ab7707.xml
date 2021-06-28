@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="12"/>
+    <TIME Timezone="UTC" Hour="17" Minute="25" Second="58"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/valgrind: Remove unneeded patches
+
+PR:		254917
+Reported by:	ice@extreme.hu
+
+(cherry picked from commit ee96b39b9f7f02e108cf5775862396bbbfaf2133)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jung-uk Kim" CommitterEmail="jkim@FreeBSD.org"/>
+      <AUTHOR AuthorName="Paul Floyd" AuthorEmail="pjfloyd@wanadoo.fr"/>
+    </PEOPLE>
+    <COMMIT Hash="cee6d95d3afd52263f24976e96c989d7e6ab7707" HashShort="cee6d95" Subject="devel/valgrind: Remove unneeded patches" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Delete" Path="devel/valgrind/files/accept4_syscall.patch"/>
+      <FILE Action="Delete" Path="devel/valgrind/files/extra-patch-ino64"/>
+      <FILE Action="Delete" Path="devel/valgrind/files/jail_syscalls.patch"/>
+      <FILE Action="Delete" Path="devel/valgrind/files/kldload_syscalls.patch"/>
+      <FILE Action="Delete" Path="devel/valgrind/files/missing_fcntls.patch"/>
+      <FILE Action="Delete" Path="devel/valgrind/files/patch-VEX_auxprogs_genoffsets.c"/>
+      <FILE Action="Delete" Path="devel/valgrind/files/patch-configure.ac"/>
+      <FILE Action="Delete" Path="devel/valgrind/files/patch-coregrind-m_debuglog.c"/>
+      <FILE Action="Delete" Path="devel/valgrind/files/patch-coregrind-m_syswrap-syswrap-amd64-freebsd.c"/>
+      <FILE Action="Delete" Path="devel/valgrind/files/patch-include__vki__vki-freebsd.h"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="12"/>
+    <TIME Timezone="UTC" Hour="6" Minute="52" Second="39"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/sbcl: re-sort variables and fix formatting
+
+(cherry picked from commit ee75dc9794e2f1d383d03093a6aaf9dffd3a122c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0c92e4f01200a18be379fc3f23bbddc38987a1ea" HashShort="0c92e4f" Subject="lang/sbcl: re-sort variables and fix formatting" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/sbcl/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

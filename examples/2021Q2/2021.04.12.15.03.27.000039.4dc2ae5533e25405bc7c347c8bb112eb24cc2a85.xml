@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="12"/>
+    <TIME Timezone="UTC" Hour="15" Minute="3" Second="27"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>abandoning ports-mgmt/synth and lang/gcc6-aux
+
+I have not been using synth for a while and I not interested to maintain synth and gcc6-aux anymore.
+
+(cherry picked from commit 1ac03563983fe07a7d2d33f5214aea0e8e54a52e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Eric Turgeon" AuthorEmail="ericbsd@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="4dc2ae5533e25405bc7c347c8bb112eb24cc2a85" HashShort="4dc2ae5" Subject="abandoning ports-mgmt/synth and lang/gcc6-aux" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/gcc6-aux/Makefile"/>
+      <FILE Action="Modify" Path="ports-mgmt/synth/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

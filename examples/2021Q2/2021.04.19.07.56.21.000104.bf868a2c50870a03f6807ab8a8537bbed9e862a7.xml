@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="19"/>
+    <TIME Timezone="UTC" Hour="7" Minute="56" Second="21"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/firefox: fix build on powerpc64*
+
+SupportsMimeType() now uses one argument.
+
+(cherry picked from commit 1dddbd517339425d59febc4cde1b037958e92920)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Christoph Moench-Tegeder" CommitterEmail="cmt@FreeBSD.org"/>
+      <AUTHOR AuthorName="Piotr Kubaj" AuthorEmail="pkubaj@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="bf868a2c50870a03f6807ab8a8537bbed9e862a7" HashShort="bf868a2" Subject="www/firefox: fix build on powerpc64*" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/firefox/files/patch-dom_media_flac_FlacDecoder.cpp"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

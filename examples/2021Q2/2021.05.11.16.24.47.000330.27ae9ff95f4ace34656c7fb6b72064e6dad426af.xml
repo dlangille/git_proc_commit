@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="11"/>
+    <TIME Timezone="UTC" Hour="16" Minute="24" Second="47"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-im/py-matrix-synapse: Update to 1.33.2
+
+PR:		255791
+MFH:		2021Q2
+Security:	CVE-2021-29471
+
+(cherry picked from commit 88da10f9e38e41a2f2fd7082f3ce7335460b7643)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Neel Chauhan" CommitterEmail="nc@FreeBSD.org"/>
+      <AUTHOR AuthorName="Sascha Biberhofer" AuthorEmail="ports@skyforge.at"/>
+    </PEOPLE>
+    <COMMIT Hash="27ae9ff95f4ace34656c7fb6b72064e6dad426af" HashShort="27ae9ff" Subject="net-im/py-matrix-synapse: Update to 1.33.2" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-im/py-matrix-synapse/Makefile"/>
+      <FILE Action="Modify" Path="net-im/py-matrix-synapse/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

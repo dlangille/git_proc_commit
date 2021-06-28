@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="1"/>
+    <TIME Timezone="UTC" Hour="3" Minute="12" Second="43"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>science/py-scipy: Fix required python version
+
+scipy dropped support for 3.6 as of 1.6.0:
+
+https://github.com/scipy/scipy/commit/0a4f408d9bd560f9a379d2e33b136b93f3583042
+
+PR:		256083
+MFH:		2021Q2
+(cherry picked from commit 7a75d1c97ab2c2b41d32490b31ffb07c55800ee7)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Li-Wen Hsu" CommitterEmail="lwhsu@FreeBSD.org"/>
+      <AUTHOR AuthorName="John W. O'Brien" AuthorEmail="john@saltant.com"/>
+    </PEOPLE>
+    <COMMIT Hash="e97e947598ce39091075e5263cfe7756c79943fc" HashShort="e97e947" Subject="science/py-scipy: Fix required python version" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="science/py-scipy/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="9"/>
+    <TIME Timezone="UTC" Hour="16" Minute="7" Second="52"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>editors/libreoffice: Update to 7.1.3 release
+
+LibreOffice 7.1.3 Community, the third minor release of the LibreOffice
+7.1 family, includes over 100 bug fixes, with 25% focused on
+Microsoft Office file compatibility (DOCX, XLSX and PPTX).
+
+Release notes:	https://blog.documentfoundation.org/blog/2021/05/06/libreoffice-7-1-3/
+
+(cherry picked from commit 3bcf64184336bf80d851783d9bbc7b2b5d4a140e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="34b5c30cd549c70614acfb33b7bec766ae386ab7" HashShort="34b5c30" Subject="editors/libreoffice: Update to 7.1.3 release" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="arabic/libreoffice/distinfo"/>
+      <FILE Action="Modify" Path="chinese/libreoffice-zh_CN/distinfo"/>
+      <FILE Action="Modify" Path="chinese/libreoffice-zh_TW/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-af/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-am/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-as/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ast/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-be/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-bg/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-bn/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-bn_IN/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-bo/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-br/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-brx/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-bs/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ca/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ca_valencia/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ckb/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-cs/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-cy/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-da/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-dgo/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-dsb/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-dz/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-el/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-en_GB/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-en_ZA/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-eo/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-es/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-et/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-eu/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-fa/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-fi/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-fur/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-fy/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ga/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-gd/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-gl/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-gu/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-gug/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-hi/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-hr/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-hsb/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-id/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-is/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-it/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ka/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-kab/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-kk/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-km/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-kmr_Latn/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-kn/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-kok/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ks/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-lb/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-lo/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-lt/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-lv/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-mai/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-mk/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ml/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-mn/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-mni/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-mr/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-my/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-nb/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ne/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-nl/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-nn/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-nr/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-nso/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-oc/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-om/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-or/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-pa_IN/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ro/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-rw/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-sa_IN/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-sat/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-sd/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-si/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-sid/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-sk/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-sl/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-sq/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-sr/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-sr_Latn/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ss/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-st/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-sv/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-sw_TZ/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-szl/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ta/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-te/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-tg/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-th/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-tn/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-tr/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ts/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-tt/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ug/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-uz/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-ve/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-vec/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-xh/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice-zu/distinfo"/>
+      <FILE Action="Modify" Path="editors/libreoffice/Makefile"/>
+      <FILE Action="Modify" Path="editors/libreoffice/Makefile.common"/>
+      <FILE Action="Modify" Path="editors/libreoffice/distinfo"/>
+      <FILE Action="Modify" Path="french/libreoffice/distinfo"/>
+      <FILE Action="Modify" Path="german/libreoffice/distinfo"/>
+      <FILE Action="Modify" Path="hebrew/libreoffice/distinfo"/>
+      <FILE Action="Modify" Path="hungarian/libreoffice/distinfo"/>
+      <FILE Action="Modify" Path="japanese/libreoffice/distinfo"/>
+      <FILE Action="Modify" Path="korean/libreoffice/distinfo"/>
+      <FILE Action="Modify" Path="polish/libreoffice/distinfo"/>
+      <FILE Action="Modify" Path="portuguese/libreoffice-pt_BR/distinfo"/>
+      <FILE Action="Modify" Path="portuguese/libreoffice/distinfo"/>
+      <FILE Action="Modify" Path="russian/libreoffice/distinfo"/>
+      <FILE Action="Modify" Path="ukrainian/libreoffice/distinfo"/>
+      <FILE Action="Modify" Path="vietnamese/libreoffice/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

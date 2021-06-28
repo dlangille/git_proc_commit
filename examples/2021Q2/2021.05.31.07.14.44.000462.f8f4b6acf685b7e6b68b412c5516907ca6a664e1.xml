@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="31"/>
+    <TIME Timezone="UTC" Hour="7" Minute="14" Second="44"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>benchmarks/fio: update to 3.27
+
+(cherry picked from commit 395823cfd2dd947aed32c3911471471720b908fa)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f8f4b6acf685b7e6b68b412c5516907ca6a664e1" HashShort="f8f4b6a" Subject="benchmarks/fio: update to 3.27" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="benchmarks/fio/Makefile"/>
+      <FILE Action="Modify" Path="benchmarks/fio/distinfo"/>
+      <FILE Action="Modify" Path="benchmarks/fio/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

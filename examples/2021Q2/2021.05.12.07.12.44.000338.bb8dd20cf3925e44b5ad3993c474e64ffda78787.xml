@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="12"/>
+    <TIME Timezone="UTC" Hour="7" Minute="12" Second="44"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/py-pop: update to 18.0
+
+(cherry picked from commit 0ed98048c5fbd4a8c10dd7100c1d72447f822c29)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="bb8dd20cf3925e44b5ad3993c474e64ffda78787" HashShort="bb8dd20" Subject="devel/py-pop: update to 18.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/py-pop/Makefile"/>
+      <FILE Action="Modify" Path="devel/py-pop/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

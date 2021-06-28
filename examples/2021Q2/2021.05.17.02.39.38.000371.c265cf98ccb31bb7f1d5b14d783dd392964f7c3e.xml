@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="17"/>
+    <TIME Timezone="UTC" Hour="2" Minute="39" Second="38"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/dav1d: update to 0.9.0
+
+Changes:	https://code.videolan.org/videolan/dav1d/-/releases/0.9.0
+Reported by:	Repology
+
+(cherry picked from commit 9fbffe366cf2e32e339814d6f4c86629dc47857b)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="c265cf98ccb31bb7f1d5b14d783dd392964f7c3e" HashShort="c265cf9" Subject="multimedia/dav1d: update to 0.9.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/dav1d/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/dav1d/distinfo"/>
+      <FILE Action="Modify" Path="multimedia/dav1d/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

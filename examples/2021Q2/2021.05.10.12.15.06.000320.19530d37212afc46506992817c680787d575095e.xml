@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="10"/>
+    <TIME Timezone="UTC" Hour="12" Minute="15" Second="6"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/dssim: update to 3.0.2
+
+Changes:	https://github.com/kornelski/dssim/compare/3.0.1...3.0.2
+Reported by:	Repology
+
+(cherry picked from commit de1876a17c9452d712c7722c2d2539e23b31cf10)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="19530d37212afc46506992817c680787d575095e" HashShort="19530d3" Subject="graphics/dssim: update to 3.0.2" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/dssim/Makefile"/>
+      <FILE Action="Modify" Path="graphics/dssim/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

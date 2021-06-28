@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="12"/>
+    <TIME Timezone="UTC" Hour="20" Minute="23" Second="57"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/mpv: backport VULKAN+VAAPI fix for Intel
+
+Regressed by cc87022694a6 update but the fix only helps mesa-devel.
+
+$ mpv --hwdec=vaapi --gpu-api=vulkan /path/to/file
+[...]
+[vo/gpu/vulkan/libplacebo] vk-&gt;CreateImage(vk-&gt;dev, &amp;iinfo, PL_VK_ALLOC, &amp;tex_vk-&gt;img): VK_ERROR_OUT_OF_DEVICE_MEMORY (../src/vulkan/gpu.c:1185)
+[vo/gpu/vulkan/libplacebo] vk-&gt;CreateImage(vk-&gt;dev, &amp;iinfo, PL_VK_ALLOC, &amp;tex_vk-&gt;img): VK_ERROR_OUT_OF_DEVICE_MEMORY (../src/vulkan/gpu.c:1185)
+[vo/gpu/vulkan/libplacebo] vk-&gt;CreateImage(vk-&gt;dev, &amp;iinfo, PL_VK_ALLOC, &amp;tex_vk-&gt;img): VK_ERROR_OUT_OF_DEVICE_MEMORY (../src/vulkan/gpu.c:1185)
+[vo/gpu/vulkan/libplacebo] vk-&gt;CreateImage(vk-&gt;dev, &amp;iinfo, PL_VK_ALLOC, &amp;tex_vk-&gt;img): VK_ERROR_OUT_OF_DEVICE_MEMORY (../src/vulkan/gpu.c:1185)
+Using hardware decoding (vaapi).
+VO: [gpu] 1920x1080 vaapi[nv12]
+[vo/gpu/vaapi-egl] unsupported VA image format nv12
+[vo/gpu] Initializing texture for hardware decoding failed.
+[...]
+
+(cherry picked from commit fbaf96a60fd0a9d08614a58a3be3344768c78eeb)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="039c0c283e0fff535cb6662f0c1c6041111bdb80" HashShort="039c0c2" Subject="multimedia/mpv: backport VULKAN+VAAPI fix for Intel" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/mpv/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/mpv/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

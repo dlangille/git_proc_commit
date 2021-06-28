@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="11"/>
+    <TIME Timezone="UTC" Hour="17" Minute="54" Second="4"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/wayland: add note about XDG_RUNTIME_DIR
+
+error: XDG_RUNTIME_DIR not set in the environment.
+
+PR:		255355
+Inspired by:	hikari
+Approved by:	maintainer timeout
+
+(cherry picked from commit 2d487a43aa142c32eabdd8feeb4ca523d24c6a42)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Tobias Kortkamp" CommitterEmail="tobik@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="b33587a4adc2dc846f129cb4e167cb6efb33fa12" HashShort="b33587a" Subject="graphics/wayland: add note about XDG_RUNTIME_DIR" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Add" Path="graphics/wayland/pkg-message"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

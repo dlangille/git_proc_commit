@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="17"/>
+    <TIME Timezone="UTC" Hour="14" Minute="46" Second="33"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/py-pytz: Update to 2021.1
+
+(cherry picked from commit 5969213cd7ca690be15e54a11ab1b477a8ae64ca)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Li-Wen Hsu" CommitterEmail="lwhsu@FreeBSD.org"/>
+      <AUTHOR AuthorName="Li-Wen Hsu" AuthorEmail="lwhsu@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="1dbb45af940e94810cf0e40c3e2998282c13cb1b" HashShort="1dbb45a" Subject="devel/py-pytz: Update to 2021.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/py-pytz/Makefile"/>
+      <FILE Action="Modify" Path="devel/py-pytz/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

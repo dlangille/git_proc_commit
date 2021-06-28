@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="12" Minute="23" Second="17"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/sqldeveloper: Update to 20.4.1.407.0006
+
+- Update to 20.4.1.407.006
+
+And while here, also Reformat Makefile a bit.
+
+PR:		256397
+Approved by:	vvd@unislabs.com (maintainer)
+
+(cherry picked from commit a52149b28546dcae017b403ecb0a596f0ec2d1b1)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Chris Moerz" AuthorEmail="freebsd@ny-central.org"/>
+    </PEOPLE>
+    <COMMIT Hash="facf9c2daf17a2152b97b7b4d4e50f4aeca86b70" HashShort="facf9c2" Subject="databases/sqldeveloper: Update to 20.4.1.407.0006" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/sqldeveloper/Makefile"/>
+      <FILE Action="Modify" Path="databases/sqldeveloper/distinfo"/>
+      <FILE Action="Modify" Path="databases/sqldeveloper/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

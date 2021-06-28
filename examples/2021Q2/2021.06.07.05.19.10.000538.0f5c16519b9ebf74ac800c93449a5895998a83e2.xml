@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="7"/>
+    <TIME Timezone="UTC" Hour="5" Minute="19" Second="10"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/rpcs3: unbreak on -CURRENT after src@95aa617e4bf0
+
+In file included from rpcs3/Emu/Cell/Modules/cellNetCtl.cpp:1:
+In file included from rpcs3/stdafx.h:7:
+In file included from Utilities/File.h:4:
+rpcs3/util/shared_ptr.hpp:10:17: error: constexpr variable 'same_ptr_implicit_v&lt;thread_future, thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt;' must be initialized by a constant expression
+        constexpr bool same_ptr_implicit_v = std::is_convertible_v&lt;const volatile From*, const volatile To*&gt; ? is_same_ptr&lt;From, To&gt;() : false;
+                       ^                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rpcs3/util/shared_ptr.hpp:396:34: note: in instantiation of variable template specialization 'stx::same_ptr_implicit_v&lt;thread_future, thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt;' requested here
+                template &lt;typename U&gt; requires same_ptr_implicit_v&lt;T, U&gt;
+                                               ^
+rpcs3/util/shared_ptr.hpp:396:34: note: while substituting template arguments into constraint expression here
+                template &lt;typename U&gt; requires same_ptr_implicit_v&lt;T, U&gt;
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~~
+Utilities/Thread.h:567:18: note: while checking constraint satisfaction for template 'shared_ptr&lt;thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt;' required here
+                                thread::push(std::move(target));
+                                             ^~~
+Utilities/Thread.h:567:18: note: in instantiation of function template specialization 'stx::shared_ptr&lt;thread_future&gt;::shared_ptr&lt;thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt;' requested here
+rpcs3/Emu/Cell/Modules/cellNetCtl.cpp:264:43: note: in instantiation of function template specialization 'named_thread&lt;netstart_hack&gt;::operator()&lt;true, int&gt;' requested here
+        g_fxo-&gt;get&lt;named_thread&lt;netstart_hack&gt;&gt;()(0);
+                                                 ^
+rpcs3/util/types.hpp:1049:16: note: non-constexpr function 'allocate' cannot be used in a constant expression
+                                X* ptr = a.allocate(1);
+                                           ^
+rpcs3/util/shared_ptr.hpp:10:105: note: in call to 'is_same_ptr()'
+        constexpr bool same_ptr_implicit_v = std::is_convertible_v&lt;const volatile From*, const volatile To*&gt; ? is_same_ptr&lt;From, To&gt;() : false;
+                                                                                                               ^
+/usr/include/c++/v1/memory:1783:66: note: declared here
+    _LIBCPP_NODISCARD_AFTER_CXX17 _LIBCPP_INLINE_VISIBILITY _Tp* allocate(size_t __n)
+                                                                 ^
+In file included from rpcs3/Emu/Cell/Modules/cellNetCtl.cpp:1:
+In file included from rpcs3/stdafx.h:7:
+In file included from Utilities/File.h:4:
+rpcs3/util/shared_ptr.hpp:396:34: error: substitution into constraint expression resulted in a non-constant expression
+                template &lt;typename U&gt; requires same_ptr_implicit_v&lt;T, U&gt;
+                                               ^~~~~~~~~~~~~~~~~~~~~~~~~
+Utilities/Thread.h:567:18: note: while checking constraint satisfaction for template 'shared_ptr&lt;thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt;' required here
+                                thread::push(std::move(target));
+                                             ^~~
+Utilities/Thread.h:567:18: note: in instantiation of function template specialization 'stx::shared_ptr&lt;thread_future&gt;::shared_ptr&lt;thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt;' requested here
+rpcs3/Emu/Cell/Modules/cellNetCtl.cpp:264:43: note: in instantiation of function template specialization 'named_thread&lt;netstart_hack&gt;::operator()&lt;true, int&gt;' requested here
+        g_fxo-&gt;get&lt;named_thread&lt;netstart_hack&gt;&gt;()(0);
+                                                 ^
+rpcs3/util/shared_ptr.hpp:396:34: note: initializer of 'same_ptr_implicit_v&lt;thread_future, thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt;' is not a constant expression
+                template &lt;typename U&gt; requires same_ptr_implicit_v&lt;T, U&gt;
+                                               ^
+rpcs3/util/shared_ptr.hpp:10:17: note: declared here
+        constexpr bool same_ptr_implicit_v = std::is_convertible_v&lt;const volatile From*, const volatile To*&gt; ? is_same_ptr&lt;From, To&gt;() : false;
+                       ^
+In file included from rpcs3/Emu/Cell/Modules/cellNetCtl.cpp:3:
+In file included from rpcs3/Emu/Cell/PPUModule.h:3:
+In file included from rpcs3/Emu/Cell/PPUFunction.h:3:
+In file included from rpcs3/Emu/Cell/PPUThread.h:3:
+In file included from rpcs3/Emu/CPU/CPUThread.h:3:
+Utilities/Thread.h:567:18: error: no viable conversion from 'typename remove_reference&lt;single_ptr&lt;thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt; &amp;&gt;::type' (aka 'stx::single_ptr&lt;thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt;') to 'shared_ptr&lt;thread_future&gt;'
+                                thread::push(std::move(target));
+                                             ^~~~~~~~~~~~~~~~~
+rpcs3/Emu/Cell/Modules/cellNetCtl.cpp:264:43: note: in instantiation of function template specialization 'named_thread&lt;netstart_hack&gt;::operator()&lt;true, int&gt;' requested here
+        g_fxo-&gt;get&lt;named_thread&lt;netstart_hack&gt;&gt;()(0);
+                                                 ^
+rpcs3/util/shared_ptr.hpp:356:3: note: candidate constructor not viable: no known conversion from 'typename remove_reference&lt;single_ptr&lt;thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt; &amp;&gt;::type' (aka 'stx::single_ptr&lt;thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt;') to 'const stx::shared_ptr&lt;thread_future&gt; &amp;' for 1st argument
+                shared_ptr(const shared_ptr&amp; r) noexcept
+                ^
+rpcs3/util/shared_ptr.hpp:364:34: note: candidate constructor not viable: no known conversion from 'typename remove_reference&lt;single_ptr&lt;thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt; &amp;&gt;::type' (aka 'stx::single_ptr&lt;thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt;') to 'std::nullptr_t' (aka 'nullptr_t') for 1st argument
+                [[deprecated("Use null_ptr")]] shared_ptr(std::nullptr_t) = delete;
+                                               ^
+rpcs3/util/shared_ptr.hpp:383:3: note: candidate constructor not viable: no known conversion from 'typename remove_reference&lt;single_ptr&lt;thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt; &amp;&gt;::type' (aka 'stx::single_ptr&lt;thread_future_t&lt;true, netstart_hack &amp;, int&gt;&gt;') to 'stx::shared_ptr&lt;thread_future&gt; &amp;&amp;' for 1st argument
+                shared_ptr(shared_ptr&amp;&amp; r) noexcept
+                ^
+rpcs3/util/shared_ptr.hpp:376:3: note: candidate template ignored: could not match 'shared_ptr' against 'single_ptr'
+                shared_ptr(const shared_ptr&lt;U&gt;&amp; r) noexcept
+                ^
+rpcs3/util/shared_ptr.hpp:390:3: note: candidate template ignored: could not match 'shared_ptr' against 'single_ptr'
+                shared_ptr(shared_ptr&lt;U&gt;&amp;&amp; r) noexcept
+                ^
+rpcs3/util/shared_ptr.hpp:397:3: note: candidate template ignored: failed template argument deduction
+                shared_ptr(single_ptr&lt;U&gt;&amp;&amp; r) noexcept
+                ^
+rpcs3/util/shared_ptr.hpp:367:12: note: explicit constructor is not a candidate
+                explicit shared_ptr(T* _this) noexcept
+                         ^
+rpcs3/util/shared_ptr.hpp:200:3: note: candidate function
+                operator element_type*() const noexcept
+                ^
+rpcs3/util/shared_ptr.hpp:212:12: note: explicit conversion function is not a candidate
+                explicit operator single_ptr&lt;U&gt;() &amp;&amp; noexcept
+                         ^
+Utilities/Thread.h:187:37: note: passing argument to parameter here
+        void push(shared_ptr&lt;thread_future&gt;);
+                                           ^
+
+Reported by:	pkg-fallout
+
+(cherry picked from commit e8aa9591b338dee8335d4d4ccf088871bdb78b54)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0f5c16519b9ebf74ac800c93449a5895998a83e2" HashShort="0f5c165" Subject="emulators/rpcs3: unbreak on -CURRENT after src@95aa617e4bf0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/rpcs3/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

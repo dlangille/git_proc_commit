@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="5"/>
+    <TIME Timezone="UTC" Hour="12" Minute="24" Second="31"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-mgmt/prometheus2: Direct commit to correct distinfo
+
+When cherry-pick'ing 2.61.1, distinfo was incorrectly merged. This is a
+direct commit to 2021Q2 to fix the issue.
+
+Fixes:		ece647d08c3933df136bef37559c6987eec192a7
+Reported by:	phyber (irc), mandree
+Approved by:	lwhsu (mentor, implicit), portmgr (implicit, fix build)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Guangyuan Yang" CommitterEmail="ygy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Guangyuan Yang" AuthorEmail="ygy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="656940c421cf8df146a941c6f2552f6145f143be" HashShort="656940c" Subject="net-mgmt/prometheus2: Direct commit to correct distinfo" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-mgmt/prometheus2/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

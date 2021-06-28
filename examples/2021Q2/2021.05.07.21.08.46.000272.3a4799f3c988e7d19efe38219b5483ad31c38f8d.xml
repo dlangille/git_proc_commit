@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="7"/>
+    <TIME Timezone="UTC" Hour="21" Minute="8" Second="46"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-p2p/py-transmission-rpc: update to 3.2.5
+
+Changes:	https://github.com/Trim21/transmission-rpc/releases/tag/v3.2.5
+Reported by:	GitHub (watch releases)
+
+(cherry picked from commit 12a0ef4828eb92aed5ad4b56436fa567d56d0a31)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="3a4799f3c988e7d19efe38219b5483ad31c38f8d" HashShort="3a4799f" Subject="net-p2p/py-transmission-rpc: update to 3.2.5" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-p2p/py-transmission-rpc/Makefile"/>
+      <FILE Action="Modify" Path="net-p2p/py-transmission-rpc/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

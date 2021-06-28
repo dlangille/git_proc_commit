@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="12"/>
+    <TIME Timezone="UTC" Hour="15" Minute="3" Second="28"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>ports-mgmt/synth: update to 2.10 release
+
+While here, take maintainership
+
+(cherry picked from commit 1daf9f81cfe67642ebb73731f19674ca71367faf)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="6a0f6f4dbb9c8bdbbb379ef249341ab6246dfeaf" HashShort="6a0f6f4" Subject="ports-mgmt/synth: update to 2.10 release" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="ports-mgmt/synth/Makefile"/>
+      <FILE Action="Modify" Path="ports-mgmt/synth/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

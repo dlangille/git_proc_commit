@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="11"/>
+    <TIME Timezone="UTC" Hour="19" Minute="40" Second="18"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/otrs: Add missing sysutils/p5-Schedule-Cron-Events dependency
+
+PR:		248577
+Submitted by:	vvv &lt;work+freebsd@vvv.kiev.ua&gt;
+Approved by:	m.tsatsenko@gmail.com (maintainer)
+MFH:		2021Q2 (runtime fix)
+
+(cherry picked from commit e0154347055c7dc1656a097280ff968037c9bb98)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Neel Chauhan" CommitterEmail="nc@FreeBSD.org"/>
+      <AUTHOR AuthorName="Neel Chauhan" AuthorEmail="nc@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0e1ab3e1554267a3b856dce84eef4202bc19295a" HashShort="0e1ab3e" Subject="www/otrs: Add missing sysutils/p5-Schedule-Cron-Events dependency" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/otrs/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

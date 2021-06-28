@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="22"/>
+    <TIME Timezone="UTC" Hour="17" Minute="14" Second="53"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>games/supertuxkart: mark BROKEN on i386</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="fee070d6b431928ea814159edfc9412045d6e778" HashShort="fee070d" Subject="games/supertuxkart: mark BROKEN on i386" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="games/supertuxkart/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

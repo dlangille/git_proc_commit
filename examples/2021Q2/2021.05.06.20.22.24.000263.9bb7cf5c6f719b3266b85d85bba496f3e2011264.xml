@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="6"/>
+    <TIME Timezone="UTC" Hour="20" Minute="22" Second="24"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>deskutils/calibre: Add missing dependency
+
+Add a dependency dynamically used to open markdown files.
+
+PR:		255620
+(cherry picked from commit 99620e82296e7e4ae7228f4d31f714c9408ea793)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Guido Falsi" CommitterEmail="madpilot@FreeBSD.org"/>
+      <AUTHOR AuthorName="Guido Falsi" AuthorEmail="madpilot@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="9bb7cf5c6f719b3266b85d85bba496f3e2011264" HashShort="9bb7cf5" Subject="deskutils/calibre: Add missing dependency" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="deskutils/calibre/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

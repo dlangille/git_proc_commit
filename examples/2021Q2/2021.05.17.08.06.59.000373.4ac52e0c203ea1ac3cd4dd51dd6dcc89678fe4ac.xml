@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="17"/>
+    <TIME Timezone="UTC" Hour="8" Minute="6" Second="59"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/postgresql??-*: Upgrade to latest version
+
+PostgreSQL 13.3, 12.7, 11.12, 10.17, and 9.6.22 Released!
+
+The PostgreSQL Global Development Group has released an update to all supported
+versions of our database system, including 13.3, 12.7, 11.12, 10.17, and
+9.6.22. This release closes three security vulnerabilities and fixes over 45
+bugs reported over the last three months.
+
+Security fixes in this release:
+
+CVE-2021-32027: Buffer overrun from integer overflow in array subscripting
+                calculations
+
+CVE-2021-32028: Memory disclosure in INSERT ... ON CONFLICT ... DO UPDATE
+
+CVE-2021-32029: Memory disclosure in partitioned-table UPDATE ... RETURNING
+
+Also plenty of bug fixes. See the release note for details.
+
+Changes to the port:
+
+Make sure we use the matching version of llvm. This fixes a problem with the
+llvm version string not being monotonically increasing with the version
+number. [1]
+
+Better pkg message about checksums for postgresql 12+. [2] [4]
+
+Adjust login class parameter to adhere to the documentation in rc.subr(8) [3]:
+  The rc.conf parameter for the login class of the postgresql daemon has
+  changed name from postgresql_class to postgresql_login_class, since
+  rc.subr(8) states that the parameter should be named ${name}_login_class.
+
+Allow parallel builds. [5]
+
+Correct the directory name for the user postgres in pkg message. [6]
+
+PR:		250824 [1], 253558 [2], 236060 [3], 233106 [4],  230656 [5]
+PR:		226674 [6]
+Submitted by:	Michael Zhilin [2], Michael Zhilin [3], Dmitry Chestnykh [4]
+Submitted by:	Steve Wills [5], knezour [6]
+
+Security:	76e0bb86-b4cb-11eb-b9c9-6cc21735f730
+Security:	62da9702-b4cc-11eb-b9c9-6cc21735f730
+
+Release notes:	https://www.postgresql.org/docs/release/
+
+(cherry picked from commit ab83f2b4bb78a718efa5c43247ba1e1d207f99b6)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Palle Girgensohn" CommitterEmail="girgen@FreeBSD.org"/>
+      <AUTHOR AuthorName="Palle Girgensohn" AuthorEmail="girgen@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="4ac52e0c203ea1ac3cd4dd51dd6dcc89678fe4ac" HashShort="4ac52e0" Subject="databases/postgresql??-*: Upgrade to latest version" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="UPDATING"/>
+      <FILE Action="Modify" Path="databases/postgresql10-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/postgresql10-server/distinfo"/>
+      <FILE Action="Modify" Path="databases/postgresql10-server/files/pkg-message-server.in"/>
+      <FILE Action="Modify" Path="databases/postgresql10-server/files/postgresql.in"/>
+      <FILE Action="Modify" Path="databases/postgresql11-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/postgresql11-server/distinfo"/>
+      <FILE Action="Modify" Path="databases/postgresql11-server/files/pkg-message-server.in"/>
+      <FILE Action="Modify" Path="databases/postgresql11-server/files/postgresql.in"/>
+      <FILE Action="Modify" Path="databases/postgresql12-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/postgresql12-server/distinfo"/>
+      <FILE Action="Modify" Path="databases/postgresql12-server/files/pkg-message-server.in"/>
+      <FILE Action="Modify" Path="databases/postgresql12-server/files/postgresql.in"/>
+      <FILE Action="Modify" Path="databases/postgresql13-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/postgresql13-server/distinfo"/>
+      <FILE Action="Modify" Path="databases/postgresql13-server/files/pkg-message-server.in"/>
+      <FILE Action="Modify" Path="databases/postgresql13-server/files/postgresql.in"/>
+      <FILE Action="Modify" Path="databases/postgresql13-server/pkg-plist-client"/>
+      <FILE Action="Modify" Path="databases/postgresql13-server/pkg-plist-server"/>
+      <FILE Action="Modify" Path="databases/postgresql95-server/files/pkg-message-server.in"/>
+      <FILE Action="Modify" Path="databases/postgresql96-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/postgresql96-server/distinfo"/>
+      <FILE Action="Modify" Path="databases/postgresql96-server/files/pkg-message-server.in"/>
+      <FILE Action="Modify" Path="databases/postgresql96-server/files/postgresql.in"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

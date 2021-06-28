@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="13" Minute="44" Second="53"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/spidermonkey185: mark BROKEN on FreeBSD ≥ 13
+
+Approved by:	portmgr blanket
+
+(cherry picked from commit 3b4a64f8404e1c9934b278cc556401476ae6df78)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="2f8b55fcb0e93e5789b4d8068754682b0588eea2" HashShort="2f8b55f" Subject="lang/spidermonkey185: mark BROKEN on FreeBSD ≥ 13" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/spidermonkey185/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

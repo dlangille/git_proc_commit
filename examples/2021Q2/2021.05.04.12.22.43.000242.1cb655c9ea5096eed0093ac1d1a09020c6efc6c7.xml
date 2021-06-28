@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="4"/>
+    <TIME Timezone="UTC" Hour="12" Minute="22" Second="43"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/expiretable: Fix build on 13+
+
+get_states() is the reason it stopped building on FreeBSD 13 and newer.
+Retire this function since it's not used anywhere and get the build
+fixed.
+
+PR:		253547
+Reported by:	mike@sentex.net
+Reviewed by:	kp
+Approved by:	maintainer timeout (2 weeks)
+Obtained from:	pfSense
+MFH:		2021Q2
+Sponsored by:	Rubicon Communications, LLC ("Netgate")
+
+(cherry picked from commit 712ed31c3e42950d96d5995007d7a7b361cd3d83)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Renato Botelho" CommitterEmail="garga@FreeBSD.org"/>
+      <AUTHOR AuthorName="Renato Botelho" AuthorEmail="garga@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="1cb655c9ea5096eed0093ac1d1a09020c6efc6c7" HashShort="1cb655c" Subject="security/expiretable: Fix build on 13+" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/expiretable/Makefile"/>
+      <FILE Action="Modify" Path="security/expiretable/files/patch-Makefile"/>
+      <FILE Action="Delete" Path="security/expiretable/files/patch-expiretable"/>
+      <FILE Action="Add" Path="security/expiretable/files/patch-expiretable.c"/>
+      <FILE Action="Add" Path="security/expiretable/files/patch-ioctl__helpers.c"/>
+      <FILE Action="Add" Path="security/expiretable/files/patch-ioctl__helpers.h"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

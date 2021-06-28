@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="15"/>
+    <TIME Timezone="UTC" Hour="15" Minute="49" Second="20"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>irc/ircII: Update to 20210314
+
+PR:		255492
+Approved by:	maintainer
+MFH:		2021Q2
+Security:	CVE-2021-29376
+
+(cherry picked from commit 876e3518e2d6471142cc16e0d9020c4cac7bbefb)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kevin Bowling" CommitterEmail="kbowling@FreeBSD.org"/>
+      <AUTHOR AuthorName="Andrew Gierth" AuthorEmail="andrew@tao11.riddles.org.uk"/>
+    </PEOPLE>
+    <COMMIT Hash="0a20f3a3fdd6c9869164218323ec17fb735e1d21" HashShort="0a20f3a" Subject="irc/ircII: Update to 20210314" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="irc/ircII/Makefile"/>
+      <FILE Action="Modify" Path="irc/ircII/distinfo"/>
+      <FILE Action="Modify" Path="irc/ircII/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

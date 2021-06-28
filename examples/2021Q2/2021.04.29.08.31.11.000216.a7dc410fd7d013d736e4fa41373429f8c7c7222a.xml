@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="29"/>
+    <TIME Timezone="UTC" Hour="8" Minute="31" Second="11"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/chromium: update to 90.0.4430.93
+
+MFH:		2021Q2
+Security:	https://vuxml.freebsd.org/freebsd/9fba80e0-a771-11eb-97a0-e09467587c17.html
+(cherry picked from commit 448693e731a7463cff4798da83f58d5096372c2e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rene Ladan" CommitterEmail="rene@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthias Wolf" AuthorEmail="matthias@rheinwolf.de"/>
+    </PEOPLE>
+    <COMMIT Hash="a7dc410fd7d013d736e4fa41373429f8c7c7222a" HashShort="a7dc410" Subject="www/chromium: update to 90.0.4430.93" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/chromium/Makefile"/>
+      <FILE Action="Modify" Path="www/chromium/distinfo"/>
+      <FILE Action="Add" Path="www/chromium/files/patch-components_paint__preview_browser_paint__preview__client.cc"/>
+      <FILE Action="Add" Path="www/chromium/files/patch-components_paint__preview_common_proto_paint__preview.proto"/>
+      <FILE Action="Add" Path="www/chromium/files/patch-mojo_core_channel.h"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

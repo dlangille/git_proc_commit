@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="28"/>
+    <TIME Timezone="UTC" Hour="12" Minute="51" Second="3"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/gimp-app: use canonical name for AALIB option
+
+PR:	255819
+Submitted by:	amdmi3@
+
+(cherry picked from commit b2d56ea4ae001063d2546bd1a772c053008bdd97)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="139e75894d4643c41415dfd4895ef7753a330d92" HashShort="139e758" Subject="graphics/gimp-app: use canonical name for AALIB option" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/gimp-app/Makefile"/>
+      <FILE Action="Modify" Path="graphics/gimp-app/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="1"/>
+    <TIME Timezone="UTC" Hour="22" Minute="46" Second="21"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/php80: Upgrade from 8.0.3 to 8.0.5
+
+Changelog:
+
+    Core:
+        Fixed bug #75776 (Flushing streams with compression filter is broken).
+        Fixed bug #80811 (Function exec without $output but with $restult_code parameter crashes).
+        Fixed bug #80814 (threaded mod_php won't load on FreeBSD: No space available for static Thread Local Storage).
+        Changed PowerPC CPU registers used by Zend VM to work around GCC bug. Old registers (r28/r29) might be clobbered by _restgpr routine used for return from C function compiled with -Os.
+    Dba:
+        Fixed bug #80817 (dba_popen() may cause segfault during RSHUTDOWN).
+    DOM:
+        Fixed bug #66783 (UAF when appending DOMDocument to element).
+    FFI:
+        Fixed bug #80847 (CData structs with fields of type struct can't be passed as C function argument).
+    FPM:
+        Fixed bug #80024 (Duplication of info about inherited socket after pool removing).
+    FTP:
+        Fixed bug #80880 (SSL_read on shutdown, ftp/proc_open).
+    IMAP:
+        Fixed bug #80800 (imap_open() fails when the flags parameter includes CL_EXPUNGE).
+        Fixed bug #80710 (imap_mail_compose() header injection).
+    Intl:
+        Fixed bug #80763 (msgfmt_format() does not accept DateTime references).
+    LibXML:
+        Fixed bug #73533 (Invalid memory access in php_libxml_xmlCheckUTF8).
+        Fixed bug #51903 (simplexml_load_file() doesn't use HTTP headers).
+    MySQLnd:
+        Fixed bug #80837 (Calling stmt_store_result after fetch doesn't throw an error).
+    Opcache:
+        Fixed bug #80839 (PHP problem with JIT).
+        Fixed bug #80861 (erronous array key overflow in 2D array with JIT).
+        Fixed bug #80786 (PHP crash using JIT).
+        Fixed bug #80782 (DASM_S_RANGE_VREG on PHP_INT_MIN-1).
+    Pcntl:
+        Fixed bug #79812 (Potential integer overflow in pcntl_exec()).
+    PCRE:
+        Fixed bug #80866 (preg_split ignores limit flag when pattern with \K has 0-width fullstring match).
+    PDO_ODBC:
+        Fixed bug #80783 (PDO ODBC truncates BLOB records at every 256th byte).
+    PDO_pgsql:
+        Fixed bug #80892 (PDO::PARAM_INT is treated the same as PDO::PARAM_STR).
+    Session:
+        Fixed bug #80889 (Cannot set save handler when save_handler is invalid).
+        Fixed bug #80774 (session_name() problem with backslash).
+    SOAP:
+        Fixed bug #69668 (SOAP special XML characters in namespace URIs not encoded).
+    Standard:
+        Fixed bug #80915 (Taking a reference to $_SERVER hides its values from phpinfo()).
+        Fixed bug #80914 ('getdir' accidentally defined as an alias of 'dir').
+        Fixed bug #80771 (phpinfo(INFO_CREDITS) displays nothing in CLI).
+        Fixed bug #78719 (http wrapper silently ignores long Location headers).
+        Fixed bug #80838 (HTTP wrapper waits for HTTP 1 response after HTTP 101).
+    Zip:
+        Fixed bug #80825 (ZipArchive::isCompressionMethodSupported does not exist).
+
+Sponsored by:	Bounce Experts
+
+(cherry picked from commit 3de8c62ac410f7635d710951b5cf0fafd2ce3877)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Torsten Zuehlsdorff" CommitterEmail="tz@FreeBSD.org"/>
+      <AUTHOR AuthorName="Torsten Zuehlsdorff" AuthorEmail="tz@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="9b1dd2d9da2c4a44f8c00912c5f0eeb20f4ad3df" HashShort="9b1dd2d" Subject="lang/php80: Upgrade from 8.0.3 to 8.0.5" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/php80/Makefile"/>
+      <FILE Action="Modify" Path="lang/php80/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

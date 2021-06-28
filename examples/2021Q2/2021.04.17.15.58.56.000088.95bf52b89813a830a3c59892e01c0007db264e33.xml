@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="17"/>
+    <TIME Timezone="UTC" Hour="15" Minute="58" Second="56"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/libgav1: update to 0.16.3
+
+Changes:	https://chromium.googlesource.com/codecs/libgav1/+log/v0.16.0..v0.16.3
+Reported by:	portscout
+
+(cherry picked from commit 5abf6717e3f0112adaa2408df03e427c7c015e4f)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="95bf52b89813a830a3c59892e01c0007db264e33" HashShort="95bf52b" Subject="multimedia/libgav1: update to 0.16.3" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/libgav1/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/libgav1/distinfo"/>
+      <FILE Action="Modify" Path="multimedia/libgav1/files/patch-CMakeLists.txt"/>
+      <FILE Action="Modify" Path="multimedia/libgav1/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

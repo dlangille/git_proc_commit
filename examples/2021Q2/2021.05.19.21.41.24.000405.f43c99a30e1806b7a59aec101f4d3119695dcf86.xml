@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="19"/>
+    <TIME Timezone="UTC" Hour="21" Minute="41" Second="24"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-mgmt/unifi6: Update to 6.2.25
+
+Changelog:
+https://community.ui.com/releases/d9cb0897-3ef4-4dda-a5d6-c07530ff8a86
+
+(cherry picked from commit dacbf0b62f55186f8b6bc74bdadcdc8939923669)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f43c99a30e1806b7a59aec101f4d3119695dcf86" HashShort="f43c99a" Subject="net-mgmt/unifi6: Update to 6.2.25" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-mgmt/unifi6/Makefile"/>
+      <FILE Action="Modify" Path="net-mgmt/unifi6/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

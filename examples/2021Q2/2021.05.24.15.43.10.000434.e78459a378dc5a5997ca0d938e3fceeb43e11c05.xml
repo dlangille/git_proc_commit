@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="24"/>
+    <TIME Timezone="UTC" Hour="15" Minute="43" Second="10"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/crowdsec-firewall-bouncer: new port
+
+Crowdsec bouncer written in golang for firewalls.
+
+cs-firewall-bouncer will fetch new and old decisions from a CrowdSec API
+to add them in a blocklist used by supported firewalls.
+
+WWW: https://github.com/crowdsecurity/cs-firewall-bouncer
+(cherry picked from commit 9ecdfbcdb55b424ca0df02b4a7fd72fc298cf9bf)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Sofian Brabez" CommitterEmail="sbz@FreeBSD.org"/>
+      <AUTHOR AuthorName="Sofian Brabez" AuthorEmail="sbz@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e78459a378dc5a5997ca0d938e3fceeb43e11c05" HashShort="e78459a" Subject="security/crowdsec-firewall-bouncer: new port" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/Makefile"/>
+      <FILE Action="Add" Path="security/crowdsec-firewall-bouncer/Makefile"/>
+      <FILE Action="Add" Path="security/crowdsec-firewall-bouncer/distinfo"/>
+      <FILE Action="Add" Path="security/crowdsec-firewall-bouncer/files/crowdsec_firewall.in"/>
+      <FILE Action="Add" Path="security/crowdsec-firewall-bouncer/files/pkg-message.in"/>
+      <FILE Action="Add" Path="security/crowdsec-firewall-bouncer/pkg-descr"/>
+      <FILE Action="Add" Path="security/crowdsec-firewall-bouncer/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

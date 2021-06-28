@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="13"/>
+    <TIME Timezone="UTC" Hour="20" Minute="55" Second="43"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Fix KDE_INVENT use
+
+Not all GitLab installations are the same; KDE_INVENT is one
+that still uses the "old" naming scheme, so set WRKSRC for
+ports that use that (all of which as "this should be a
+temporary solution until there is a real release again").
+Fixes build failures (patch, actually, since the extracted
+directories didn't match expectations) in e.g. audio/amarok.</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Adriaan de Groot" CommitterEmail="adridg@FreeBSD.org"/>
+      <AUTHOR AuthorName="Adriaan de Groot" AuthorEmail="adridg@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="3236f55cdc4fa8c030f517486333eb45e6239c5c" HashShort="3236f55" Subject="Fix KDE_INVENT use" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="Mk/Uses/kde.mk"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="26"/>
+    <TIME Timezone="UTC" Hour="17" Minute="40" Second="43"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/delaboratory: fix build with LLVM 11 libc++
+
+Rename local semaphore.h to keep it from accidentally being picked up
+by libc++ headers in place of the system &lt;semaphore.h&gt;.
+
+Obtained from:	OpenBSD</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Emanuel Haupt" CommitterEmail="ehaupt@FreeBSD.org"/>
+      <AUTHOR AuthorName="Emanuel Haupt" AuthorEmail="ehaupt@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="7fa75f77eba49750971e9012a7921b5cd9af6697" HashShort="7fa75f7" Subject="graphics/delaboratory: fix build with LLVM 11 libc++" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/delaboratory/Makefile"/>
+      <FILE Action="Add" Path="graphics/delaboratory/files/patch-core_base__layer__with__properties.cc"/>
+      <FILE Action="Add" Path="graphics/delaboratory/files/patch-core_layer__processor.h"/>
+      <FILE Action="Add" Path="graphics/delaboratory/files/patch-gui__wx_layer__processor__threads.h"/>
+      <FILE Action="Add" Path="graphics/delaboratory/files/patch-gui__wx_mutex__read__write.h"/>
+      <FILE Action="Add" Path="graphics/delaboratory/files/patch-gui__wx_semaphore.cc"/>
+      <FILE Action="Add" Path="graphics/delaboratory/files/patch-gui__wx_update__blend.cc"/>
+      <FILE Action="Add" Path="graphics/delaboratory/files/patch-gui__wx_update__main__layer__image.cc"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

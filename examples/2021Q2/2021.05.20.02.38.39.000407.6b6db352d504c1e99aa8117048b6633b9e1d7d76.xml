@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="20"/>
+    <TIME Timezone="UTC" Hour="2" Minute="38" Second="39"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/libavif: unbreak fetch
+
+fetch: https://github.com/AOMediaCodec/libavif/commit/2340cdb5f0c2.patch: size mismatch: expected 1712, actual 1714
+
+-index 919f0bc..cb680c3 100644
++index 919f0bc1..cb680c33 100644
+
+(cherry picked from commit 43938a30739d2edbdad9003ccf73959aeb16c309)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="6b6db352d504c1e99aa8117048b6633b9e1d7d76" HashShort="6b6db35" Subject="graphics/libavif: unbreak fetch" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/libavif/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

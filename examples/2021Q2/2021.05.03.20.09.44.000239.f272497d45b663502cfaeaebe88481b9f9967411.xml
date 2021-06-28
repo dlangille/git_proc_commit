@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="3"/>
+    <TIME Timezone="UTC" Hour="20" Minute="9" Second="44"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/firefox-esr: update to 78.10.1 (rc1)
+
+Release Notes (soon):
+  https://www.mozilla.org/en-US/firefox/78.10.1/releasenotes/
+
+(cherry picked from commit 27c39d2934613ba952088da14f6e8c753bc886be)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Christoph Moench-Tegeder" CommitterEmail="cmt@FreeBSD.org"/>
+      <AUTHOR AuthorName="Christoph Moench-Tegeder" AuthorEmail="cmt@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f272497d45b663502cfaeaebe88481b9f9967411" HashShort="f272497" Subject="www/firefox-esr: update to 78.10.1 (rc1)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/firefox-esr/Makefile"/>
+      <FILE Action="Modify" Path="www/firefox-esr/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

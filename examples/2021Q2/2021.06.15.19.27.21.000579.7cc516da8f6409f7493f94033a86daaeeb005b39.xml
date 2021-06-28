@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="15"/>
+    <TIME Timezone="UTC" Hour="19" Minute="27" Second="21"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>mail/postfix: Revert to 3.5.9
+
+Revert recent update to 3.6.1 back to 3.5.9 to fix the build.  As there
+is no mail/postfix35 that builds on FreeBSD 11, keep mail/postfix on the
+last version known to build and run on FreeBSD 11.
+
+And while here, also update the MAINTAINER. No functional change.
+
+This is a direct commit to 2021Q2.</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="7cc516da8f6409f7493f94033a86daaeeb005b39" HashShort="7cc516d" Subject="mail/postfix: Revert to 3.5.9" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="mail/postfix/Makefile"/>
+      <FILE Action="Modify" Path="mail/postfix/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

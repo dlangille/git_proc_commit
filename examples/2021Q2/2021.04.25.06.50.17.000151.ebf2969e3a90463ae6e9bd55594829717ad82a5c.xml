@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="25"/>
+    <TIME Timezone="UTC" Hour="6" Minute="50" Second="17"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/clickhouse: update to 21.3.6.55-lts
+PR:		255352
+Reported by:	maintainer
+
+(cherry picked from commit af7179f8cc81ef51e96a74971c3ab40d5f3a0a8e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ebf2969e3a90463ae6e9bd55594829717ad82a5c" HashShort="ebf2969" Subject="databases/clickhouse: update to 21.3.6.55-lts" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/clickhouse/Makefile"/>
+      <FILE Action="Modify" Path="databases/clickhouse/distinfo"/>
+      <FILE Action="Modify" Path="databases/clickhouse/files/clickhouse.in"/>
+      <FILE Action="Modify" Path="databases/clickhouse/files/patch-cmake_freebsd_default__libs.cmake"/>
+      <FILE Action="Modify" Path="databases/clickhouse/files/patch-src_Common_MemoryStatisticsOS.cpp"/>
+      <FILE Action="Modify" Path="databases/clickhouse/files/patch-src_Common_MemoryStatisticsOS.h"/>
+      <FILE Action="Modify" Path="databases/clickhouse/files/patch-src_Interpreters_AsynchronousMetrics.cpp"/>
+      <FILE Action="Modify" Path="databases/clickhouse/files/patch-src_Interpreters_AsynchronousMetrics.h"/>
+      <FILE Action="Modify" Path="databases/clickhouse/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

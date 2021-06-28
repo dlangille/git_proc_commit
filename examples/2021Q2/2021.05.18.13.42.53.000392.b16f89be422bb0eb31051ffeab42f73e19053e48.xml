@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="13" Minute="42" Second="53"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/libgda5-mdb: mark BROKEN (does not compile)
+
+Approved by:	portmgr blanket
+
+(cherry picked from commit 1082f8b1f0931f42abd8b0837b3dd06eae63d165)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="b16f89be422bb0eb31051ffeab42f73e19053e48" HashShort="b16f89b" Subject="databases/libgda5-mdb: mark BROKEN (does not compile)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/libgda5-mdb/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>
