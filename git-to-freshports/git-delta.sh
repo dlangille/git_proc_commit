@@ -30,6 +30,10 @@ logfile "XML dir is $XML"
 
 for repo in ${repos}
 do
+   if [ "${repo}" != "ports" ]
+   then
+      continue
+   fi
    logfile "Now processing repo: ${repo}"
 
    # convert the repo label to a physical directory on disk
@@ -53,57 +57,102 @@ do
       continue
    fi
 
-   if [ -f ${LATEST_FILE} ]; then
-      logfile "LATEST_FILE='${LATEST_FILE}' exists"
-   else
-      logfile "FATAL error, LATEST_FILE='${LATEST_FILE}' does not exist. We need a starting point."
-      continue
-   fi
-
    logfile "Repodir is $REPODIR"
    # on with the work
 
    cd ${REPODIR}
 
    # Bring local branch up-to-date with the local remote
-   logfile "Running: ${GIT} pull:"
-   ${GIT} pull
-   logfile "Done."
+   logfile "Running: ${GIT} fetch:"
+   ${GIT} fetch
+   logfile "fetch completed."
 
-   # let's try having the latest commt in this this.
-   STARTPOINT=$(cat ${LATEST_FILE})
+   NAME_OF_HEAD="main"
+   NAME_OF_REMOTE=$REMOTE
+   MAIN_BRANCH="$NAME_OF_REMOTE/$NAME_OF_HEAD"
 
-   if [ "${STARTPOINT}x" = 'x' ]
-   then
-      logfile "STARTPOINT is empty; there must not be any new commits to process"
-      logfile "Not proceeding with this repo: '${repo}'"
-      continue
-   else
-      logfile "STARTPOINT = ${STARTPOINT}"
-   fi
+   git for-each-ref --format '%(objecttype) %(refname)' \
+      | sed -n 's/^commit refs\/remotes\///p' \
+      | while read -r refname
+   do
+      echo looking at $refname
+      # for now, when testing, only this branch please
+      if [ "$refname" != "origin/2021Q2" ]
+      then
+         continue
+      fi
 
-   # get list of commits, if only to document them here
-   logfile "Running: ${GIT} rev-list ${STARTPOINT}..HEAD"
-   commits=$(${GIT} rev-list ${STARTPOINT}..HEAD)
-   logfile "Done."
+      # for now, when testing, only this branch please
+#      if [ "$refname" != "$MAIN_BRANCH" ]
+#      then
+#         continue
+#      fi
 
-   if [ -z "$commits" ]
-   then
-     logfile "No commits were found"
-   else
-     logfile "The commits found are:"
-     for commit in $commits
-     do
-        logfile "$commit"
-     done
-   fi
+      echo "working on '$refname'"
+      echo checkig for git rev-parse -q --verify freshports/$refname
 
-   logfile "${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --commit ${STARTPOINT} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
-            ${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --commit ${STARTPOINT} --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
-         
-   new_latest=$(${GIT}  rev-parse HEAD)
-   echo $new_latest > ${LATEST_FILE}
+      if ! git rev-parse -q --verify freshports/$refname
+      then
+         if [ "$refname" == "$MAIN_BRANCH" ]
+         then
+            echo "FATAL - '$MAIN_BRANCH' must have tag 'freshports/$refname' set manually  - special case the main branch because the best merge base is the most recent commit"
+            exit
+         fi
+         echo "'git rev-parse -q --verify freshports/$refname'" found nothing
+         echo "Let's find the first commit in this branch"
+         first_ref=$(git merge-base $NAME_OF_REMOTE/$NAME_OF_HEAD $refname)
+         echo "First ref is '$first_ref'"
+         # get the first commit of that branch and create a tag.
+         echo taging that now:
+         git tag -m "first known commit of $refname" -f freshports/$refname $first_ref
+      fi
 
+      echo the latest commit we have for freshports/$refname is:
+      echo -----------------------------------
+      git show freshports/$refname
+      echo -----------------------------------
+
+      # get list of commits, if only to document them here
+      logfile "Running: ${GIT} rev-list freshports/$refname..$refname"
+      commits=$(${GIT} rev-list freshports/$refname..$refname)
+      logfile "Done."
+
+      if [ -z "$commits" ]
+      then
+         logfile "No commits were found"
+      else
+         logfile "The commits found are:"
+         for commit in $commits
+         do
+            logfile "$commit"
+         done
+
+         #
+         # get the commit hashes associated with each of these tags
+         # git-to-freshports-xml.py needs hashes, not tags
+         # see https://stackoverflow.com/questions/1862423/how-to-tell-which-commit-a-tag-points-to-in-git/1862542#1862542
+         #     https://news.freshports.org/2021/06/27/putting-the-new-git-delta-sh-into-use-on-devgit-freshports-org/
+         #
+         # for ^{} https://gitirc.eu/gitrevisions.html
+         # "A suffix ^ followed by an empty brace pair means the object could be a tag, and dereference the tag recursively until a non-tag object is found. "
+         #
+         STARTPOINT=$(git rev-parse -q freshports/${refname}^{})
+         ENDPOINT=$(git rev-list -n 1 $refname)
+         BRANCH=$(echo $refname | sed -n -n 's/^${NAME_OF_REMOTE}\///p')
+         BRANCH=${refname#$NAME_OF_REMOTE/}
+         logfile "${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --branch $BRANCH --commit-range $STARTPOINT..$ENDPOINT --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
+                  ${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --branch $BRANCH --commit-range $STARTPOINT..$ENDPOINT --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
+
+         new_latest=$(${GIT} rev-parse HEAD)
+
+         echo new_latest = $new_latest
+
+         # echo $new_latest > ${LATEST_FILE}
+         # Store the last known commit that we just processed.
+        git tag -m "last known commit of ${refname}" -f freshports/${refname} ${new_latest}
+      fi
+
+   done
 done
 
 logfile "Ending"
