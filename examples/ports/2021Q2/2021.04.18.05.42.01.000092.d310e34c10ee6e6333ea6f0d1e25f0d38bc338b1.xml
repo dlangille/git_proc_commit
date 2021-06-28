@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="18"/>
+    <TIME Timezone="UTC" Hour="5" Minute="42" Second="1"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/vst3sdk: Unbreak on 11 by adding #define _WITH_GETLINE for getline(3) to be visible
+
+Reported by:	fallout
+
+(cherry picked from commit 6e103bcb57b6011a7084e02622000166a41af1e9)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="d310e34c10ee6e6333ea6f0d1e25f0d38bc338b1" HashShort="d310e34" Subject="audio/vst3sdk: Unbreak on 11 by adding #define _WITH_GETLINE for getline(3) to be visible" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/vst3sdk/files/patch-vstgui4_vstgui_lib_platform_linux_x11fileselector.cpp"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

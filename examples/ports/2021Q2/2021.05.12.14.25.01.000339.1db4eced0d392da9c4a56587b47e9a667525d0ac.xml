@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="12"/>
+    <TIME Timezone="UTC" Hour="14" Minute="25" Second="1"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-im/py-matrix-synapse: Fix dependency check on 2021Q2
+
+PR:	255791</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Neel Chauhan" CommitterEmail="nc@FreeBSD.org"/>
+      <AUTHOR AuthorName="Neel Chauhan" AuthorEmail="nc@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="1db4eced0d392da9c4a56587b47e9a667525d0ac" HashShort="1db4ece" Subject="net-im/py-matrix-synapse: Fix dependency check on 2021Q2" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Add" Path="net-im/py-matrix-synapse/files/patch-synapse_python__dependencies.py"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

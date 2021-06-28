@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="6"/>
+    <TIME Timezone="UTC" Hour="10" Minute="11" Second="17"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/minisatip: Update to 1.1.0
+
+(cherry picked from commit 84ccbf4379e0cc9a00108d9bbb87fcf989760920)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernhard Froehlich" CommitterEmail="decke@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernhard Froehlich" AuthorEmail="decke@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="2669e386fa5fc542e7fa83fab669b5e1aaafc003" HashShort="2669e38" Subject="multimedia/minisatip: Update to 1.1.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/minisatip/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/minisatip/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

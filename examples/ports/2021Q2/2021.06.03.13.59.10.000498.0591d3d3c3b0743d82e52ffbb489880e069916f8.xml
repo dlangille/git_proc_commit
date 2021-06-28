@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="3"/>
+    <TIME Timezone="UTC" Hour="13" Minute="59" Second="10"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/sudo: update to 1.9.7
+
+Among other changes this release fixes -fcommon errors. A complete list
+of changes can be found at https://www.sudo.ws/stable.html/
+
+PR:		255812
+Submitted by:	Yasuhiro Kimura &lt;yasu@utahime.org&gt; (mostly)
+Reported by:	Yasuhiro Kimura &lt;yasu@utahime.org&gt;
+Tested by:	cy
+Approved by:	garga (maintainer)
+MFH:		2021Q2
+
+(cherry picked from commit 72d1eb161b86e663242d192171078d6babc1afdf)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Cy Schubert" CommitterEmail="cy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Cy Schubert" AuthorEmail="cy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0591d3d3c3b0743d82e52ffbb489880e069916f8" HashShort="0591d3d" Subject="security/sudo: update to 1.9.7" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/sudo/Makefile"/>
+      <FILE Action="Modify" Path="security/sudo/distinfo"/>
+      <FILE Action="Delete" Path="security/sudo/files/patch-install-sh"/>
+      <FILE Action="Add" Path="security/sudo/files/patch-lib_iolog_hostcheck.c"/>
+      <FILE Action="Add" Path="security/sudo/files/patch-scripts_install-sh"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

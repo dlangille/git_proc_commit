@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="10"/>
+    <TIME Timezone="UTC" Hour="13" Minute="48" Second="38"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/cbsd: update to 13.0.6
+
+Submitted by:	maintainer
+
+(cherry picked from commit 525ea060f79215098bad47141c7f558a2126a31a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="eca26f0cd09d10ab7becf712579a1470768d966c" HashShort="eca26f0" Subject="sysutils/cbsd: update to 13.0.6" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/cbsd/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/cbsd/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

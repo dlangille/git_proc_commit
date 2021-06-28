@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="22"/>
+    <TIME Timezone="UTC" Hour="0" Minute="53" Second="7"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/rhvoice: Follow the GitHub account rename; Integrate with speech-dispatcher
+
+(cherry picked from commit ecc0623c5d85bcee6284492fbfef811497d8280d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="a5bd958ec79a23cb9272f1e6386ea7d6c4aee288" HashShort="a5bd958" Subject="audio/rhvoice: Follow the GitHub account rename; Integrate with speech-dispatcher" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/rhvoice/Makefile"/>
+      <FILE Action="Modify" Path="audio/rhvoice/distinfo"/>
+      <FILE Action="Modify" Path="audio/rhvoice/pkg-descr"/>
+      <FILE Action="Modify" Path="audio/rhvoice/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

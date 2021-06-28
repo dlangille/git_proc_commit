@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="23"/>
+    <TIME Timezone="UTC" Hour="13" Minute="16" Second="31"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/ruby-build: Update to 20210423
+
+* Fix hashes for TruffleRuby GraalVM 21.1.0
+
+Relnotes:	https://github.com/rbenv/ruby-build/releases/tag/v20210423
+(cherry picked from commit 0d028b527bbe6a886d57f3523719575bfbf45432)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Koichiro Iwao" CommitterEmail="meta@FreeBSD.org"/>
+      <AUTHOR AuthorName="Koichiro Iwao" AuthorEmail="meta@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="1d1ebc8f3da3cf44360e15e1a2e522c6e0e76043" HashShort="1d1ebc8" Subject="devel/ruby-build: Update to 20210423" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/ruby-build/Makefile"/>
+      <FILE Action="Modify" Path="devel/ruby-build/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

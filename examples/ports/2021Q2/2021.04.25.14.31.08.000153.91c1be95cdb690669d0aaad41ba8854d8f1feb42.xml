@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="25"/>
+    <TIME Timezone="UTC" Hour="14" Minute="31" Second="8"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/gh: Resolve conflict with shells/fish
+
+PR:		255384
+Reported by:	Bjorn Neergaard &lt;bjorn@neersighted.com&gt;
+
+(cherry picked from commit 36d76902abf2cb2e16da2dd31cf38e58adaf37a7)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Lewis Cook" CommitterEmail="lcook@FreeBSD.org"/>
+      <AUTHOR AuthorName="Lewis Cook" AuthorEmail="lcook@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="91c1be95cdb690669d0aaad41ba8854d8f1feb42" HashShort="91c1be9" Subject="devel/gh: Resolve conflict with shells/fish" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/gh/Makefile"/>
+      <FILE Action="Modify" Path="devel/gh/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

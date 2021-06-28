@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="1"/>
+    <TIME Timezone="UTC" Hour="17" Minute="39" Second="20"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>games/DDNet: fix running own binaries
+
+Specify path to binary dir explicitly, so the game could find its
+own binary for correctly restarting and server binary for running
+it
+
+(cherry picked from commit 397395a4e59136ec7b42c5ff44b02c029ae74626)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="2e5cc75779b158d926afbd3a80f8edc949f6f22f" HashShort="2e5cc75" Subject="games/DDNet: fix running own binaries" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="games/DDNet/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

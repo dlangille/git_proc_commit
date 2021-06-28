@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="1"/>
+    <TIME Timezone="UTC" Hour="18" Minute="38" Second="56"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/signify: Update keys for OpenBSD 6.9
+
+(cherry picked from commit dd5e5f7f969cbaed02b6d50bfa83c3e389a5e6aa)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Tobias Kortkamp" CommitterEmail="tobik@FreeBSD.org"/>
+      <AUTHOR AuthorName="Tobias Kortkamp" AuthorEmail="tobik@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0c9d78d06b9e7eab68aaacd96d8e1d2c34e895e5" HashShort="0c9d78d" Subject="security/signify: Update keys for OpenBSD 6.9" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/signify/Makefile"/>
+      <FILE Action="Delete" Path="security/signify/files/openbsd-66-base.pub"/>
+      <FILE Action="Delete" Path="security/signify/files/openbsd-67-base.pub"/>
+      <FILE Action="Add" Path="security/signify/files/openbsd-69-base.pub"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="6"/>
+    <TIME Timezone="UTC" Hour="13" Minute="24" Second="14"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/libwebsockets: Update to 4.2.0
+
+- Update libwebsockets to 4.2.0
+- Enable mqtt support by default
+- "Hack" around hard git requirement
+
+PR:             256019
+(cherry picked from commit ca989f6339de59653820f35a23f6107ee65d2e20)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Daniel Engberg" AuthorEmail="daniel.engberg.lists@pyret.net"/>
+    </PEOPLE>
+    <COMMIT Hash="f22ce4a6908fce11b5ecd66e6344bc0c8bf3c604" HashShort="f22ce4a6" Subject="net/libwebsockets: Update to 4.2.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/libwebsockets/Makefile"/>
+      <FILE Action="Modify" Path="net/libwebsockets/distinfo"/>
+      <FILE Action="Modify" Path="net/libwebsockets/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

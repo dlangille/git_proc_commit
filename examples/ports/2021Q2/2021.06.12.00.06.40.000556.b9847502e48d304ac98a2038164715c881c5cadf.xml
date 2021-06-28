@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="12"/>
+    <TIME Timezone="UTC" Hour="0" Minute="6" Second="40"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/rpcs3: update to 0.0.16.12392
+
+Changes:	https://github.com/RPCS3/rpcs3/compare/2dc6adc03...dfbd63df9
+(cherry picked from commit b1ec839eac1fc903beb47ee5e069d6022c67199d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="b9847502e48d304ac98a2038164715c881c5cadf" HashShort="b984750" Subject="emulators/rpcs3: update to 0.0.16.12392" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/rpcs3/Makefile"/>
+      <FILE Action="Modify" Path="emulators/rpcs3/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

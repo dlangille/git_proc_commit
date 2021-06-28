@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="19"/>
+    <TIME Timezone="UTC" Hour="18" Minute="56" Second="13"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Fix pkgconfig files.
+
+PR:		254315
+Reported by:	Olga Smirnova
+Submitted by:	rodrigo
+
+(cherry picked from commit efaa198b606e6f38c34d5b3f2acd12686f6ad455)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rodrigo Osorio" CommitterEmail="rodrigo@FreeBSD.org"/>
+      <AUTHOR AuthorName="Tilman Keskinoz" AuthorEmail="arved@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="05109f51920eb6951b5204708c8f3f0f1bad29d8" HashShort="05109f5" Subject="Fix pkgconfig files." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="textproc/luceneplusplus/Makefile"/>
+      <FILE Action="Add" Path="textproc/luceneplusplus/files/patch-src_config_contrib_liblucene++-contrib.pc.in"/>
+      <FILE Action="Add" Path="textproc/luceneplusplus/files/patch-src_config_core_liblucene++.pc.in"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

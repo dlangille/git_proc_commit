@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="15"/>
+    <TIME Timezone="UTC" Hour="0" Minute="47" Second="35"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/libsidplayfp: Reset maintainer
+
+PR:		256043
+Approved by:	portmgr (maintainer timeout: 14+ days)
+MFH:		2021Q2
+
+(cherry picked from commit 87918eed667e32212639ce1c72d084a5fa476923)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kevin Bowling" CommitterEmail="kbowling@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kevin Bowling" AuthorEmail="kbowling@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ae5151b68170f01ebda34f04e4c4548dd2c3292f" HashShort="ae5151b" Subject="audio/libsidplayfp: Reset maintainer" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/libsidplayfp/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

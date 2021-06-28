@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="15"/>
+    <TIME Timezone="UTC" Hour="20" Minute="30" Second="13"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>- Fix new jail and ports creation.
+
+Brings in freebsd/poudriere@1c9357d08e35f2bb248533ce043b2e61920ebf9e
+
+(cherry picked from commit b42828e7fd3e3d9505be516f919a586f18521f0d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bryan Drewery" CommitterEmail="bdrewery@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bryan Drewery" AuthorEmail="bdrewery@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="6e8c572eb4900aabdc916b6a7d4bd9c1d59cf518" HashShort="6e8c572" Subject="- Fix new jail and ports creation." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="ports-mgmt/poudriere-devel/Makefile"/>
+      <FILE Action="Add" Path="ports-mgmt/poudriere-devel/files/patch-1c9357d08e35f2bb248533ce043b2e61920ebf9e"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

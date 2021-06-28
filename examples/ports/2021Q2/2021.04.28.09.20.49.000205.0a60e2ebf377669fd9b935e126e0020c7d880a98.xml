@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="28"/>
+    <TIME Timezone="UTC" Hour="9" Minute="20" Second="49"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>astro/nightfall: update to latest upsteam and remove BROKEN
+
+Bump to more recent(?) release from the website; German-only
+	https://www.la-samhna.de/nightfall/index.html
+
+(cherry picked from commit 7ea9db4bfd0924a4b9fe1fdb2f98218fc50b6e92)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Adriaan de Groot" CommitterEmail="adridg@FreeBSD.org"/>
+      <AUTHOR AuthorName="Adriaan de Groot" AuthorEmail="adridg@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0a60e2ebf377669fd9b935e126e0020c7d880a98" HashShort="0a60e2e" Subject="astro/nightfall: update to latest upsteam and remove BROKEN" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="astro/nightfall/Makefile"/>
+      <FILE Action="Modify" Path="astro/nightfall/distinfo"/>
+      <FILE Action="Modify" Path="astro/nightfall/files/patch-Light.c"/>
+      <FILE Action="Modify" Path="astro/nightfall/files/patch-Light.h"/>
+      <FILE Action="Add" Path="astro/nightfall/files/patch-LightGL.c"/>
+      <FILE Action="Add" Path="astro/nightfall/files/patch-LightGL.h"/>
+      <FILE Action="Add" Path="astro/nightfall/files/patch-LightPassband.c"/>
+      <FILE Action="Modify" Path="astro/nightfall/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

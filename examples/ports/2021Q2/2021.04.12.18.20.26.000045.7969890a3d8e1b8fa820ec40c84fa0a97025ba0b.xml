@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="12"/>
+    <TIME Timezone="UTC" Hour="18" Minute="20" Second="26"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/xfce4-settings: Update to 4.16.1
+
+- Remove upstreamed patch
+- Also fix plist glitch I introduced by mistake in a previous
+  update
+
+MFH:	2021Q2 (due to plist glitch fix)
+(cherry picked from commit 7902e4999f11de4a5bc3389a7185bdb4afbd1bcd)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Guido Falsi" CommitterEmail="madpilot@FreeBSD.org"/>
+      <AUTHOR AuthorName="Guido Falsi" AuthorEmail="madpilot@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="7969890a3d8e1b8fa820ec40c84fa0a97025ba0b" HashShort="7969890" Subject="sysutils/xfce4-settings: Update to 4.16.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/xfce4-settings/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/xfce4-settings/distinfo"/>
+      <FILE Action="Delete" Path="sysutils/xfce4-settings/files/patch-dialogs_appearance-settings_main.c"/>
+      <FILE Action="Modify" Path="sysutils/xfce4-settings/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

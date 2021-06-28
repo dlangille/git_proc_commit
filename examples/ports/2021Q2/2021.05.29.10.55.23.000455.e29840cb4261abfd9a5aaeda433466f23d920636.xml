@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="29"/>
+    <TIME Timezone="UTC" Hour="10" Minute="55" Second="23"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/openvpn-devel: switch to Gitlab and new maintainer
+
+The previous maintainer asked that the port be removed, but
+we seem to have found a better solution. Gert Doering volunteered
+to take over the port and reference Git directly.
+
+Import security/openvpn fix for leftover .orig files.
+
+PR:		256209
+Maintainer change implicitly
+Approved by:	ecrist@secure-computing.net (removal request)
+New contents reviewed and
+Approved by:	gert@greenie.muc.de (new maintainer, by IRC/mail)
+
+MFH because original port no longer fetchable, Eric F. Crist
+removed his download files.
+
+(cherry picked from commit 9364842b3b08f9eaa49bf80c7c14550c2689ab7f)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Matthias Andree" CommitterEmail="mandree@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthias Andree" AuthorEmail="mandree@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e29840cb4261abfd9a5aaeda433466f23d920636" HashShort="e29840c" Subject="security/openvpn-devel: switch to Gitlab and new maintainer" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/openvpn-devel/Makefile"/>
+      <FILE Action="Modify" Path="security/openvpn-devel/distinfo"/>
+      <FILE Action="Delete" Path="security/openvpn-devel/files/patch-src_openvpn_openssl__compat.h"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

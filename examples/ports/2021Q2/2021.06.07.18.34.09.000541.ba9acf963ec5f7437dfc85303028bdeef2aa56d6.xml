@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="7"/>
+    <TIME Timezone="UTC" Hour="18" Minute="34" Second="9"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>*/*: return shurd's ports to the pool ...
+
+... after safekeeping his commit bit.
+
+With hat:	portmgr-secretary
+
+(cherry picked from commit 3f55f503379cb91e47cd95a0eb8e32497c1ae96d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rene Ladan" CommitterEmail="rene@FreeBSD.org"/>
+      <AUTHOR AuthorName="Rene Ladan" AuthorEmail="rene@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ba9acf963ec5f7437dfc85303028bdeef2aa56d6" HashShort="ba9acf9" Subject="*/*: return shurd's ports to the pool ..." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="comms/concordance/Makefile"/>
+      <FILE Action="Modify" Path="comms/libconcord/Makefile"/>
+      <FILE Action="Modify" Path="comms/syncterm/Makefile"/>
+      <FILE Action="Modify" Path="devel/wxformbuilder/Makefile"/>
+      <FILE Action="Modify" Path="games/freedink-data/Makefile"/>
+      <FILE Action="Modify" Path="games/freedink-dfarc/Makefile"/>
+      <FILE Action="Modify" Path="games/freedink-engine/Makefile"/>
+      <FILE Action="Modify" Path="games/freedink/Makefile"/>
+      <FILE Action="Modify" Path="misc/jbidwatcher/Makefile"/>
+      <FILE Action="Modify" Path="net/pkt-gen/Makefile"/>
+      <FILE Action="Modify" Path="ports-mgmt/pkg_cleanup/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

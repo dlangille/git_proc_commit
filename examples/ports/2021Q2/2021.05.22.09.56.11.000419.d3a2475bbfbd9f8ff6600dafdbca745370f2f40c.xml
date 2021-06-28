@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="22"/>
+    <TIME Timezone="UTC" Hour="9" Minute="56" Second="11"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/py-requests: Update to 2.25.1
+
+- Patches removed were incorporated upstream.
+- Update WWW with current project's information.
+
+Changelog:  https://github.com/psf/requests/blob/v2.25.1/HISTORY.md
+
+PR:		250941
+Approved by:	koobs (maintainer, implicit)
+
+Co-authored-by: Olivier Cochard &lt;olivier@FreeBSD.org&gt;
+Co-authored-by: Danilo G. Baio &lt;dbaio@FreeBSD.org&gt;
+(cherry picked from commit 7d02ece23c1a68e64e5220bea3c28275ff5152e4)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Danilo G. Baio" CommitterEmail="dbaio@FreeBSD.org"/>
+      <AUTHOR AuthorName="Charlie Li" AuthorEmail="vishwin@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="d3a2475bbfbd9f8ff6600dafdbca745370f2f40c" HashShort="d3a2475b" Subject="www/py-requests: Update to 2.25.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/py-requests/Makefile"/>
+      <FILE Action="Modify" Path="www/py-requests/distinfo"/>
+      <FILE Action="Delete" Path="www/py-requests/files/patch-setup.py"/>
+      <FILE Action="Add" Path="www/py-requests/files/patch-tests_test__requests.py"/>
+      <FILE Action="Delete" Path="www/py-requests/files/patch-tests_test__utils.py"/>
+      <FILE Action="Modify" Path="www/py-requests/pkg-descr"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

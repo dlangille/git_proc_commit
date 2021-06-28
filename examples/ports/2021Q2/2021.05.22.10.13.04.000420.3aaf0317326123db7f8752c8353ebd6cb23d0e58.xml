@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="22"/>
+    <TIME Timezone="UTC" Hour="10" Minute="13" Second="4"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/python-doc-html: Fix distinfo of v2.7.18
+
+No content changed, it seems just Sphinx output was changed.
+
+PR:		255782
+Submitted by:	Yasuhiro KIMURA &lt;yasu@utahime.org&gt;
+Approved by:	python (with hat)
+
+(cherry picked from commit 37f19e9f90c85122bb88346c1ecc8a4540bd136c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Danilo G. Baio" CommitterEmail="dbaio@FreeBSD.org"/>
+      <AUTHOR AuthorName="Danilo G. Baio" AuthorEmail="dbaio@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="3aaf0317326123db7f8752c8353ebd6cb23d0e58" HashShort="3aaf031" Subject="lang/python-doc-html: Fix distinfo of v2.7.18" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/python-doc-html/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

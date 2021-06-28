@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="6"/>
+    <TIME Timezone="UTC" Hour="11" Minute="8" Second="38"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/raylib: Package right .so version (3.5.0)
+
+It turned out that the version raylib 3.7.0 produces .so
+version 3.5.0 (as submitted in original PR)
+
+This will be discussed with upstream, but for now, fix the
+build by using the version(s) produced by the build.
+
+PR:		256428
+(cherry picked from commit 57cf60e917471bd727eaaaffdbfd82a4d77f6c61)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="60b5ac016e38c550676c03217791f6aae167ea59" HashShort="60b5ac0" Subject="devel/raylib: Package right .so version (3.5.0)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/raylib/Makefile"/>
+      <FILE Action="Modify" Path="devel/raylib/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

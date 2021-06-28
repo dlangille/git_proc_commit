@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="6"/>
+    <TIME Timezone="UTC" Hour="13" Minute="26" Second="31"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/tomcat10: Fix shebang in rc.d script
+
+PR:		254878
+Reported by:	Lapo Luchini &lt;lapo@lapo.it&gt;
+Approved by:	vvd@unislabs.com (maintainer)
+
+(cherry picked from commit a5de7b0cf8ad4b38de466c929446e6fbf98858cc)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Lapo Luchini" AuthorEmail="lapo@lapo.it"/>
+    </PEOPLE>
+    <COMMIT Hash="afa1357f1caab752b93b4c5fd0742d385e84229a" HashShort="afa1357" Subject="www/tomcat10: Fix shebang in rc.d script" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/tomcat10/files/tomcat10.in"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

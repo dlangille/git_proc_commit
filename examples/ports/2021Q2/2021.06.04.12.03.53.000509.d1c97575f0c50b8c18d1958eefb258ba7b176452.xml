@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="12" Minute="3" Second="53"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>.hooks/prepare-commit-msg: Cleanup.
+
+Instead of writing everything in the new commit template all at once in
+a large here document, do it cleanly one command at a time.
+
+(cherry picked from commit d744a8de4295aa3ba4fc6caf011743d661d98e29)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mathieu Arnold" CommitterEmail="mat@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mathieu Arnold" AuthorEmail="mat@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="d1c97575f0c50b8c18d1958eefb258ba7b176452" HashShort="d1c9757" Subject=".hooks/prepare-commit-msg: Cleanup." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path=".hooks/prepare-commit-msg"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

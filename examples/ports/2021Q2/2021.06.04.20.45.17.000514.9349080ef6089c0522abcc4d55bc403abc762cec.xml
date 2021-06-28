@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="20" Minute="45" Second="17"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/php80: Upgrade from 8.0.6 to 8.0.7
+
+Changelog:
+
+    Core:
+        Fixed bug #80960 (opendir() warning wrong info when failed on Windows).
+        Fixed bug #67792 (HTTP Authorization schemes are treated as case-sensitive).
+        Fixed bug #80972 (Memory exhaustion on invalid string offset).
+    FPM:
+        Fixed bug #65800 (Events port mechanism).
+    FTP:
+        Fixed bug #80901 (Info leak in ftp extension).
+        Fixed bug #79100 (Wrong FTP error messages).
+    GD:
+        Fixed bug #81032 (GD install is affected by external libgd installation).
+    Intl:
+        Fixed bug #81019 (Unable to clone NumberFormatter after failed parse()).
+    MBString:
+        Fixed bug #81011 (mb_convert_encoding removes references from arrays).
+    ODBC:
+        Fixed bug #80460 (ODBC doesn't account for SQL_NO_TOTAL indicator).
+    Opcache:
+        Fixed bug #81007 (JIT "not supported" on 32-bit x86 -- build problem?).
+        Fixed bug #81015 (Opcache optimization assumes wrong part of ternary operator in if-condition).
+        Fixed bug #81046 (Literal compaction merges non-equal related literals).
+    PDO_MySQL:
+        Fixed bug #81037 (PDO discards error message text from prepared statement).
+    PDO_ODBC:
+        Fixed bug #44643 (bound parameters ignore explicit type definitions).
+    pgsql:
+        Fixed php_pgsql_fd_cast() wrt. php_stream_can_cast().
+    SPL:
+        Fixed bug #80933 (SplFileObject::DROP_NEW_LINE is broken for NUL and CR).
+    XMLReader:
+        Fixed bug #73246 (XMLReader: encoding length not checked).
+    Zip:
+        Fixed bug #80863 (ZipArchive::extractTo() ignores references).
+
+Sponsored by:	Bounce Experts
+
+(cherry picked from commit c4d81d7c8bc890a3f43ede1c9dc4fde0e4dd92dd)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Torsten Zuehlsdorff" CommitterEmail="tz@FreeBSD.org"/>
+      <AUTHOR AuthorName="Torsten Zuehlsdorff" AuthorEmail="tz@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="9349080ef6089c0522abcc4d55bc403abc762cec" HashShort="9349080" Subject="lang/php80: Upgrade from 8.0.6 to 8.0.7" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/php80/Makefile"/>
+      <FILE Action="Modify" Path="lang/php80/distinfo"/>
+      <FILE Action="Modify" Path="www/php80-opcache/files/patch-config.m4"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

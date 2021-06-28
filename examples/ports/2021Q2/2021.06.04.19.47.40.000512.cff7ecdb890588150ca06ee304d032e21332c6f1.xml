@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="19" Minute="47" Second="40"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/arcan: drop undesired RUN_DEPENDS after cd486eb5dadf
+
+Reported by:	tobik
+
+(cherry picked from commit 052410f6f398a5d7f6e491eda5ce4b2daea29089)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="cff7ecdb890588150ca06ee304d032e21332c6f1" HashShort="cff7ecd" Subject="multimedia/arcan: drop undesired RUN_DEPENDS after cd486eb5dadf" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/arcan/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

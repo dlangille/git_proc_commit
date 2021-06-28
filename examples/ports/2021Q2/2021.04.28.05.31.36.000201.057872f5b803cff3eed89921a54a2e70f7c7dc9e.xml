@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="28"/>
+    <TIME Timezone="UTC" Hour="5" Minute="31" Second="36"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Speed up USES=cargo ports ops
+
+MASTER_SITES aliases processing in the framework is very inefficient
+and the CRATESIO indirection is not worth it.  Normally ports only
+have a handful of sites at most, but USES=cargo currently adds one
+site for each crate by necessity.  The inefficiency suddenly matters
+a lot.
+
+By consuming MASTER_SITE_CRATESIO directly we can sidestep this
+issue without losing anything.
+
+Before:
+$ time make -C www/zola -V MASTER_SITES &gt;/dev/null
+        4.21 real         4.14 user         0.03 sys
+
+After:
+$ time make -C www/zola -V MASTER_SITES &gt;/dev/null
+        0.60 real         0.58 user         0.02 sys
+
+(cherry picked from commit ffd4db6b940600e78ab01f8ef06bb3e7629f48e6)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Tobias Kortkamp" CommitterEmail="tobik@FreeBSD.org"/>
+      <AUTHOR AuthorName="Tobias Kortkamp" AuthorEmail="tobik@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="057872f5b803cff3eed89921a54a2e70f7c7dc9e" HashShort="057872f" Subject="Speed up USES=cargo ports ops" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="Mk/Uses/cargo.mk"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="13"/>
+    <TIME Timezone="UTC" Hour="4" Minute="28" Second="23"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/py-pymemcache: update to 3.4.3
+
+Changes: https://github.com/pinterest/pymemcache/releases/tag/v3.4.3
+
+PR:	255817
+(cherry picked from commit 6b41adb6461fae7ea6e73257baf919b3bcfe1900)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Neel Chauhan" CommitterEmail="nc@FreeBSD.org"/>
+      <AUTHOR AuthorName="Alessandro Sagratini" AuthorEmail="ale_sagra@hotmail.com"/>
+    </PEOPLE>
+    <COMMIT Hash="af0c6cb39f80528e5a975152844307706fc97270" HashShort="af0c6cb" Subject="databases/py-pymemcache: update to 3.4.3" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/py-pymemcache/Makefile"/>
+      <FILE Action="Modify" Path="databases/py-pymemcache/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

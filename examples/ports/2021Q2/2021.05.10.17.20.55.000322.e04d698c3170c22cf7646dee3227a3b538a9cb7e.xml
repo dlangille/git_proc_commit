@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="10"/>
+    <TIME Timezone="UTC" Hour="17" Minute="20" Second="55"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/tor: Update 0.4.5.7 -&gt; 0.4.5.8
+
+Changelog: https://blog.torproject.org/node/2031
+
+Reported by:	upstream notification
+
+(cherry picked from commit 24d7b3d06d2ca635a5193730a11da9ba634be51f)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e04d698c3170c22cf7646dee3227a3b538a9cb7e" HashShort="e04d698" Subject="security/tor: Update 0.4.5.7 -&gt; 0.4.5.8" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/tor/Makefile"/>
+      <FILE Action="Modify" Path="security/tor/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

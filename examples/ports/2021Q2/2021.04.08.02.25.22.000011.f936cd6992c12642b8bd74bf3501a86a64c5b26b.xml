@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="8"/>
+    <TIME Timezone="UTC" Hour="2" Minute="25" Second="22"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/jenkins: Update to 2.287
+
+MFH:		2021Q2
+Security:	9595d002-edeb-4602-be2d-791cd654247e
+Sponsored by:	The FreeBSD Foundation
+
+(cherry picked from commit 673dd8700d0c928cfa860a658025828c1ae72c40)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Li-Wen Hsu" CommitterEmail="lwhsu@FreeBSD.org"/>
+      <AUTHOR AuthorName="Li-Wen Hsu" AuthorEmail="lwhsu@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f936cd6992c12642b8bd74bf3501a86a64c5b26b" HashShort="f936cd6" Subject="devel/jenkins: Update to 2.287" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/jenkins/Makefile"/>
+      <FILE Action="Modify" Path="devel/jenkins/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

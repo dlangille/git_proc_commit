@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="20"/>
+    <TIME Timezone="UTC" Hour="19" Minute="28" Second="20"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Another openssh version fix for CVE-2021-28041.
+
+Reported by:	leres
+
+(cherry picked from commit d51bb525343c53e0a111b86a7c15c59bcfa6b15f)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bryan Drewery" CommitterEmail="bdrewery@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bryan Drewery" AuthorEmail="bdrewery@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="50b224190720b071fda3b85345705e686c024957" HashShort="50b2241" Subject="Another openssh version fix for CVE-2021-28041." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/vuxml/vuln.xml"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

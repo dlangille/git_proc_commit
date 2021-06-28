@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="7"/>
+    <TIME Timezone="UTC" Hour="18" Minute="31" Second="35"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-mgmt/unifi6: Update to 6.1.71
+
+- Update to 6.1.71
+- Changelog:
+  https://community.ui.com/releases/0cffd3ed-7429-4529-9a20-9fead78ebf66
+
+Differential Revision:	https://reviews.freebsd.org/D29444
+
+(cherry picked from commit dc5b4ddd54e8ad42c270415eeadcd0e25b9b6d50)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="1b6c6e845bee55af11ebc79f195a20397a4f574a" HashShort="1b6c6e8" Subject="net-mgmt/unifi6: Update to 6.1.71" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-mgmt/unifi6/Makefile"/>
+      <FILE Action="Modify" Path="net-mgmt/unifi6/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

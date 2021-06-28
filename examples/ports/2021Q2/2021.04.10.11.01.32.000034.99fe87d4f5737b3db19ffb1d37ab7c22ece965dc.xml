@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="10"/>
+    <TIME Timezone="UTC" Hour="11" Minute="1" Second="32"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/gitlab-ce: bugfix update to 13.10.2.
+
+Changelog:
+https://about.gitlab.com/releases/2021/04/01/gitlab-13-10-2-released/
+
+MFH:		2021Q2
+(cherry picked from commit bac76e3032045008b963d972884a3e1390ebc669)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Matthias Fechner" CommitterEmail="mfechner@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthias Fechner" AuthorEmail="mfechner@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="99fe87d4f5737b3db19ffb1d37ab7c22ece965dc" HashShort="99fe87d" Subject="www/gitlab-ce: bugfix update to 13.10.2." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/gitaly/Makefile"/>
+      <FILE Action="Modify" Path="devel/gitaly/distinfo"/>
+      <FILE Action="Modify" Path="www/gitlab-ce/Makefile"/>
+      <FILE Action="Modify" Path="www/gitlab-ce/distinfo"/>
+      <FILE Action="Modify" Path="www/gitlab-ce/pkg-plist"/>
+      <FILE Action="Modify" Path="www/gitlab-pages/distinfo"/>
+      <FILE Action="Modify" Path="www/gitlab-workhorse/Makefile"/>
+      <FILE Action="Modify" Path="www/gitlab-workhorse/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

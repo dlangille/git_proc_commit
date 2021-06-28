@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="1"/>
+    <TIME Timezone="UTC" Hour="14" Minute="6" Second="2"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/postgresql??-server: rc-script should require DAEMON
+
+Changeset ab83f2b4bb78 changed the startup order for Postgresql. The cleartmp
+rc.d now comes after the Postgresql startup.  Unfortunately, Postgresql likes
+to create a socket in /tmp/.s.PGSQL.5432. After cleartmp does its work, that
+socket disappears from the filesystem.
+
+Submitted by:	Jeroen Pulles
+PR:		256335
+
+(cherry picked from commit 8d831eb43aba59013b948830cbd4b22b45deb223)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Palle Girgensohn" CommitterEmail="girgen@FreeBSD.org"/>
+      <AUTHOR AuthorName="Palle Girgensohn" AuthorEmail="girgen@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="df154b989620e4c84258747601cc678e15dd119e" HashShort="df154b9" Subject="databases/postgresql??-server: rc-script should require DAEMON" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/postgresql10-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/postgresql10-server/files/postgresql.in"/>
+      <FILE Action="Modify" Path="databases/postgresql11-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/postgresql11-server/files/postgresql.in"/>
+      <FILE Action="Modify" Path="databases/postgresql12-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/postgresql12-server/files/postgresql.in"/>
+      <FILE Action="Modify" Path="databases/postgresql13-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/postgresql13-server/files/postgresql.in"/>
+      <FILE Action="Modify" Path="databases/postgresql96-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/postgresql96-server/files/postgresql.in"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

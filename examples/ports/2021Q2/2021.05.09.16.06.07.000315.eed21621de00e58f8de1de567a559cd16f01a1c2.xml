@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="9"/>
+    <TIME Timezone="UTC" Hour="16" Minute="6" Second="7"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>editors/libreoffice: fix build on powerpc64le
+
+Add the previously removed powerpc64le case.
+
+(cherry picked from commit 439d1445b6f1dafe759bd5c35a1ff2a77174926d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Piotr Kubaj" AuthorEmail="pkubaj@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="eed21621de00e58f8de1de567a559cd16f01a1c2" HashShort="eed2162" Subject="editors/libreoffice: fix build on powerpc64le" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="editors/libreoffice/files/patch-configure"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="23"/>
+    <TIME Timezone="UTC" Hour="23" Minute="3" Second="30"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/squid3: Mark as deprecated and set an expiry date
+
+Expiration date following expected EoL of FreeBSD 11.
+
+PR:		254749
+Approved by:	timp87@gmail.com (maintainer)
+
+(cherry picked from commit 98d128a55b0761e7b2a53a861c1eb93e83ddfa45)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Danilo G. Baio" CommitterEmail="dbaio@FreeBSD.org"/>
+      <AUTHOR AuthorName="Daniel Engberg" AuthorEmail="daniel.engberg.lists@pyret.net"/>
+    </PEOPLE>
+    <COMMIT Hash="7886a9905189798f2b702a932a4c462d7d0d5adc" HashShort="7886a99" Subject="www/squid3: Mark as deprecated and set an expiry date" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/squid3/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="10"/>
+    <TIME Timezone="UTC" Hour="8" Minute="35" Second="27"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/py-dict-toolbox: Update to version 2
+
+(cherry picked from commit cc58f40fbb6555a0f1aa1e6ce688187fff45641a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="b806afa0b957e49e4776f3ea44a8da087ed271bc" HashShort="b806afa" Subject="sysutils/py-dict-toolbox: Update to version 2" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/py-dict-toolbox/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/py-dict-toolbox/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

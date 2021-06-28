@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="10"/>
+    <TIME Timezone="UTC" Hour="14" Minute="56" Second="49"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-mgmt/cacti: Update to 1.2.17
+
+Full changelog: https://github.com/Cacti/cacti/releases/tag/release%2F1.2.17
+
+PR:		256325
+Security:	CVE-2020-35701
+MFH:		2021Q2
+Approved by:	Michael Muenz &lt;m.muenz@gmail.com&gt; (maintainer)
+
+(cherry picked from commit 073124bd04f0d5cb9c80599da3df15887e3968ef)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rodrigo Osorio" CommitterEmail="rodrigo@FreeBSD.org"/>
+      <AUTHOR AuthorName="Rodrigo Osorio" AuthorEmail="rodrigo@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="3ea5cea62b96b9cc28c69f4b753b03d18fbf5154" HashShort="3ea5cea" Subject="net-mgmt/cacti: Update to 1.2.17" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-mgmt/cacti/Makefile"/>
+      <FILE Action="Modify" Path="net-mgmt/cacti/distinfo"/>
+      <FILE Action="Modify" Path="net-mgmt/cacti/files/patch-lib_installer.php"/>
+      <FILE Action="Modify" Path="net-mgmt/cacti/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

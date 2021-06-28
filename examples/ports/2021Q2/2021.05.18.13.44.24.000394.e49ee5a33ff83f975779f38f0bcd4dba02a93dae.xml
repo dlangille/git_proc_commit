@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="13" Minute="44" Second="24"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>java/wildfly13: fix plist (@sample)
+
+Approved by:	portmgr blanket
+
+(cherry picked from commit 2537a3996c6df45bc6c255faf5a1b550cee589a3)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e49ee5a33ff83f975779f38f0bcd4dba02a93dae" HashShort="e49ee5a" Subject="java/wildfly13: fix plist (@sample)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="java/wildfly13/Makefile"/>
+      <FILE Action="Modify" Path="java/wildfly13/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

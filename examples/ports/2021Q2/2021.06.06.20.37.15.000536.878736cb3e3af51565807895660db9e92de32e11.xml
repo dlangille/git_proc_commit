@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="6"/>
+    <TIME Timezone="UTC" Hour="20" Minute="37" Second="15"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/libwebsockets: Fix LWS_BUILD_HASH
+
+Pass LWS_BUILD_HASH to cmake instead of patching
+CMakeLists.txt
+
+This fixes ca989f6339de59653820f35a23f6107ee65d2e20
+
+(cherry picked from commit c2f7da2a89ec7bab27dd6b8ab5e2936024a7b3d1)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="878736cb3e3af51565807895660db9e92de32e11" HashShort="878736c" Subject="net/libwebsockets: Fix LWS_BUILD_HASH" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/libwebsockets/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

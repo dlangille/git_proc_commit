@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="29"/>
+    <TIME Timezone="UTC" Hour="2" Minute="10" Second="32"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/ruby-build: Update to 20210526
+
+Relnotes:	https://github.com/rbenv/ruby-build/releases/tag/v20210510
+Relnotes:	https://github.com/rbenv/ruby-build/releases/tag/v20210526
+(cherry picked from commit b43fe9f1bfde6ef6a24d0f45baf9d6295d15b72a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Koichiro Iwao" CommitterEmail="meta@FreeBSD.org"/>
+      <AUTHOR AuthorName="Koichiro Iwao" AuthorEmail="meta@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="d0644f544ca67bc5fc2d0c203147db9c3e19ca37" HashShort="d0644f5" Subject="devel/ruby-build: Update to 20210526" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/ruby-build/Makefile"/>
+      <FILE Action="Modify" Path="devel/ruby-build/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

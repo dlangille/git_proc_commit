@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="5"/>
+    <TIME Timezone="UTC" Hour="22" Minute="55" Second="35"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/yuzu: update to s20210602
+
+Changes:	https://github.com/yuzu-emu/yuzu/compare/519ddfae0...4ea171fa5
+(cherry picked from commit a500d6f8fb2d1f5123606eaf16642310f42e4971)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="be6ef66c1788344be9f94a122cc9abc70bd41d32" HashShort="be6ef66" Subject="emulators/yuzu: update to s20210602" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/yuzu/Makefile"/>
+      <FILE Action="Modify" Path="emulators/yuzu/distinfo"/>
+      <FILE Action="Modify" Path="emulators/yuzu/files/patch-sdl2"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

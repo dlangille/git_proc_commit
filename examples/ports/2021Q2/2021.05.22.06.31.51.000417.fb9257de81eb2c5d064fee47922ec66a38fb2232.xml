@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="22"/>
+    <TIME Timezone="UTC" Hour="6" Minute="31" Second="51"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/musicpd: Update to upstream release 0.22.7
+
+Details:
+- Upstream release, see
+  https://raw.githubusercontent.com/MusicPlayerDaemon/MPD/v0.22.7/NEWS
+
+MFH:		2021Q2
+(cherry picked from commit 5994870bc563cfd3bf7545285c3c71e774e35686)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Thomas Zander" CommitterEmail="riggs@FreeBSD.org"/>
+      <AUTHOR AuthorName="Thomas Zander" AuthorEmail="riggs@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="fb9257de81eb2c5d064fee47922ec66a38fb2232" HashShort="fb9257d" Subject="audio/musicpd: Update to upstream release 0.22.7" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/musicpd/Makefile"/>
+      <FILE Action="Modify" Path="audio/musicpd/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

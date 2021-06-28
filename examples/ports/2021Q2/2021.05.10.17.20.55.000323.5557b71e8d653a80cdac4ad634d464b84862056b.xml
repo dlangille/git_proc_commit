@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="10"/>
+    <TIME Timezone="UTC" Hour="17" Minute="20" Second="55"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/tor-devel: Update 0.4.6.1-alpha -&gt; 0.4.6.2-alpha
+
+Changelog: https://blog.torproject.org/node/2018
+
+Reported by:	upstream notification
+
+(cherry picked from commit 53f28ac1a9ae271350bb8dccf9a15f32b835fa9f)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="5557b71e8d653a80cdac4ad634d464b84862056b" HashShort="5557b71" Subject="security/tor-devel: Update 0.4.6.1-alpha -&gt; 0.4.6.2-alpha" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/tor-devel/Makefile"/>
+      <FILE Action="Modify" Path="security/tor-devel/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

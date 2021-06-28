@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="2"/>
+    <TIME Timezone="UTC" Hour="18" Minute="44" Second="41"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/py-yaml: update to 5.4.1
+
+PR:		256220
+Approved by:	dbaio (maintainer)
+MFH:		2020Q2 (security release)
+
+(cherry picked from commit 44ab2946a775ffac4851022225e24c868888e7dc)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="08da1b52dddc923dbe55ae9c18701b6fa29df5fe" HashShort="08da1b5" Subject="devel/py-yaml: update to 5.4.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/py-yaml/Makefile"/>
+      <FILE Action="Modify" Path="devel/py-yaml/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

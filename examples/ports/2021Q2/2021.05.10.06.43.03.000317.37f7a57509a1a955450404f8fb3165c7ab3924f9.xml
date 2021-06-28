@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="10"/>
+    <TIME Timezone="UTC" Hour="6" Minute="43" Second="3"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/miniflux: Remove nop WANT_PGSQL=client
+
+In 8f75e04cb888e86484843db9dca00e739e346e19 the pgsql dependency
+was dropped intentionally but WANT_PGSQL was left in place but it
+has no effect now.
+
+Fix the PGSQL_SERVER option by adding the required USES=pgsql for
+WANT_PGSQL.
+
+While here also fix opt_VARS usage.  Unlike opt_USE it does not
+support separating words with ,
+
+Reported by:	portscan (WANT_PGSQL without USES=pgsql)
+
+(cherry picked from commit a868d766d8b0bc897568c93a1ba3dbeeed3b4519)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Tobias Kortkamp" AuthorEmail="tobik@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="37f7a57509a1a955450404f8fb3165c7ab3924f9" HashShort="37f7a57" Subject="www/miniflux: Remove nop WANT_PGSQL=client" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/miniflux/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

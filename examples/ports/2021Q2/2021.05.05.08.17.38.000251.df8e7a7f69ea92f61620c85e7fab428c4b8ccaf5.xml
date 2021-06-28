@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="5"/>
+    <TIME Timezone="UTC" Hour="8" Minute="17" Second="38"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/sysvbanner: set new MAINTAINER
+
+Submitter becomes MAINTAINER. Already maintener of x11-themes/slim-themes
+
+PR:	255531
+Reported by:	d.oriented@gmail.com
+MFH:	2021Q1
+
+(cherry picked from commit bae0065b3480238e990fc457fe97467959962bbc)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Fernando Apesteguía" CommitterEmail="fernape@FreeBSD.org"/>
+      <AUTHOR AuthorName="Fernando Apesteguía" AuthorEmail="fernape@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="df8e7a7f69ea92f61620c85e7fab428c4b8ccaf5" HashShort="df8e7a7" Subject="sysutils/sysvbanner: set new MAINTAINER" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/sysvbanner/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

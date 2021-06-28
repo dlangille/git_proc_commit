@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="9"/>
+    <TIME Timezone="UTC" Hour="15" Minute="23" Second="19"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/valgrind: fix PKGBASE collision
+
+(cherry picked from commit 2b3c7a8fddf5a9d5ba2a2c1f5aca79a3b9a48377)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Antoine Brodin" CommitterEmail="antoine@FreeBSD.org"/>
+      <AUTHOR AuthorName="Antoine Brodin" AuthorEmail="antoine@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="72cd30ce03148e9bcf8ea700ddd6674c7a4d9303" HashShort="72cd30c" Subject="devel/valgrind: fix PKGBASE collision" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/valgrind/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

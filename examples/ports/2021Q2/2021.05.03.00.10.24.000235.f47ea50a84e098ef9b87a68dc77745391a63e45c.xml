@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="3"/>
+    <TIME Timezone="UTC" Hour="0" Minute="10" Second="24"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11/wezterm: regen distinfo after 3758b337a1b0
+
+(cherry picked from commit 71de4243ef6d726a7e2241117de3969e32544df2)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f47ea50a84e098ef9b87a68dc77745391a63e45c" HashShort="f47ea50" Subject="x11/wezterm: regen distinfo after 3758b337a1b0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11/wezterm/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

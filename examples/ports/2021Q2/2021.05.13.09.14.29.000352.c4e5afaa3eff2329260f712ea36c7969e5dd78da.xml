@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="13"/>
+    <TIME Timezone="UTC" Hour="9" Minute="14" Second="29"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/chromium: update to 90.0.4430.212
+
+MFH:		2021Q2
+Security:	https://vuxml.freebsd.org/freebsd/3cac007f-b27e-11eb-97a0-e09467587c17.html
+(cherry picked from commit ee49491174986c7e5e54f7ccbd2e6d038f6791fb)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rene Ladan" CommitterEmail="rene@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthias Wolf" AuthorEmail="matthias@rheinwolf.de"/>
+    </PEOPLE>
+    <COMMIT Hash="c4e5afaa3eff2329260f712ea36c7969e5dd78da" HashShort="c4e5afa" Subject="www/chromium: update to 90.0.4430.212" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/chromium/Makefile"/>
+      <FILE Action="Modify" Path="www/chromium/distinfo"/>
+      <FILE Action="Add" Path="www/chromium/files/patch-third__party_webrtc_modules_video__coding_codecs_h264_h264__decoder__impl.cc"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

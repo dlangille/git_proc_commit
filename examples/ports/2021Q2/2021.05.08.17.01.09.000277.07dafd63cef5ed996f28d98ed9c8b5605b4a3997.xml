@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="8"/>
+    <TIME Timezone="UTC" Hour="17" Minute="1" Second="9"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/flac: Fix out-of-bounds read
+
+Obtained from:	https://github.com/xiph/flac/commit/2e7931c27eb15e387da440a37f12437e35b22dd4
+Security:	49346de2-b015-11eb-9bdf-f8b156b6dcc8
+Security:	CVE-2020-0499
+
+(cherry picked from commit 3984e6561a7ee7383c502456ae27ce48ee28a028)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Christian Weisgerber" CommitterEmail="naddy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Christian Weisgerber" AuthorEmail="naddy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="07dafd63cef5ed996f28d98ed9c8b5605b4a3997" HashShort="07dafd6" Subject="audio/flac: Fix out-of-bounds read" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/flac/Makefile"/>
+      <FILE Action="Add" Path="audio/flac/files/patch-src_libFLAC_bitreader.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

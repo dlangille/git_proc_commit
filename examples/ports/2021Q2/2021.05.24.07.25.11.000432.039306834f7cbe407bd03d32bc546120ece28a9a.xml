@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="24"/>
+    <TIME Timezone="UTC" Hour="7" Minute="25" Second="11"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/azure-agent: Update to 2.2.54.2
+
+PR:		243046, 248543, 248651
+Approved by:	whu (maintainer, implicitly)
+
+(cherry picked from commit b185a2b866b8642e2500dd691267694ac388875b)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Li-Wen Hsu" CommitterEmail="lwhsu@FreeBSD.org"/>
+      <AUTHOR AuthorName="Li-Wen Hsu" AuthorEmail="lwhsu@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="039306834f7cbe407bd03d32bc546120ece28a9a" HashShort="0393068" Subject="sysutils/azure-agent: Update to 2.2.54.2" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/azure-agent/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/azure-agent/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/azure-agent/files/patch-azurelinuxagent_daemon_resourcedisk_freebsd.py"/>
+      <FILE Action="Modify" Path="sysutils/azure-agent/files/patch-config_freebsd_waagent.conf"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

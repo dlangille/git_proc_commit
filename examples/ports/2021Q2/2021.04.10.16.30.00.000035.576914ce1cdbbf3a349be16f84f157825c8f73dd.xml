@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="10"/>
+    <TIME Timezone="UTC" Hour="16" Minute="30" Second="0"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/faac: Update to 1.30; switch upstream fetch location to GitHub.
+
+PR:		254710
+Reported by:	pi
+MFH:		2021Q2
+
+(cherry picked from commit 637a10ebd9e5c3460054bd5c1ffa605a1a4522cd)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Thomas Zander" CommitterEmail="riggs@FreeBSD.org"/>
+      <AUTHOR AuthorName="Thomas Zander" AuthorEmail="riggs@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="576914ce1cdbbf3a349be16f84f157825c8f73dd" HashShort="576914c" Subject="audio/faac: Update to 1.30; switch upstream fetch location to GitHub." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/faac/Makefile"/>
+      <FILE Action="Modify" Path="audio/faac/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

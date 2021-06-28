@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="15"/>
+    <TIME Timezone="UTC" Hour="14" Minute="53" Second="41"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>textproc/mdbook: Update to 0.4.7
+
+Reported by:	Repology
+MFH:		2021Q2
+Security:	40b481a9-9df7-11eb-9bc3-8c164582fbac
+
+(cherry picked from commit 54c98296bb33ae8625272fa872d68c64d891e752)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mateusz Piotrowski" CommitterEmail="0mp@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mateusz Piotrowski" AuthorEmail="0mp@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="4dbbf80e8688a91e07bce2e0970f5bd35399b2d8" HashShort="4dbbf80" Subject="textproc/mdbook: Update to 0.4.7" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="textproc/mdbook/Makefile"/>
+      <FILE Action="Modify" Path="textproc/mdbook/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

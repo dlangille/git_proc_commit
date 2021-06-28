@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="12" Minute="3" Second="44"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>githooks: Rework authorship instructions.
+
+While there, move them upwards so they are not hidden at the far end of
+the template.
+
+(cherry picked from commit 5b7c17856512900d2a13be547869b734a527a57b)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mathieu Arnold" CommitterEmail="mat@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mathieu Arnold" AuthorEmail="mat@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="196cb1deb76c167cc1a853917dec42184b773d8b" HashShort="196cb1d" Subject="githooks: Rework authorship instructions." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path=".hooks/prepare-commit-msg"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

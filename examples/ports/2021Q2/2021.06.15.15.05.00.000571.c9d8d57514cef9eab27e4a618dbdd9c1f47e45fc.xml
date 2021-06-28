@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="15"/>
+    <TIME Timezone="UTC" Hour="15" Minute="5" Second="0"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/suricata: Mark option PRELUDE as broken
+
+https://redmine.openinfosecfoundation.org/issues/4065
+
+PR:		255370
+Reported by:	Ryan Lawrence &lt;bug@ryan-l.com&gt;
+Approved by:	maintainer timeout
+MFH:		2021Q2
+
+(cherry picked from commit 2d4de39c06e6d77981f1b40b38282fa66c6ff51d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kevin Bowling" CommitterEmail="kbowling@FreeBSD.org"/>
+      <AUTHOR AuthorName="Franco Fichtner" AuthorEmail="franco@opnsense.org"/>
+    </PEOPLE>
+    <COMMIT Hash="c9d8d57514cef9eab27e4a618dbdd9c1f47e45fc" HashShort="c9d8d57" Subject="security/suricata: Mark option PRELUDE as broken" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/suricata/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="12"/>
+    <TIME Timezone="UTC" Hour="14" Minute="48" Second="1"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Convert GitLab diffs back to patches
+
+GitLab has fixed unstable footer, so restore header/footer.
+https://gitlab.com/gitlab-org/gitaly/-/commit/8a1daafa720b
+
+This reverts commit c031fd115a267199aa9cd9ee7d4a790ac6d27c03.
+
+(cherry picked from commit fe9883e07c675cbf74a89481b560e6b5d845654a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8f39f5e21a8a9932feeb9617cb7af567e060a68d" HashShort="8f39f5e" Subject="Convert GitLab diffs back to patches" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/webrtc-audio-processing/Makefile"/>
+      <FILE Action="Modify" Path="audio/webrtc-audio-processing/distinfo"/>
+      <FILE Action="Modify" Path="games/jumpnbump/Makefile"/>
+      <FILE Action="Modify" Path="games/jumpnbump/distinfo"/>
+      <FILE Action="Modify" Path="games/swell-foop/Makefile"/>
+      <FILE Action="Modify" Path="games/swell-foop/distinfo"/>
+      <FILE Action="Modify" Path="graphics/libdrm/Makefile"/>
+      <FILE Action="Modify" Path="graphics/libdrm/distinfo"/>
+      <FILE Action="Modify" Path="graphics/waffle/Makefile"/>
+      <FILE Action="Modify" Path="graphics/waffle/distinfo"/>
+      <FILE Action="Modify" Path="graphics/wayland-utils/Makefile"/>
+      <FILE Action="Modify" Path="graphics/wayland-utils/distinfo"/>
+      <FILE Action="Modify" Path="x11-drivers/xf86-video-amdgpu/Makefile"/>
+      <FILE Action="Modify" Path="x11-drivers/xf86-video-amdgpu/distinfo"/>
+      <FILE Action="Modify" Path="x11-drivers/xf86-video-ati/Makefile"/>
+      <FILE Action="Modify" Path="x11-drivers/xf86-video-ati/distinfo"/>
+      <FILE Action="Modify" Path="x11-drivers/xf86-video-savage/Makefile"/>
+      <FILE Action="Modify" Path="x11-drivers/xf86-video-savage/distinfo"/>
+      <FILE Action="Modify" Path="x11/virtboard/Makefile"/>
+      <FILE Action="Modify" Path="x11/virtboard/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

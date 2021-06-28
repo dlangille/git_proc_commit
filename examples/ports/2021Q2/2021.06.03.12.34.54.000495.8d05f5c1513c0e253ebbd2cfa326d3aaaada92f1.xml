@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="3"/>
+    <TIME Timezone="UTC" Hour="12" Minute="34" Second="54"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/openvpn: do not package .orig leftovers from patch
+
+Bump PORTREVISION as we change the pkg-plist.
+(Includes -mbedtls port variant.)
+
+PR:		255946
+Based on a patch by and
+Reported by:	Mikael Urankar (mikael@)
+
+(cherry picked from commit 42101271373865d49753e8d7b1fb66dfce325dd0)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Matthias Andree" CommitterEmail="mandree@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthias Andree" AuthorEmail="mandree@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8d05f5c1513c0e253ebbd2cfa326d3aaaada92f1" HashShort="8d05f5c" Subject="security/openvpn: do not package .orig leftovers from patch" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/openvpn/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

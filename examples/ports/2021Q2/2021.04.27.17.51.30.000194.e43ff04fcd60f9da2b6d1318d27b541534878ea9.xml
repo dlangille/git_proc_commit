@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="27"/>
+    <TIME Timezone="UTC" Hour="17" Minute="51" Second="30"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/gprolog: mark BROKEN
+
+(cherry picked from commit fd84b36be89047dca78ae5b16d1a81808ae98eeb)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e43ff04fcd60f9da2b6d1318d27b541534878ea9" HashShort="e43ff04" Subject="lang/gprolog: mark BROKEN" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/gprolog/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

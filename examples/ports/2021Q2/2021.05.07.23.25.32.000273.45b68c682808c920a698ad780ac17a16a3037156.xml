@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="7"/>
+    <TIME Timezone="UTC" Hour="23" Minute="25" Second="32"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/php74: Update from 7.4.18 to 7.4.19
+
+PDO_pgsql:
+
+    Revert "Fixed bug #80892 (PDO::PARAM_INT is treated the same as PDO::PARAM_STR)"
+
+Sponsored by:	Bounce Experts
+
+(cherry picked from commit 1f37ed93a62a894345acc1de89f2dc8803c803e6)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Torsten Zuehlsdorff" CommitterEmail="tz@FreeBSD.org"/>
+      <AUTHOR AuthorName="Torsten Zuehlsdorff" AuthorEmail="tz@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="45b68c682808c920a698ad780ac17a16a3037156" HashShort="45b68c68" Subject="lang/php74: Update from 7.4.18 to 7.4.19" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/php74-pdo_pgsql/Makefile"/>
+      <FILE Action="Delete" Path="databases/php74-pdo_pgsql/files/patch-pgsql__statement.c"/>
+      <FILE Action="Delete" Path="databases/php74-pdo_pgsql/files/patch-tests_bug__80892.phpt"/>
+      <FILE Action="Modify" Path="devel/php74-intl/Makefile"/>
+      <FILE Action="Modify" Path="lang/php74/Makefile"/>
+      <FILE Action="Modify" Path="lang/php74/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

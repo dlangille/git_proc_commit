@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="23"/>
+    <TIME Timezone="UTC" Hour="10" Minute="47" Second="26"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/mkvtoolnix: Update to upstream release 57.0.0.
+
+Details:
+- Enhancements and fixes, see
+  https://mkvtoolnix.download/doc/NEWS.md
+
+MFH:		2021Q2
+(cherry picked from commit be42d8d81edb8bc4d2fb302b0d0a57584e0750cf)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Thomas Zander" CommitterEmail="riggs@FreeBSD.org"/>
+      <AUTHOR AuthorName="Thomas Zander" AuthorEmail="riggs@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="74f4674d210628cddc2548aae2d5f67fe923739f" HashShort="74f4674" Subject="multimedia/mkvtoolnix: Update to upstream release 57.0.0." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/mkvtoolnix/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/mkvtoolnix/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

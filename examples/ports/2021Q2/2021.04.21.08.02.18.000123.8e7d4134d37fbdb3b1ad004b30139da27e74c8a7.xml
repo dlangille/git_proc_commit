@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="21"/>
+    <TIME Timezone="UTC" Hour="8" Minute="2" Second="18"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/pycharm-pro: Fix staging with non-default Python versions
+
+* Replace two occurrences in pkg-plist where PYTHON_VER shouldn't be
+  used as a substitution because "3.7" is really hardcoded in the paths.
+
+PR:		253815
+Approved by:	portmgr (build fix)
+MFH:		2021Q2
+
+(cherry picked from commit 980acd02507f9efef60f5aaf9aff71bb952571ff)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kai Knoblich" CommitterEmail="kai@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kai Knoblich" AuthorEmail="kai@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8e7d4134d37fbdb3b1ad004b30139da27e74c8a7" HashShort="8e7d413" Subject="devel/pycharm-pro: Fix staging with non-default Python versions" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/pycharm-pro/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="5"/>
+    <TIME Timezone="UTC" Hour="14" Minute="52" Second="52"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/ansible28: Update to 2.8.20
+
+Changes:	https://github.com/ansible/ansible/blob/stable-2.8/changelogs/CHANGELOG-v2.8.rst#v2-8-20
+MFH:		2021Q2
+Security:	50ec3a01-ad77-11eb-8528-8c164582fbac
+Security:	CVE-2020-10744
+
+(cherry picked from commit 15ecc1948909aa97bb87df303f83ec398a2c91b4)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mateusz Piotrowski" CommitterEmail="0mp@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mateusz Piotrowski" AuthorEmail="0mp@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="78b1adfae9fa049584275afdec7b1a6ded663264" HashShort="78b1adf" Subject="sysutils/ansible28: Update to 2.8.20" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/ansible28/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/ansible28/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="29"/>
+    <TIME Timezone="UTC" Hour="9" Minute="38" Second="31"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Update to 9.16.15.
+
+MFH:            2021Q2
+Security:       CVE-2021-25214
+Security:       CVE-2021-25215
+Security:       CVE-2021-25216
+Sponsored by:   Absolight
+
+(cherry picked from commit 731ad5e0f06a9de43068b5623c33d1a74d546aea)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mathieu Arnold" CommitterEmail="mat@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mathieu Arnold" AuthorEmail="mat@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="44436ff0b0c0245ddd3ded7c6bf78ca42faaace6" HashShort="44436ff" Subject="Update to 9.16.15." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="dns/bind916/Makefile"/>
+      <FILE Action="Modify" Path="dns/bind916/distinfo"/>
+      <FILE Action="Modify" Path="dns/bind916/files/extrapatch-bind-min-override-ttl"/>
+      <FILE Action="Modify" Path="dns/bind916/files/patch-configure"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

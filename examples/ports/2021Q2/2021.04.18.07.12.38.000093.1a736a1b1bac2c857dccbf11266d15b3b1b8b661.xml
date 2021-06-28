@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="18"/>
+    <TIME Timezone="UTC" Hour="7" Minute="12" Second="38"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>ftp/curl: Update to 7.76.0
+
+Changes:	https://curl.haxx.se/changes.html
+(cherry picked from commit d45ce11e9a22e4b561b3c13b824f96ba0a45879e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Po-Chuan Hsieh" CommitterEmail="sunpoet@FreeBSD.org"/>
+      <AUTHOR AuthorName="Po-Chuan Hsieh" AuthorEmail="sunpoet@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="1a736a1b1bac2c857dccbf11266d15b3b1b8b661" HashShort="1a736a1" Subject="ftp/curl: Update to 7.76.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="ftp/curl/Makefile"/>
+      <FILE Action="Modify" Path="ftp/curl/distinfo"/>
+      <FILE Action="Modify" Path="ftp/curl/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

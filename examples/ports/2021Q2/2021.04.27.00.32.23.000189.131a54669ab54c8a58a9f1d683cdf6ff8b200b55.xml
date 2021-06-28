@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="27"/>
+    <TIME Timezone="UTC" Hour="0" Minute="32" Second="23"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/mesa-devel: update to 21.1.b.494
+
+Changes:	https://gitlab.freedesktop.org/mesa/mesa/-/compare/0f4ba349e92...939bf7a4198
+(cherry picked from commit cfd6661514d87bff7d9756c5c43aab86b1d788a2)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="131a54669ab54c8a58a9f1d683cdf6ff8b200b55" HashShort="131a546" Subject="graphics/mesa-devel: update to 21.1.b.494" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/mesa-devel/Makefile"/>
+      <FILE Action="Modify" Path="graphics/mesa-devel/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

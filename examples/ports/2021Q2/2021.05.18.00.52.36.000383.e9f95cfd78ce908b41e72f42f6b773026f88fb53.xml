@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="0" Minute="52" Second="36"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/nss: fix build on powerpc64le
+
+LLVM's integrated assembler can't build ppc-gcm.s:
+ppc-gcm.s:642:24: error: invalid memory operand
+    std          31,-8(SP);
+
+Use as from binutils on powerpc64le.
+
+While here correct the architecture check to also check for Linux's ppc64 - similar to the OS check in the same patch.
+
+(cherry picked from commit 192a67a0d79f89529eaac61ea9e865b7cb32365e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Piotr Kubaj" AuthorEmail="pkubaj@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e9f95cfd78ce908b41e72f42f6b773026f88fb53" HashShort="e9f95cf" Subject="security/nss: fix build on powerpc64le" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/nss/Makefile"/>
+      <FILE Action="Modify" Path="security/nss/files/patch-lib-freebl-Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

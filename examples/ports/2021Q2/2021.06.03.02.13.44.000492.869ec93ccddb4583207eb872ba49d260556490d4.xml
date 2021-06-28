@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="3"/>
+    <TIME Timezone="UTC" Hour="2" Minute="13" Second="44"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/arcan: install extra manpages
+
+Inspired by:	Arch, PkgSrc
+
+(cherry picked from commit cd486eb5dadff15395252578a1055f6e736d2dc9)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="869ec93ccddb4583207eb872ba49d260556490d4" HashShort="869ec93" Subject="multimedia/arcan: install extra manpages" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/arcan/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/arcan/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="10" Minute="5" Second="35"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/tauthon: Update to 2.8.3
+
+ChangeLog: https://github.com/naftaliharris/tauthon/blob/master/Misc/NEWS.d/2.8.3.rst
+
+PR:	256387
+Reported by:	olivier.freebsd@free.fr (maintainer)
+Security:	CVE-2020-8492
+MFH:	2021Q2
+
+(cherry picked from commit 7d98dad380fae35c1a1f64e1b86c3488aef24d0f)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Fernando Apesteguía" CommitterEmail="fernape@FreeBSD.org"/>
+      <AUTHOR AuthorName="Fernando Apesteguía" AuthorEmail="fernape@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="96419941bedafbce043e6a9a834f575812187652" HashShort="9641994" Subject="lang/tauthon: Update to 2.8.3" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/tauthon/Makefile"/>
+      <FILE Action="Modify" Path="lang/tauthon/distinfo"/>
+      <FILE Action="Modify" Path="lang/tauthon/files/patch-setup.py"/>
+      <FILE Action="Delete" Path="lang/tauthon/files/patch-setup_metadata.py"/>
+      <FILE Action="Modify" Path="lang/tauthon/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

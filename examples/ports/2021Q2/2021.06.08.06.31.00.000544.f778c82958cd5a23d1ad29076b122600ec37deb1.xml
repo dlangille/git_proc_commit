@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="8"/>
+    <TIME Timezone="UTC" Hour="6" Minute="31" Second="0"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/sbcl: update to 2.1.5
+
+(cherry picked from commit e91a8dfb87df5b0c0fb0d659a9beb9c0d9cf9c24)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f778c82958cd5a23d1ad29076b122600ec37deb1" HashShort="f778c82" Subject="lang/sbcl: update to 2.1.5" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/sbcl/Makefile"/>
+      <FILE Action="Modify" Path="lang/sbcl/distinfo"/>
+      <FILE Action="Delete" Path="lang/sbcl/files/patch-src_compiler_ir1tran.lisp"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

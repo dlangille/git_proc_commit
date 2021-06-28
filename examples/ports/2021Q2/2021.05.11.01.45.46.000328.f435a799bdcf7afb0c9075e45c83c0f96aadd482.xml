@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="11"/>
+    <TIME Timezone="UTC" Hour="1" Minute="45" Second="46"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/aom: update to 3.1.0
+
+Changes:	https://aomedia.googlesource.com/aom/+log/v3.0.0..v3.1.0
+Reported by:	portscout, /r/AV1
+
+(cherry picked from commit f40d123e50db8083db9672131d0642910d516376)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f435a799bdcf7afb0c9075e45c83c0f96aadd482" HashShort="f435a79" Subject="multimedia/aom: update to 3.1.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/aom/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/aom/distinfo"/>
+      <FILE Action="Modify" Path="multimedia/aom/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

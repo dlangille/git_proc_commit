@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="29"/>
+    <TIME Timezone="UTC" Hour="14" Minute="26" Second="53"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/serveez: unbreak after guile port rename
+
+(cherry picked from commit fe4fbcfa8daf96610b85f0a6c802cdd3a4a9bbfc)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="88aa78cba6b2cb40ee682aff4f7325f9c089996f" HashShort="88aa78c" Subject="net/serveez: unbreak after guile port rename" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/serveez/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

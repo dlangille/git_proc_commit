@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="9"/>
+    <TIME Timezone="UTC" Hour="16" Minute="5" Second="24"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>editors/libreoffice: bump PORTREVISION
+
+(cherry picked from commit 45ac5742fb17227ff21e5c00e8992807cc111f35)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Piotr Pawel Stefaniak" AuthorEmail="pstef@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="57ea88b976b24b770d50a7b4d51c692f2967a3d4" HashShort="57ea88b" Subject="editors/libreoffice: bump PORTREVISION" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="editors/libreoffice/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>
