@@ -34,7 +34,7 @@ do
    then
 #      continue
    fi
-   logfile "Now processing repo: ${repo}"
+   logfile "Now processing repo: ${repo} ---------------"
 
    # convert the repo label to a physical directory on disk
    dir=$(convert_repo_label_to_directory ${repo})
@@ -75,36 +75,40 @@ do
       | sed -n 's/^commit refs\/remotes\///p' \
       | while read -r refname
    do
-      echo looking at $refname
+# if we mention all thsese, and we are skipping most of them, that's a
+# lot of log lines to scroll past
+#      logfile "looking at $refname"
       # for now, when testing, only this branch please
       if [ "$refname" != "origin/2021Q2" ] && [ "$refname" != "$MAIN_BRANCH" ]
       then
          continue
       fi
 
-      echo "working on '$refname'"
-      echo checkig for git rev-parse -q --verify freshports/$refname
+      logfile "working on '$refname'"
+      logfile "Is freshports/$refname defined on the repo '${repo}'?"
+      logfile "running: git rev-parse -q --verify freshports/$refname^{}"
 
-      if ! git rev-parse -q --verify freshports/$refname
+      if ! git rev-parse -q --verify freshports/$refname^{}
       then
          if [ "$refname" == "$MAIN_BRANCH" ]
          then
-            echo "FATAL - '$MAIN_BRANCH' must have tag 'freshports/$refname' set manually  - special case the main branch because the best merge base is the most recent commit"
+            logfile "FATAL - '$MAIN_BRANCH' must have tag 'freshports/$refname' set manually  - special case the main branch because the best merge base is the most recent commit"
             exit
          fi
-         echo "'git rev-parse -q --verify freshports/$refname'" found nothing
-         echo "Let's find the first commit in this branch"
+         logfile "'git rev-parse -q --verify freshports/$refname^{}'" found nothing
+         logfile "Let's find the first commit in this branch"
          first_ref=$(git merge-base $NAME_OF_REMOTE/$NAME_OF_HEAD $refname)
-         echo "First ref is '$first_ref'"
+         logfile "First ref is '$first_ref'"
          # get the first commit of that branch and create a tag.
-         echo taging that now:
+         logfile "tagging that now:"
          git tag -m "first known commit of $refname" -f freshports/$refname $first_ref
       fi
 
-      echo the latest commit we have for freshports/$refname is:
-      echo -----------------------------------
-      git show freshports/$refname^{}
-      echo -----------------------------------
+      logfile "the latest commit we have for freshports/$refname is:"
+      # not sent to logfile so it output is not prefixed with a timestamp
+      # and therefore is aligned with the output of 'git rev-parse -q --verify' above.
+      # This makes it easier to view in the logs.
+      git rev-parse freshports/$refname^{}
 
       # get list of commits, if only to document them here
       logfile "Running: ${GIT} rev-list freshports/$refname..$refname"
@@ -137,7 +141,7 @@ do
          logfile "${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --branch $BRANCH --commit-range $STARTPOINT..$ENDPOINT --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
                   ${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --branch $BRANCH --commit-range $STARTPOINT..$ENDPOINT --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
 
-         echo new_latest = $(${GIT} rev-parse ${refname})
+         logfile "new_latest = $(${GIT} rev-parse ${refname})"
 
          # echo $new_latest > ${LATEST_FILE}
          # Store the last known commit that we just processed.
