@@ -32,7 +32,7 @@ for repo in ${repos}
 do
    if [ "${repo}" != "ports" ]
    then
-      continue
+#      continue
    fi
    logfile "Now processing repo: ${repo}"
 
@@ -77,16 +77,10 @@ do
    do
       echo looking at $refname
       # for now, when testing, only this branch please
-      if [ "$refname" != "origin/2021Q2" ]
+      if [ "$refname" != "origin/2021Q2" ] && [ "$refname" != "$MAIN_BRANCH" ]
       then
          continue
       fi
-
-      # for now, when testing, only this branch please
-#      if [ "$refname" != "$MAIN_BRANCH" ]
-#      then
-#         continue
-#      fi
 
       echo "working on '$refname'"
       echo checkig for git rev-parse -q --verify freshports/$refname
@@ -109,7 +103,7 @@ do
 
       echo the latest commit we have for freshports/$refname is:
       echo -----------------------------------
-      git show freshports/$refname
+      git show freshports/$refname^{}
       echo -----------------------------------
 
       # get list of commits, if only to document them here
@@ -143,13 +137,11 @@ do
          logfile "${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --branch $BRANCH --commit-range $STARTPOINT..$ENDPOINT --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
                   ${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --branch $BRANCH --commit-range $STARTPOINT..$ENDPOINT --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
 
-         new_latest=$(${GIT} rev-parse HEAD)
-
-         echo new_latest = $new_latest
+         echo new_latest = $(${GIT} rev-parse ${refname})
 
          # echo $new_latest > ${LATEST_FILE}
          # Store the last known commit that we just processed.
-        git tag -m "last known commit of ${refname}" -f freshports/${refname} ${new_latest}
+        git tag -m "last known commit of ${refname}" -f freshports/${refname} ${refname}
       fi
 
    done

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/local/bin/python3.8
 
 # Copyright 2019-2020 Serhii (Sergey) Kozlov
 # All rights reserved
@@ -60,6 +60,7 @@ def get_config() -> dict:
                                                                       help="Print more debug information")
     parser.add_argument('-l', '--log-dest', choices={'syslog', 'stderr'}, default='syslog', dest='log_destination',
                         help="Logging destination. Defaults to 'sylog'")
+    parser.add_argument('-b', '--branch',   type=str, help='The branch upon which this commit occurs')
 
     commit_group = parser.add_mutually_exclusive_group(required=True)
     commit_group.add_argument('-c', '--commit',        help="Commit to process the tree since. Equivalent to '--commit-range=<commit>..HEAD'")
@@ -140,6 +141,7 @@ def main():
 
     repo = pygit2.Repository(str(config['path']))
 
+
     num_commits = 0
     if config['commit']:
         commits = commit_range(repo, f"{config['commit']}..HEAD")
@@ -173,16 +175,20 @@ def main():
         ET.SubElement(update, 'TIME', Timezone='UTC', Hour=str(commit_datetime.hour),
                       Minute=str(commit_datetime.minute), Second=str(commit_datetime.second))
         log.debug("Writing OS entry")
-        commit_branches = list(repo.branches.local.with_commit(commit))
-        commit_branches_num = len(commit_branches)
-        if commit_branches_num == 0:
-            log.error(f"Unable to get branch name for commit {commit.hex}. "
-                      f"Make sure that the local tracking branch exists for the remote branch.")
-            continue
-        elif commit_branches_num > 1:
-            log.warning(f"Ambiguity in getting branch name for commit {commit.hex}. Got branches: {commit_branches}."
-                        f"Using the first one: {commit_branches[0]}")
-        ET.SubElement(update, 'OS', Repo=config['repo'], Id=config['os'], Branch=commit_branches[0])
+        
+        if config['branch']:
+            ET.SubElement(update, 'OS', Repo=config['repo'], Id=config['os'], Branch=config['branch'])
+        else:
+            commit_branches = list(repo.branches.remote.with_commit(commit))
+            commit_branches_num = len(commit_branches)
+            if commit_branches_num == 0:
+                log.error(f"Unable to get branch name for commit {commit.hex}. "
+                          f"Make sure that the local tracking branch exists for the remote branch.")
+                continue
+            elif commit_branches_num > 1:
+                log.warning(f"Ambiguity in getting branch name for commit {commit.hex}. Got branches: {commit_branches}."
+                            f"Using the first one: {commit_branches[0]}")
+            ET.SubElement(update, 'OS', Repo=config['repo'], Id=config['os'], Branch=commit_branches[0])
 
         log.debug("Writing commit message")
         text = ET.SubElement(update, 'LOG')
