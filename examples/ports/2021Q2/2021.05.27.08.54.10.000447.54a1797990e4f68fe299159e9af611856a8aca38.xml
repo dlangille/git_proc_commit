@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="27"/>
+    <TIME Timezone="UTC" Hour="8" Minute="54" Second="10"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/pcre2: update to 10.37
+
+(cherry picked from commit 6456d569b37addb9839eb53c63e6f14d52d00ebe)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="54a1797990e4f68fe299159e9af611856a8aca38" HashShort="54a1797" Subject="devel/pcre2: update to 10.37" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/pcre2/Makefile"/>
+      <FILE Action="Modify" Path="devel/pcre2/distinfo"/>
+      <FILE Action="Modify" Path="devel/pcre2/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

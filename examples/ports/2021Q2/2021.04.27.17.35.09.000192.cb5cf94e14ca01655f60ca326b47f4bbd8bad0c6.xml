@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="27"/>
+    <TIME Timezone="UTC" Hour="17" Minute="35" Second="9"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/bpytop: Update to 1.0.64
+
+(cherry picked from commit 3a99118119d500bec638b1e71895c88ed16015e4)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Li-Wen Hsu" CommitterEmail="lwhsu@FreeBSD.org"/>
+      <AUTHOR AuthorName="Li-Wen Hsu" AuthorEmail="lwhsu@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="cb5cf94e14ca01655f60ca326b47f4bbd8bad0c6" HashShort="cb5cf94" Subject="sysutils/bpytop: Update to 1.0.64" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/bpytop/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/bpytop/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

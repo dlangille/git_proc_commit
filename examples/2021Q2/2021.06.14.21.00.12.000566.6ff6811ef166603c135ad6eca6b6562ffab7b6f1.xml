@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="14"/>
+    <TIME Timezone="UTC" Hour="21" Minute="0" Second="12"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>securty/sudo: Update to 1.9.7p1
+
+Major changes between sudo 1.9.7p1 and 1.9.7
+
+ * Fixed an SELinux sudoedit bug when the edited temporary file
+   could not be opened.  The sesh helper would still be run even
+   when there are no temporary files available to install.
+
+ * Fixed a compilation problem on FreeBSD.
+
+ * The sudo_noexec.so file is now built as a module on all systems
+   other than macOS.  This makes it possible to use other libtool
+   implementations such as slibtool.  On macOS shared libraries and
+   modules are not interchangeable and the version of libtool shipped
+   with sudo must be used.
+
+ * Fixed a few bugs in the getgrouplist() emulation on Solaris when
+   reading from the local group file.
+
+ * Fixed a bug in sudo_logsrvd that prevented periodic relay server
+   connection retries from occurring in "store_first" mode.
+
+ * Disabled the nss_search()-based getgrouplist() emulation on HP-UX
+   due to a crash when the group source is set to "compat" in
+   /etc/nsswitch.conf.  This is probably due to a mismatch between
+   include/compat/nss_dbdefs.h and what HP-UX uses internally.  On
+   HP-UX we now just cycle through groups the slow way using
+   getgrent().  Bug #978.
+
+PR:		256561
+Submitted by:	cy
+Reported by:	cy
+Approved by:	garga (maintainer)
+MFH:		2020Q2
+
+(cherry picked from commit f34318c566935213a6e7c4e2ac53a6b921a6e9f9)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Cy Schubert" CommitterEmail="cy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Cy Schubert" AuthorEmail="cy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="6ff6811ef166603c135ad6eca6b6562ffab7b6f1" HashShort="6ff6811" Subject="securty/sudo: Update to 1.9.7p1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/sudo/Makefile"/>
+      <FILE Action="Modify" Path="security/sudo/distinfo"/>
+      <FILE Action="Delete" Path="security/sudo/files/patch-lib_iolog_hostcheck.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

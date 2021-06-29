@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="11"/>
+    <TIME Timezone="UTC" Hour="17" Minute="55" Second="6"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>gecko: ignore llvm in DEFAULT_VERSIONS if LTO is enabled
+
+PR:		253771
+(cherry picked from commit 4e67118c7a58ddee28e376bc4291f348a9a0d38d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="646b08b36e1c6bf9673b7da726ec0d72af7eb07a" HashShort="646b08b" Subject="gecko: ignore llvm in DEFAULT_VERSIONS if LTO is enabled" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="Mk/bsd.gecko.mk"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

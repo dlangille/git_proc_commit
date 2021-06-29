@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="19"/>
+    <TIME Timezone="UTC" Hour="8" Minute="19" Second="13"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/drm-fbsd13-kmod: Update to 5.4.92.g20210419
+
+- Fix kernel panic with sysctl -a when a NAVI10 gpu is present.
+
+(cherry picked from commit 2a988f4b237f914a13a61f3d15879c4cb9fab9b6)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Emmanuel Vadot" CommitterEmail="manu@FreeBSD.org"/>
+      <AUTHOR AuthorName="Emmanuel Vadot" AuthorEmail="manu@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="cdbfe8c1c9831078e142376de877ab7bab1a3a00" HashShort="cdbfe8c" Subject="graphics/drm-fbsd13-kmod: Update to 5.4.92.g20210419" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/drm-fbsd13-kmod/Makefile"/>
+      <FILE Action="Modify" Path="graphics/drm-fbsd13-kmod/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

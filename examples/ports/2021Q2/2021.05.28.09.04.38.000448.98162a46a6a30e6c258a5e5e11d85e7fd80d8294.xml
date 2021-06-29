@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="28"/>
+    <TIME Timezone="UTC" Hour="9" Minute="4" Second="38"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/py-passlib: Update to 1.7.4
+
+Changes:
+ - https://passlib.readthedocs.io/en/stable/history/1.7.html#id2
+ - https://passlib.readthedocs.io/en/stable/history/1.7.html#id1
+
+PR:		256189
+Approved by:	koobs (maintainer)
+
+(cherry picked from commit 3bcd5a9d5bef6170c1e78d80dfa04c85fad54c82)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mikael Urankar" CommitterEmail="mikael@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mikael Urankar" AuthorEmail="mikael@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="98162a46a6a30e6c258a5e5e11d85e7fd80d8294" HashShort="98162a4" Subject="security/py-passlib: Update to 1.7.4" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/py-passlib/Makefile"/>
+      <FILE Action="Modify" Path="security/py-passlib/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

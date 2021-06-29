@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="23"/>
+    <TIME Timezone="UTC" Hour="17" Minute="18" Second="21"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/sngrep: Update to 1.4.9
+
+Changes: https://github.com/irontec/sngrep/releases/tag/v1.4.9
+
+PR:		256096
+Approved by:	tad AT vif DOT com (maintainer)
+MFH:		2021Q2 (bugfix blanket)
+
+(cherry picked from commit 6fb9cd1210365ed317d0e6879d356b070897aa90)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Neel Chauhan" CommitterEmail="nc@FreeBSD.org"/>
+      <AUTHOR AuthorName="Daniel Engberg" AuthorEmail="daniel.engberg.lists@pyret.net"/>
+    </PEOPLE>
+    <COMMIT Hash="61b0127bb7b4b4abb511eeee98fdf9ec46a82d6a" HashShort="61b0127" Subject="net/sngrep: Update to 1.4.9" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/sngrep/Makefile"/>
+      <FILE Action="Modify" Path="net/sngrep/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

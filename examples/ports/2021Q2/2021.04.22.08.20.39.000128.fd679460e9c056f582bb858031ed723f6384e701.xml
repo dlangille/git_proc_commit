@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="22"/>
+    <TIME Timezone="UTC" Hour="8" Minute="20" Second="39"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/virtualbox-ose-additions: Fix vboxvfs panic
+
+Fix panic on mount when trying to use vbox VFS after
+base r355790 (or git commit hash 6fa079fc3f5e).
+
+PR:		255208
+MFH:		2021Q2
+(cherry picked from commit 8a311de0cb804d8b135413884b4fb336d287ad5a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Guido Falsi" CommitterEmail="madpilot@FreeBSD.org"/>
+      <AUTHOR AuthorName="Guido Falsi" AuthorEmail="madpilot@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="fd679460e9c056f582bb858031ed723f6384e701" HashShort="fd67946" Subject="emulators/virtualbox-ose-additions: Fix vboxvfs panic" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/virtualbox-ose-additions/Makefile"/>
+      <FILE Action="Modify" Path="emulators/virtualbox-ose/files/patch-src_VBox_Additions_freebsd_vboxvfs_vboxvfs__vnops.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

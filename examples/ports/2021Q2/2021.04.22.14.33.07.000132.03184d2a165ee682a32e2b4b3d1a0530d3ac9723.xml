@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="22"/>
+    <TIME Timezone="UTC" Hour="14" Minute="33" Second="7"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11-toolkits/qt5-gui: unbreak on FreeBSD &gt;= 13.0 armv[67]
+
+/usr/bin/cc ... -fno-integrated-as ... ../3rdparty/pixman/pixman-arm-neon-asm.S -o .obj/pixman-arm-neon-asm.o
+cc: error: unable to execute command: Executable "as" doesn't exist!
+cc: error: assembler command failed with exit code 1 (use -v to see invocation)
+
+Reported by:	pkg-fallout
+
+(cherry picked from commit 7ebdbb52f8d7050fcfd6bbad5eac0ade8a52597e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="03184d2a165ee682a32e2b4b3d1a0530d3ac9723" HashShort="03184d2" Subject="x11-toolkits/qt5-gui: unbreak on FreeBSD &gt;= 13.0 armv[67]" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11-toolkits/qt5-gui/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

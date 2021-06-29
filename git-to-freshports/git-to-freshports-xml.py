@@ -175,7 +175,7 @@ def main():
         ET.SubElement(update, 'TIME', Timezone='UTC', Hour=str(commit_datetime.hour),
                       Minute=str(commit_datetime.minute), Second=str(commit_datetime.second))
         log.debug("Writing OS entry")
-        
+
         if config['branch']:
             ET.SubElement(update, 'OS', Repo=config['repo'], Id=config['os'], Branch=config['branch'])
         else:

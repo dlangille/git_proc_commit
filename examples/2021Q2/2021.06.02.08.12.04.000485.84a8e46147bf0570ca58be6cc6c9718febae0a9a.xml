@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="2"/>
+    <TIME Timezone="UTC" Hour="8" Minute="12" Second="4"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>math/mpdecimal: use compiler:c++11-lang
+
+Fix building on powerpc64
+
+PR:		256051
+(cherry picked from commit 455cd09db2c9334d9c15d6d76c6110e86f0c4198)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Li-Wen Hsu" CommitterEmail="lwhsu@FreeBSD.org"/>
+      <AUTHOR AuthorName="Stefan Krah" AuthorEmail="skrah@bytereef.org"/>
+    </PEOPLE>
+    <COMMIT Hash="84a8e46147bf0570ca58be6cc6c9718febae0a9a" HashShort="84a8e46" Subject="math/mpdecimal: use compiler:c++11-lang" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="math/mpdecimal/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

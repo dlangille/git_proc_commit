@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="28"/>
+    <TIME Timezone="UTC" Hour="5" Minute="32" Second="48"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Fix ports that pull main distfile from CRATESIO (D29760)
+
+- Put distfiles into CARGO_DIST_SUBDIR where they were not
+- Use correct crate file extension
+
+MFH:		2021Q2 (to ease future cherry picks)
+(cherry picked from commit 89c1633d112b9cd8562ba37665ca958e89dbf075)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Tobias Kortkamp" CommitterEmail="tobik@FreeBSD.org"/>
+      <AUTHOR AuthorName="Tobias Kortkamp" AuthorEmail="tobik@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="9bcb1fb8c4611a17e662f2444253c74f6f70ac2d" HashShort="9bcb1fb" Subject="Fix ports that pull main distfile from CRATESIO (D29760)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/cargo-c/Makefile"/>
+      <FILE Action="Modify" Path="devel/desed/Makefile"/>
+      <FILE Action="Modify" Path="devel/gbump/Makefile"/>
+      <FILE Action="Modify" Path="devel/racer/Makefile"/>
+      <FILE Action="Modify" Path="devel/rust-bindgen/Makefile"/>
+      <FILE Action="Modify" Path="devel/rust-cbindgen/Makefile"/>
+      <FILE Action="Modify" Path="dns/doh-proxy/Makefile"/>
+      <FILE Action="Modify" Path="dns/doh-proxy/distinfo"/>
+      <FILE Action="Modify" Path="graphics/dssim/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/termplay/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/termplay/distinfo"/>
+      <FILE Action="Modify" Path="shells/starship/Makefile"/>
+      <FILE Action="Modify" Path="shells/starship/distinfo"/>
+      <FILE Action="Modify" Path="sysutils/flowgger/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

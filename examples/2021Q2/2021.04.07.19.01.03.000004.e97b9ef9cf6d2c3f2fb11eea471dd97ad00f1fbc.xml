@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="7"/>
+    <TIME Timezone="UTC" Hour="19" Minute="1" Second="3"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/node10: Update 10.24.0 -&gt; 10.24.1
+
+https://nodejs.org/en/blog/release/v10.24.1/
+
+This is a security release. See
+https://nodejs.org/en/blog/vulnerability/april-2021-security-releases/
+
+MFH:		2021Q2
+Security:	c0c1834c-9761-11eb-acfd-0022489ad614
+Sponsored by:	Miles AS
+
+(cherry picked from commit d445e7981f116b7d506ea7d86487f41a7b39a2bd)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bradley T. Hughes" CommitterEmail="bhughes@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bradley T. Hughes" AuthorEmail="bhughes@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e97b9ef9cf6d2c3f2fb11eea471dd97ad00f1fbc" HashShort="e97b9ef" Subject="www/node10: Update 10.24.0 -&gt; 10.24.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/node10/Makefile"/>
+      <FILE Action="Modify" Path="www/node10/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

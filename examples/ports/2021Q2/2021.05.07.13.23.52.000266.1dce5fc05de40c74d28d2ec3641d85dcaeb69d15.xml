@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="7"/>
+    <TIME Timezone="UTC" Hour="13" Minute="23" Second="52"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/libplacebo: update to 3.120.3
+
+Changes:	https://code.videolan.org/videolan/libplacebo/-/tags/v3.120.3
+Reported by:	Repology
+
+(cherry picked from commit 5ca33357dc35daa92f13df026afc16e4c7f038dc)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="1dce5fc05de40c74d28d2ec3641d85dcaeb69d15" HashShort="1dce5fc" Subject="graphics/libplacebo: update to 3.120.3" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/libplacebo/Makefile"/>
+      <FILE Action="Modify" Path="graphics/libplacebo/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="13" Minute="49" Second="11"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/incron: fix plist (@sample)
+
+Approved by:	portmgr blanket
+
+(cherry picked from commit db34caf7a447db42a0e8b5abd0e7fbe8f3116d0d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="800e9871ed8fb8d9184c8329539d158b3346c4ae" HashShort="800e987" Subject="sysutils/incron: fix plist (@sample)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/incron/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

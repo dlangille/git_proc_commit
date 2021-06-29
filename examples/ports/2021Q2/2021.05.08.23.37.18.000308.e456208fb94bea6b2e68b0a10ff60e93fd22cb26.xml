@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="8"/>
+    <TIME Timezone="UTC" Hour="23" Minute="37" Second="18"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/pam_xdg: minor rewording in pkg-message
+
+(cherry picked from commit d0c910d1d374c0c1a1c12651d099124a6d4b69ea)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e456208fb94bea6b2e68b0a10ff60e93fd22cb26" HashShort="e456208" Subject="sysutils/pam_xdg: minor rewording in pkg-message" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/pam_xdg/pkg-message"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

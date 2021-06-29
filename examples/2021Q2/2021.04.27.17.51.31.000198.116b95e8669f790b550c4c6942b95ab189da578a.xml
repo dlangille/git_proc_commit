@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="27"/>
+    <TIME Timezone="UTC" Hour="17" Minute="51" Second="31"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/performance: mark BROKEN on FreeBSD 11
+
+(cherry picked from commit cdb9a64fa3b220e5edfa5ac0d3ff69e3976864de)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="116b95e8669f790b550c4c6942b95ab189da578a" HashShort="116b95e" Subject="devel/performance: mark BROKEN on FreeBSD 11" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/performance/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

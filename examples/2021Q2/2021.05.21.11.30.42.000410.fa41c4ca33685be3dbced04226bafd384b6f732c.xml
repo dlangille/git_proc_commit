@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="21"/>
+    <TIME Timezone="UTC" Hour="11" Minute="30" Second="42"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/api-sanity-autotest: attempt to fix build on package builders.
+
+devel/abi-compliance-checker no longer supplies
+bin/abi-compliance-checker.pl but it does supply the binary
+bin/abi-compliance-checker.
+
+(cherry picked from commit 5c10906c41df785c63ac430e168e8becf8a04a94)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mark Linimon" AuthorEmail="linimon@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="fa41c4ca33685be3dbced04226bafd384b6f732c" HashShort="fa41c4c" Subject="devel/api-sanity-autotest: attempt to fix build on package builders." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/api-sanity-autotest/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

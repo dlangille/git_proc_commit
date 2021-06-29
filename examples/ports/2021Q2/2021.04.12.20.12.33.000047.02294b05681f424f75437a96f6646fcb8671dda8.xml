@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="12"/>
+    <TIME Timezone="UTC" Hour="20" Minute="12" Second="33"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>games/pinball: fix @sample.
+Reported by:	pkg-fallout
+
+(cherry picked from commit c896f7099766a5e2c523fa50816a574d18e838cb)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Thierry Thomas" CommitterEmail="thierry@FreeBSD.org"/>
+      <AUTHOR AuthorName="Thierry Thomas" AuthorEmail="thierry@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="02294b05681f424f75437a96f6646fcb8671dda8" HashShort="02294b0" Subject="games/pinball: fix @sample." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="games/pinball/Makefile"/>
+      <FILE Action="Modify" Path="games/pinball/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

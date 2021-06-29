@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="10"/>
+    <TIME Timezone="UTC" Hour="6" Minute="44" Second="53"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/miniflux: reformat Makefile
+
+(cherry picked from commit 893f2c6a347c1e2061f4e5351eab008f48f66e73)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="378e5d07d635c18745eb462f2e80e608bbd2fc6c" HashShort="378e5d07" Subject="www/miniflux: reformat Makefile" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/miniflux/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

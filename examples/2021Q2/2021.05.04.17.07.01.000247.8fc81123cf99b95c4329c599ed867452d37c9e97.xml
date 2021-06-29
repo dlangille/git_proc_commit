@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="4"/>
+    <TIME Timezone="UTC" Hour="17" Minute="7" Second="1"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>mail/exim-doc-*: update exim docs to 4.94.2 release to match mail/exim
+
+While here, take maintainersip as part of mail/exim maintenance
+
+(cherry picked from commit b54c6654bb9c308bc951dfe0db8ec97fa30fb5d8)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8fc81123cf99b95c4329c599ed867452d37c9e97" HashShort="8fc8112" Subject="mail/exim-doc-*: update exim docs to 4.94.2 release to match mail/exim" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="mail/exim-doc-html/Makefile"/>
+      <FILE Action="Modify" Path="mail/exim-doc-html/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

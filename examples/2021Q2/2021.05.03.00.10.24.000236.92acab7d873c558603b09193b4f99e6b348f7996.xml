@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="3"/>
+    <TIME Timezone="UTC" Hour="0" Minute="10" Second="24"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11/wezterm: update to 20210502.154244.3.f7122.c
+
+Changes:	https://github.com/wez/wezterm/releases/tag/20210502-154244-3f7122cb
+Reported by:	GitHub (watch releases)
+
+(cherry picked from commit 34ce0fa06cad060819284476c2f160d0465e1036)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="92acab7d873c558603b09193b4f99e6b348f7996" HashShort="92acab7" Subject="x11/wezterm: update to 20210502.154244.3.f7122.c" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11/wezterm/Makefile"/>
+      <FILE Action="Modify" Path="x11/wezterm/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

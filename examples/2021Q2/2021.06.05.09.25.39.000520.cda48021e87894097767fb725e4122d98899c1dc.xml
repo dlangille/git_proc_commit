@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="5"/>
+    <TIME Timezone="UTC" Hour="9" Minute="25" Second="39"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/virtualbox-ose: Fix mismerge in commit 751f083cf699
+
+Direct commit to quarterly to fix a merge mistake in the checrry
+pick of commit ef04eff33cf6.
+
+Reported by:		bdrewery</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Guido Falsi" CommitterEmail="madpilot@FreeBSD.org"/>
+      <AUTHOR AuthorName="Guido Falsi" AuthorEmail="madpilot@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="cda48021e87894097767fb725e4122d98899c1dc" HashShort="cda4802" Subject="emulators/virtualbox-ose: Fix mismerge in commit 751f083cf699" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/virtualbox-ose/files/patch-src_VBox_Additions_freebsd_vboxvfs_vboxvfs__vfsops.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

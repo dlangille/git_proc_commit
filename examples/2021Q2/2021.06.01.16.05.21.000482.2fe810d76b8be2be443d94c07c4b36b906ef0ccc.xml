@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="1"/>
+    <TIME Timezone="UTC" Hour="16" Minute="5" Second="21"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/redis: security update from 6.0.13 to 6.0.14
+
+Changelog:      https://github.com/redis/redis/compare/6.0.13...6.0.14
+PR:             256339
+Security:       CVE-2021-32625
+Security:       8eb69cd0-c2ec-11eb-b6e7-8c164567ca3c
+(cherry picked from commit d72fc1e8e141f136d8a4fa1fcf14734c0bede28e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Sergey A. Osokin" CommitterEmail="osa@FreeBSD.org"/>
+      <AUTHOR AuthorName="Sergey A. Osokin" AuthorEmail="osa@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="2fe810d76b8be2be443d94c07c4b36b906ef0ccc" HashShort="2fe810d" Subject="databases/redis: security update from 6.0.13 to 6.0.14" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/redis/Makefile"/>
+      <FILE Action="Modify" Path="databases/redis/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

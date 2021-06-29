@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="22"/>
+    <TIME Timezone="UTC" Hour="16" Minute="54" Second="56"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>math/sage: work-around to chase the upgrade of py-docutils to 0.17
+
+There is no subdir hu for Hungarian under $PYTHON_SITELIBDIR/docutils/languages
+and since the upgrade to textproc/py-docutils to 0.17 this causes a failure in
+dochtml when building Sage.
+
+Neither the upgrade to 0.17.1 proposed in PR 255197 solves the problem: as a
+work-around this modification only removes the build of a_tour_of_sage for hu.
+
+(cherry picked from commit 4a9bb724e8f62bdf6f9e2a73e86fd2187b532f41)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Thierry Thomas" CommitterEmail="thierry@FreeBSD.org"/>
+      <AUTHOR AuthorName="Thierry Thomas" AuthorEmail="thierry@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f46e4ccd8445b0dc50ebb06a20e3e5b4c9f0a28a" HashShort="f46e4cc" Subject="math/sage: work-around to chase the upgrade of py-docutils to 0.17" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="math/sage/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

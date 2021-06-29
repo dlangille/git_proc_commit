@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="6"/>
+    <TIME Timezone="UTC" Hour="10" Minute="45" Second="30"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>mail/sylpheed: Add missing dependency
+
+PR:		256378 (based on)
+Notified by:	stage-qa
+MFH:		2021Q1
+
+(cherry picked from commit 06caa0418884a026c1c2e0be94675880371898f4)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Emanuel Haupt" CommitterEmail="ehaupt@FreeBSD.org"/>
+      <AUTHOR AuthorName="Emanuel Haupt" AuthorEmail="ehaupt@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="14239f27d1169ace26d1913ce7fd1ba0ac097eba" HashShort="14239f2" Subject="mail/sylpheed: Add missing dependency" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="mail/sylpheed/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

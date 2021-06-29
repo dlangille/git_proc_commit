@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="18"/>
+    <TIME Timezone="UTC" Hour="16" Minute="43" Second="40"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/veracrypt: fix plist
+
+Reported by:	'poudriere bulk -t' failure
+Approved by:	portmgr blanket (trivial fix packaging)
+MFH:		2021Q2
+
+(cherry picked from commit ce7525e65911cc709c94f07f6b64477e2e35f7a7)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="49dc86f679b0a4a3480537ff78f1f4871abab50d" HashShort="49dc86f" Subject="security/veracrypt: fix plist" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/veracrypt/Makefile"/>
+      <FILE Action="Modify" Path="security/veracrypt/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

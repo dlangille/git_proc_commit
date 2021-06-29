@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="11" Minute="46" Second="0"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/corosync3: fix plist (@sample)
+
+Approved by:	portmgr blanket
+
+(cherry picked from commit fa564838212dbe634d9bdcb259357666ea6c1e9c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="a69099f6d1fb6448f29e4c709d01ed5fcb4c9707" HashShort="a69099f" Subject="net/corosync3: fix plist (@sample)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/corosync3/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

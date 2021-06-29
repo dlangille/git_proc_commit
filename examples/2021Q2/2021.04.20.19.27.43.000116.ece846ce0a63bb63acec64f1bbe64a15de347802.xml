@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="20"/>
+    <TIME Timezone="UTC" Hour="19" Minute="27" Second="43"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/jenkins-lts: Update to 2.277.3
+
+MFH:		2021Q2
+Security:	e358b470-b37d-4e47-bc8a-2cd9adbeb63c
+Sponsored by:	The FreeBSD Foundation
+
+(cherry picked from commit f1101c72bf9e3cbb2d90ac76198bb5656f0623d9)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Li-Wen Hsu" CommitterEmail="lwhsu@FreeBSD.org"/>
+      <AUTHOR AuthorName="Li-Wen Hsu" AuthorEmail="lwhsu@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ece846ce0a63bb63acec64f1bbe64a15de347802" HashShort="ece846c" Subject="devel/jenkins-lts: Update to 2.277.3" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/jenkins-lts/Makefile"/>
+      <FILE Action="Modify" Path="devel/jenkins-lts/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

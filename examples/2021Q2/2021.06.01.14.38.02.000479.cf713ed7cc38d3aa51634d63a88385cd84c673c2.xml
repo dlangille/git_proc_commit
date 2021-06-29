@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="1"/>
+    <TIME Timezone="UTC" Hour="14" Minute="38" Second="2"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11/libX11: update to 1.7.0
+
+Changes:	https://lists.x.org/archives/xorg-announce/2020-November/003065.html
+PR:		255770
+Reported by:	portscout
+Approved by:	zeising
+Exp-run by:	antoine
+Differential Revision:	https://reviews.freebsd.org/D30202
+
+(cherry picked from commit ee545c31194e74fd0f6c484723b965e4bcaa0446)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jung-uk Kim" CommitterEmail="jkim@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="cf713ed7cc38d3aa51634d63a88385cd84c673c2" HashShort="cf713ed" Subject="x11/libX11: update to 1.7.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11/libX11/Makefile"/>
+      <FILE Action="Modify" Path="x11/libX11/distinfo"/>
+      <FILE Action="Modify" Path="x11/libX11/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

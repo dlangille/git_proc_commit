@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="14"/>
+    <TIME Timezone="UTC" Hour="18" Minute="20" Second="7"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>mail/smtprelay: Update to 1.6.0 and fix REQUIRE in rc.d script
+
+(cherry picked from commit 0bf8c12f5dab36ae633f8fc922f3416e893b5059)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernhard Froehlich" CommitterEmail="decke@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernhard Froehlich" AuthorEmail="decke@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="985a0747baebcaf20694ddc436e4ca3a725d93e8" HashShort="985a074" Subject="mail/smtprelay: Update to 1.6.0 and fix REQUIRE in rc.d script" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="mail/smtprelay/Makefile"/>
+      <FILE Action="Modify" Path="mail/smtprelay/distinfo"/>
+      <FILE Action="Modify" Path="mail/smtprelay/files/smtprelay.in"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

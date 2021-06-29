@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="31"/>
+    <TIME Timezone="UTC" Hour="21" Minute="54" Second="42"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/wayland: merge upstream fix for CVE-2013-2003
+
+This is upstream MR 133,
+	https://gitlab.freedesktop.org/wayland/wayland/-/merge_requests/133
+which in turn is a Wayland-ified version of the fix to libXcursor.
+
+PR:		256273
+Reported by:	Evgeniy Khramtsov
+Approved by:	zeising (x11)
+
+(cherry picked from commit 6431a5d2419ada906a7927c7b85e5f98bcd6eba2)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Adriaan de Groot" CommitterEmail="adridg@FreeBSD.org"/>
+      <AUTHOR AuthorName="Adriaan de Groot" AuthorEmail="adridg@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="07b0f03960528e9f5be1a9fd985650a32c579e0a" HashShort="07b0f03" Subject="graphics/wayland: merge upstream fix for CVE-2013-2003" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/wayland/Makefile"/>
+      <FILE Action="Modify" Path="graphics/wayland/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

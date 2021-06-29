@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="17"/>
+    <TIME Timezone="UTC" Hour="18" Minute="46" Second="55"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11/grim: update to 1.3.2
+
+Changes:	https://github.com/emersion/grim/releases/tag/v1.3.2
+Reported by:	GitHub (watch releases)
+
+(cherry picked from commit cd437bc7cdfa5000d22ca4e9dbe7cf45d4df7d96)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="2b4e509377d1b7110d727e7ace3257c3b3f7f9d6" HashShort="2b4e5093" Subject="x11/grim: update to 1.3.2" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11/grim/Makefile"/>
+      <FILE Action="Modify" Path="x11/grim/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

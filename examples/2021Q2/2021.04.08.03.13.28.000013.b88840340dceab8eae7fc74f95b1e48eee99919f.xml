@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="8"/>
+    <TIME Timezone="UTC" Hour="3" Minute="13" Second="28"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/py-hvac: Update to 0.10.9
+
+Changelog:  https://github.com/hvac/hvac/releases/tag/v0.10.9
+
+PR:	 254736
+Submitted by:  Alessandro Sagratini &lt;ale_sagra@hotmail.com&gt; (maintainer)
+
+(cherry picked from commit 463f46b75aebebc728d6b5cfb14652eea68aa3de)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Danilo G. Baio" CommitterEmail="dbaio@FreeBSD.org"/>
+      <AUTHOR AuthorName="Danilo G. Baio" AuthorEmail="dbaio@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="b88840340dceab8eae7fc74f95b1e48eee99919f" HashShort="b888403" Subject="devel/py-hvac: Update to 0.10.9" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/py-hvac/Makefile"/>
+      <FILE Action="Modify" Path="devel/py-hvac/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

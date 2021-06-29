@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="18"/>
+    <TIME Timezone="UTC" Hour="5" Minute="42" Second="1"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/vst3sdk: Add patch for missing include statement
+
+Reported by:	fallout
+
+(cherry picked from commit 12913c59e09630309451c561c098981e0d869782)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="392a2a5c19cff406676a67f4ed87a53fb5765bb1" HashShort="392a2a5" Subject="audio/vst3sdk: Add patch for missing include statement" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Add" Path="audio/vst3sdk/files/patch-vstgui4_vstgui_lib_platform_linux_x11fileselector.cpp"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

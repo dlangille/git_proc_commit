@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="15"/>
+    <TIME Timezone="UTC" Hour="17" Minute="5" Second="29"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/libsidplayfp: Remove distinfo w/o EOF EOL
+
+The commit hook is preventing updates here, remove the file so it can be
+fixed and updated.
+
+PR:		256043
+MFH:		2021Q2
+(cherry picked from commit 1f11aee3c6fc478ef13ebb759eb708ed44556b1d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kevin Bowling" CommitterEmail="kbowling@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kevin Bowling" AuthorEmail="kbowling@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="5764c51866b6726eb7d7e74ddb41c9e4e41fa9dc" HashShort="5764c518" Subject="audio/libsidplayfp: Remove distinfo w/o EOF EOL" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Delete" Path="audio/libsidplayfp/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

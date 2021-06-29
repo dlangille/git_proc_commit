@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="25"/>
+    <TIME Timezone="UTC" Hour="20" Minute="53" Second="35"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/adguardhome: Use pre-bilt html frontend tarballs and mantenance mode which allows to build them.
+
+Port was broken without this since they recently added the need for html
+frontend being presend before build and such frontend was missing.
+
+Reported by:	Sandro Wirth &lt;sandro.wirth@posteo.de&gt;
+
+(cherry picked from commit 990e47d4e491bbed9bdd626b4b89f186de5804c7)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="63a2b7669b0088f00c627973cf1238549658370f" HashShort="63a2b76" Subject="www/adguardhome: Use pre-bilt html frontend tarballs and mantenance mode which allows to build them." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/adguardhome/Makefile"/>
+      <FILE Action="Modify" Path="www/adguardhome/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

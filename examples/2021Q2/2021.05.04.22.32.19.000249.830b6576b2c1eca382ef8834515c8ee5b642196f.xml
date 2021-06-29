@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="4"/>
+    <TIME Timezone="UTC" Hour="22" Minute="32" Second="19"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11/py-xdot: Add missing dependency NumPy
+
+Approved by:	portmgr blanket
+
+(cherry picked from commit 81bb1c7e2197256fd724e3edf056ad780c039b26)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="830b6576b2c1eca382ef8834515c8ee5b642196f" HashShort="830b657" Subject="x11/py-xdot: Add missing dependency NumPy" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11/py-xdot/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

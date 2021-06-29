@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="26"/>
+    <TIME Timezone="UTC" Hour="9" Minute="38" Second="53"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/shibboleth-sp: Update to 3.2.2
+
+This is a security fix for an issue that has not yet been disclosed. The
+vuxml entry will be updated once the CVE is available.
+
+The patch to mitigate the vulnerability was introduced already on
+2021-04-23 in the FreeBSD port as 3.2.1_1.
+
+Security:	e4403051-a667-11eb-b9c9-6cc21735f730
+
+(cherry-picked from commit 19889886e54f734191490f09765d631b9b67f0a7)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Palle Girgensohn" CommitterEmail="girgen@FreeBSD.org"/>
+      <AUTHOR AuthorName="Palle Girgensohn" AuthorEmail="girgen@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8586ae798f4bf5c86666e1b87744f1da97d35a72" HashShort="8586ae7" Subject="security/shibboleth-sp: Update to 3.2.2" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/shibboleth-sp/Makefile"/>
+      <FILE Action="Modify" Path="security/shibboleth-sp/distinfo"/>
+      <FILE Action="Modify" Path="security/shibboleth-sp/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

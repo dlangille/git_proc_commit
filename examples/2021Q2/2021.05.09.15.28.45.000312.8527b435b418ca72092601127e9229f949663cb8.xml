@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="9"/>
+    <TIME Timezone="UTC" Hour="15" Minute="28" Second="45"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>ports-mgmt/synth: Update to 2.11 release
+
+This fixes https://github.com/jrmarino/synth/issues/193
+(sys/sys/param.h in freebsd/main loses comment after __FreeBSD_version)
+
+MFH:	2021Q2
+(cherry picked from commit a53b9c858eb613ea9f1e79d0b31655d747cc5275)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8527b435b418ca72092601127e9229f949663cb8" HashShort="8527b43" Subject="ports-mgmt/synth: Update to 2.11 release" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="ports-mgmt/synth/Makefile"/>
+      <FILE Action="Modify" Path="ports-mgmt/synth/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

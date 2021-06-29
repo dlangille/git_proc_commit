@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="15"/>
+    <TIME Timezone="UTC" Hour="10" Minute="46" Second="4"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/mesa-devel: unbreak standalone build after 4c2cc95952a6
+
+===&gt; Checking for items in pkg-plist which are not in STAGEDIR
+Error: Missing: include/vulkan/vulkan_intel.h
+
+PR:		255082
+Reported by:	Evgeniy Khramtsov
+Regressed by:	https://gitlab.freedesktop.org/mesa/mesa/-/commit/5e6db1916860
+
+(cherry picked from commit 116c6c13785b89e7cd4f7abe556a9ca960209347)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="3a9aa5b44377c2dc5f8731f5fe087270409dba11" HashShort="3a9aa5b" Subject="graphics/mesa-devel: unbreak standalone build after 4c2cc95952a6" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/mesa-devel/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

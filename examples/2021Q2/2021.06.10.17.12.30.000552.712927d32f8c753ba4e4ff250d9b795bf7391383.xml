@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="10"/>
+    <TIME Timezone="UTC" Hour="17" Minute="12" Second="30"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/python3[89]: remove LIBFFI option
+
+Python now requires libffi from ports and does not build with LIBFFI
+disabled, so remove the option.
+
+PR:		256141
+Reported by:	majo-bugs.freebsd.org@cerny.sk
+Reviewed by:	koobs (python)
+Approved by:	koobs (python)
+MFH:		2020Q2 (bugfix)
+
+(cherry picked from commit 64be746e535b0ca620460c95a819b81ac2159d01)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="712927d32f8c753ba4e4ff250d9b795bf7391383" HashShort="712927d" Subject="lang/python3[89]: remove LIBFFI option" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/python38/Makefile"/>
+      <FILE Action="Modify" Path="lang/python39/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

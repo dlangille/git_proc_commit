@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="13" Minute="45" Second="30"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>misc/dahdi-kmod: mark BROKEN (does not compile)
+
+Approved by:	portmgr blanket
+
+(cherry picked from commit 4820f0aa604558a87abdc82299b67c3181a52fbd)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="29a3be2b5a25835f6497afa888013829aa99e503" HashShort="29a3be2" Subject="misc/dahdi-kmod: mark BROKEN (does not compile)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="misc/dahdi-kmod/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

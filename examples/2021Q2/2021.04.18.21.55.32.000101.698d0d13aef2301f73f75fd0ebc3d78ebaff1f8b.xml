@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="18"/>
+    <TIME Timezone="UTC" Hour="21" Minute="55" Second="32"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11/foot: update to 1.7.2
+
+Changes:	https://codeberg.org/dnkl/foot/releases/tag/1.7.2
+Reported by:	Repology
+
+(cherry picked from commit 8758065144c114d30038220dbb7ad613ff867148)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="698d0d13aef2301f73f75fd0ebc3d78ebaff1f8b" HashShort="698d0d1" Subject="x11/foot: update to 1.7.2" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11/foot/Makefile"/>
+      <FILE Action="Modify" Path="x11/foot/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

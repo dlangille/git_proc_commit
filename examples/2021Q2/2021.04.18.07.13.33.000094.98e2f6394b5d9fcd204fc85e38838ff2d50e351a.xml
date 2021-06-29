@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="18"/>
+    <TIME Timezone="UTC" Hour="7" Minute="13" Second="33"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/rubygem-activerecord-session_store: Update to 2.0.0
+
+- Update RUN_DEPENDS: use Rails 6.0
+
+Changes:	https://github.com/rails/activerecord-session_store/releases
+(cherry picked from commit 8884130c8856d335665b4a663d0849da33fd5d95)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Po-Chuan Hsieh" CommitterEmail="sunpoet@FreeBSD.org"/>
+      <AUTHOR AuthorName="Po-Chuan Hsieh" AuthorEmail="sunpoet@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="98e2f6394b5d9fcd204fc85e38838ff2d50e351a" HashShort="98e2f63" Subject="databases/rubygem-activerecord-session_store: Update to 2.0.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/rubygem-activerecord-session_store/Makefile"/>
+      <FILE Action="Modify" Path="databases/rubygem-activerecord-session_store/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

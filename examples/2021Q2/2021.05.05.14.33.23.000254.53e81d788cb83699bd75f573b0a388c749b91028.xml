@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="5"/>
+    <TIME Timezone="UTC" Hour="14" Minute="33" Second="23"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/ansible27: Update to 2.7.18
+
+PR:		249501
+Changes:	https://github.com/ansible/ansible/blob/stable-2.7/changelogs/CHANGELOG-v2.7.rst#v2-7-18
+MFH:		2021Q2
+(cherry picked from commit 3cf61bd24e68bca05ac71417e5870a2e125c6878)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mateusz Piotrowski" CommitterEmail="0mp@FreeBSD.org"/>
+      <AUTHOR AuthorName="Michael Muenz" AuthorEmail="m.muenz@gmail.com"/>
+    </PEOPLE>
+    <COMMIT Hash="53e81d788cb83699bd75f573b0a388c749b91028" HashShort="53e81d7" Subject="sysutils/ansible27: Update to 2.7.18" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/ansible27/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/ansible27/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

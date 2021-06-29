@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="0" Minute="48" Second="21"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/ceph14: update to 14.2.21 release
+
+Introduce option WITH_TESTS which covers all test/debug tools. Currently
+disabled due to linking errors
+
+PR: 255763 (based on)
+Approved by: maintainer (implicit)
+
+(cherry picked from commit 67ce935d463c530750afb8e4485c83aeb7bc30f8)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="61d3e84e0d6371269214ee5f6dc4c944cf30e5fa" HashShort="61d3e84" Subject="net/ceph14: update to 14.2.21 release" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/ceph14/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

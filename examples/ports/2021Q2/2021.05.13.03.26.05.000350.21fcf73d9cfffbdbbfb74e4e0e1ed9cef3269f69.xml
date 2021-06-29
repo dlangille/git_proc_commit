@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="13"/>
+    <TIME Timezone="UTC" Hour="3" Minute="26" Second="5"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/adguardhome: Update 0.106.1 -&gt; 0.106.2
+
+Reported by:	portscout
+
+(cherry picked from commit fc387610e1e8be6f3aea773673a11a04a01a29a7)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="21fcf73d9cfffbdbbfb74e4e0e1ed9cef3269f69" HashShort="21fcf73" Subject="www/adguardhome: Update 0.106.1 -&gt; 0.106.2" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/adguardhome/Makefile"/>
+      <FILE Action="Modify" Path="www/adguardhome/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

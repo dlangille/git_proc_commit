@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="7"/>
+    <TIME Timezone="UTC" Hour="23" Minute="26" Second="27"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/php80: Update from 8.0.5 to 8.0.6
+
+PDO_pgsql:
+
+    Revert "Fixed bug #80892 (PDO::PARAM_INT is treated the same as PDO::PARAM_STR)"
+
+Sponsored by:	Bounce Experts
+
+(cherry picked from commit 85d390d64b21091cba650449989bab8144d97dab)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Torsten Zuehlsdorff" CommitterEmail="tz@FreeBSD.org"/>
+      <AUTHOR AuthorName="Torsten Zuehlsdorff" AuthorEmail="tz@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="b8ebedb6cbdfc27cb8b1e0814ae927dc047d88b9" HashShort="b8ebedb" Subject="lang/php80: Update from 8.0.5 to 8.0.6" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/php80-pdo_pgsql/Makefile"/>
+      <FILE Action="Delete" Path="databases/php80-pdo_pgsql/files/patch-pgsql__statement.c"/>
+      <FILE Action="Delete" Path="databases/php80-pdo_pgsql/files/patch-tests_bug__80892.phpt"/>
+      <FILE Action="Modify" Path="devel/php80-intl/Makefile"/>
+      <FILE Action="Modify" Path="lang/php80/Makefile"/>
+      <FILE Action="Modify" Path="lang/php80/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

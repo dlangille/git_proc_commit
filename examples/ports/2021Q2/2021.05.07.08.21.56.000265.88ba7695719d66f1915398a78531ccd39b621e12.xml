@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="7"/>
+    <TIME Timezone="UTC" Hour="8" Minute="21" Second="56"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-mgmt/zabbix5-server: Update to 5.0.11
+
+- Update to 5.0.11
+- Changelog: https://www.zabbix.com/rn/rn5.0.11
+
+PR:			255657
+Differential Revision:	https://reviews.freebsd.org/D30147
+
+(cherry picked from commit 3ec0b1fc6c1dd36f5627f54567d46496c4f1c33d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Pakhom Golynga" AuthorEmail="pg@pakhom.spb.ru"/>
+    </PEOPLE>
+    <COMMIT Hash="88ba7695719d66f1915398a78531ccd39b621e12" HashShort="88ba769" Subject="net-mgmt/zabbix5-server: Update to 5.0.11" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-mgmt/zabbix5-server/Makefile"/>
+      <FILE Action="Modify" Path="net-mgmt/zabbix5-server/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

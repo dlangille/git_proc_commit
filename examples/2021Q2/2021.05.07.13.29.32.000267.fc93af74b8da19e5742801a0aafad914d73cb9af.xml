@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="7"/>
+    <TIME Timezone="UTC" Hour="13" Minute="29" Second="32"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/py-cherrypy: Fix runtime with Python 3.8 and onward
+
+Backport patches from the 18.x release branch that uses the Python's
+library "contextlib" instead of the external library "contextlib2".
+
+The "contextlib2" library is a backported version which is required for
+compatibility with Python 2.7 as the 17.x release of CherryPy is the
+last one that has compatibility for Python 2.7.
+
+Since the support for Python 2.7 has been removed in aa7a6c429ea6,
+"contextlib2 is no longer needed for backward compatibility.
+
+This is a transitional solution to fix the regression with Python 3.8
+because an update to the 18.x release needs a bit more work and also
+requires one or more new Python packages.
+
+While I'm here:
+
+* Sort variables according to the PHB and pet portclippy.
+* Remove superfluous EXAMPLESDIR.
+* Convert to newer options framework.
+* Set NO_ARCH as there are no architecture specific files.
+* Add "do-test" target to make future QA easier.
+
+PR:		250379
+Reported by:	jbeich
+Approved by:	maintainer timeout (6+ months)
+MFH:		2021Q2
+
+(cherry picked from commit 7915fe9b3fce2721c82d041ebbe47cf0a47981c1)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kai Knoblich" CommitterEmail="kai@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kai Knoblich" AuthorEmail="kai@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="fc93af74b8da19e5742801a0aafad914d73cb9af" HashShort="fc93af7" Subject="www/py-cherrypy: Fix runtime with Python 3.8 and onward" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/py-cherrypy/Makefile"/>
+      <FILE Action="Add" Path="www/py-cherrypy/files/patch-cherrypy_lib_sessions.py"/>
+      <FILE Action="Add" Path="www/py-cherrypy/files/patch-setup.py"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

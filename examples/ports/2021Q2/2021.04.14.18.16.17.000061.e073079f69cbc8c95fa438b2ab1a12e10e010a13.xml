@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="14"/>
+    <TIME Timezone="UTC" Hour="18" Minute="16" Second="17"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/wireguard-tools: Various fixes for the rc.d scripts
+
+- Introduce wireguard_confdir to rc.d script
+- Fix variables and load_rc_config order in rc.d script
+- Change rc.d scripts to run earlier after NETWORKING is available
+
+Submitted by:	niels@netbox.org
+
+(cherry picked from commit 9986bb780c473fe5a1a2821d14aead6b3bcaadbe)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernhard Froehlich" CommitterEmail="decke@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernhard Froehlich" AuthorEmail="decke@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e073079f69cbc8c95fa438b2ab1a12e10e010a13" HashShort="e073079" Subject="net/wireguard-tools: Various fixes for the rc.d scripts" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/wireguard-tools/Makefile"/>
+      <FILE Action="Modify" Path="net/wireguard-tools/files/wireguard_lite.in"/>
+      <FILE Action="Modify" Path="net/wireguard-tools/files/wireguard_wgquick.in"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

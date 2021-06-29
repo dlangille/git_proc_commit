@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="7"/>
+    <TIME Timezone="UTC" Hour="18" Minute="37" Second="38"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>textproc/docproj: Add Hugo/Asciidoctor dependencies
+
+This just adds the new dependencies for building the doc tree with
+Hugo/Asciidoctor, as we still have the legacy docs available, will be
+kept the former dependencies for a little while.
+
+PR:	 253518
+Submitted by:  Yasuhiro Kimura, Dries Michiels
+Reviewed by:   0mp, adamw, dbaio, debdrup, lwhsu
+Approved by:   doceng (bcr, maintainer)
+Differential Revision:	https://reviews.freebsd.org/D28609
+
+(cherry picked from commit 21a4260fb3343c08f21ec58635ddad7c522bf87a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Danilo G. Baio" CommitterEmail="dbaio@FreeBSD.org"/>
+      <AUTHOR AuthorName="Danilo G. Baio" AuthorEmail="dbaio@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="c4ba03505970eb233fc57991252bd451cfd7109a" HashShort="c4ba035" Subject="textproc/docproj: Add Hugo/Asciidoctor dependencies" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="textproc/docproj/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

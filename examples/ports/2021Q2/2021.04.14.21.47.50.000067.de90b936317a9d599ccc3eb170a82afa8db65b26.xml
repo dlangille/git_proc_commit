@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="14"/>
+    <TIME Timezone="UTC" Hour="21" Minute="47" Second="50"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>textproc/elasticsearch6: Update to 6.8.15
+
+(cherry picked from commit 9fdcf40f3c7502a6d647640e0963c2dce9a48b9e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="de90b936317a9d599ccc3eb170a82afa8db65b26" HashShort="de90b93" Subject="textproc/elasticsearch6: Update to 6.8.15" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="textproc/elasticsearch6/Makefile"/>
+      <FILE Action="Modify" Path="textproc/elasticsearch6/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

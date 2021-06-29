@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="14"/>
+    <TIME Timezone="UTC" Hour="7" Minute="18" Second="36"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/apache24: Update to 2.4.48
+
+Approved by:	apache (with hat)
+
+(cherry picked from commit 1085fbd715563d82bb1eb5598a4448bce0de505d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernard Spil" CommitterEmail="brnrd@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernard Spil" AuthorEmail="brnrd@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="2ea11f7275de4a607ce907c11a2a5b44e22da554" HashShort="2ea11f7" Subject="www/apache24: Update to 2.4.48" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/apache24/Makefile"/>
+      <FILE Action="Modify" Path="www/apache24/distinfo"/>
+      <FILE Action="Add" Path="www/apache24/files/patch-modules_md_md__crypt.c"/>
+      <FILE Action="Modify" Path="www/apache24/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

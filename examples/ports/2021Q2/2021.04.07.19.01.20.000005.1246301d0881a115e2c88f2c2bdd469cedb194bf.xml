@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="7"/>
+    <TIME Timezone="UTC" Hour="19" Minute="1" Second="20"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/node12: Update 12.22.0 -&gt; 12.22.1
+
+https://nodejs.org/en/blog/release/v12.22.1/
+
+This is a security release. See
+https://nodejs.org/en/blog/vulnerability/april-2021-security-releases/
+
+MFH:		2021Q2
+Security:	c0c1834c-9761-11eb-acfd-0022489ad614
+Sponsored by:	Miles AS
+
+(cherry picked from commit 5d4e7835aaf7c571b5592f25e5f891b5f7d8039f)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bradley T. Hughes" CommitterEmail="bhughes@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bradley T. Hughes" AuthorEmail="bhughes@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="1246301d0881a115e2c88f2c2bdd469cedb194bf" HashShort="1246301" Subject="www/node12: Update 12.22.0 -&gt; 12.22.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/node12/Makefile"/>
+      <FILE Action="Modify" Path="www/node12/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

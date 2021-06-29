@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="25"/>
+    <TIME Timezone="UTC" Hour="10" Minute="21" Second="6"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/ufraw: Upgrade to latest version
+
+Major changes:
+    * Intagrate multipleple fixes from openSUSE
+    * Fix build against glib-2.68
+    * ufraw_preview: do now overwrite configuration with preview size
+    * ufraw-gimp: properly send EXIF data to Gimp 2.9 and later
+    * Suppress compiler warnings on implicit fallthrough
+    * ufraw_developer: use fabs() instead of abs() for double
+    * Fix GCC 9 OpenMP issues by drop default(none)
+    * From Gentoo ufraw-0.17-cfitsio-automagic.patch
+    * From Gentoo ufraw-0.22-jasper-automagic.patch
+    * From Gentoo ufraw-0.22-jpeg9.patch
+    * From Gentoo ufraw-0.22-exiv2-0.27.patch
+    * 05_CVE-2018-19655.patch from Debian
+    * Prevent crash when camera specified in .ufraw file is not in lensfun db
+    * Fix crash on destroy of lensfun object on PEF images
+
+Security:	CVE-2018-19655
+MFH:		2021Q2
+(cherry picked from commit 0e861af1558fee9f258c8ee67e3d48aff151986f)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rodrigo Osorio" CommitterEmail="rodrigo@FreeBSD.org"/>
+      <AUTHOR AuthorName="Rodrigo Osorio" AuthorEmail="rodrigo@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ff55ae246a44875e8da59ae410e37294cc0f7519" HashShort="ff55ae2" Subject="graphics/ufraw: Upgrade to latest version" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/ufraw/Makefile"/>
+      <FILE Action="Modify" Path="graphics/ufraw/distinfo"/>
+      <FILE Action="Delete" Path="graphics/ufraw/files/patch-dcraw.cc"/>
+      <FILE Action="Delete" Path="graphics/ufraw/files/patch-gentoo_b5b414"/>
+      <FILE Action="Delete" Path="graphics/ufraw/files/patch-ufraw__conf.c"/>
+      <FILE Action="Delete" Path="graphics/ufraw/files/patch-ufraw__developer.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

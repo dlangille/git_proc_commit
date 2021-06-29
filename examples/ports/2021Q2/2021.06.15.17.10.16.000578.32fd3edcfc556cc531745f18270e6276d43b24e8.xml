@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="15"/>
+    <TIME Timezone="UTC" Hour="17" Minute="10" Second="16"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/libsidplayfp: Remove unneeded line continuation
+
+MFH:		2021Q2
+(cherry picked from commit 0a8b84cb4dd4239df532765373b55754f04832ca)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kevin Bowling" CommitterEmail="kbowling@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kevin Bowling" AuthorEmail="kbowling@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="32fd3edcfc556cc531745f18270e6276d43b24e8" HashShort="32fd3ed" Subject="audio/libsidplayfp: Remove unneeded line continuation" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/libsidplayfp/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

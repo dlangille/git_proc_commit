@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="17"/>
+    <TIME Timezone="UTC" Hour="12" Minute="49" Second="19"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/postgresql-mysql_fdw: Update from 2.5.5 to 2.6.0
+
+This release includes the following:
+
+Feature:
+
+    Join Push down - If we have a join between two foreign tables from the same remote server, push that join down to the remote server instead of fetching all the rows for both the tables and performing a join locally.
+
+Other Fixes:
+
+    Fixes crash with IMPORT FOREIGN SCHEMA when executed repeatedly.
+    Restricts fetching of the system attributes from the remote relation.
+    Fixes compiler warning due to clash with MySQL library macro.
+    Costs are not shown in the explain output when the COSTS explain option is OFF.
+    Uses environment variables in tests for connection parameters.
+    No longer supports PG/EPAS version 9.5.
+
+Sponsored by:	Bounce Experts
+
+(cherry picked from commit 4394f1f2bcdc1327fad694916f90584447ba4a32)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Torsten Zuehlsdorff" CommitterEmail="tz@FreeBSD.org"/>
+      <AUTHOR AuthorName="Torsten Zuehlsdorff" AuthorEmail="tz@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ff6ba3b6b0715c94af7ef9c957dcf8ef26fc85b9" HashShort="ff6ba3b" Subject="databases/postgresql-mysql_fdw: Update from 2.5.5 to 2.6.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/postgresql-mysql_fdw/Makefile"/>
+      <FILE Action="Modify" Path="databases/postgresql-mysql_fdw/distinfo"/>
+      <FILE Action="Modify" Path="databases/postgresql-mysql_fdw/pkg-descr"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

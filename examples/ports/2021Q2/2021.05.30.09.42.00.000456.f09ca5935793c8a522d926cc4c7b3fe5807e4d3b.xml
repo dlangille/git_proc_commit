@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="30"/>
+    <TIME Timezone="UTC" Hour="9" Minute="42" Second="0"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/mysql57-*: update to 5.7.32 GA release
+
+Release Notes: https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-34.html
+
+PR:	255748 (based on)
+MFH:	2021Q2
+Approved by:	joneum@ (implicit)
+
+(cherry picked from commit ebbb2d513387c14bbb667f88e84ffbdb87a4dda3)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f09ca5935793c8a522d926cc4c7b3fe5807e4d3b" HashShort="f09ca59" Subject="databases/mysql57-*: update to 5.7.32 GA release" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/mysql57-client/files/patch-cmake_build__configurations_compiler__options.cmake"/>
+      <FILE Action="Modify" Path="databases/mysql57-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/mysql57-server/distinfo"/>
+      <FILE Action="Add" Path="databases/mysql57-server/files/patch-cmake_build__configurations_compiler__options.cmake"/>
+      <FILE Action="Add" Path="databases/mysql57-server/files/patch-rapid_plugin_group__replication_src_recovery_state_transfer.cc"/>
+      <FILE Action="Add" Path="databases/mysql57-server/files/patch-sql_binlog.cc"/>
+      <FILE Action="Modify" Path="databases/mysql57-server/files/patch-sql_locks_shared__spin__lock.cc"/>
+      <FILE Action="Add" Path="databases/mysql57-server/files/patch-storage_innobase_fsp_fsp0fsp.cc"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="27"/>
+    <TIME Timezone="UTC" Hour="6" Minute="55" Second="16"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/clickhouse: Add forgotten patch.
+
+Reported by:	maintainer
+
+(cherry picked from commit 2519b10407948f6195c69e2939262d519d074935)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f39d8e48af65bc18c14dd9c29c0141ce593bcd97" HashShort="f39d8e4" Subject="databases/clickhouse: Add forgotten patch." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/clickhouse/Makefile"/>
+      <FILE Action="Add" Path="databases/clickhouse/files/patch-contrib_cassandra_CMakeLists.txt"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="23"/>
+    <TIME Timezone="UTC" Hour="14" Minute="35" Second="28"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>textproc/libxml2: add upstream fix for CVE-2021-3541
+
+This is relapted to parameter entities expansion and following
+the line of the billion laugh attack. Somehow in that path the
+counting of parameters was missed and the normal algorithm based
+on entities "density" was useless.
+
+PR:		256094
+Obtained from:	https://gitlab.gnome.org/GNOME/libxml2/-/commit/8598060bacada41a0eb09d95c97744ff4e428f8e
+Security:	CVE-2021-3541
+
+(cherry picked from commit 83889bd6875d128b44342dd3cd58fe6027b98542)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Tobias C. Berner" CommitterEmail="tcberner@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yasuhiro Kimura" AuthorEmail="yasu@utahime.org"/>
+    </PEOPLE>
+    <COMMIT Hash="d1aa619eee6b57face171474c3166f4112447f26" HashShort="d1aa619" Subject="textproc/libxml2: add upstream fix for CVE-2021-3541" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="textproc/libxml2/Makefile"/>
+      <FILE Action="Add" Path="textproc/libxml2/files/patch-CVE-2021-3541"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

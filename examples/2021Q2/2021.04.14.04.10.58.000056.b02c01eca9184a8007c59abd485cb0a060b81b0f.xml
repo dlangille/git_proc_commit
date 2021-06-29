@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="14"/>
+    <TIME Timezone="UTC" Hour="4" Minute="10" Second="58"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>misc/freebsd-release-manifests: add 13.0-RELEASE, rm 13-RC*
+
+Approved by:	re (gjb)
+Sponsored by:	Rubicon Communications, LLC ("Netgate") [gjb]
+
+(cherry picked from commit 2cf0be6dd16efa989c00d2b1d4c5746e1ba09e49)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kyle Evans" CommitterEmail="kevans@FreeBSD.org"/>
+      <AUTHOR AuthorName="Glen Barber" AuthorEmail="gjb@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="b02c01eca9184a8007c59abd485cb0a060b81b0f" HashShort="b02c01e" Subject="misc/freebsd-release-manifests: add 13.0-RELEASE, rm 13-RC*" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="misc/freebsd-release-manifests/Makefile"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/amd64-amd64-13.0-RC4"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/amd64-amd64-13.0-RC5"/>
+      <FILE Action="Add" Path="misc/freebsd-release-manifests/files/MANIFESTS/amd64-amd64-13.0-RELEASE"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/arm64-aarch64-13.0-RC4"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/arm64-aarch64-13.0-RC5"/>
+      <FILE Action="Add" Path="misc/freebsd-release-manifests/files/MANIFESTS/arm64-aarch64-13.0-RELEASE"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/i386-i386-13.0-RC4"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/i386-i386-13.0-RC5"/>
+      <FILE Action="Add" Path="misc/freebsd-release-manifests/files/MANIFESTS/i386-i386-13.0-RELEASE"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/powerpc-powerpc-13.0-RC4"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/powerpc-powerpc-13.0-RC5"/>
+      <FILE Action="Add" Path="misc/freebsd-release-manifests/files/MANIFESTS/powerpc-powerpc-13.0-RELEASE"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/powerpc-powerpc64-13.0-RC4"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/powerpc-powerpc64-13.0-RC5"/>
+      <FILE Action="Add" Path="misc/freebsd-release-manifests/files/MANIFESTS/powerpc-powerpc64-13.0-RELEASE"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/powerpc-powerpc64le-13.0-RC4"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/powerpc-powerpc64le-13.0-RC5"/>
+      <FILE Action="Add" Path="misc/freebsd-release-manifests/files/MANIFESTS/powerpc-powerpc64le-13.0-RELEASE"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/powerpc-powerpcspe-13.0-RC4"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/powerpc-powerpcspe-13.0-RC5"/>
+      <FILE Action="Add" Path="misc/freebsd-release-manifests/files/MANIFESTS/powerpc-powerpcspe-13.0-RELEASE"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/riscv-riscv64-13.0-RC4"/>
+      <FILE Action="Delete" Path="misc/freebsd-release-manifests/files/MANIFESTS/riscv-riscv64-13.0-RC5"/>
+      <FILE Action="Add" Path="misc/freebsd-release-manifests/files/MANIFESTS/riscv-riscv64-13.0-RELEASE"/>
+      <FILE Action="Modify" Path="misc/freebsd-release-manifests/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="3"/>
+    <TIME Timezone="UTC" Hour="12" Minute="34" Second="57"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/openvpn: band-aid fix for SIGSEGV on push echo
+
+PR:		256331
+Reported by:	peo@nethead.se
+
+(cherry picked from commit 6c20c4906a3b0f805c932f4e74ef7f62086e704d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Matthias Andree" CommitterEmail="mandree@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthias Andree" AuthorEmail="mandree@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="c306c212d40f2112cd0713e53add1e7851393dc3" HashShort="c306c21" Subject="security/openvpn: band-aid fix for SIGSEGV on push echo" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/openvpn/Makefile"/>
+      <FILE Action="Add" Path="security/openvpn/files/patch-src_openvpn_options.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

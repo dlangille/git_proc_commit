@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="7"/>
+    <TIME Timezone="UTC" Hour="19" Minute="39" Second="12"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>games/vms-empire: update to 1.16 and fix no-common build.
+
+PR:		245804
+Submitted by:	Gian-Simon Purkert &lt;gspurki@gmail.com&gt;
+MFH:		2021Q2
+
+(cherry picked from commit 4ad7ae27f6442600bc01916650d4a74920cc8504)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rene Ladan" CommitterEmail="rene@FreeBSD.org"/>
+      <AUTHOR AuthorName="Rene Ladan" AuthorEmail="rene@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="bfccb51a85046c184800886fead404dceb231fe9" HashShort="bfccb51" Subject="games/vms-empire: update to 1.16 and fix no-common build." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="games/vms-empire/Makefile"/>
+      <FILE Action="Modify" Path="games/vms-empire/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

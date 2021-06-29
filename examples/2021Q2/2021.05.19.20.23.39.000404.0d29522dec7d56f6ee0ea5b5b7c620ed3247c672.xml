@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="19"/>
+    <TIME Timezone="UTC" Hour="20" Minute="23" Second="39"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/pgpool-II-41: Update version 4.1.2=&gt;4.1.6
+
+- Pet portlint
+- Fix pkg-plist. Except the default pgpool.conf.sample other
+  pgpool.conf.sample* represents different configurations for different
+  scenario. Only the pgpool.conf.sample should create a corresponding
+  pgpool.conf file. Hence removing the @sample directive for the other
+  pgpool.conf.sample*
+
+Approved by:	tz
+Relnotes: https://www.pgpool.net/docs/latest/en/html/release-4-1-6.html
+Sponsored by:	Bounce Experts
+
+(cherry picked from commit 45438e74330c2c62867565587c569d893fbff3e3)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Muhammad Moinur Rahman" CommitterEmail="bofh@FreeBSD.org"/>
+      <AUTHOR AuthorName="Muhammad Moinur Rahman" AuthorEmail="bofh@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0d29522dec7d56f6ee0ea5b5b7c620ed3247c672" HashShort="0d29522" Subject="databases/pgpool-II-41: Update version 4.1.2=&gt;4.1.6" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/pgpool-II-41/Makefile"/>
+      <FILE Action="Modify" Path="databases/pgpool-II-41/distinfo"/>
+      <FILE Action="Modify" Path="databases/pgpool-II-41/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

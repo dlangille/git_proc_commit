@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="6"/>
+    <TIME Timezone="UTC" Hour="11" Minute="6" Second="57"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/drupal7: update 7.78 -&gt; 7.80, fix security vulnerability
+
+PR: 		255417
+MFH:		2021Q2
+Security:	CVE-2020-13672
+		https://www.drupal.org/sa-core-2021-002
+Changes:	https://www.drupal.org/project/drupal/releases/7.80
+Approved by:	joneum (maintainer timeout)
+
+(cherry picked from commit 2b1037171f1a4591119c4bc354075b4e3503a397)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kurt Jaeger" CommitterEmail="pi@FreeBSD.org"/>
+      <AUTHOR AuthorName="Simon Wright" AuthorEmail="simon.wright@gmx.net"/>
+    </PEOPLE>
+    <COMMIT Hash="ab22de5d66db581138d3676f9e50b66fd0fb17d2" HashShort="ab22de5" Subject="www/drupal7: update 7.78 -&gt; 7.80, fix security vulnerability" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/drupal7/Makefile"/>
+      <FILE Action="Modify" Path="www/drupal7/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

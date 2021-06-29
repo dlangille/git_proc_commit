@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="10"/>
+    <TIME Timezone="UTC" Hour="10" Minute="59" Second="19"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Fix downloading of packages hosted on gitlab.
+
+Gitlab changed the address beginning of April you can download packages
+from:
+curl https://gitlab.com/gitlab-org/gitlab-foss/repository/7efd19e3716ab6f9146052da76d1bd59ec815f2d/archive.tar.gz?dummy=/gitlab-org-gitlab-foss-7efd19e3716ab6f9146052da76d1bd59ec815f2d_GL0.tar.gz
+to:
+curl https://gitlab.com/gitlab-org/gitlab-foss/-/archive/7efd19e3716ab6f9146052da76d1bd59ec815f2d.tar.gz?dummy=/gitlab-org-gitlab-foss-7efd19e3716ab6f9146052da76d1bd59ec815f2d_GL0.tar.gz
+
+The new extracted archive will have a different folder name.
+Before it was:
+gitlab-foss-7efd19e3716ab6f9146052da76d1bd59ec815f2d-7efd19e3716ab6f9146052da76d1bd59ec815f2d
+now it is:
+gitlab-foss-7efd19e3716ab6f9146052da76d1bd59ec815f2d
+
+So all ports using gitlab must regen their distinfo.
+
+PR:		254866
+MFH:		2021Q2
+Differential Revision:	https://reviews.freebsd.org/D29628
+
+(cherry picked from commit 12ae9706d9b2bc40f303077f1b3c5801b94ea027)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Matthias Fechner" CommitterEmail="mfechner@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthias Fechner" AuthorEmail="mfechner@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="25feb17bca5b772d134b48379e67e85150cf84e3" HashShort="25feb17" Subject="Fix downloading of packages hosted on gitlab." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="Mk/bsd.port.mk"/>
+      <FILE Action="Modify" Path="Mk/bsd.sites.mk"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

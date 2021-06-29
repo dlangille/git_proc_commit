@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="20"/>
+    <TIME Timezone="UTC" Hour="21" Minute="18" Second="6"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>audio/ocp: drop dependency to audio/libsidplay
+
+ocp now uses a builtin version of sidplayfp and therefore
+audio/libsidplay is no longer required.
+
+(cherry picked from commit 6bd17866630c85fc75344f185016765351b66268)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Emanuel Haupt" CommitterEmail="ehaupt@FreeBSD.org"/>
+      <AUTHOR AuthorName="Emanuel Haupt" AuthorEmail="ehaupt@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0ac2a4f0ebb84c765a4bda1f3a4f993b9a8c9e1c" HashShort="0ac2a4f" Subject="audio/ocp: drop dependency to audio/libsidplay" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="audio/ocp/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

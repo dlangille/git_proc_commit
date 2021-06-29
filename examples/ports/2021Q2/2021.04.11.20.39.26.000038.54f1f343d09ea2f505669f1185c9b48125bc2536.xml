@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="11"/>
+    <TIME Timezone="UTC" Hour="20" Minute="39" Second="26"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/glow: Update to 1.4.1
+
+Changes: 	https://github.com/charmbracelet/glow/releases/tag/v1.4.1</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Lewis Cook" CommitterEmail="lcook@FreeBSD.org"/>
+      <AUTHOR AuthorName="Lewis Cook" AuthorEmail="lcook@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="54f1f343d09ea2f505669f1185c9b48125bc2536" HashShort="54f1f34" Subject="sysutils/glow: Update to 1.4.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/glow/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/glow/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

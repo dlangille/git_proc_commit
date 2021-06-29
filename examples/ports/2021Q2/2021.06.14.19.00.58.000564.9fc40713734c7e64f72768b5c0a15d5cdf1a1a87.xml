@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="14"/>
+    <TIME Timezone="UTC" Hour="19" Minute="0" Second="58"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>mail/postfix: Update to 3.6.1
+
+Relnotes:	http://www.postfix.org/announcements/postfix-3.6.1.html
+Reported by:	portscout
+
+(cherry picked from commit 28a702cf412f69edf99d00eb957668a6b7c05b05)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="9fc40713734c7e64f72768b5c0a15d5cdf1a1a87" HashShort="9fc4071" Subject="mail/postfix: Update to 3.6.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="mail/postfix/Makefile"/>
+      <FILE Action="Modify" Path="mail/postfix/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

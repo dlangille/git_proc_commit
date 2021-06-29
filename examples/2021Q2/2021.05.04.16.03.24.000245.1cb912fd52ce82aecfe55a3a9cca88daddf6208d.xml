@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="4"/>
+    <TIME Timezone="UTC" Hour="16" Minute="3" Second="24"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>mail/exim:	update to 4.94.2 security release
+
+  * New upstream security release.
+    + Release based on +fixes branch.
+    + Fixes multiple security vulnerabilities reported by Qualys and adds
+      related robustness improvements. (Special thanks to Heiko)
+      CVE-2020-28023: Out-of-bounds read in smtp_setup_msg()
+      CVE-2020-28007: Link attack in Exim's log directory
+      CVE-2020-28016: Heap out-of-bounds write in parse_fix_phrase()
+      CVE-2020-28012: Missing close-on-exec flag for privileged pipe
+      CVE-2020-28024: Heap buffer underflow in smtp_ungetc()
+      CVE-2020-28009: Integer overflow in get_stdinput()
+      CVE-2020-28015, CVE-28021: New-line injection into spool header file
+      CVE-2020-28026: Line truncation and injection in spool_read_header()
+      CVE-2020-28022: Heap out-of-bounds read and write in extract_option()
+      CVE-2020-28017: Integer overflow in receive_add_recipient()
+      CVE-2020-28013: Heap buffer overflow in parse_fix_phrase()
+      CVE-2020-28011: Heap buffer overflow in queue_run()
+      CVE-2020-28010: Heap out-of-bounds write in main()
+      CVE-2020-28018: Use-after-free in tls-openssl.c
+      CVE-2020-28025: Heap out-of-bounds read in pdkim_finish_bodyhash()
+      CVE-2020-28014, CVE-2021-27216: PID file handling
+      CVE-2020-28008: Assorted attacks in Exim's spool directory
+      CVE-2020-28019: Failure to reset function pointer after BDAT error
+  * Incorporate debian patches to turn taint failures into warnings.
+
+(cherry picked from commit 0a629bd71087f75c3b334edb53b01ec68709ab60)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="1cb912fd52ce82aecfe55a3a9cca88daddf6208d" HashShort="1cb912f" Subject="mail/exim:&#9;update to 4.94.2 security release" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="mail/exim/Makefile"/>
+      <FILE Action="Modify" Path="mail/exim/distinfo"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_01-Introduce-main-config-option-allow_insecure_tainted_.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_02-search.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_03-dbstuff.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_04-acl.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_05-parse.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_06-rda.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_07-appendfile.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_08-autoreply.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_09-pipe.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_10-deliver.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_11-directory.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_12-expand.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_13-lf_sqlperform.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_14-rf_get_transport.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_15-deliver.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_16-smtp_out.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_17-smtp.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_18-update-doc.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_20-Set-mainlog_name-and-rejectlog_name-unconditionally.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_21-tidy-log.c.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_22-Silence-compiler.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_23-Do-not-close-the-main-_log-if-we-do-not-see-a-chance.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_24-Silence-the-compiler.patch"/>
+      <FILE Action="Add" Path="mail/exim/files/debian/75_26-Disable-taintchecks-for-mkdir-this-isn-t-part-of-4.9.patch"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0002-Taint-fix-pam-expansion-condition.-Bug-2587"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0003-Taint-fix-listcount-expansion-operator.-Bug-2586"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0004-Docs-fix-mistaken-variable-name"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0006-Docs-typoes"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0007-Taint-fix-multiple-ACL-actions-to-properly-manage-tainted-"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0008-Fix-bi.-Bug-2590"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0009-Filters-fix-vacation-in-Exim-filter.-Bug-2593"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0010-TLS-use-RFC-6125-rules-for-certifucate-name-checks-when-CN"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0011-Taint-fix-radius-expansion-condition"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0012-smtp_accept_map_per_host-call-search_tidyup-in-fail-path.-"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0013-Taint-fix-verify.-Bug-2598"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0014-Fix-string_copy-macro-to-not-multiple-eval-args.-Bug-2603"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0015-Cutthrough-handle-request-when-a-callout-hold-is-active.-B"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0016-Lookups-Fix-subdir-filter-on-a-dsearch"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0018-Sqlite-fix-segfault-on-bad-missing-sqlite_dbfile.-Bug-2606"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0019-Taint-fix-ACL-spam-condition-to-permit-tainted-name-argume"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0020-Fix-message-reception-clock-usage.-Bug-2615"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0021-typoes"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0022-Fix-DKIM-signing-to-always-terminate.-Bug-2295"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0023-Fix-taint-trap-in-parse_fix_phrase-.-Bug-2617"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0024-Taint-fix-ACL-spam-condition-to-permit-tainted-name-argume"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0025-Fix-debug_print_socket"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0026-debug_print_socket-output-formatting"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0027-Fix-spelling-of-local_part_data-in-docs-and-debug-output"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0028-Fix-readsocket-eol-replacement.-Bug-2630"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0029-Taint-fix-off-by-one-in-is_tainted-.-Bug-2634"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0030-Build-ifdef-guard-for-EXPERIMENTAL_QUEUEFILE"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0031-Taint-fix-off-by-one-in-is_tainted-.-Bug-2634"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0032-DANE-force-SNI-to-use-domain.-Bug-2265"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0033-DANE-Fix-2-rcpt-message-diff-domins-case.-Bug-2265"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0034-Fix-non-DANE-build"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0035-DANE-Fix-2-messages-from-queue-case"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0036-Fix-non-DANE-build"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0038-GnuTLS-clear-errno-before-any-data-i-o-op-so-error-logging"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0039-Fix-non-TLS-build"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0040-eximon-fix-FreeBSD-build"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0041-LDAP-fix-taint-check-in-server-list-walk.-Bug-2646"/>
+      <FILE Action="Delete" Path="mail/exim/files/patch-z0042-Pass-authenticator-pubname-through-spool.-Bug-2648"/>
+      <FILE Action="Modify" Path="mail/exim/options"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="8"/>
+    <TIME Timezone="UTC" Hour="22" Minute="30" Second="57"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>comms/picocom: New maintainer
+
+PR:		255560
+Approved by:	koobs, portmgr (unmaintained port)
+MFH:		2021Q2
+
+(cherry picked from commit 312bd2a9dbb4b385ed19a7ba8343b5e48500f48c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kevin Bowling" CommitterEmail="kbowling@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kevin Bowling" AuthorEmail="kbowling@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="7d4fcbae6baa51ebc646fcde9b0599c698390596" HashShort="7d4fcba" Subject="comms/picocom: New maintainer" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="comms/picocom/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

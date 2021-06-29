@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="11"/>
+    <TIME Timezone="UTC" Hour="1" Minute="45" Second="49"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/aom: unbreak VMAF after f40d123e50db
+
+ld: error: undefined symbol: environ
+&gt;&gt;&gt; referenced by auxv.c:54 (/usr/src/lib/libc/gen/auxv.c:54)
+&gt;&gt;&gt;               auxv.o:(init_aux_vector_once) in archive /usr/lib/libc.a
+&gt;&gt;&gt; referenced by tls.c:443 (/usr/src/lib/libc/gen/tls.c:443)
+&gt;&gt;&gt;               tls.o:(_init_tls) in archive /usr/lib/libc.a
+&gt;&gt;&gt; referenced by getenv.c:250 (/usr/src/lib/libc/stdlib/getenv.c:250)
+&gt;&gt;&gt;               getenv.o:(__clean_env_destructor) in archive /usr/lib/libc.a
+&gt;&gt;&gt; referenced 17 more times
+
+ld: error: undefined symbol: __progname
+&gt;&gt;&gt; referenced by getprogname.c:16 (/usr/src/lib/libc/gen/getprogname.c:16)
+&gt;&gt;&gt;               getprogname.o:(_getprogname) in archive /usr/lib/libc.a
+c++: error: linker command failed with exit code 1 (use -v to see invocation)
+
+PR:		255590
+Reported by:	ice@extreme.hu, fluffy
+Regressed by:	https://aomedia.googlesource.com/aom/+/b53a4d710849%5E!/
+
+(cherry picked from commit 27a2b131c71afe2977b1f8263225872f75614ea3)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="4e987bb701977bc814d83205a8908440abc200dd" HashShort="4e987bb" Subject="multimedia/aom: unbreak VMAF after f40d123e50db" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/aom/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/aom/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

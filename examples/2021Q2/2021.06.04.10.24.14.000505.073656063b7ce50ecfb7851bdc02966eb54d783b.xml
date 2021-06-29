@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="10" Minute="24" Second="14"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/zrepl: pidfile should be world-readable
+
+PR:	255981
+
+(cherry picked from commit 2a866a1b4fd0e2ce6d07904c920f98e7d994bd59)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Lewis Cook" CommitterEmail="lcook@FreeBSD.org"/>
+      <AUTHOR AuthorName="Alan Somers" AuthorEmail="asomers@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="073656063b7ce50ecfb7851bdc02966eb54d783b" HashShort="0736560" Subject="sysutils/zrepl: pidfile should be world-readable" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/zrepl/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/zrepl/files/zrepl.in"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

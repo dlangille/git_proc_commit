@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="11"/>
+    <TIME Timezone="UTC" Hour="13" Minute="38" Second="0"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/rubygem-dragonfly: Security update to 1.4.0.
+
+PR:		256547
+Security:	CVE-2021-33564
+Security:	c9e2a1a7-caa1-11eb-904f-14dae9d5a9d2
+(cherry picked from commit eab883d9afef400678a76d4ed25252662f7cf87b)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Matthias Fechner" CommitterEmail="mfechner@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="cc6cca41422ec422d6e2e0a02e8e1fc2e051b435" HashShort="cc6cca4" Subject="graphics/rubygem-dragonfly: Security update to 1.4.0." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/rubygem-dragonfly/Makefile"/>
+      <FILE Action="Modify" Path="graphics/rubygem-dragonfly/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

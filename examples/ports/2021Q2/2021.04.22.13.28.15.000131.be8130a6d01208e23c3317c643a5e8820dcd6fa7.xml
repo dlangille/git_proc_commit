@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="22"/>
+    <TIME Timezone="UTC" Hour="13" Minute="28" Second="15"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/py-aiologger: Update to 0.6.1
+
+(cherry picked from commit e0fc25630cba8309f88dd0017c29b9d0c684d77d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="be8130a6d01208e23c3317c643a5e8820dcd6fa7" HashShort="be8130a" Subject="devel/py-aiologger: Update to 0.6.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/py-aiologger/Makefile"/>
+      <FILE Action="Modify" Path="devel/py-aiologger/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

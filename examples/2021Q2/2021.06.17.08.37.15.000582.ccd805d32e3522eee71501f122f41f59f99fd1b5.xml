@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="17"/>
+    <TIME Timezone="UTC" Hour="8" Minute="37" Second="15"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>dns/bind916: Update to 9.16.17.
+
+Changes:	https://downloads.isc.org/isc/bind9/9.16.17/doc/arm/html/notes.html#notes-for-bind-9-16-17
+MFH:		yes
+(cherry picked from commit bd84c5b4f210c3ac266a2eaa33f0481d47a87053)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mathieu Arnold" CommitterEmail="mat@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mathieu Arnold" AuthorEmail="mat@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ccd805d32e3522eee71501f122f41f59f99fd1b5" HashShort="ccd805d" Subject="dns/bind916: Update to 9.16.17." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="dns/bind916/Makefile"/>
+      <FILE Action="Modify" Path="dns/bind916/distinfo"/>
+      <FILE Action="Modify" Path="dns/bind916/files/extrapatch-bind-min-override-ttl"/>
+      <FILE Action="Modify" Path="dns/bind916/files/extrapatch-bind-tools"/>
+      <FILE Action="Modify" Path="dns/bind916/files/patch-configure"/>
+      <FILE Action="Modify" Path="dns/bind916/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

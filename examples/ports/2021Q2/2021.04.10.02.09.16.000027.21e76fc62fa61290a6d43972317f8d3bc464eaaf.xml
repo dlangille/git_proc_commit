@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="10"/>
+    <TIME Timezone="UTC" Hour="2" Minute="9" Second="16"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-im/coyim: Applies the correct fix for gotk3 from upstream.
+
+As of Golang 1.16, the cgo tool will no longer try to translate C struct
+bitfields into Go struct fields, even if their size can be represented
+in Go. The order in which C bitfields appear in memory is implementation
+dependent, so in some cases the cgo tool produced results that were
+silently incorrect.
+
+In this case "accel_flags" is the bitwise field in question. A new
+declaration for GtkAccelKey structure that does not explicitly access
+to 'accel_flags' has been addressed in the patch.
+
+https://github.com/gotk3/gotk3/pull/730
+
+Patch will be removed when vendor library will be updated.
+
+(cherry picked from commit 3a9193de7272af328956a7cb2af49f5354580691)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Santhosh Raju" CommitterEmail="fox@FreeBSD.org"/>
+      <AUTHOR AuthorName="Santhosh Raju" AuthorEmail="fox@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="21e76fc62fa61290a6d43972317f8d3bc464eaaf" HashShort="21e76fc" Subject="net-im/coyim: Applies the correct fix for gotk3 from upstream." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-im/coyim/files/patch-vendor_github.com_gotk3_gotk3_gtk_accel.go"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

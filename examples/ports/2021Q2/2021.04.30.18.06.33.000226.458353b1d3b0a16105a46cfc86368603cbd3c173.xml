@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="30"/>
+    <TIME Timezone="UTC" Hour="18" Minute="6" Second="33"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>mail/dovecot-fts-xapian: Update to 1.4.9
+
+- Update to 1.4.9
+
+Approved by:	osa (mentor)
+Differential Revision:	https://reviews.freebsd.org/D29956
+
+(cherry picked from commit 3036033a13db7f623e4f121eb7f70675e7c122e7)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="458353b1d3b0a16105a46cfc86368603cbd3c173" HashShort="458353b" Subject="mail/dovecot-fts-xapian: Update to 1.4.9" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="mail/dovecot-fts-xapian/Makefile"/>
+      <FILE Action="Modify" Path="mail/dovecot-fts-xapian/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

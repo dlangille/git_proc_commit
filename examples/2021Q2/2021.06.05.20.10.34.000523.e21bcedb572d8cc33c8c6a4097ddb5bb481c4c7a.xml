@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="5"/>
+    <TIME Timezone="UTC" Hour="20" Minute="10" Second="34"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/youtube_dl: update to 2021.06.06
+
+Changes:	https://github.com/ytdl-org/youtube-dl/releases/tag/2021.06.06
+Reported by:	GitHub (watch releases)
+
+(cherry picked from commit c07f689ef165193dbfabffd83843283b9a6c5668)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e21bcedb572d8cc33c8c6a4097ddb5bb481c4c7a" HashShort="e21bced" Subject="www/youtube_dl: update to 2021.06.06" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/youtube_dl/Makefile"/>
+      <FILE Action="Modify" Path="www/youtube_dl/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

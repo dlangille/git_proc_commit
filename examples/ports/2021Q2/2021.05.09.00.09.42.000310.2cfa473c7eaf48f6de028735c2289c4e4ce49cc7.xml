@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="9"/>
+    <TIME Timezone="UTC" Hour="0" Minute="9" Second="42"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>gecko: wait for rust before swiching llvm* next time
+
+Cross-language LTO in www/firefox requires devel/llvm* and bundled
+LLVM in lang/rust to be of the same major version. Adjust the comment
+to delay future bumps but until LTO is enabled desync can still happen.
+
+PR:		255359
+Suggested by:	dim
+
+(cherry picked from commit b1c90afe23f93698805a22802f2dd02acbe4488a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="2cfa473c7eaf48f6de028735c2289c4e4ce49cc7" HashShort="2cfa473" Subject="gecko: wait for rust before swiching llvm* next time" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="Mk/bsd.gecko.mk"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

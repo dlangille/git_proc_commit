@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="14"/>
+    <TIME Timezone="UTC" Hour="21" Minute="47" Second="58"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/beats6: Update to 6.8.15
+
+(cherry picked from commit 72b4a1887cc241991ab1b81ace9d3ec392b8ea93)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ffdef8f610ff7738eb0e09ef853b55803ea965c1" HashShort="ffdef8f" Subject="sysutils/beats6: Update to 6.8.15" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/beats6/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/beats6/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

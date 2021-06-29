@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="3"/>
+    <TIME Timezone="UTC" Hour="13" Minute="59" Second="17"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/libgcrypt: update to 1.9.3
+
+PR:		255735
+Submitted by:	Daniel Engberg &lt;daniel.engberg.lists@pyret.net&gt;
+Reviewed by:	cy
+Tested by:	cy
+MFH:		2021Q2
+
+(cherry picked from commit 865a2a94e8fd819d5598b3f2230db4e82ff7fc44)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Cy Schubert" CommitterEmail="cy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Cy Schubert" AuthorEmail="cy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="67967c72eab139d680eca82090bb4ccae34d7d05" HashShort="67967c7" Subject="security/libgcrypt: update to 1.9.3" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/libgcrypt/Makefile"/>
+      <FILE Action="Modify" Path="security/libgcrypt/distinfo"/>
+      <FILE Action="Modify" Path="security/libgcrypt/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

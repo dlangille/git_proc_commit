@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="12" Minute="3" Second="30"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>githooks: Adjust hooks for the ports tree
+
+- Capitalize the topic line: this way the example is consistent with the
+  desired style.
+- Update the description of MFH.
+- Point the Pull Request field to the ports repo on GitHub.
+
+Reviewed by:	mat, bapt
+Differential Revision:	https://reviews.freebsd.org/D29861
+
+(cherry picked from commit 37dfa4eeea6de2ae698ca8bb0023835c9f28f7b9)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mathieu Arnold" CommitterEmail="mat@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mateusz Piotrowski" AuthorEmail="0mp@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8bdd9fb6c2d765da8cfda5a9c3f20ff46202ad11" HashShort="8bdd9fb" Subject="githooks: Adjust hooks for the ports tree" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path=".hooks/prepare-commit-msg"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

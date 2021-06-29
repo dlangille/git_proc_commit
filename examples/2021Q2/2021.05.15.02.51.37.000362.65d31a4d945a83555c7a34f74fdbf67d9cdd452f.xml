@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="15"/>
+    <TIME Timezone="UTC" Hour="2" Minute="51" Second="37"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/vulkan-tools: unbreak vkcube-wayland on non-tiling compositors
+
+Affects at least wayfire, labwc, plasma5-kwin.
+
+$ vkcube-wayland
+Segmentation fault
+(lldb) bt
+* thread #1, name = 'vkcube-wayland', stop reason = signal SIGSEGV: invalid address (fault address: 0x128000)
+  * frame #0: 0x00000008004811f3 libc.so.7`memcpy at memmove.S:314
+    frame #1: 0x00000000002097f4 vkcube-wayland`demo_update_data_buffer(demo=0x00007fffffffd258) at cube.c:894:5
+    frame #2: 0x0000000000213e4f vkcube-wayland`demo_draw(demo=0x00007fffffffd258) at cube.c:1043:5
+    frame #3: 0x000000000020c3fc vkcube-wayland`demo_run(demo=0x00007fffffffd258) at cube.c:2757:13
+    frame #4: 0x000000000020aa16 vkcube-wayland`main(argc=1, argv=0x00007fffffffe038) at cube.c:4267:5
+    frame #5: 0x0000000000208340 vkcube-wayland`_start(ap=&lt;unavailable&gt;, cleanup=&lt;unavailable&gt;) at crt1_c.c:75:7
+
+(cherry picked from commit d7da60fca5da60adf4e60b547c53fd9a53ffd27c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="65d31a4d945a83555c7a34f74fdbf67d9cdd452f" HashShort="65d31a4" Subject="graphics/vulkan-tools: unbreak vkcube-wayland on non-tiling compositors" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/vulkan-tools/Makefile"/>
+      <FILE Action="Modify" Path="graphics/vulkan-tools/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

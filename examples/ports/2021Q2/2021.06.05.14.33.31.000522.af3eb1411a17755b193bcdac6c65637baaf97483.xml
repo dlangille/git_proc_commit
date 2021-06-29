@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="5"/>
+    <TIME Timezone="UTC" Hour="14" Minute="33" Second="31"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/ocserv: Update to 1.1.3
+
+(cherry picked from commit cd0a1795e02636de8e062b47fb71935299751b49)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="af3eb1411a17755b193bcdac6c65637baaf97483" HashShort="af3eb14" Subject="net/ocserv: Update to 1.1.3" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/ocserv/Makefile"/>
+      <FILE Action="Modify" Path="net/ocserv/distinfo"/>
+      <FILE Action="Modify" Path="net/ocserv/pkg-message"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

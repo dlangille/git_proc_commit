@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="29"/>
+    <TIME Timezone="UTC" Hour="0" Minute="40" Second="49"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11-servers/xwayland-devel: update to 1.20.0.914
+
+Changes:	https://gitlab.freedesktop.org/xorg/xserver/-/compare/7aaf54a18...7e142cb2a
+(cherry picked from commit 27a23c28fc44073a1d31eb54bc44c6553af65898)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="af2f4e125c0b5e1acf9985e6934122eaaf07a9cf" HashShort="af2f4e1" Subject="x11-servers/xwayland-devel: update to 1.20.0.914" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11-servers/xwayland-devel/Makefile"/>
+      <FILE Action="Modify" Path="x11-servers/xwayland-devel/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

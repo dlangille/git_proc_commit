@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="8"/>
+    <TIME Timezone="UTC" Hour="0" Minute="36" Second="38"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/rpcs3: update to 0.0.16.12375
+
+- Drop BSL remains from LICENSE after 1197aa34b984
+
+Changes:	https://github.com/RPCS3/rpcs3/compare/6ac9e6f9c...2169e8d93
+(cherry picked from commit 76f0d05e7b9d42d6d74cd2e057091c7594a14348)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="a5bcc99f59c256750c2bdfc1e5f30b1c9eaa385a" HashShort="a5bcc99" Subject="emulators/rpcs3: update to 0.0.16.12375" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/rpcs3/Makefile"/>
+      <FILE Action="Modify" Path="emulators/rpcs3/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

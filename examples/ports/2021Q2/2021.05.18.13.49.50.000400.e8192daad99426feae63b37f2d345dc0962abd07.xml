@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="13" Minute="49" Second="50"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/pefs-kmod: mark BROKEN on FreeBSD 13+
+
+Approved by:	portmgr blanket
+
+(cherry picked from commit d5b8a83bdcd39919594c9b84ee145a54ef86e5ea)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e8192daad99426feae63b37f2d345dc0962abd07" HashShort="e8192da" Subject="sysutils/pefs-kmod: mark BROKEN on FreeBSD 13+" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/pefs-kmod/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

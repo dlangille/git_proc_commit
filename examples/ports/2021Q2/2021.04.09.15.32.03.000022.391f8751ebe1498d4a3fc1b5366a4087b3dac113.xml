@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="9"/>
+    <TIME Timezone="UTC" Hour="15" Minute="32" Second="3"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/sbcl: Reformat Makefile
+
+(cherry picked from commit 5ca6d1d1c0c8fdea89d52efdac72e814622af763)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="391f8751ebe1498d4a3fc1b5366a4087b3dac113" HashShort="391f875" Subject="lang/sbcl: Reformat Makefile" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/sbcl/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

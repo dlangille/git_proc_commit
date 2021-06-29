@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="0" Minute="52" Second="36"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/nss: update to 3.65
+
+Changes:	https://developer.mozilla.org/docs/Mozilla/Projects/NSS/NSS_3.65_release_notes
+Changes:	https://hg.mozilla.org/projects/nss/shortlog/NSS_3_65_RTM
+(cherry picked from commit 27411fe284d7e5debf87f3a7f7400b83e70253c6)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="773915c8ffadd98c9e72caee5a47e40c9831d808" HashShort="773915c" Subject="security/nss: update to 3.65" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/nss/Makefile"/>
+      <FILE Action="Modify" Path="security/nss/distinfo"/>
+      <FILE Action="Modify" Path="security/nss/files/patch-lib-freebl-Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

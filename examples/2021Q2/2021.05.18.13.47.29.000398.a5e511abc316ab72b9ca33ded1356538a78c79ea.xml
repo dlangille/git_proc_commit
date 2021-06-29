@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="18"/>
+    <TIME Timezone="UTC" Hour="13" Minute="47" Second="29"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/jobd: mark BROKEN everwhere
+
+Observed to fail on amd64/12, 13, 14, riscv64/14
+
+(cherry picked from commit c7a643e6e5e1471631731e8d5a8b1a7979fdbf95)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mark Linimon" AuthorEmail="linimon@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="a5e511abc316ab72b9ca33ded1356538a78c79ea" HashShort="a5e511a" Subject="sysutils/jobd: mark BROKEN everwhere" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/jobd/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

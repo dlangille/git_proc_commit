@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="13"/>
+    <TIME Timezone="UTC" Hour="5" Minute="37" Second="48"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Update to upstream release 56.1.0.
+
+Details:
+- Enhancements and fixes, see
+  https://mkvtoolnix.download/doc/NEWS.md
+- In particular, fix a regression in the HEVC parser causing invalid
+  memory access.
+
+MFH:		2021Q2
+(cherry picked from commit 2a0f957e621567aa84ff55748d3f59781af43d90)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Thomas Zander" CommitterEmail="riggs@FreeBSD.org"/>
+      <AUTHOR AuthorName="Thomas Zander" AuthorEmail="riggs@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f56fff02748aa34fbdb3fe5e78d350fc73261711" HashShort="f56fff0" Subject="Update to upstream release 56.1.0." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/mkvtoolnix/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/mkvtoolnix/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="24"/>
+    <TIME Timezone="UTC" Hour="23" Minute="24" Second="26"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/pg_partman: Update to 4.5.1
+
+Security:	5fa90ee6-bc9e-11eb-a287-e0d55e2a8bf9
+(cherry picked from commit 370c7631a13560605f62525b3b6fb7181727e38a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Palle Girgensohn" CommitterEmail="girgen@FreeBSD.org"/>
+      <AUTHOR AuthorName="Palle Girgensohn" AuthorEmail="girgen@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8c25791ab1ff2356b3f03aec6d164141cf53cc2e" HashShort="8c25791" Subject="databases/pg_partman: Update to 4.5.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/pg_partman/Makefile"/>
+      <FILE Action="Modify" Path="databases/pg_partman/distinfo"/>
+      <FILE Action="Modify" Path="databases/pg_partman/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

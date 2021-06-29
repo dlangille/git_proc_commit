@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="21"/>
+    <TIME Timezone="UTC" Hour="6" Minute="8" Second="43"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/gitlab-ce: Security update to 13.10.3.
+
+Changelog:
+https://about.gitlab.com/releases/2021/04/14/security-release-gitlab-13-10-3-released/
+(cherry picked from commit 77d6936ce6b750acc1503f712be7e507b90b5f47)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Matthias Fechner" CommitterEmail="mfechner@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthias Fechner" AuthorEmail="mfechner@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="a0aac5772461f983f0e8190049658d880943161c" HashShort="a0aac57" Subject="www/gitlab-ce: Security update to 13.10.3." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/gitaly/Makefile"/>
+      <FILE Action="Modify" Path="devel/gitaly/distinfo"/>
+      <FILE Action="Modify" Path="www/gitlab-ce/Makefile"/>
+      <FILE Action="Modify" Path="www/gitlab-ce/distinfo"/>
+      <FILE Action="Modify" Path="www/gitlab-workhorse/Makefile"/>
+      <FILE Action="Modify" Path="www/gitlab-workhorse/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

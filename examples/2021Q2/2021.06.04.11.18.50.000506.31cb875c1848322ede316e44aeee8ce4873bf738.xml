@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="11" Minute="18" Second="50"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/lasso: Update version 2.6.1=&gt;2.7.0
+
+Relnotes:  https://git.entrouvert.org/lasso.git/tree/NEWS?id=v2.7.0
+Security: https://www.vuxml.org/freebsd/417de1e6-c31b-11eb-9633-b42e99a1b9c3.html
+(cherry picked from commit fcbade26f768bbcf2556a61fa8b5a622a9a77260)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Muhammad Moinur Rahman" CommitterEmail="bofh@FreeBSD.org"/>
+      <AUTHOR AuthorName="Muhammad Moinur Rahman" AuthorEmail="bofh@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="31cb875c1848322ede316e44aeee8ce4873bf738" HashShort="31cb875" Subject="security/lasso: Update version 2.6.1=&gt;2.7.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/lasso/Makefile"/>
+      <FILE Action="Modify" Path="security/lasso/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

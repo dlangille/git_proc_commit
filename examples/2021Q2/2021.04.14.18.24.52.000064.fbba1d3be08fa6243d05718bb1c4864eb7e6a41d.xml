@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="14"/>
+    <TIME Timezone="UTC" Hour="18" Minute="24" Second="52"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/kodi-addon-pvr.iptvsimple: Update to 7.6.1
+
+(cherry picked from commit cc8b198239a91521f622a851edadd6648654644c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernhard Froehlich" CommitterEmail="decke@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernhard Froehlich" AuthorEmail="decke@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="fbba1d3be08fa6243d05718bb1c4864eb7e6a41d" HashShort="fbba1d3" Subject="multimedia/kodi-addon-pvr.iptvsimple: Update to 7.6.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/kodi-addon-pvr.iptvsimple/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/kodi-addon-pvr.iptvsimple/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

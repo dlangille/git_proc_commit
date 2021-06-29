@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="20"/>
+    <TIME Timezone="UTC" Hour="12" Minute="13" Second="30"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/mysql80-*: update to 8.0.25 GA release
+
+Release notes:	https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-25.html
+		https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-24.html
+
+PR:		255937
+Submitted by:	delphij@
+Approved by	joneum@ (implicit)
+MFH:		2021Q2
+
+(cherry picked from commit c7fbbf15f3b8471c85f4c404c61fb2c9fbe1b923)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ca9337dc3528d948c14b0ea20dd016eb8608ee76" HashShort="ca9337d" Subject="databases/mysql80-*: update to 8.0.25 GA release" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="databases/mysql80-client/pkg-plist"/>
+      <FILE Action="Modify" Path="databases/mysql80-server/Makefile"/>
+      <FILE Action="Modify" Path="databases/mysql80-server/distinfo"/>
+      <FILE Action="Modify" Path="databases/mysql80-server/files/patch-client_CMakeLists.txt"/>
+      <FILE Action="Delete" Path="databases/mysql80-server/files/patch-icu68"/>
+      <FILE Action="Modify" Path="databases/mysql80-server/files/patch-mysys_my__default.cc"/>
+      <FILE Action="Add" Path="databases/mysql80-server/files/patch-sql_binlog.cc"/>
+      <FILE Action="Delete" Path="databases/mysql80-server/files/patch-sql_item.h"/>
+      <FILE Action="Modify" Path="databases/mysql80-server/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

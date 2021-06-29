@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="22"/>
+    <TIME Timezone="UTC" Hour="17" Minute="19" Second="28"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>games/hedgewars: mark BROKEN on i386
+
+Link fails with 'ld: error: duplicate symbol: LandDirty_dimension_info'
+on some code converted from pascal to C, so this would be non-trivial
+to fix.</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ef47add9a366ab2a45207c71fa860d777b8d03e0" HashShort="ef47add" Subject="games/hedgewars: mark BROKEN on i386" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="games/hedgewars/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

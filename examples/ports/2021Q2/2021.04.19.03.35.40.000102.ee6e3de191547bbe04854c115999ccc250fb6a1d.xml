@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="19"/>
+    <TIME Timezone="UTC" Hour="3" Minute="35" Second="40"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/musikcube: Update 0.96.5 -&gt; 0.96.6 with unbreak at run-time
+
+It was broken on 12 and 11 due to ncurses port vs. base library confusion.
+
+(cherry picked from commit 68457b801edd40093c0b8b624c7423868b5db95a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Yuri Victorovich" CommitterEmail="yuri@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yuri Victorovich" AuthorEmail="yuri@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ee6e3de191547bbe04854c115999ccc250fb6a1d" HashShort="ee6e3de" Subject="multimedia/musikcube: Update 0.96.5 -&gt; 0.96.6 with unbreak at run-time" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/musikcube/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/musikcube/distinfo"/>
+      <FILE Action="Delete" Path="multimedia/musikcube/files/patch-src_musikcube_CMakeLists.txt"/>
+      <FILE Action="Modify" Path="multimedia/musikcube/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

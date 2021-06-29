@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="26"/>
+    <TIME Timezone="UTC" Hour="16" Minute="37" Second="50"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/openscep: extend BROKEN to FreeBSD 14</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8414820f7d82049f8970499fd181274d8dc8e1e4" HashShort="8414820" Subject="security/openscep: extend BROKEN to FreeBSD 14" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/openscep/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="17"/>
+    <TIME Timezone="UTC" Hour="21" Minute="30" Second="46"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/chromium: update to 91.0.4472.106
+
+This is a bugfix release, see
+https://chromium.googlesource.com/chromium/src/+log/91.0.4472.101..91.0.4472.106?pretty=fuller&amp;n=10000
+
+While here remove the hardcoded dependency on virtual_oss.
+
+MFH:		2021Q2
+(cherry picked from commit 8c17a97d68ab369d5be30d90d5720b260e520efd)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rene Ladan" CommitterEmail="rene@FreeBSD.org"/>
+      <AUTHOR AuthorName="Rene Ladan" AuthorEmail="rene@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f74454e03fab429db9413ed5aa7f126b5a2ef54c" HashShort="f74454e" Subject="www/chromium: update to 91.0.4472.106" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/chromium/Makefile"/>
+      <FILE Action="Modify" Path="www/chromium/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

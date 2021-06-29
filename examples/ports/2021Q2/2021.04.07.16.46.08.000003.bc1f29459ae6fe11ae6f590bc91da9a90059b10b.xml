@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="7"/>
+    <TIME Timezone="UTC" Hour="16" Minute="46" Second="8"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>games/libretro-mame2000: fix build on powerpc64*
+
+src/cpu/tms9900/99xxstat.h:204:14: error: expected identifier or '('
+static INT32 asm setst_add_32_laeco(register INT32 a, register INT32 b, register INT16 st)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Piotr Kubaj" CommitterEmail="pkubaj@FreeBSD.org"/>
+      <AUTHOR AuthorName="Piotr Kubaj" AuthorEmail="pkubaj@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="bc1f29459ae6fe11ae6f590bc91da9a90059b10b" HashShort="bc1f294" Subject="games/libretro-mame2000: fix build on powerpc64*" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="games/libretro-mame2000/Makefile"/>
+      <FILE Action="Add" Path="games/libretro-mame2000/files/patch-src_cpu_tms9900_99xxstat.h"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

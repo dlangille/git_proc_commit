@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="20"/>
+    <TIME Timezone="UTC" Hour="11" Minute="50" Second="57"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Add the prepare-commit-msg hook to the repository.
+
+To make use of it, the easiest way is to run:
+
+  git config --add core.hooksPath .hooks
+
+Discussed with:	bapt
+
+(cherry picked from commit bbc2474ef7a65eb8561c8ecf7af80c2bfed1f248)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mathieu Arnold" CommitterEmail="mat@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mathieu Arnold" AuthorEmail="mat@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="043e196d694c84978db30432358dd10ad90b3246" HashShort="043e196" Subject="Add the prepare-commit-msg hook to the repository." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Add" Path=".hooks/prepare-commit-msg"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

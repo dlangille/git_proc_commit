@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="8"/>
+    <TIME Timezone="UTC" Hour="17" Minute="32" Second="45"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-mgmt/prometheus2: Direct commit to correct GH_TUPLE
+
+When cherry-pick'ing 2.26.1, Makefile.modules was also incorrectly
+merged. This is a direct commit to 2021Q2 to fix the build.
+
+Fixes:		656940c421cf8df146a941c6f2552f6145f143be
+Fixes:          ece647d08c3933df136bef37559c6987eec192a7
+Reported by:    phyber (irc)
+Approved by:    lwhsu (mentor, implicit), portmgr (implicit, fix build)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Guangyuan Yang" CommitterEmail="ygy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Guangyuan Yang" AuthorEmail="ygy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="378903dcfbf69e0aeaa1aa660e5e8425c91c400d" HashShort="378903d" Subject="net-mgmt/prometheus2: Direct commit to correct GH_TUPLE" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-mgmt/prometheus2/Makefile.modules"/>
+      <FILE Action="Modify" Path="net-mgmt/prometheus2/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

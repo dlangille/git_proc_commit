@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="30"/>
+    <TIME Timezone="UTC" Hour="15" Minute="38" Second="55"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/firefox: depend on libpci to qualify for WebRender by default
+
+On Intel Skylake this enables WebRender for Xorg and Wayland (wlroots).
+Xwayland isn't qualified yet but Firefox can be tricked by unsetting
+WAYLAND_DISPLAY or simply switching to native via MOZ_ENABLE_WAYLAND.
+
+PR:		255344
+Reported by:	Evgeniy Khramtsov (via gecko@ list)
+
+(cherry picked from commit f079b462f891b1e5c2cec31ac1190c73c17b0054)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="c6ce38ae4397e2e33b5d44bafbc558a3443ba33b" HashShort="c6ce38a" Subject="www/firefox: depend on libpci to qualify for WebRender by default" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="Mk/bsd.gecko.mk"/>
+      <FILE Action="Modify" Path="www/firefox/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

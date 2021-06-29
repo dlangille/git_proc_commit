@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="13"/>
+    <TIME Timezone="UTC" Hour="16" Minute="44" Second="55"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>databases/mariadb103-client: Fix empty file
+
+(cherry picked from commit 3a57e729c0fecc4618169cf2c130dc711a01aee9)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernard Spil" CommitterEmail="brnrd@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernard Spil" AuthorEmail="brnrd@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="af8d2974dbd0ea314c1fc37cce082d26a92aa217" HashShort="af8d297" Subject="databases/mariadb103-client: Fix empty file" EncodingLoses="false" Repository="ports"/>
+    <FILES/>
+  </UPDATE>
+</UPDATES>

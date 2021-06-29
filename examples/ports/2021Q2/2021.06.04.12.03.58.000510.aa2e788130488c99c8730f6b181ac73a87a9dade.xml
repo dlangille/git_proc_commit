@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="4"/>
+    <TIME Timezone="UTC" Hour="12" Minute="3" Second="58"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>.hooks/prepare-commit-msg: Enhance commit-msg hook.
+
+If a single port is updated, the hook now pre-fills in an appropriate
+subject line.
+
+(cherry picked from commit 5147b3b5e10fcd48d3679bd0e7b261f345440881)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mathieu Arnold" CommitterEmail="mat@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mathieu Arnold" AuthorEmail="mat@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="aa2e788130488c99c8730f6b181ac73a87a9dade" HashShort="aa2e788" Subject=".hooks/prepare-commit-msg: Enhance commit-msg hook." EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path=".hooks/prepare-commit-msg"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

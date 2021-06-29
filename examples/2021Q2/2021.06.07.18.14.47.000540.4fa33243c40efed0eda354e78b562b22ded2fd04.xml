@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="7"/>
+    <TIME Timezone="UTC" Hour="18" Minute="14" Second="47"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/abi-compliance-checker: Update WWW
+
+(cherry picked from commit 31a9aa65e2459c7b14fa3f6b88bd7d46dba50c6d)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Li-Wen Hsu" CommitterEmail="lwhsu@FreeBSD.org"/>
+      <AUTHOR AuthorName="Li-Wen Hsu" AuthorEmail="lwhsu@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="4fa33243c40efed0eda354e78b562b22ded2fd04" HashShort="4fa3324" Subject="devel/abi-compliance-checker: Update WWW" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/abi-compliance-checker/pkg-descr"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

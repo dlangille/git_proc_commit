@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="4"/>
+    <TIME Timezone="UTC" Hour="17" Minute="20" Second="54"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11/fuzzel: update to 1.5.4
+
+Changes:	https://codeberg.org/dnkl/fuzzel/releases/tag/1.5.4
+Reported by:	Repology
+
+(cherry picked from commit 3def3f33f4e06f454d068ec978715bd6fb6fcf08)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="068a647b0bafcda632c0b817ec836a31f3a4efb8" HashShort="068a647" Subject="x11/fuzzel: update to 1.5.4" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11/fuzzel/Makefile"/>
+      <FILE Action="Modify" Path="x11/fuzzel/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

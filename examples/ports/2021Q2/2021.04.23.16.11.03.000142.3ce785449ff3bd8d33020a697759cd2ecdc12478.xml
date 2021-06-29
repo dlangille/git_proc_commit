@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="23"/>
+    <TIME Timezone="UTC" Hour="16" Minute="11" Second="3"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>llvm12: Disable LLDB on non-x86 architectures
+
+The 12.0.0 branch point hit point in the rework of FreeBSD debug targets
+were non-x86 architectures are broken.  For now, simply disable LLDB
+builds on those platforms.
+
+PR:		254082
+(cherry picked from commit cc0bbd86088c545607a8585256adb8e3cfb132ad)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Brooks Davis" AuthorEmail="brooks@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="3ce785449ff3bd8d33020a697759cd2ecdc12478" HashShort="3ce7854" Subject="llvm12: Disable LLDB on non-x86 architectures" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/llvm12/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

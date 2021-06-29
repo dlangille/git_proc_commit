@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="16"/>
+    <TIME Timezone="UTC" Hour="22" Minute="6" Second="58"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>mail/postfix*: Direct commit to update MAINTAINER
+
+- Direct commit to update MAINTAINER of mail/postfix ports.
+- No functional changes</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="932f023d54e7894c5967d302cecb28f2f7a38df1" HashShort="932f023" Subject="mail/postfix*: Direct commit to update MAINTAINER" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="mail/postfix-current-sasl/Makefile"/>
+      <FILE Action="Modify" Path="mail/postfix-current/Makefile"/>
+      <FILE Action="Modify" Path="mail/postfix-ldap-sasl/Makefile"/>
+      <FILE Action="Modify" Path="mail/postfix-sasl/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

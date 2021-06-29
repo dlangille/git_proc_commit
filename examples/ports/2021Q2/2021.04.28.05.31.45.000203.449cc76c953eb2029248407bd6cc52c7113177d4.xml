@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="28"/>
+    <TIME Timezone="UTC" Hour="5" Minute="31" Second="45"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Mk/Uses/cargo.mk: Use canonical crate file extension going forward
+
+Crates should have the file extension .crate not .tar.gz.  Cargo
+saves them with that extension and it is also what their original
+name was according to file(1):
+
+$ file rust/crates/*
+rust/crates/better-panic-0.2.0.tar.gz:gzip compressed data, was "better-panic-0.2.0.crate"
+rust/crates/binary-space-partition-0.1.2.tar.gz:gzip compressed data, was "binary-space-partition-0.1.2.crate"
+...
+
+The only reason we used .tar.gz is that it was that way in OpenBSD's
+devel/cargo/cargo.port.mk module.  At the moment they are all .tar.gz
+but they might have a different format in the future.
+
+Doing a delayed rollout of this over a change-everything-once
+approach to
+
+- not immeditately invalidate all uncommitted port changes or
+  external ports
+- not make sweeping changes twice in main and 2021Q2
+
+at the cost of having a transition period where mirrors might have
+to carry both the .tar.gz and .crate tarballs (all crates combined
+are ~600 MiB).
+
+Reviewed by:	jbeich
+MFH:		2021Q2 (to ease future cherry picks)
+Differential Revision:	https://reviews.freebsd.org/D29760
+
+(cherry picked from commit 3758b337a1b07b4a767d74e21e6b0b67db5e763c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Tobias Kortkamp" CommitterEmail="tobik@FreeBSD.org"/>
+      <AUTHOR AuthorName="Tobias Kortkamp" AuthorEmail="tobik@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="449cc76c953eb2029248407bd6cc52c7113177d4" HashShort="449cc76" Subject="Mk/Uses/cargo.mk: Use canonical crate file extension going forward" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="Mk/Uses/cargo.mk"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

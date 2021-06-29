@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="22"/>
+    <TIME Timezone="UTC" Hour="17" Minute="23" Second="8"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>textproc/docproj: Set PDF option as default
+
+Approved by:	doceng (with hat)
+
+(cherry picked from commit ae5a18f68c6794114b009d74739c0f9d5fb00ecd)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Danilo G. Baio" CommitterEmail="dbaio@FreeBSD.org"/>
+      <AUTHOR AuthorName="Danilo G. Baio" AuthorEmail="dbaio@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="15c503031a88e11b80b55786f62512b33933d6f6" HashShort="15c5030" Subject="textproc/docproj: Set PDF option as default" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="textproc/docproj/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="13"/>
+    <TIME Timezone="UTC" Hour="19" Minute="47" Second="44"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-im/prosody: Update to 0.11.9
+
+PR:		255845
+MFH:		2021Q2
+Security:	fc75570a-b417-11eb-a23d-c7ab331fd711
+(cherry picked from commit 643a6a5bc131208a14ff87a7e18feee076b27a81)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Neel Chauhan" CommitterEmail="nc@FreeBSD.org"/>
+      <AUTHOR AuthorName="Thomas Morper" AuthorEmail="thomas@beingboiled.info"/>
+    </PEOPLE>
+    <COMMIT Hash="535be7636b0abb8c2e91f4a7121a7633174f0fd8" HashShort="535be76" Subject="net-im/prosody: Update to 0.11.9" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-im/prosody/Makefile"/>
+      <FILE Action="Modify" Path="net-im/prosody/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

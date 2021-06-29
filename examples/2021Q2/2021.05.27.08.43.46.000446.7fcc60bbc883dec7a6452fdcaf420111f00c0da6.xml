@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="27"/>
+    <TIME Timezone="UTC" Hour="8" Minute="43" Second="46"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/zrepl: Update to 0.4.0
+
+Differential Revision: https://reviews.freebsd.org/D30453
+
+Approved by:	lcook (maintainer)
+
+(cherry picked from commit 1d16ddefe2a3b0d5ff889a962f5057cb1fa6b82c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="7fcc60bbc883dec7a6452fdcaf420111f00c0da6" HashShort="7fcc60b" Subject="sysutils/zrepl: Update to 0.4.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/zrepl/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/zrepl/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

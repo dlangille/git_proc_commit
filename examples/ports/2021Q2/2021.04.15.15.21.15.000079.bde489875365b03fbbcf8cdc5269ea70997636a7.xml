@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="15"/>
+    <TIME Timezone="UTC" Hour="15" Minute="21" Second="15"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-mgmt/netbox: Update to 2.10.9
+
+Changelog:
+
+Enhancements:
+* Add MAC address search field to VM interfaces list
+* Omit child devices from non-racked devices list under rack view
+* Add column to cable termination objects to display cable color
+* Display NAPALM-enabled device tabs only when relevant
+* Support disabling TLS certificate validation for Redis
+
+Bug Fixes:
+* Fix missing custom field filters for cables, rack reservations
+* Add missing count_ipaddresses attribute to VMInterface serializer
+* Permit users to manage their own REST API tokens without needing
+  explicit permission
+* Fix interface connections REST API endpoint
+* Support colons in webhook header values
+* Do not infer tenant assignment from parent objects for prefixes,
+  IP addresses
+* Handle exception when attempting to assign an MPTT-enabled model
+  as its own parent
+* Correct handling of boolean fields when cloning objects
+
+https://github.com/netbox-community/netbox/releases/tag/v2.10.9
+
+MFH:		2021Q2
+(cherry picked from commit 2d88de57d5ec7fbba7e36fb9c79db728c91a260e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kai Knoblich" CommitterEmail="kai@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kai Knoblich" AuthorEmail="kai@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="bde489875365b03fbbcf8cdc5269ea70997636a7" HashShort="bde4898" Subject="net-mgmt/netbox: Update to 2.10.9" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-mgmt/netbox/Makefile"/>
+      <FILE Action="Modify" Path="net-mgmt/netbox/distinfo"/>
+      <FILE Action="Modify" Path="net-mgmt/netbox/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

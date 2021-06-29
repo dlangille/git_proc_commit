@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="3"/>
+    <TIME Timezone="UTC" Hour="2" Minute="13" Second="42"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/arcan: set distribution tag for --version
+
+Inspired by:	Arch
+
+(cherry picked from commit 1d280d822c0e9109b7a9788b938cd90a518f7874)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0648a1b49add5b524f4b62080986f51869e5dea5" HashShort="0648a1b49" Subject="multimedia/arcan: set distribution tag for --version" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/arcan/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

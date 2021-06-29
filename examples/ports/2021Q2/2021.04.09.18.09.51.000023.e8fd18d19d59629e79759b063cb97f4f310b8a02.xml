@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="9"/>
+    <TIME Timezone="UTC" Hour="18" Minute="9" Second="51"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/clamav: Update to 0.103.2
+
+Changes: https://blog.clamav.net/2021/04/clamav-01032-security-patch-release.html
+
+PR:		254862
+Submitted by:	Yasuhiro Kimura &lt;yasu AT utahime DOT org&gt; (maintainer)
+
+(cherry picked from commit e01c3f0b80b378d8e5e2c9ec9c544c291c300556)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Neel Chauhan" CommitterEmail="nc@FreeBSD.org"/>
+      <AUTHOR AuthorName="Neel Chauhan" AuthorEmail="nc@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e8fd18d19d59629e79759b063cb97f4f310b8a02" HashShort="e8fd18d" Subject="security/clamav: Update to 0.103.2" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/clamav/Makefile"/>
+      <FILE Action="Modify" Path="security/clamav/distinfo"/>
+      <FILE Action="Modify" Path="security/clamav/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

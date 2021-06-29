@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="14"/>
+    <TIME Timezone="UTC" Hour="9" Minute="21" Second="57"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/python38: Update to 3.8.9
+
+(cherry picked from commit 771018296f01d42c6a5e91a1f8c7ad1d38822279)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Wen Heping" AuthorEmail="wen@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ac1a56d554807a6008c79a9c63cde2acc92d5ca6" HashShort="ac1a56d" Subject="lang/python38: Update to 3.8.9" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/python-doc-html/distinfo"/>
+      <FILE Action="Modify" Path="lang/python38/Makefile.version"/>
+      <FILE Action="Modify" Path="lang/python38/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="23"/>
+    <TIME Timezone="UTC" Hour="16" Minute="11" Second="3"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>llvm12: Update to 12.0.0rc4
+
+(cherry picked from commit 847e7c304a27c34d8f53f9bd0a98f3fd116ce240)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Brooks Davis" AuthorEmail="brooks@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="f4f2dcaee5c66c32811d90a7869e7a587de1cdc0" HashShort="f4f2dca" Subject="llvm12: Update to 12.0.0rc4" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/llvm12/Makefile"/>
+      <FILE Action="Modify" Path="devel/llvm12/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

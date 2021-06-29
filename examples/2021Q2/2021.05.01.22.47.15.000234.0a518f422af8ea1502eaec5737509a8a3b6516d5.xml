@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="1"/>
+    <TIME Timezone="UTC" Hour="22" Minute="47" Second="15"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/php73: Upgrade from 7.3.27 to 7.3.28
+
+Changelog:
+
+Imap:
+
+    Fixed bug #80710 (imap_mail_compose() header injection).
+
+Sponsored by: Bounce Experts
+
+(cherry picked from commit 413eb8a39f9f2164b5828e1809ecd278644c26cb)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Torsten Zuehlsdorff" CommitterEmail="tz@FreeBSD.org"/>
+      <AUTHOR AuthorName="Torsten Zuehlsdorff" AuthorEmail="tz@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0a518f422af8ea1502eaec5737509a8a3b6516d5" HashShort="0a518f4" Subject="lang/php73: Upgrade from 7.3.27 to 7.3.28" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/php73/Makefile"/>
+      <FILE Action="Modify" Path="lang/php73/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

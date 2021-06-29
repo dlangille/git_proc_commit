@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="3"/>
+    <TIME Timezone="UTC" Hour="23" Minute="18" Second="48"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>lang/go: Update to 1.16.5
+
+Changes:	https://golang.org/doc/devel/release#go1.16.minor
+Security:	079b3641-c4bd-11eb-a22a-693f0544ae52
+(cherry picked from commit 4b0da804cc4bc260c6483ac42d6ae5fa782f919f)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitri Goutnik" CommitterEmail="dmgk@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitri Goutnik" AuthorEmail="dmgk@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="3c36f367cfd0f2a5fc5f27b72494ea1d26ee6672" HashShort="3c36f36" Subject="lang/go: Update to 1.16.5" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="lang/go/Makefile"/>
+      <FILE Action="Modify" Path="lang/go/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

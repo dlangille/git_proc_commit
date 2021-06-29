@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="14"/>
+    <TIME Timezone="UTC" Hour="21" Minute="47" Second="30"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>textproc/kibana6: Update to 6.8.15
+
+- Update to 6.8.15
+- Specify rc order more specifically
+
+(cherry picked from commit 1538fc2c8dfe671e9c9644d9dc28253cb4251001)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Juraj Lutter" AuthorEmail="otis@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="c2dfa66954b6101adc6c3bb4419229dd627486f5" HashShort="c2dfa66" Subject="textproc/kibana6: Update to 6.8.15" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="textproc/kibana6/Makefile"/>
+      <FILE Action="Modify" Path="textproc/kibana6/distinfo"/>
+      <FILE Action="Modify" Path="textproc/kibana6/files/kibana.in"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

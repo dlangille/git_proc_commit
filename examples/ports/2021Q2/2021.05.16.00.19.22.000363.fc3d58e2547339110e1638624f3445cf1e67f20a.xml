@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="16"/>
+    <TIME Timezone="UTC" Hour="0" Minute="19" Second="22"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/flexget: update to 3.1.122
+
+Changes:	https://github.com/Flexget/Flexget/compare/v3.1.121...v3.1.122
+Reported by:	Repology
+
+(cherry picked from commit 463524251ec67b7717b5d6d42796ee056ee6c032)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="fc3d58e2547339110e1638624f3445cf1e67f20a" HashShort="fc3d58e" Subject="www/flexget: update to 3.1.122" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/flexget/Makefile"/>
+      <FILE Action="Modify" Path="www/flexget/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="24"/>
+    <TIME Timezone="UTC" Hour="18" Minute="17" Second="16"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/wireguard-go: Update to 0.0.20210424
+
+(cherry picked from commit fa23bcdfc51c9d073848f9cb536d0cfcee35ca36)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Bernhard Froehlich" CommitterEmail="decke@FreeBSD.org"/>
+      <AUTHOR AuthorName="Bernhard Froehlich" AuthorEmail="decke@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="6b04cf205a6c9703cbe9716a63b51ea9e5f97743" HashShort="6b04cf2" Subject="net/wireguard-go: Update to 0.0.20210424" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/wireguard-go/Makefile"/>
+      <FILE Action="Modify" Path="net/wireguard-go/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

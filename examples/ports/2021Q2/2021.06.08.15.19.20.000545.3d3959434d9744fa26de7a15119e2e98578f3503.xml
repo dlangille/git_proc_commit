@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="8"/>
+    <TIME Timezone="UTC" Hour="15" Minute="19" Second="20"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/zrepl: /var/run/zrepl should not be world-readable
+
+This partially reverts commit 2a866a1, and instead installs
+the pidfile to /var/run/zrepl.pid fixing the problem seen in
+PR 255981.
+
+As taken from the zrepl documentation[1]:
+
+[....]
+The zrepl daemon needs to open various UNIX sockets in a runtime directory:
+
+a control socket that the CLI commands use to interact with the daemon
+the ssh+stdinserver Transport listener opens one socket per configured
+client, named after client_identity parameter
+
+There is no authentication on these sockets except the UNIX permissions.
+The zrepl daemon will refuse to bind any of the above sockets in a
+directory that is world-accessible.
+[....]
+
+[1] 	https://zrepl.github.io/configuration/misc.html#runtime-directories-unix-sockets
+
+PR:		256472
+Reported by:	Raúl &lt;raul.munoz@custos.es&gt;
+
+(cherry picked from commit 621d9c9f594a0f7d049cb44dab25efed81c35c91)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Lewis Cook" CommitterEmail="lcook@FreeBSD.org"/>
+      <AUTHOR AuthorName="Lewis Cook" AuthorEmail="lcook@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="3d3959434d9744fa26de7a15119e2e98578f3503" HashShort="3d39594" Subject="sysutils/zrepl: /var/run/zrepl should not be world-readable" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/zrepl/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/zrepl/files/zrepl.in"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

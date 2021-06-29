@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="3"/>
+    <TIME Timezone="UTC" Hour="14" Minute="5" Second="47"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/rubygem-rdoc: Update to 6.3.1
+
+PR:		25552
+Reported by:	Yasuhiro Kimura &lt;yasu@utahime.org&gt;
+Relnotes:	https://github.com/ruby/rdoc/commits/v6.3.1
+Security:	CVE-2021-31799
+
+(cherry picked from commit 9f9c3a1527cb11d3344bf4993597016de2a5ae78)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Koichiro Iwao" CommitterEmail="meta@FreeBSD.org"/>
+      <AUTHOR AuthorName="Koichiro Iwao" AuthorEmail="meta@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="a1a861f93c9b2fc420494d05e48d9ccd407da7db" HashShort="a1a861f" Subject="devel/rubygem-rdoc: Update to 6.3.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/rubygem-rdoc/Makefile"/>
+      <FILE Action="Modify" Path="devel/rubygem-rdoc/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

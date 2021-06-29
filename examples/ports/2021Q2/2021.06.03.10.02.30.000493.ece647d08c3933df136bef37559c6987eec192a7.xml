@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="3"/>
+    <TIME Timezone="UTC" Hour="10" Minute="2" Second="30"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-mgmt/prometheus2: Update to 2.26.1
+
+Changes:	https://github.com/prometheus/prometheus/releases/tag/v2.26.1
+
+PR:		256324
+Security:	CVE-2021-29622
+Security:	59ab72fb-bccf-11eb-a38d-6805ca1caf5c
+Approved by:	lwhsu (mentor)
+
+(cherry picked from commit eed856cce0561df8be263b48f5ad482a096e2123)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Guangyuan Yang" CommitterEmail="ygy@FreeBSD.org"/>
+      <AUTHOR AuthorName="David O'Rourke" AuthorEmail="dor.bsd@xm0.uk"/>
+    </PEOPLE>
+    <COMMIT Hash="ece647d08c3933df136bef37559c6987eec192a7" HashShort="ece647d" Subject="net-mgmt/prometheus2: Update to 2.26.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-mgmt/prometheus2/Makefile"/>
+      <FILE Action="Modify" Path="net-mgmt/prometheus2/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

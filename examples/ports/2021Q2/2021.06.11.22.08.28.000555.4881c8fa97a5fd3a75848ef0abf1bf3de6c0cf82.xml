@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="11"/>
+    <TIME Timezone="UTC" Hour="22" Minute="8" Second="28"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/rpcs3: update to 0.0.16.12386
+
+Changes:	https://github.com/RPCS3/rpcs3/compare/2169e8d93...2dc6adc03
+(cherry picked from commit 1c2d7e46de2312635f7845b14ae5de4445ea99a2)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="4881c8fa97a5fd3a75848ef0abf1bf3de6c0cf82" HashShort="4881c8f" Subject="emulators/rpcs3: update to 0.0.16.12386" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/rpcs3/Makefile"/>
+      <FILE Action="Modify" Path="emulators/rpcs3/distinfo"/>
+      <FILE Action="Delete" Path="emulators/rpcs3/files/patch-3rdparty_hidapi_libusb_hid.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

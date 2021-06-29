@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="12"/>
+    <TIME Timezone="UTC" Hour="14" Minute="44" Second="38"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/svt-av1: add new license after a8dd55117ec8
+
+https://github.com/AOMediaCodec/SVT-AV1/commit/9272e132a3cd
+(cherry picked from commit 4ab46b08c75a39d8760ccb850eac10310b5bdf41)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="0e2b7e99e6a0510a1a78e41baed118c288636b48" HashShort="0e2b7e9" Subject="multimedia/svt-av1: add new license after a8dd55117ec8" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/svt-av1/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

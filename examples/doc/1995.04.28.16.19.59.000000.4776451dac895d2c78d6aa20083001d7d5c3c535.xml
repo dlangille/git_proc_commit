@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="1995" Month="4" Day="28"/>
+    <TIME Timezone="UTC" Hour="16" Minute="19" Second="59"/>
+    <OS Repo="doc" Id="FreeBSD" Branch="main"/>
+    <LOG>The FreeBSD handbook finds a new home.</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="John Fieber" CommitterEmail="jfieber@FreeBSD.org"/>
+      <AUTHOR AuthorName="John Fieber" AuthorEmail="jfieber@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="4776451dac895d2c78d6aa20083001d7d5c3c535" HashShort="4776451" Subject="The FreeBSD handbook finds a new home." EncodingLoses="false" Repository="doc"/>
+    <FILES>
+      <FILE Action="Add" Path="handbook/authors.sgml"/>
+      <FILE Action="Add" Path="handbook/basics.sgml"/>
+      <FILE Action="Add" Path="handbook/bibliography.sgml"/>
+      <FILE Action="Add" Path="handbook/ctm.sgml"/>
+      <FILE Action="Add" Path="handbook/current.sgml"/>
+      <FILE Action="Add" Path="handbook/dialup.sgml"/>
+      <FILE Action="Add" Path="handbook/diskless.sgml"/>
+      <FILE Action="Add" Path="handbook/eresources.sgml"/>
+      <FILE Action="Add" Path="handbook/glossary.sgml"/>
+      <FILE Action="Add" Path="handbook/handbook.sgml"/>
+      <FILE Action="Add" Path="handbook/kerberos.sgml"/>
+      <FILE Action="Add" Path="handbook/nfs.sgml"/>
+      <FILE Action="Add" Path="handbook/porting.sgml"/>
+      <FILE Action="Add" Path="handbook/ports.sgml"/>
+      <FILE Action="Add" Path="handbook/ppp.sgml"/>
+      <FILE Action="Add" Path="handbook/scsi.sgml"/>
+      <FILE Action="Add" Path="handbook/slipc.sgml"/>
+      <FILE Action="Add" Path="handbook/slips.sgml"/>
+      <FILE Action="Add" Path="handbook/submitters.sgml"/>
+      <FILE Action="Add" Path="handbook/sup.sgml"/>
+      <FILE Action="Add" Path="handbook/troubleshooting.sgml"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

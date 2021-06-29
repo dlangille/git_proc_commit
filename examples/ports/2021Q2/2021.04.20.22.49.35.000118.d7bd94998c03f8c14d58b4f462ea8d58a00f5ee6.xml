@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="20"/>
+    <TIME Timezone="UTC" Hour="22" Minute="49" Second="35"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>graphics/spectacle: avoid crash with export-plugins
+
+This is upstream MR
+	https://invent.kde.org/graphics/spectacle/-/merge_requests/61
+and avoids crashes when clicking almost any entry in the
+*export* menu.
+
+PR:		252313</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Adriaan de Groot" CommitterEmail="adridg@FreeBSD.org"/>
+      <AUTHOR AuthorName="Adriaan de Groot" AuthorEmail="adridg@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="d7bd94998c03f8c14d58b4f462ea8d58a00f5ee6" HashShort="d7bd9499" Subject="graphics/spectacle: avoid crash with export-plugins" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="graphics/spectacle/Makefile"/>
+      <FILE Action="Add" Path="graphics/spectacle/files/patch-git-f123cf6b1b67519a1a4e82e69764da9e89716489.diff"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

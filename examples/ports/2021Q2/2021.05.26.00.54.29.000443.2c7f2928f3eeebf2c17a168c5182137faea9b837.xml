@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="26"/>
+    <TIME Timezone="UTC" Hour="0" Minute="54" Second="29"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/libzmq4: Update to 4.3.4, Fix security issues
+
+- Patches removed were incorporated upstream.
+
+Changelog:  https://github.com/zeromq/libzmq/releases/tag/v4.3.2
+      https://github.com/zeromq/libzmq/releases/tag/v4.3.3
+      https://github.com/zeromq/libzmq/releases/tag/v4.3.4
+
+PR:		255102
+Approved by:	koobs (maintainer, implicit)
+Security:	21ec4428-bdaa-11eb-a04e-641c67a117d8
+Security:	6954a2b0-bda8-11eb-a04e-641c67a117d8
+
+Co-authored-by: Danilo G. Baio &lt;dbaio@FreeBSD.org&gt;
+(cherry picked from commit f3f486e42206887b05bcca9675087b976b8eb27c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Danilo G. Baio" CommitterEmail="dbaio@FreeBSD.org"/>
+      <AUTHOR AuthorName="Thomas Petig" AuthorEmail="thomas@petig.eu"/>
+    </PEOPLE>
+    <COMMIT Hash="2c7f2928f3eeebf2c17a168c5182137faea9b837" HashShort="2c7f292" Subject="net/libzmq4: Update to 4.3.4, Fix security issues" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/libzmq4/Makefile"/>
+      <FILE Action="Modify" Path="net/libzmq4/distinfo"/>
+      <FILE Action="Delete" Path="net/libzmq4/files/patch-PR3358"/>
+      <FILE Action="Delete" Path="net/libzmq4/files/patch-PR3359"/>
+      <FILE Action="Add" Path="net/libzmq4/files/patch-tests_testutil.hpp"/>
+      <FILE Action="Modify" Path="net/libzmq4/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

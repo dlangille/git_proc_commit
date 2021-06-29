@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="8"/>
+    <TIME Timezone="UTC" Hour="20" Minute="1" Second="27"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net-im/dino: update to 0.2.1
+
+MFH:		2021Q2
+Security:	fc1bcbca-c88b-11eb-9120-f02f74d0e4bd
+         	CVE-2021-33896
+(cherry picked from commit e43302a959cf016d5ce6e673e3cd8c72920975ea)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Ashish SHUKLA" CommitterEmail="ashish@FreeBSD.org"/>
+      <AUTHOR AuthorName="Ashish SHUKLA" AuthorEmail="ashish@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="6704030c1a51c244f0eaf9e30972bbd988ca5df8" HashShort="6704030" Subject="net-im/dino: update to 0.2.1" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net-im/dino/Makefile"/>
+      <FILE Action="Modify" Path="net-im/dino/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="5"/>
+    <TIME Timezone="UTC" Hour="14" Minute="53" Second="19"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>sysutils/ansible2*: Deprecate unsupported versions
+
+EXPIRATION_DATE will be set in another commit,
+which is not going to be MFH'ed.
+
+MFH:		2021Q2
+(cherry picked from commit 10bb4c5eef3d528ad9f7fc4be6e07952742c91a0)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Mateusz Piotrowski" CommitterEmail="0mp@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mateusz Piotrowski" AuthorEmail="0mp@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="5ca8559e6ff06a0dccfa4a6dfc6fffadba80829f" HashShort="5ca8559" Subject="sysutils/ansible2*: Deprecate unsupported versions" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="sysutils/ansible27/Makefile"/>
+      <FILE Action="Modify" Path="sysutils/ansible28/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

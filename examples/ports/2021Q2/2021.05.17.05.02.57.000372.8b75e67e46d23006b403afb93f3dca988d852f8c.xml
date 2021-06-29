@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="17"/>
+    <TIME Timezone="UTC" Hour="5" Minute="2" Second="57"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/p5-Pod-Coverage: Add missing dependency
+
+Add missing dependency on textproc/p5-Pod-Parser. Without it, the
+following error is observed at runtime:
+
+  Can't locate Pod/Find.pm in @INC (you may need to install the Pod::Find module)
+
+Reviewed by:	koobs
+Approved by:	koobs (ports, mentor), portmgr (blanket: runtime fix)
+Differential Revision:	https://reviews.freebsd.org/D30274
+MFH:		2021Q2 (missing dependency, runtime fix)
+
+(cherry picked from commit d45fe6214c886b40c06440b9cf282f5e7ea0be3a)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Fukang Chen" CommitterEmail="loader@FreeBSD.org"/>
+      <AUTHOR AuthorName="Fukang Chen" AuthorEmail="loader@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="8b75e67e46d23006b403afb93f3dca988d852f8c" HashShort="8b75e67e" Subject="devel/p5-Pod-Coverage: Add missing dependency" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/p5-Pod-Coverage/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

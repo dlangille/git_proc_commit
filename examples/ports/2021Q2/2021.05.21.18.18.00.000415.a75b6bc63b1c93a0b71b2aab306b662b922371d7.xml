@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="21"/>
+    <TIME Timezone="UTC" Hour="18" Minute="18" Second="0"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>net/libdaq: Update version 3.0.2=&gt;3.0.3
+
+Relnotes:	https://github.com/snort3/libdaq/releases/tag/v3.0.3
+MFH:		2021Q2
+(cherry picked from commit 7185d6fc23e5a571b1162a6e0ef93a150f618fa8)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Muhammad Moinur Rahman" CommitterEmail="bofh@FreeBSD.org"/>
+      <AUTHOR AuthorName="Muhammad Moinur Rahman" AuthorEmail="bofh@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="a75b6bc63b1c93a0b71b2aab306b662b922371d7" HashShort="a75b6bc" Subject="net/libdaq: Update version 3.0.2=&gt;3.0.3" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="net/libdaq/Makefile"/>
+      <FILE Action="Modify" Path="net/libdaq/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

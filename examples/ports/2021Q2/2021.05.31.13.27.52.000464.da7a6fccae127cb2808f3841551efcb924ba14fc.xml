@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="31"/>
+    <TIME Timezone="UTC" Hour="13" Minute="27" Second="52"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/py-setproctitle: update to 1.2.2
+
+PR:		256191
+(cherry picked from commit b4286e486b516aac2a6a2d067f6cba5f6d0bcce4)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Sofian Brabez" CommitterEmail="sbz@FreeBSD.org"/>
+      <AUTHOR AuthorName="Mikael Urankar" AuthorEmail="mikael@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="da7a6fccae127cb2808f3841551efcb924ba14fc" HashShort="da7a6fc" Subject="devel/py-setproctitle: update to 1.2.2" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/py-setproctitle/Makefile"/>
+      <FILE Action="Modify" Path="devel/py-setproctitle/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

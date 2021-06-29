@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="13"/>
+    <TIME Timezone="UTC" Hour="12" Minute="56" Second="13"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>games/3dc: Fix crash on boot
+
+The call to XtVaGetValues returns a value that overwrites the `bc` variable and
+smashes the stack. Use a long instead.
+
+PR:	255765
+Reported by:	grahamperrin@gmail.com
+Tested by:	rhurling@
+MFH:		2021Q2
+
+(cherry picked from commit 339d443d7b97dcef2ad415ff9cf743685ebea304)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Fernando Apesteguía" CommitterEmail="fernape@FreeBSD.org"/>
+      <AUTHOR AuthorName="Fernando Apesteguía" AuthorEmail="fernape@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="2c822c361c643b4ff4d741f6d4d293a54ab15eb3" HashShort="2c822c3" Subject="games/3dc: Fix crash on boot" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="games/3dc/Makefile"/>
+      <FILE Action="Add" Path="games/3dc/files/patch-xif.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

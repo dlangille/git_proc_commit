@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="13"/>
+    <TIME Timezone="UTC" Hour="9" Minute="22" Second="2"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/boost-libs: backport upstream commit to add support to c++20 concepts
+
+Until newer boost is ported, this fixes compilation of client code with errors like
+    async_result.hpp: error: concept cannot have associated constraints
+
+See https://github.com/boostorg/asio/issues/312 for details.
+
+PR:		255016
+Submitted by:	amdmi3
+MFH:		2021Q2
+
+(cherry picked from commit 4902f812a6107e7789724a91a3fe04f4545b47b1)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="43280b4cc9c9f99c6697ffe9bbbacd069e1cb912" HashShort="43280b4" Subject="devel/boost-libs: backport upstream commit to add support to c++20 concepts" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/boost-libs/Makefile"/>
+      <FILE Action="Add" Path="devel/boost-libs/files/patch-c++20-concepts"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

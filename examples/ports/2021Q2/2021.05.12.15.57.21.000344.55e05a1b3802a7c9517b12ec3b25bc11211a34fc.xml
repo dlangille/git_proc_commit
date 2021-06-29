@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="12"/>
+    <TIME Timezone="UTC" Hour="15" Minute="57" Second="21"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>Chase GitLab redirect in PATCH_SITES (a la 64c25a7c484a)
+
+https://about.gitlab.com/releases/2020/05/06/gitlab-com-13-0-breaking-changes/#removal-of-deprecated-project-paths
+(cherry picked from commit 32ca8c877e886b2df0dcc62b6a784e4dbc0f2c66)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="55e05a1b3802a7c9517b12ec3b25bc11211a34fc" HashShort="55e05a1" Subject="Chase GitLab redirect in PATCH_SITES (a la 64c25a7c484a)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="x11-drivers/xf86-video-amdgpu/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

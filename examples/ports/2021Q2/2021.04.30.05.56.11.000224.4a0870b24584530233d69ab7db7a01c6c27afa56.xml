@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="30"/>
+    <TIME Timezone="UTC" Hour="5" Minute="56" Second="11"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>editors/openoffice-4: Upgrade to 4.1.10
+
+  * Fixes CVE 2021-30245
+
+  * Fixes https://bz.apache.org/ooo/show_bug.cgi?id=128439
+
+(cherry picked from commit ad5d8f0484ac6ac236825b5ce2c64bdb7eef69a4)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Don Lewis" CommitterEmail="truckman@FreeBSD.org"/>
+      <AUTHOR AuthorName="Don Lewis" AuthorEmail="truckman@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="4a0870b24584530233d69ab7db7a01c6c27afa56" HashShort="4a0870b" Subject="editors/openoffice-4: Upgrade to 4.1.10" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="editors/openoffice-4/Makefile"/>
+      <FILE Action="Modify" Path="editors/openoffice-4/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

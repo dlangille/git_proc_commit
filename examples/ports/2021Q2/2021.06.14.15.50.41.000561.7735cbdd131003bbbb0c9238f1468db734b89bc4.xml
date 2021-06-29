@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="14"/>
+    <TIME Timezone="UTC" Hour="15" Minute="50" Second="41"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>textprox/expat2: update to 2.4.1 -- fixes CVE-2013-0340/CWE-776
+
+See [1] for details:
+	Expat 2.4.0 and follow-up release 2.4.1 have both been released earlier
+	today (21-05-23). Release 2.4.0 fixes long known security issue CVE-2013-0340 by
+	adding protection against so-called Billion Laughs Attacks, a form of
+	denial of service against applications accepting XML input, in all known
+	variations, including recent flavor Parameter Laughs.
+
+[1] https://blog.hartwork.org/posts/cve-2013-0340-billion-laughs-fixed-in-expat-2-4-0
+
+PR:		256121
+Exp-run by:	antoine
+
+(cherry picked from commit 1454ab40206b85f94edb6390e0d96c9716a07399)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Tobias C. Berner" CommitterEmail="tcberner@FreeBSD.org"/>
+      <AUTHOR AuthorName="Tobias C. Berner" AuthorEmail="tcberner@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="7735cbdd131003bbbb0c9238f1468db734b89bc4" HashShort="7735cbd" Subject="textprox/expat2: update to 2.4.1 -- fixes CVE-2013-0340/CWE-776" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="textproc/expat2/Makefile"/>
+      <FILE Action="Modify" Path="textproc/expat2/distinfo"/>
+      <FILE Action="Modify" Path="textproc/expat2/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

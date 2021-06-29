@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="6"/>
+    <TIME Timezone="UTC" Hour="22" Minute="59" Second="10"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/upnp: Update to 1.14.5
+
+Changes:	https://github.com/pupnp/pupnp/releases/tag/release-1.14.5
+PR:		254825
+Submitted by:	Dries Michiels &lt;driesm.michiels@gmail.com&gt; (maintainer)
+Security:	79fa9f23-9725-11eb-b530-7085c2fb2c14</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Lewis Cook" CommitterEmail="lcook@FreeBSD.org"/>
+      <AUTHOR AuthorName="Lewis Cook" AuthorEmail="lcook@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="ba68dd511d88a2fb6c4fefb53bc401b0f86e3217" HashShort="ba68dd5" Subject="devel/upnp: Update to 1.14.5" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/upnp/Makefile"/>
+      <FILE Action="Modify" Path="devel/upnp/distinfo"/>
+      <FILE Action="Delete" Path="devel/upnp/files/patch-upnp_src_genlib_net_http_httpreadwrite.c"/>
+      <FILE Action="Modify" Path="devel/upnp/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

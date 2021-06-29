@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="15"/>
+    <TIME Timezone="UTC" Hour="10" Minute="54" Second="40"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/chromium: update to 89.0.4389.128
+
+MFH:		2021Q2
+Security:	http://vuxml.freebsd.org/freebsd/7c0d71a9-9d48-11eb-97a0-e09467587c17.html
+(cherry picked from commit a805b0a20e2cffd538df5651018e8c2c27ff5e63)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rene Ladan" CommitterEmail="rene@FreeBSD.org"/>
+      <AUTHOR AuthorName="Matthias Wolf" AuthorEmail="matthias@rheinwolf.de"/>
+    </PEOPLE>
+    <COMMIT Hash="f1500c792bd446ad561b1226799c1afe4618a02c" HashShort="f1500c7" Subject="www/chromium: update to 89.0.4389.128" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/chromium/Makefile"/>
+      <FILE Action="Modify" Path="www/chromium/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

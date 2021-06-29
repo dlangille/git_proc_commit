@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="6"/>
+    <TIME Timezone="UTC" Hour="10" Minute="9" Second="56"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/raylib: Update to 3.7.0
+
+Committing slightly modified version, providing for less
+work in future updates, in line with what was introduced
+in update to 3.5.0.
+
+PR:		256428
+(cherry picked from commit e6803e7083235e9e308263deda300afafa2522bb)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Juraj Lutter" CommitterEmail="otis@FreeBSD.org"/>
+      <AUTHOR AuthorName="Martin Filla" AuthorEmail="freebsd@sysctl.cz"/>
+    </PEOPLE>
+    <COMMIT Hash="b9f46d134fd1ee5039cab0cb1a6b07a264702307" HashShort="b9f46d1" Subject="devel/raylib: Update to 3.7.0" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/raylib/Makefile"/>
+      <FILE Action="Modify" Path="devel/raylib/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

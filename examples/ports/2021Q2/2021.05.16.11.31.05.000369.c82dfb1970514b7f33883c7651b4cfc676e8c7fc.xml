@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="16"/>
+    <TIME Timezone="UTC" Hour="11" Minute="31" Second="5"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/chromium: attempt to make it work with Microsoft Teams
+
+- add dependency virtual_oss so the microphone works [1]
+- skip assertion in h264_decoder, we will force it to initialize
+  later [2]
+
+PR:	246214 [1]
+PR:	255484 [2]
+MFH:	2021Q2
+(cherry picked from commit 74647995deae7050b6f9a3bf3b3a3ef8ff25ad63)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rene Ladan" CommitterEmail="rene@FreeBSD.org"/>
+      <AUTHOR AuthorName="Rene Ladan" AuthorEmail="rene@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="c82dfb1970514b7f33883c7651b4cfc676e8c7fc" HashShort="c82dfb1" Subject="www/chromium: attempt to make it work with Microsoft Teams" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/chromium/Makefile"/>
+      <FILE Action="Modify" Path="www/chromium/files/patch-third__party_webrtc_modules_video__coding_codecs_h264_h264__decoder__impl.cc"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

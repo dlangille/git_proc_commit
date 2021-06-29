@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="24"/>
+    <TIME Timezone="UTC" Hour="15" Minute="18" Second="26"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/firefox: fix dependency version information
+
+According to:
+  build/moz.configure/nspr.configure (NSPR, sets minimum version)
+  build/moz.configure/nss.configure (NSS, sets minimum version)
+  gfx/harfbuzz/README.mozilla (harfbuzz embedded copy, we use our own)
+  gfx/graphite2/README.mozilla (graphite2 embedded copy, we use our own)
+  media/libpng/README (libpng embedded copy, we use our own)
+  media/libvpx/config/vpx_version.h (libvpx embedded copy, we use our own)
+may this help me when I touch it next time
+
+(cherry picked from commit 31c1a83b5c002170ca78ef9e6e0e51864dc1ce89)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Christoph Moench-Tegeder" CommitterEmail="cmt@FreeBSD.org"/>
+      <AUTHOR AuthorName="Christoph Moench-Tegeder" AuthorEmail="cmt@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="d5e4b679aaf426a4a5f4e735f26870f7a7bcdb2a" HashShort="d5e4b67" Subject="www/firefox: fix dependency version information" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/firefox/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

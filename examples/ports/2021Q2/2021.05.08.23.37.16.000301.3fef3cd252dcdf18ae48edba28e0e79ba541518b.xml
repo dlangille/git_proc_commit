@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="8"/>
+    <TIME Timezone="UTC" Hour="23" Minute="37" Second="16"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/yuzu: unbreak after 85a65c9557ca
+
+-- SDL2 2.0.14 or newer not found, falling back to externals.
+
+CMake Error at externals/CMakeLists.txt:54 (add_subdirectory):
+  The source directory
+
+    /wrkdirs/usr/ports/emulators/yuzu/work/yuzu-2e268abe4/externals/SDL
+
+  does not contain a CMakeLists.txt file.
+
+Reported by:	pkg-fallout
+
+(cherry picked from commit d02aa5e9ce6b357bdb5b8cd494d0f6a4a1249d7e)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Jan Beich" CommitterEmail="jbeich@FreeBSD.org"/>
+      <AUTHOR AuthorName="Jan Beich" AuthorEmail="jbeich@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="3fef3cd252dcdf18ae48edba28e0e79ba541518b" HashShort="3fef3cd" Subject="emulators/yuzu: unbreak after 85a65c9557ca" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="emulators/yuzu-qt5/Makefile"/>
+      <FILE Action="Add" Path="emulators/yuzu/files/patch-sdl2"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

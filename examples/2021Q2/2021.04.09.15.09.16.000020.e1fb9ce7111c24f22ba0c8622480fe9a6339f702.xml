@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="9"/>
+    <TIME Timezone="UTC" Hour="15" Minute="9" Second="16"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>x11/xmascot: clean up port
+
+- fix build with -fno-common and un-expire
+- set LICENSE
+- fix parallel build
+- move to MASTER_SITE of submitter
+
+Add entry to LEGAL
+
+Submitter becomes maintainer
+
+PR:		249011
+MFH:		2021Q2
+(cherry picked from commit ffce9c1d6dfcfacb319eed3c02c2d2dc4f44bd46)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Rene Ladan" CommitterEmail="rene@FreeBSD.org"/>
+      <AUTHOR AuthorName="Yoshihiro Takahashi" AuthorEmail="nyan@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="e1fb9ce7111c24f22ba0c8622480fe9a6339f702" HashShort="e1fb9ce" Subject="x11/xmascot: clean up port" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="LEGAL"/>
+      <FILE Action="Modify" Path="x11/xmascot/Makefile"/>
+      <FILE Action="Modify" Path="x11/xmascot/distinfo"/>
+      <FILE Action="Delete" Path="x11/xmascot/files/patch-config.tmpl"/>
+      <FILE Action="Modify" Path="x11/xmascot/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

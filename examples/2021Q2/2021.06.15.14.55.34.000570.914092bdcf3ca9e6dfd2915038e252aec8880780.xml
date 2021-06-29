@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="15"/>
+    <TIME Timezone="UTC" Hour="14" Minute="55" Second="34"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>multimedia/libhdhomerun: Update to 20200907
+
+Changes https://www.silicondust.com/support/downloads/software-changelog/
+
+PR:		251088
+Approved by:	maintainer
+MFH:		2021Q2
+
+(cherry picked from commit 63bb888a3d08b7298e9563a73dd371f40d9838a7)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kevin Bowling" CommitterEmail="kbowling@FreeBSD.org"/>
+      <AUTHOR AuthorName="David O'Rourke" AuthorEmail="dor.bsd@xm0.uk"/>
+    </PEOPLE>
+    <COMMIT Hash="914092bdcf3ca9e6dfd2915038e252aec8880780" HashShort="914092b" Subject="multimedia/libhdhomerun: Update to 20200907" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="multimedia/libhdhomerun/Makefile"/>
+      <FILE Action="Modify" Path="multimedia/libhdhomerun/distinfo"/>
+      <FILE Action="Delete" Path="multimedia/libhdhomerun/files/patch-hdhomerun__discover.c"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

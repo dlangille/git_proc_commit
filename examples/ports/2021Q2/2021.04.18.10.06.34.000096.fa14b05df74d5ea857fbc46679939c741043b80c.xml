@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="18"/>
+    <TIME Timezone="UTC" Hour="10" Minute="6" Second="34"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/doxygen: update to 1.9.1 release
+
+Also regen 'pkg-plist' for affected consumers, with PORTREVISION bump
+Touch Mk/bsd.ruby.mk due to all ruby* is affected
+MFH:	2021Q2
+
+(cherry picked from commit b8ac15afd00127044d75894e357f697d825ed385)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dima Panov" CommitterEmail="fluffy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dima Panov" AuthorEmail="fluffy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="fa14b05df74d5ea857fbc46679939c741043b80c" HashShort="fa14b05" Subject="devel/doxygen: update to 1.9.1 release" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="Mk/bsd.ruby.mk"/>
+      <FILE Action="Modify" Path="audio/libsidplayfp/Makefile"/>
+      <FILE Action="Modify" Path="audio/libsidplayfp/pkg-plist"/>
+      <FILE Action="Modify" Path="devel/cppunit/Makefile"/>
+      <FILE Action="Modify" Path="devel/cppunit/pkg-plist"/>
+      <FILE Action="Modify" Path="devel/doxygen/Makefile"/>
+      <FILE Action="Modify" Path="devel/doxygen/distinfo"/>
+      <FILE Action="Add" Path="devel/doxygen/files/patch-addon_doxywizard_CMakeLists.txt"/>
+      <FILE Action="Add" Path="devel/doxygen/files/patch-doc-translator.py"/>
+      <FILE Action="Add" Path="devel/doxygen/files/patch-libmscgen_CMakeLists.txt"/>
+      <FILE Action="Modify" Path="devel/doxygen/files/patch-md5-dirdef"/>
+      <FILE Action="Modify" Path="devel/doxygen/files/patch-md5-util"/>
+      <FILE Action="Add" Path="devel/doxygen/files/patch-src_htmlgen.cpp"/>
+      <FILE Action="Modify" Path="devel/tbb/Makefile"/>
+      <FILE Action="Modify" Path="devel/tbb/pkg-plist"/>
+      <FILE Action="Modify" Path="graphics/ogre3d/Makefile"/>
+      <FILE Action="Modify" Path="graphics/ogre3d/pkg-plist"/>
+      <FILE Action="Modify" Path="graphics/opensubdiv/Makefile"/>
+      <FILE Action="Modify" Path="graphics/opensubdiv/pkg-plist"/>
+      <FILE Action="Modify" Path="graphics/ptex/Makefile"/>
+      <FILE Action="Modify" Path="graphics/ptex/pkg-plist"/>
+      <FILE Action="Modify" Path="lang/ruby26/pkg-plist"/>
+      <FILE Action="Modify" Path="lang/ruby27/pkg-plist"/>
+      <FILE Action="Modify" Path="lang/ruby30/pkg-plist"/>
+      <FILE Action="Modify" Path="mail/libcmime/Makefile"/>
+      <FILE Action="Modify" Path="mail/libcmime/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

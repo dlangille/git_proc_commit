@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="15"/>
+    <TIME Timezone="UTC" Hour="9" Minute="8" Second="56"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>japanese/mh: Remove BROKEN_FreeBSD_13/14 flags
+
+The error was fixed in PR 249013.
+
+PR:	254973
+Reported by:	CQG00620@nifty.ne.jp (maintainer)
+MFH:	2021Q2 (remove build restriction)
+
+(cherry picked from commit 335c1f36a9e4231d8f00667c893e903dea59e09c)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Fernando Apesteguía" CommitterEmail="fernape@FreeBSD.org"/>
+      <AUTHOR AuthorName="Fernando Apesteguía" AuthorEmail="fernape@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="fb435cb211e0d14f7baee22228127492af1f96b8" HashShort="fb435cb" Subject="japanese/mh: Remove BROKEN_FreeBSD_13/14 flags" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="japanese/mh/Makefile"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="10"/>
+    <TIME Timezone="UTC" Hour="8" Minute="31" Second="41"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>devel/py-tiamat: Update to 7.7
+
+(cherry picked from commit 130f5fc5a27f81dfe1e2b8a42dc0676009ab3868)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Kirill Ponomarev" CommitterEmail="krion@FreeBSD.org"/>
+      <AUTHOR AuthorName="Kirill Ponomarev" AuthorEmail="krion@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="7ff738ba8b3f6d563562d4f92db7d0adab4ad6b5" HashShort="7ff738b" Subject="devel/py-tiamat: Update to 7.7" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="devel/py-tiamat/Makefile"/>
+      <FILE Action="Modify" Path="devel/py-tiamat/distinfo"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

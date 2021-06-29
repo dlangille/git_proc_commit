@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="4" Day="26"/>
+    <TIME Timezone="UTC" Hour="14" Minute="54" Second="44"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>emulators/quasi88: fix build</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Dmitry Marakasov" CommitterEmail="amdmi3@FreeBSD.org"/>
+      <AUTHOR AuthorName="Dmitry Marakasov" AuthorEmail="amdmi3@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="b1ef04432be6276fcc108653d40c2b0c19e74dd7" HashShort="b1ef044" Subject="emulators/quasi88: fix build" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Add" Path="emulators/quasi88/files/patch-src_snddrv_quasi88_2608fmgen.cpp"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="5" Day="25"/>
+    <TIME Timezone="UTC" Hour="8" Minute="42" Second="11"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>www/firefox: update to 89.0 (rc1)
+
+Release Notes (soon):
+  https://www.mozilla.org/en-US/firefox/89.0/releasenotes/
+
+(cherry picked from commit dcfa581a83553181ba72f0cb97e35504a81cbef8)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Christoph Moench-Tegeder" CommitterEmail="cmt@FreeBSD.org"/>
+      <AUTHOR AuthorName="Christoph Moench-Tegeder" AuthorEmail="cmt@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="3b0f68ffad729f34b9ef06e513e66f1854ee5fd3" HashShort="3b0f68f" Subject="www/firefox: update to 89.0 (rc1)" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="www/firefox/Makefile"/>
+      <FILE Action="Modify" Path="www/firefox/distinfo"/>
+      <FILE Action="Delete" Path="www/firefox/files/patch-bug1686713"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<UPDATES Version="1.5.0.0" Source="git">
+  <UPDATE>
+    <DATE Year="2021" Month="6" Day="3"/>
+    <TIME Timezone="UTC" Hour="13" Minute="59" Second="23"/>
+    <OS Repo="ports" Id="FreeBSD" Branch="2021Q2"/>
+    <LOG>security/libgcrypt: Make static an option
+
+Static linked binaries, due to the fact that they're statically linked,
+can pose a security risk should a library be updated and depending
+software not be recompiled and linked. This was a hot topic on BUGTRAQ
+about 25 years ago.
+
+The default is to build static libraries so as not to alter the package
+avoiding a POLA violation.
+
+PR:		255735
+Submitted by:	Daniel Engberg &lt;daniel.engberg.lists@pyret.net&gt; (mostly)
+Reported by:	Daniel Engberg &lt;daniel.engberg.lists@pyret.net&gt;
+Reviewed by:	cy
+Tested by:	cy
+MFH:		2021Q2
+
+(cherry picked from commit 527821a60c9f2e706a0549ac23c8ddc6d8b778c3)</LOG>
+    <PEOPLE>
+      <COMMITTER CommitterName="Cy Schubert" CommitterEmail="cy@FreeBSD.org"/>
+      <AUTHOR AuthorName="Cy Schubert" AuthorEmail="cy@FreeBSD.org"/>
+    </PEOPLE>
+    <COMMIT Hash="70b08e987327d237ba066bf3398b3e55675f9c76" HashShort="70b08e9" Subject="security/libgcrypt: Make static an option" EncodingLoses="false" Repository="ports"/>
+    <FILES>
+      <FILE Action="Modify" Path="security/libgcrypt/Makefile"/>
+      <FILE Action="Modify" Path="security/libgcrypt/pkg-plist"/>
+    </FILES>
+  </UPDATE>
+</UPDATES>
