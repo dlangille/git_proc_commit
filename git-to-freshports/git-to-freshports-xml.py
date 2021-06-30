@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/local/bin/python3.8
 
 # Copyright 2019-2020 Serhii (Sergey) Kozlov
 # All rights reserved
