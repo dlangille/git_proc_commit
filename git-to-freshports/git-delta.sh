@@ -79,7 +79,7 @@ do
 # lot of log lines to scroll past
 #      logfile "looking at $refname"
       # for now, when testing, only this branch please
-      if [ "$refname" != "origin/2021Q2" ] && [ "$refname" != "$MAIN_BRANCH" ]
+      if [ "$refname" != "origin/2021Q2" ] && [ "$refname" != "origin/2021Q3" ] && [ "$refname" != "$MAIN_BRANCH" ]
       then
          continue
       fi
