@@ -75,7 +75,7 @@ do
       | sed -n 's/^commit refs\/remotes\///p' \
       | while read -r refname
    do
-# if we mention all thsese, and we are skipping most of them, that's a
+# if we mention all these, and we are skipping most of them, that's a
 # lot of log lines to scroll past
 #      logfile "looking at $refname"
       # for now, when testing, only this branch please
