@@ -145,7 +145,7 @@ do
 
          # echo $new_latest > ${LATEST_FILE}
          # Store the last known commit that we just processed.
-        git tag -m "last known commit of ${refname}" -f freshports/${refname} ${refname}
+         git tag -m "last known commit of ${refname}" -f freshports/${refname} ${refname}
       fi
 
    done
