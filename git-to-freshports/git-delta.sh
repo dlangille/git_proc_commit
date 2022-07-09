@@ -28,6 +28,8 @@ XML="${INGRESS_MSGDIR}/incoming"
 
 logfile "XML dir is $XML"
 
+result=0
+
 for repo in ${repos}
 do
    if [ "${repo}" != "ports" ]
@@ -141,14 +143,23 @@ do
          logfile "${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --branch $BRANCH --commit-range $STARTPOINT..$ENDPOINT --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}"
                   ${SCRIPTDIR}/git-to-freshports-xml.py --repo ${repo} --path ${REPODIR} --branch $BRANCH --commit-range $STARTPOINT..$ENDPOINT --spooling ${INGRESS_SPOOLINGDIR} --output ${XML}
 
-         logfile "new_latest = $(${GIT} rev-parse ${refname})"
+         result=$?
+         logfile "${SCRIPTDIR}/git-to-freshports-xml.py result: $result"
+         if [ "$result" == "0" ]
+         then
+            logfile "new_latest = $(${GIT} rev-parse ${refname})"
 
-         # echo $new_latest > ${LATEST_FILE}
-         # Store the last known commit that we just processed.
-        git tag -m "last known commit of ${refname}" -f freshports/${refname} ${refname}
+            # echo $new_latest > ${LATEST_FILE}
+            # Store the last known commit that we just processed.
+            git tag -m "last known commit of ${refname}" -f freshports/${refname} ${refname}
+         else
+            logfatal "FATAL eror with git-to-freshports-xml.py result: $result"
+         fi
       fi
 
    done
 done
 
 logfile "Ending"
+
+exit $result
